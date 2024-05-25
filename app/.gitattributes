@@ -1,0 +1,8 @@
+# Set text attributes for SVG files
+*.svg text
+
+# Normalize line endings for SVG files (use LF in the repository)
+*.svg eol=lf
+
+# Treat SVG files as binary to avoid unnecessary diffs
+*.svg -diff
