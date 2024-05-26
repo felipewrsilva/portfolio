@@ -1,10 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
+'use client'
+
 import { useState } from 'react'
 import { IoCopyOutline } from 'react-icons/io5'
 import { cn } from '@/lib/utils'
 import { BackgroundGradientAnimation } from './GradientBg'
 import GridGlobe from './GridGlobe'
 import MagicButton from '../MagicButton'
+import dynamic from 'next/dynamic'
+
+const ConfettiAnimation = dynamic(
+  () => import('./ConfettiAnimation').then((mod) => mod.default),
+  { ssr: false },
+)
 
 export const BentoGrid = ({
   className,
@@ -147,7 +155,9 @@ export const BentoGridItem = ({
                 className={`absolute -bottom-5 right-0 ${
                   copied ? 'block' : 'block'
                 }`}
-              ></div>
+              >
+                <ConfettiAnimation copied={copied} />
+              </div>
 
               <MagicButton
                 title={copied ? 'Email is copied!' : 'Copy my email address'}
