@@ -39,7 +39,7 @@ const Hero = () => {
           />
 
           <p className="mb-4 text-center text-sm md:text-lg md:tracking-wider lg:text-2xl">
-            Hi! I&apos;m Felipe, a Next.js Developer based in Brazil.
+            Hi! I&apos;m Felipe, a Fullstack Developer based in Brazil.
           </p>
 
           <a href="#about">

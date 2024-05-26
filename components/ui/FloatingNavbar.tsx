@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
-
 import React, { useState } from 'react'
 import {
   motion,
@@ -8,30 +8,31 @@ import {
   useMotionValueEvent,
 } from 'framer-motion'
 import Link from 'next/link'
-import { cn } from '@/utils/cn'
-
-type navItem = {
-  name: string
-  link: string
-  icon?: JSX.Element
-}
+import { cn } from '@/lib/utils'
 
 export const FloatingNav = ({
   navItems,
   className,
 }: {
-  navItems: navItem[]
+  navItems: {
+    name: string
+    link: string
+    icon?: JSX.Element
+  }[]
   className?: string
 }) => {
   const { scrollYProgress } = useScroll()
 
+  // set true for the initial state so that nav bar is visible in the hero section
   const [visible, setVisible] = useState(true)
 
   useMotionValueEvent(scrollYProgress, 'change', (current) => {
+    // Check if current is not undefined and is a number
     if (typeof current === 'number') {
       const direction = current! - scrollYProgress.getPrevious()!
 
       if (scrollYProgress.get() < 0.05) {
+        // also set true for the initial state
         setVisible(true)
       } else {
         if (direction < 0) {
@@ -68,7 +69,7 @@ export const FloatingNav = ({
           border: '1px solid rgba(255, 255, 255, 0.125)',
         }}
       >
-        {navItems.map((navItem: navItem, idx: number) => (
+        {navItems.map((navItem: any, idx: number) => (
           <Link
             key={`link=${idx}`}
             href={navItem.link}

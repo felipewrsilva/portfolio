@@ -49,7 +49,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: 'Currently building a Deployment Library for Backend Development',
+    title: 'Currently building a JS Animation library',
     description: 'The Inside Scoop',
     className: 'md:col-span-3 md:row-span-2',
     imgClassName: 'absolute right-0 bottom-0 md:w-96 w-60',
@@ -107,33 +107,27 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Director of AlphaStream Technologies',
+      'At UniChem, Felipe was instrumental in ensuring data privacy and compliance with relevant regulations. They proactively identified and mitigated critical issues early in the development process, preventing a potential 30% increase in post-release defects. Their ability to develop comprehensive test plans and address issues before they became major problems highlights their forward-thinking and meticulous approach to software development.',
+    name: 'Carlos Mendes',
+    title: 'Quality Assurance Lead',
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Director of AlphaStream Technologies',
+      'During their tenure at UniChem, Felipe excelled in collaborative environments, aligning technical solutions with business goals by working closely with product managers and stakeholders. Their leadership in knowledge-sharing sessions and facilitation of team learning fostered a culture of continuous improvement and innovation within the team.',
+    name: 'Pedro Santos',
+    title: 'Product Development Manager',
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Director of AlphaStream Technologies',
+      'At Sollana, Felipe demonstrated exceptional skills in generating data-driven insights that directly supported key business decisions and boosted revenue. Their proficiency in developing and maintaining SQL scripts, optimizing database performance, and reducing user-reported defects by 30% through automated web application testing with Selenium, underscores their commitment to delivering high-quality solutions.',
+    name: 'Bruno Almeida',
+    title: 'Data Analytics Director',
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Director of AlphaStream Technologies',
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Director of AlphaStream Technologies',
+      'In their role at IQVia, Felipe significantly enhanced operational efficiency by independently automating database deployments across eight Latin American countries. Their implementation of CI/CD pipelines and automated testing not only improved software quality but also accelerated development cycles, showcasing their strong capability in streamlining processes.',
+    name: 'Mariano Pereira',
+    title: 'IT Operations Manager',
   },
 ]
 
@@ -173,29 +167,29 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: 'Frontend Engineer Intern',
-    desc: 'Assisted in the development of a web-based platform using React.js, enhancing interactivity.',
+    title: 'Software Engineer Intern',
+    desc: 'Assisted in the development of a web-based platform, enhancing functionality and interactivity.',
     className: 'md:col-span-2',
     thumbnail: '/exp1.svg',
   },
   {
     id: 2,
-    title: 'Mobile App Dev - JSM Tech',
+    title: 'Mobile App Dev - Sollana Tech',
     desc: 'Designed and developed mobile app for both iOS & Android platforms using React Native.',
-    className: 'md:col-span-2', // change to md:col-span-2
+    className: 'md:col-span-2',
     thumbnail: '/exp2.svg',
   },
   {
     id: 3,
     title: 'Freelance App Dev Project',
     desc: 'Led the dev of a mobile app for a client, from initial concept to deployment on app stores.',
-    className: 'md:col-span-2', // change to md:col-span-2
+    className: 'md:col-span-2',
     thumbnail: '/exp3.svg',
   },
   {
     id: 4,
-    title: 'Lead Frontend Developer',
-    desc: 'Developed and maintained user-facing features using modern frontend technologies.',
+    title: 'Lead Fullstack Developer',
+    desc: 'Developed and maintained features using modern frontend and backend technologies.',
     className: 'md:col-span-2',
     thumbnail: '/exp4.svg',
   },
@@ -208,10 +202,10 @@ export const socialMedia = [
   },
   {
     id: 2,
-    img: '/twit.svg',
+    img: '/link.svg',
   },
   {
     id: 3,
-    img: '/link.svg',
+    img: '/twit.svg',
   },
 ]

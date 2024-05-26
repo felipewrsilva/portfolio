@@ -1,7 +1,8 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable react/no-unknown-property */
 'use client'
+
 import { useEffect, useRef, useState } from 'react'
 import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from 'three'
 import ThreeGlobe from 'three-globe'
@@ -151,22 +152,6 @@ export function Globe({ globeConfig, data }: WorldProps) {
     setGlobeData(filteredPoints)
   }
 
-  useEffect(() => {
-    if (globeRef.current && globeData) {
-      globeRef.current
-        .hexPolygonsData(countries.features)
-        .hexPolygonResolution(3)
-        .hexPolygonMargin(0.7)
-        .showAtmosphere(defaultProps.showAtmosphere)
-        .atmosphereColor(defaultProps.atmosphereColor)
-        .atmosphereAltitude(defaultProps.atmosphereAltitude)
-        .hexPolygonColor(() => {
-          return defaultProps.polygonColor
-        })
-      startAnimation()
-    }
-  }, [globeData])
-
   const startAnimation = () => {
     if (!globeRef.current || !globeData) return
 
@@ -206,6 +191,29 @@ export function Globe({ globeConfig, data }: WorldProps) {
   }
 
   useEffect(() => {
+    if (globeRef.current && globeData) {
+      globeRef.current
+        .hexPolygonsData(countries.features)
+        .hexPolygonResolution(3)
+        .hexPolygonMargin(0.7)
+        .showAtmosphere(defaultProps.showAtmosphere)
+        .atmosphereColor(defaultProps.atmosphereColor)
+        .atmosphereAltitude(defaultProps.atmosphereAltitude)
+        .hexPolygonColor(() => {
+          return defaultProps.polygonColor
+        })
+      startAnimation()
+    }
+  }, [
+    defaultProps.atmosphereAltitude,
+    defaultProps.atmosphereColor,
+    defaultProps.polygonColor,
+    defaultProps.showAtmosphere,
+    globeData,
+    startAnimation,
+  ])
+
+  useEffect(() => {
     if (!globeRef.current || !globeData) return
 
     const interval = setInterval(() => {
@@ -240,7 +248,7 @@ export function WebGLRendererConfig() {
     gl.setPixelRatio(window.devicePixelRatio)
     gl.setSize(size.width, size.height)
     gl.setClearColor(0xffaaff, 0)
-  }, [gl, size.height, size.width])
+  }, [])
 
   return null
 }

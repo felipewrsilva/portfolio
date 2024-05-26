@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+
 import './globals.css'
-import { ThemeProvider } from '@/components/ThemeProvider'
+import { ThemeProvider } from './provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +17,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/fs-logo.svg" sizes="any" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"

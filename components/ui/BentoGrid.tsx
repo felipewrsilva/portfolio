@@ -1,17 +1,17 @@
-'use client'
-
+/* eslint-disable @next/next/no-img-element */
 import { useState } from 'react'
 import { IoCopyOutline } from 'react-icons/io5'
 
-import Lottie from 'react-lottie'
+import dynamic from 'next/dynamic'
 
-import { cn } from '@/utils/cn'
+import { cn } from '@/lib/utils'
 
 import { BackgroundGradientAnimation } from './GradientBg'
 import GridGlobe from './GridGlobe'
 import animationData from '@/data/confetti.json'
 import MagicButton from '../MagicButton'
-import Image from 'next/image'
+
+const Lottie = dynamic(() => import('react-lottie'), { ssr: false })
 
 export const BentoGrid = ({
   className,
@@ -52,9 +52,17 @@ export const BentoGridItem = ({
   spareImg?: string
 }) => {
   const leftLists = ['ReactJS', 'Express', 'Typescript']
-  const rightLists = ['VueJS', 'NextJS', 'GraphQL']
+  const rightLists = ['VueJS', 'NuxtJS', 'GraphQL']
 
   const [copied, setCopied] = useState(false)
+
+  const handleCopy = () => {
+    if (typeof window === 'undefined') return
+
+    const text = 'felipewrsilva@gmail.com'
+    navigator.clipboard.writeText(text)
+    setCopied(true)
+  }
 
   const defaultOptions = {
     loop: copied,
@@ -63,18 +71,6 @@ export const BentoGridItem = ({
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice',
     },
-  }
-
-  const handleCopy = () => {
-    if (typeof navigator !== 'undefined' && navigator.clipboard) {
-      const text = 'felipewrsilva@gmail.com'
-      navigator.clipboard
-        .writeText(text)
-        .then(() => setCopied(true))
-        .catch((error) => console.error('Error copying text: ', error))
-    } else {
-      console.error('Clipboard API not supported')
-    }
   }
 
   return (
@@ -92,11 +88,9 @@ export const BentoGridItem = ({
       <div className={`${id === 6 && 'flex justify-center'} h-full`}>
         <div className="absolute h-full w-full">
           {img && (
-            <Image
+            <img
               src={img}
               alt={img}
-              width={100}
-              height={100}
               className={cn(imgClassName, 'object-cover object-center ')}
             />
           )}
@@ -106,12 +100,10 @@ export const BentoGridItem = ({
             id === 5 && 'w-full opacity-80'
           } `}
         >
-          {spareImg && typeof document !== 'undefined' && (
-            <Image
+          {spareImg && (
+            <img
               src={spareImg}
               alt={spareImg}
-              width={100}
-              height={100}
               className="h-full w-full object-cover object-center"
             />
           )}
