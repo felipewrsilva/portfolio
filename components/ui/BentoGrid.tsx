@@ -5,8 +5,6 @@ import { cn } from '@/lib/utils'
 import { BackgroundGradientAnimation } from './GradientBg'
 import GridGlobe from './GridGlobe'
 import MagicButton from '../MagicButton'
-import { LazyLottie } from './LazyLottie'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 export const BentoGrid = ({
   className,
@@ -50,7 +48,6 @@ export const BentoGridItem = ({
   const rightLists = ['VueJS', 'NuxtJS', 'GraphQL']
 
   const [copied, setCopied] = useState(false)
-  const queryClient = new QueryClient()
 
   const handleCopy = () => {
     const text = 'felipewrsilva@gmail.com'
@@ -150,21 +147,10 @@ export const BentoGridItem = ({
                 className={`absolute -bottom-5 right-0 ${
                   copied ? 'block' : 'block'
                 }`}
-              >
-                <QueryClientProvider client={queryClient}>
-                  <LazyLottie
-                    id="empty-box"
-                    getAnimationData={() => import('@/data/confetti.json')}
-                    loop={copied}
-                    autoplay={copied}
-                    height={200}
-                    width={400}
-                  />
-                </QueryClientProvider>
-              </div>
+              ></div>
 
               <MagicButton
-                title={copied ? 'Email is Copied!' : 'Copy my email address'}
+                title={copied ? 'Email is copied!' : 'Copy my email address'}
                 icon={<IoCopyOutline />}
                 position="left"
                 handleClick={handleCopy}
