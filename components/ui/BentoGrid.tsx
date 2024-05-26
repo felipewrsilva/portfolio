@@ -1,17 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from 'react'
 import { IoCopyOutline } from 'react-icons/io5'
-
-import dynamic from 'next/dynamic'
-
 import { cn } from '@/lib/utils'
-
 import { BackgroundGradientAnimation } from './GradientBg'
 import GridGlobe from './GridGlobe'
-import animationData from '@/data/confetti.json'
 import MagicButton from '../MagicButton'
-
-const Lottie = dynamic(() => import('react-lottie'), { ssr: false })
+import { LazyLottie } from './LazyLottie'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 export const BentoGrid = ({
   className,
@@ -55,22 +50,12 @@ export const BentoGridItem = ({
   const rightLists = ['VueJS', 'NuxtJS', 'GraphQL']
 
   const [copied, setCopied] = useState(false)
+  const queryClient = new QueryClient()
 
   const handleCopy = () => {
-    if (typeof window === 'undefined') return
-
     const text = 'felipewrsilva@gmail.com'
     navigator.clipboard.writeText(text)
     setCopied(true)
-  }
-
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
-    },
   }
 
   return (
@@ -166,7 +151,16 @@ export const BentoGridItem = ({
                   copied ? 'block' : 'block'
                 }`}
               >
-                <Lottie options={defaultOptions} height={200} width={400} />
+                <QueryClientProvider client={queryClient}>
+                  <LazyLottie
+                    id="empty-box"
+                    getAnimationData={() => import('@/data/confetti.json')}
+                    loop={copied}
+                    autoplay={copied}
+                    height={200}
+                    width={400}
+                  />
+                </QueryClientProvider>
               </div>
 
               <MagicButton
