@@ -9,7 +9,6 @@ import {
 } from 'framer-motion'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
-import { navItems } from '@/data'
 import { Dictionary } from '@/app/dictionaries'
 
 export const FloatingNav = ({
@@ -19,24 +18,12 @@ export const FloatingNav = ({
   dict: Dictionary
   className?: string
 }) => {
-  navItems.forEach((element) => {
-    switch (element.name) {
-      case 'About':
-        element.name = dict.page.floatingNav.about
-        break
-      case 'Contact':
-        element.name = dict.page.floatingNav.contact
-        break
-      case 'Projects':
-        element.name = dict.page.floatingNav.projects
-        break
-      case 'Testimonials':
-        element.name = dict.page.floatingNav.testimonials
-        break
-      default:
-        break
-    }
-  })
+  const navItems = [
+    { name: dict.page.floatingNav.about, link: '#about' },
+    { name: dict.page.floatingNav.projects, link: '#projects' },
+    { name: dict.page.floatingNav.testimonials, link: '#testimonials' },
+    { name: dict.page.floatingNav.contact, link: '#contact' },
+  ]
 
   const { scrollYProgress } = useScroll()
 

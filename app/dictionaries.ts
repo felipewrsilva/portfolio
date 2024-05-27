@@ -3,6 +3,10 @@ import 'server-only'
 // Define the structure of the dictionary
 export interface Dictionary {
   page: {
+    bentoGrid: {
+      copied: string
+      notCopied: string
+    }
     floatingNav: {
       about: string
       projects: string
@@ -16,7 +20,8 @@ export interface Dictionary {
       callToAction: string
     }
     gridItems: Array<{
-      /* Define your grid item structure here */
+      title: string
+      description: string
     }>
     projects: Array<{
       /* Define your projects structure here */

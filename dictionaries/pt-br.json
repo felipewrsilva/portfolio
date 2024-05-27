@@ -1,5 +1,9 @@
 {
   "page": {
+    "bentoGrid": {
+      "copied": "Email copiado!",
+      "notCopied": "Copie o meu email"
+    },
     "floatingNav": {
       "about": "Sobre",
       "projects": "Projetos",
@@ -8,7 +12,7 @@
     },
     "header": {
       "title": "Magia da Web Dinâmica com Next.js",
-      "tagline": "Transformando Conceitos em Experiências de Usuário Sem Interrupções",
+      "tagline": "Transformando ideias em experiências de usuário contínuas e naturais.",
       "introduction": "Oi! Eu sou Felipe, um Desenvolvedor Fullstack baseado no Brasil.",
       "callToAction": "Mostre meu trabalho"
     },
@@ -22,12 +26,16 @@
         "description": ""
       },
       {
+        "title": "Tech Stack",
+        "description": "Melhorando constantemente"
+      },
+      {
         "title": "Entusiasta de tecnologia com paixão por desenvolvimento",
         "description": ""
       },
       {
         "title": "Atualmente trabalhando em uma biblioteca CI/CD para implantações de software",
-        "description": "O Bastidor"
+        "description": "Bastidores"
       },
       {
         "title": "Você quer começar um projeto juntos?",

@@ -21,9 +21,9 @@ const Home = async () => {
     <main className="relative mx-auto flex flex-col items-center justify-center overflow-hidden bg-black-100 px-5 sm:px-10">
       <div className="w-full max-w-7xl">
         <FloatingNav dict={dict} />
-        <Hero />
-        <Grid />
-        <RecentProjects />
+        <Hero dict={dict} />
+        <Grid dict={dict} />
+        {/* <RecentProjects /> */}
         <Clients />
         <Experience />
         <Approach />

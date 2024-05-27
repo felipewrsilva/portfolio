@@ -1,5 +1,9 @@
 {
   "page": {
+    "bentoGrid": {
+      "copied": "Email is copied!",
+      "notCopied": "Copy my email address"
+    },
     "floatingNav": {
       "about": "About",
       "projects": "Projects",
@@ -24,6 +28,10 @@
       {
         "title": "Tech enthusiast with a passion for development",
         "description": ""
+      },
+      {
+        "title": "My tech stack",
+        "description": "I constantly try to improve things"
       },
       {
         "title": "Currently working on CI/CD library for software deployments",
