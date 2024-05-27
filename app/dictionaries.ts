@@ -41,6 +41,11 @@ export interface Dictionary {
       title: string
       description: string
     }>
+    approach: string
+    approaches: Array<{
+      title: string
+      description: string
+    }>
   }
 }
 

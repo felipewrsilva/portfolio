@@ -1,5 +1,6 @@
 {
   "page": {
+    "approach": "Minha abordagem",
     "experience": "Experiência de trabalho",
     "hero": "Veja meu trabalho",
     "client": {
@@ -104,6 +105,20 @@
       {
         "title": "Desenvolvedor Fullstack Líder",
         "description": "Desenvolveu e manteve funcionalidades usando tecnologias modernas de frontend e backend."
+      }
+    ],
+    "approaches": [
+      {
+        "title": "Planejamento e Estratégia",
+        "description": "Vamos colaborar para mapear os objetivos do seu site, público-alvo e funcionalidades-chave. Vamos discutir coisas como estrutura do site, navegação e requisitos de conteúdo."
+      },
+      {
+        "title": "Desenvolvimento e Atualização de Progresso",
+        "description": "Assim que concordarmos com o plano, eu coloco minha playlist lofi para tocar e mergulho na codificação. Desde esboços iniciais até código refinado, mantenho você atualizado a cada passo do caminho."
+      },
+      {
+        "title": "Desenvolvimento e Lançamento",
+        "description": "Aqui é onde a mágica acontece! Com base no design aprovado, traduzirei tudo em código funcional, construindo seu site do zero."
       }
     ]
   }
