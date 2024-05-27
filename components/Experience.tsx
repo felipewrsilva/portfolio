@@ -3,14 +3,44 @@
 
 import React from 'react'
 
-import { workExperience } from '@/data'
+import { HeroProps } from '@/data'
 import { Button } from './ui/MovingBorders'
 
-const Experience = () => {
+const Experience: React.FC<HeroProps> = ({ dict }) => {
+  const workExperience = [
+    {
+      id: 1,
+      title: dict.page.experiences[0].title,
+      desc: dict.page.experiences[0].description,
+      className: 'md:col-span-2',
+      thumbnail: '/exp1.svg',
+    },
+    {
+      id: 2,
+      title: dict.page.experiences[1].title,
+      desc: dict.page.experiences[1].description,
+      className: 'md:col-span-2',
+      thumbnail: '/exp2.svg',
+    },
+    {
+      id: 3,
+      title: dict.page.experiences[2].title,
+      desc: dict.page.experiences[2].description,
+      className: 'md:col-span-2',
+      thumbnail: '/exp3.svg',
+    },
+    {
+      id: 4,
+      title: dict.page.experiences[3].title,
+      desc: dict.page.experiences[3].description,
+      className: 'md:col-span-2',
+      thumbnail: '/exp4.svg',
+    },
+  ]
   return (
     <div className="w-full py-20">
       <h1 className="heading">
-        My <span className="text-purple">work experience</span>
+        <span className="text-purple">{dict.page.experience}</span>
       </h1>
 
       <div className="mt-12 grid w-full grid-cols-1 gap-10 lg:grid-cols-4">

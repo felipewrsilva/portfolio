@@ -3,6 +3,7 @@ import 'server-only'
 // Define the structure of the dictionary
 export interface Dictionary {
   page: {
+    experience: string
     hero: string
     client: {
       words: string
@@ -37,7 +38,8 @@ export interface Dictionary {
       role: string
     }>
     experiences: Array<{
-      /* Define your experiences structure here */
+      title: string
+      description: string
     }>
   }
 }

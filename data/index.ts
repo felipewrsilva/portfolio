@@ -72,37 +72,6 @@ export const companies = [
   },
 ]
 
-export const workExperience = [
-  {
-    id: 1,
-    title: 'Software Engineer Intern',
-    desc: 'Assisted in the development of a web-based platform, enhancing functionality and interactivity.',
-    className: 'md:col-span-2',
-    thumbnail: '/exp1.svg',
-  },
-  {
-    id: 2,
-    title: 'Mobile App Dev - Sollana Tech',
-    desc: 'Designed and developed mobile app for both iOS & Android platforms using React Native.',
-    className: 'md:col-span-2',
-    thumbnail: '/exp2.svg',
-  },
-  {
-    id: 3,
-    title: 'Freelance App Dev Project',
-    desc: 'Led the dev of a mobile app for a client, from initial concept to deployment on app stores.',
-    className: 'md:col-span-2',
-    thumbnail: '/exp3.svg',
-  },
-  {
-    id: 4,
-    title: 'Lead Fullstack Developer',
-    desc: 'Developed and maintained features using modern frontend and backend technologies.',
-    className: 'md:col-span-2',
-    thumbnail: '/exp4.svg',
-  },
-]
-
 export const socialMedia = [
   {
     id: 1,

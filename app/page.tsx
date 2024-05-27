@@ -23,9 +23,9 @@ const Home = async () => {
         <Hero dict={dict} />
         <Grid dict={dict} />
         <Clients dict={dict} />
-        <Experience />
-        <Approach />
-        <Footer />
+        <Experience dict={dict} />
+        <Approach dict={dict} />
+        <Footer dict={dict} />
       </div>
     </main>
   )
