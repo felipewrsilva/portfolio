@@ -120,6 +120,11 @@
         "title": "Development & Launch",
         "description": "This is where the magic happens! Based on the approved design, I'll translate everything into functional code, building your website from the ground up."
       }
-    ]
+    ],
+    "footer": {
+      "presence": "Ready to take your digital presence to the next level?",
+      "discussion": "Reach out to me today and let's discuss how I can help you achieve your goals.",
+      "contact": "Let's get in touch"
+    }
   }
 }

@@ -120,6 +120,11 @@
         "title": "Desenvolvimento e Lançamento",
         "description": "Aqui é onde a mágica acontece! Com base no design aprovado, traduzirei tudo em código funcional, construindo seu site do zero."
       }
-    ]
+    ],
+    "footer": {
+      "presence": "Pronto para levar sua presença digital para o próximo nível?",
+      "discussion": "Entre em contato comigo hoje mesmo e vamos discutir como posso ajudá-lo a alcançar seus objetivos.",
+      "contact": "Vamos entrar em contato"
+    }
   }
 }

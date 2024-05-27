@@ -46,6 +46,11 @@ export interface Dictionary {
       title: string
       description: string
     }>
+    footer: {
+      presence: string
+      discussion: string
+      contact: string
+    }
   }
 }
 
