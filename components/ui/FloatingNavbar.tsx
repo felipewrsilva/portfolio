@@ -9,30 +9,31 @@ import {
 } from 'framer-motion'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import { Dictionary } from '@/app/dictionaries'
 
 export const FloatingNav = ({
-  navItems,
+  dict,
   className,
 }: {
-  navItems: {
-    name: string
-    link: string
-    icon?: JSX.Element
-  }[]
+  dict: Dictionary
   className?: string
 }) => {
+  const navItems = [
+    { name: dict.page.floatingNav.about, link: '#about' },
+    { name: dict.page.floatingNav.projects, link: '#projects' },
+    { name: dict.page.floatingNav.testimonials, link: '#testimonials' },
+    { name: dict.page.floatingNav.contact, link: '#contact' },
+  ]
+
   const { scrollYProgress } = useScroll()
 
-  // set true for the initial state so that nav bar is visible in the hero section
   const [visible, setVisible] = useState(true)
 
   useMotionValueEvent(scrollYProgress, 'change', (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === 'number') {
       const direction = current! - scrollYProgress.getPrevious()!
 
       if (scrollYProgress.get() < 0.05) {
-        // also set true for the initial state
         setVisible(true)
       } else {
         if (direction < 0) {

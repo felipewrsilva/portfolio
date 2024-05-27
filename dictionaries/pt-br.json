@@ -1,0 +1,130 @@
+{
+  "page": {
+    "approach": "Minha abordagem",
+    "experience": "Experiência de trabalho",
+    "hero": "Veja meu trabalho",
+    "client": {
+      "words": "Palavras gentis de",
+      "partners": "parceiros satisfeitos"
+    },
+    "bentoGrid": {
+      "copied": "Email copiado!",
+      "notCopied": "Copie o meu email"
+    },
+    "floatingNav": {
+      "about": "Sobre",
+      "projects": "Projetos",
+      "testimonials": "Depoimentos",
+      "contact": "Contato"
+    },
+    "header": {
+      "title": "Explorando a magia da web com Next.js",
+      "tagline": "Transformando ideias em experiências de usuário contínuas e naturais.",
+      "introduction": "Oi! Eu sou Felipe, um Desenvolvedor Fullstack baseado no Brasil.",
+      "callToAction": "Mostre meu trabalho"
+    },
+    "gridItems": [
+      {
+        "title": "Eu priorizo a colaboração com o cliente, promovendo comunicação aberta",
+        "description": ""
+      },
+      {
+        "title": "Sou muito flexível com comunicações em diferentes fusos horários",
+        "description": ""
+      },
+      {
+        "title": "Tech Stack",
+        "description": "Melhorando constantemente"
+      },
+      {
+        "title": "Entusiasta de tecnologia com paixão por desenvolvimento",
+        "description": ""
+      },
+      {
+        "title": "Atualmente trabalhando em uma biblioteca CI/CD para implantações de software",
+        "description": "Bastidores"
+      },
+      {
+        "title": "Quer começar um projeto?",
+        "description": ""
+      }
+    ],
+    "projects": [
+      {
+        "title": "Sistema Solar 3D com Planetas para Explorar",
+        "description": "Explore as maravilhas do nosso sistema solar com esta cativante simulação 3D dos planetas usando Three.js."
+      },
+      {
+        "title": "Yoom - Aplicativo de Videoconferência",
+        "description": "Simplifique sua experiência de videoconferência com o Yoom. Conecte-se perfeitamente com colegas e amigos."
+      },
+      {
+        "title": "SaaS de Imagem AI - Aplicação Canva",
+        "description": "Um aplicativo REAL de Software-como-Serviço com recursos de IA e um sistema de pagamentos e créditos usando a mais recente pilha de tecnologia."
+      },
+      {
+        "title": "Website 3D Animado do Apple iPhone",
+        "description": "Recriado o site do Apple iPhone 15 Pro, combinando animações GSAP e efeitos 3D com Three.js."
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Na UniChem, Felipe foi fundamental para garantir a privacidade dos dados e a conformidade com as regulamentações relevantes. Ele identificou e mitigou proativamente questões críticas no início do processo de desenvolvimento, prevenindo um aumento potencial de 30% nos defeitos pós-lançamento. Sua habilidade em desenvolver planos de teste abrangentes e resolver problemas antes que se tornassem grandes destaca sua abordagem meticulosa e voltada para o futuro no desenvolvimento de software.",
+        "name": "Carlos Mendes",
+        "role": "Líder de Garantia de Qualidade"
+      },
+      {
+        "quote": "Durante seu tempo na UniChem, Felipe se destacou em ambientes colaborativos, alinhando soluções técnicas com objetivos de negócios ao trabalhar de perto com gerentes de produto e stakeholders. Sua liderança em sessões de compartilhamento de conhecimento e facilitação do aprendizado em equipe promoveu uma cultura de melhoria contínua e inovação dentro da equipe.",
+        "name": "Pedro Santos",
+        "role": "Gerente de Desenvolvimento de Produto"
+      },
+      {
+        "quote": "Na Sollana, Felipe demonstrou habilidades excepcionais na geração de insights baseados em dados que apoiaram diretamente decisões empresariais importantes e aumentaram a receita. Sua proficiência em desenvolver e manter scripts SQL, otimizar o desempenho do banco de dados e reduzir os defeitos relatados pelos usuários em 30% através de testes automatizados de aplicativos web com Selenium, ressalta seu compromisso em entregar soluções de alta qualidade.",
+        "name": "Bruno Almeida",
+        "role": "Diretor de Análise de Dados"
+      },
+      {
+        "quote": "Em seu papel na IQVia, Felipe aprimorou significativamente a eficiência operacional ao automatizar independentemente implantações de banco de dados em oito países da América Latina. Sua implementação de pipelines CI/CD e testes automatizados não apenas melhorou a qualidade do software, mas também acelerou os ciclos de desenvolvimento, demonstrando sua forte capacidade de otimizar processos.",
+        "name": "Mariano Pereira",
+        "role": "Gerente de Operações de TI"
+      }
+    ],
+    "experiences": [
+      {
+        "title": "Estagiário de Engenharia de Software",
+        "description": "Assistiu no desenvolvimento de uma plataforma baseada na web, aprimorando a funcionalidade e interatividade."
+      },
+      {
+        "title": "Desenvolvedor de App Móvel - Sollana Tech",
+        "description": "Desenvolveu e projetou aplicativo móvel para plataformas iOS e Android usando React Native."
+      },
+      {
+        "title": "Projeto de Desenvolvimento de App Freelance",
+        "description": "Liderou o desenvolvimento de um aplicativo móvel para um cliente, desde o conceito inicial até a implantação nas lojas de aplicativos."
+      },
+      {
+        "title": "Desenvolvedor Fullstack Líder",
+        "description": "Desenvolveu e manteve funcionalidades usando tecnologias modernas de frontend e backend."
+      }
+    ],
+    "approaches": [
+      {
+        "title": "Planejamento e Estratégia",
+        "description": "Vamos colaborar para mapear os objetivos do seu site, público-alvo e funcionalidades-chave. Vamos discutir coisas como estrutura do site, navegação e requisitos de conteúdo."
+      },
+      {
+        "title": "Desenvolvimento e Atualização de Progresso",
+        "description": "Assim que concordarmos com o plano, eu coloco minha playlist lofi para tocar e mergulho na codificação. Desde esboços iniciais até código refinado, mantenho você atualizado a cada passo do caminho."
+      },
+      {
+        "title": "Desenvolvimento e Lançamento",
+        "description": "Aqui é onde a mágica acontece! Com base no design aprovado, traduzirei tudo em código funcional, construindo seu site do zero."
+      }
+    ],
+    "footer": {
+      "presence": "Pronto para levar sua presença digital para o próximo nível?",
+      "discussion": "Entre em contato comigo hoje mesmo e vamos discutir como posso ajudá-lo a alcançar seus objetivos.",
+      "contact": "Vamos entrar em contato"
+    }
+  }
+}

@@ -1,22 +1,23 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+'use client'
+
 import React from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import { CanvasRevealEffect } from './ui/CanvasRevealEffect'
+import { HeroProps } from '@/data'
 
-const Approach = () => {
+const Approach: React.FC<HeroProps> = ({ dict }) => {
   return (
     <section className="w-full py-20">
       <h1 className="heading">
-        My <span className="text-purple">approach</span>
+        <span className="text-purple">{dict.page.approach}</span>
       </h1>
       <div className="my-20 flex w-full flex-col items-center justify-center gap-4 lg:flex-row">
         <Card
-          title="Planning & Strategy"
+          title={dict.page.approaches[0].title}
           icon={<AceternityIcon order="Phase 1" />}
-          des="We'll collaborate to map out your website's goals, target audience, 
-          and key functionalities. We'll discuss things like site structure, 
-          navigation, and content requirements."
+          des={dict.page.approaches[0].description}
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -24,11 +25,9 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Development & Progress Update"
+          title={dict.page.approaches[1].title}
           icon={<AceternityIcon order="Phase 2" />}
-          des="Once we agree on the plan, I cue my lofi playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
-          every step of the way."
+          des={dict.page.approaches[1].description}
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -41,11 +40,9 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Development & Launch"
+          title={dict.page.approaches[2].title}
           icon={<AceternityIcon order="Phase 3" />}
-          des="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
-          from the ground up."
+          des={dict.page.approaches[2].description}
         >
           <CanvasRevealEffect
             animationSpeed={3}

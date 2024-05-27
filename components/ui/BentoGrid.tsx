@@ -8,6 +8,7 @@ import { BackgroundGradientAnimation } from './GradientBg'
 import GridGlobe from './GridGlobe'
 import MagicButton from '../MagicButton'
 import dynamic from 'next/dynamic'
+import { Dictionary } from '@/app/dictionaries'
 
 const ConfettiAnimation = dynamic(
   () => import('./ConfettiAnimation').then((mod) => mod.default),
@@ -42,6 +43,7 @@ export const BentoGridItem = ({
   imgClassName,
   titleClassName,
   spareImg,
+  dict,
 }: {
   className?: string
   id: number
@@ -51,6 +53,7 @@ export const BentoGridItem = ({
   imgClassName?: string
   titleClassName?: string
   spareImg?: string
+  dict: Dictionary
 }) => {
   const leftLists = ['ReactJS', 'Express', 'Typescript']
   const rightLists = ['VueJS', 'NuxtJS', 'GraphQL']
@@ -160,7 +163,11 @@ export const BentoGridItem = ({
               </div>
 
               <MagicButton
-                title={copied ? 'Email is copied!' : 'Copy my email address'}
+                title={
+                  copied
+                    ? dict.page.bentoGrid.copied
+                    : dict.page.bentoGrid.notCopied
+                }
                 icon={<IoCopyOutline />}
                 position="left"
                 handleClick={handleCopy}
