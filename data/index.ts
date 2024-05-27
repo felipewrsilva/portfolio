@@ -39,33 +39,6 @@ export const projects = [
   },
 ]
 
-export const testimonials = [
-  {
-    quote:
-      'At UniChem, Felipe was instrumental in ensuring data privacy and compliance with relevant regulations. They proactively identified and mitigated critical issues early in the development process, preventing a potential 30% increase in post-release defects. Their ability to develop comprehensive test plans and address issues before they became major problems highlights their forward-thinking and meticulous approach to software development.',
-    name: 'Carlos Mendes',
-    title: 'Quality Assurance Lead',
-  },
-  {
-    quote:
-      'During their tenure at UniChem, Felipe excelled in collaborative environments, aligning technical solutions with business goals by working closely with product managers and stakeholders. Their leadership in knowledge-sharing sessions and facilitation of team learning fostered a culture of continuous improvement and innovation within the team.',
-    name: 'Pedro Santos',
-    title: 'Product Development Manager',
-  },
-  {
-    quote:
-      'At Sollana, Felipe demonstrated exceptional skills in generating data-driven insights that directly supported key business decisions and boosted revenue. Their proficiency in developing and maintaining SQL scripts, optimizing database performance, and reducing user-reported defects by 30% through automated web application testing with Selenium, underscores their commitment to delivering high-quality solutions.',
-    name: 'Bruno Almeida',
-    title: 'Data Analytics Director',
-  },
-  {
-    quote:
-      'In their role at IQVia, Felipe significantly enhanced operational efficiency by independently automating database deployments across eight Latin American countries. Their implementation of CI/CD pipelines and automated testing not only improved software quality but also accelerated development cycles, showcasing their strong capability in streamlining processes.',
-    name: 'Mariano Pereira',
-    title: 'IT Operations Manager',
-  },
-]
-
 export const companies = [
   {
     id: 1,

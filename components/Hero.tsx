@@ -47,7 +47,7 @@ const Hero: React.FC<HeroProps> = ({ dict }) => {
 
           <a href="#about">
             <MagicButton
-              title="Show my work"
+              title={dict.page.hero}
               icon={<FaLocationArrow />}
               position="right"
             />

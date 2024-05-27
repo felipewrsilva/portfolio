@@ -3,10 +3,16 @@
 
 import React from 'react'
 
-import { HeroProps, companies, testimonials } from '@/data'
+import { HeroProps, companies } from '@/data'
 import { InfiniteMovingCards } from './ui/InfiniteCards'
 
 const Clients: React.FC<HeroProps> = ({ dict }) => {
+  const testimonials = dict.page.testimonials.map((testimonial) => ({
+    quote: testimonial.quote,
+    name: testimonial.name,
+    title: testimonial.role,
+  }))
+
   return (
     <section id="testimonials" className="py-20">
       <h1 className="heading">
