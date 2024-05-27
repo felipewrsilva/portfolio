@@ -1,5 +1,9 @@
 {
   "page": {
+    "client": {
+      "words": "Palavras gentis de",
+      "partners": "parceiros satisfeitos"
+    },
     "bentoGrid": {
       "copied": "Email copiado!",
       "notCopied": "Copie o meu email"
@@ -11,7 +15,7 @@
       "contact": "Contato"
     },
     "header": {
-      "title": "Magia da Web Dinâmica com Next.js",
+      "title": "Explorando a magia da web com Next.js",
       "tagline": "Transformando ideias em experiências de usuário contínuas e naturais.",
       "introduction": "Oi! Eu sou Felipe, um Desenvolvedor Fullstack baseado no Brasil.",
       "callToAction": "Mostre meu trabalho"
@@ -38,7 +42,7 @@
         "description": "Bastidores"
       },
       {
-        "title": "Você quer começar um projeto juntos?",
+        "title": "Quer começar um projeto?",
         "description": ""
       }
     ],

@@ -6,7 +6,6 @@ import Footer from '@/components/Footer'
 import Clients from '@/components/Clients'
 import Approach from '@/components/Approach'
 import Experience from '@/components/Experience'
-import RecentProjects from '@/components/RecentProjects'
 import { FloatingNav } from '@/components/ui/FloatingNavbar'
 import { getDictionary } from './dictionaries'
 import { headers } from 'next/headers'
@@ -23,8 +22,7 @@ const Home = async () => {
         <FloatingNav dict={dict} />
         <Hero dict={dict} />
         <Grid dict={dict} />
-        {/* <RecentProjects /> */}
-        <Clients />
+        <Clients dict={dict} />
         <Experience />
         <Approach />
         <Footer />

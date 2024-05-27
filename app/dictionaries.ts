@@ -3,6 +3,10 @@ import 'server-only'
 // Define the structure of the dictionary
 export interface Dictionary {
   page: {
+    client: {
+      words: string
+      partners: string
+    }
     bentoGrid: {
       copied: string
       notCopied: string

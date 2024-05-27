@@ -1,5 +1,9 @@
 {
   "page": {
+    "client": {
+      "words": "Kind words from",
+      "partners": " satisfied partners"
+    },
     "bentoGrid": {
       "copied": "Email is copied!",
       "notCopied": "Copy my email address"
