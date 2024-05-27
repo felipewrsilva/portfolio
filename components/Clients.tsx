@@ -3,15 +3,21 @@
 
 import React from 'react'
 
-import { companies, testimonials } from '@/data'
+import { HeroProps, companies } from '@/data'
 import { InfiniteMovingCards } from './ui/InfiniteCards'
 
-const Clients = () => {
+const Clients: React.FC<HeroProps> = ({ dict }) => {
+  const testimonials = dict.page.testimonials.map((testimonial) => ({
+    quote: testimonial.quote,
+    name: testimonial.name,
+    title: testimonial.role,
+  }))
+
   return (
     <section id="testimonials" className="py-20">
       <h1 className="heading">
-        Kind words from
-        <span className="text-purple"> satisfied partners</span>
+        {dict.page.client.words}
+        <span className="text-purple"> {dict.page.client.partners}</span>
       </h1>
 
       <div className="flex flex-col items-center max-lg:mt-10">

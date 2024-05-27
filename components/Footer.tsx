@@ -1,12 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
+'use client'
+
 import { FaLocationArrow } from 'react-icons/fa6'
 
-import { socialMedia } from '@/data'
+import { HeroProps, socialMedia } from '@/data'
 import MagicButton from './MagicButton'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const Footer = () => {
+const Footer: React.FC<HeroProps> = ({ dict }) => {
   return (
     <footer className="w-full pb-10 pt-20" id="contact">
       <div className="absolute -bottom-72 left-0 min-h-96 w-full">
@@ -18,17 +20,13 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence to the next level?
-        </h1>
+        <h1 className="heading lg:max-w-[45vw]">{dict.page.footer.presence}</h1>
         <p className="my-5 text-center text-white-200 md:mt-10">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
+          {dict.page.footer.discussion}
         </p>
         <a href="mailto:felipewrsilva@gmail.com">
           <MagicButton
-            title="Let's get in touch"
+            title={dict.page.footer.contact}
             icon={<FaLocationArrow />}
             position="right"
           />
