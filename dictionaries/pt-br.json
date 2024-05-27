@@ -19,17 +19,17 @@
     },
     "header": {
       "title": "Explorando a magia da web com Next.js",
-      "tagline": "Transformando ideias em experiências de usuário contínuas e naturais.",
-      "introduction": "Oi! Eu sou Felipe, um Desenvolvedor Fullstack baseado no Brasil.",
-      "callToAction": "Mostre meu trabalho"
+      "tagline": "Convertendo conceitos em experiências de usuário fluidas e contínuas.",
+      "introduction": "Oi! Sou Felipe, Desenvolvedor Fullstack no Brasil.",
+      "callToAction": "Ver o meu trabalho"
     },
     "gridItems": [
       {
-        "title": "Eu priorizo a colaboração com o cliente, promovendo comunicação aberta",
+        "title": "Priorizo a colaboração com o cliente, promovendo comunicação aberta",
         "description": ""
       },
       {
-        "title": "Sou muito flexível com comunicações em diferentes fusos horários",
+        "title": "Flexível com horário de trabalho",
         "description": ""
       },
       {
@@ -41,7 +41,7 @@
         "description": ""
       },
       {
-        "title": "Atualmente trabalhando em uma biblioteca CI/CD para implantações de software",
+        "title": "Trabalhando em uma biblioteca para implantações de software com CI/CD",
         "description": "Bastidores"
       },
       {
