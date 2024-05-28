@@ -1,9 +1,11 @@
 'use client'
 
+import { useContext } from 'react'
+import { DictionaryContext } from '@/components/PageContent'
 import { BentoGrid, BentoGridItem } from './ui/BentoGrid'
-import { HeroProps } from '@/data'
 
-const Grid: React.FC<HeroProps> = ({ dict }) => {
+export const Grid = () => {
+  const dict = useContext(DictionaryContext)
   const gridItems = [
     {
       id: 1,
@@ -80,7 +82,6 @@ const Grid: React.FC<HeroProps> = ({ dict }) => {
             imgClassName={item.imgClassName}
             titleClassName={item.titleClassName}
             spareImg={item.spareImg}
-            dict={dict}
           />
         ))}
       </BentoGrid>

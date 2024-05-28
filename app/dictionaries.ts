@@ -1,57 +1,6 @@
 import 'server-only'
 
-// Define the structure of the dictionary
-export interface Dictionary {
-  page: {
-    experience: string
-    hero: string
-    client: {
-      words: string
-      partners: string
-    }
-    bentoGrid: {
-      copied: string
-      notCopied: string
-    }
-    floatingNav: {
-      about: string
-      testimonials: string
-      contact: string
-    }
-    header: {
-      title: string
-      tagline: string
-      introduction: string
-      callToAction: string
-    }
-    gridItems: Array<{
-      title: string
-      description: string
-    }>
-    projects: Array<{
-      /* Define your projects structure here */
-    }>
-    testimonials: Array<{
-      quote: string
-      name: string
-      role: string
-    }>
-    experiences: Array<{
-      title: string
-      description: string
-    }>
-    approach: string
-    approaches: Array<{
-      title: string
-      description: string
-    }>
-    footer: {
-      presence: string
-      discussion: string
-      contact: string
-    }
-  }
-}
+import { Dictionary } from '@/data'
 
 // Define a type for the supported locales
 type Locale = 'en-US' | 'pt-BR'

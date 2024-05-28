@@ -1,12 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 
-import React from 'react'
+import React, { useContext } from 'react'
 
-import { HeroProps, companies } from '@/data'
+import { companies } from '@/data'
 import { InfiniteMovingCards } from './ui/InfiniteCards'
+import { DictionaryContext } from '@/components/PageContent'
 
-const Clients: React.FC<HeroProps> = ({ dict }) => {
+export const Clients = () => {
+  const dict = useContext(DictionaryContext)
+
   const testimonials = dict.page.testimonials.map((testimonial) => ({
     quote: testimonial.quote,
     name: testimonial.name,

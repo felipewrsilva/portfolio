@@ -1,12 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 
-import React from 'react'
+import React, { useContext } from 'react'
 
-import { HeroProps } from '@/data'
 import { Button } from './ui/MovingBorders'
+import { DictionaryContext } from '@/components/PageContent'
 
-const Experience: React.FC<HeroProps> = ({ dict }) => {
+export const Experience = () => {
+  const dict = useContext(DictionaryContext)
+
   const workExperience = [
     {
       id: 1,

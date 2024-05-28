@@ -1,7 +1,106 @@
-import { Dictionary } from '@/app/dictionaries'
+export interface Dictionary {
+  page: {
+    experience: string
+    hero: string
+    client: {
+      words: string
+      partners: string
+    }
+    bentoGrid: {
+      copied: string
+      notCopied: string
+    }
+    floatingNav: {
+      about: string
+      testimonials: string
+      contact: string
+    }
+    header: {
+      title: string
+      tagline: string
+      introduction: string
+      callToAction: string
+    }
+    gridItems: Array<{
+      title: string
+      description: string
+    }>
+    projects: Array<{
+      /* Define your projects structure here */
+    }>
+    testimonials: Array<{
+      quote: string
+      name: string
+      role: string
+    }>
+    experiences: Array<{
+      title: string
+      description: string
+    }>
+    approach: string
+    approaches: Array<{
+      title: string
+      description: string
+    }>
+    footer: {
+      presence: string
+      discussion: string
+      contact: string
+    }
+  }
+}
 
-export interface HeroProps {
-  dict: Dictionary
+export const defaultEnglishDictionary: Dictionary = {
+  page: {
+    experience: 'Experience',
+    hero: 'Hero',
+    client: {
+      words: 'Words',
+      partners: 'Partners',
+    },
+    bentoGrid: {
+      copied: 'Copied',
+      notCopied: 'Not Copied',
+    },
+    floatingNav: {
+      about: 'About',
+      testimonials: 'Testimonials',
+      contact: 'Contact',
+    },
+    header: {
+      title: 'Title',
+      tagline: 'Tagline',
+      introduction: 'Introduction',
+      callToAction: 'Call to Action',
+    },
+    gridItems: [
+      { title: 'Title', description: 'Description' },
+      { title: 'Title', description: 'Description' },
+      { title: 'Title', description: 'Description' },
+      { title: 'Title', description: 'Description' },
+      { title: 'Title', description: 'Description' },
+      { title: 'Title', description: 'Description' },
+    ],
+    projects: [],
+    testimonials: [],
+    experiences: [
+      { title: 'Title', description: 'Description' },
+      { title: 'Title', description: 'Description' },
+      { title: 'Title', description: 'Description' },
+      { title: 'Title', description: 'Description' },
+    ],
+    approach: 'Approach',
+    approaches: [
+      { title: 'Title', description: 'Description' },
+      { title: 'Title', description: 'Description' },
+      { title: 'Title', description: 'Description' },
+    ],
+    footer: {
+      presence: 'Presence',
+      discussion: 'Discussion',
+      contact: 'Contact',
+    },
+  },
 }
 
 export const projects = [

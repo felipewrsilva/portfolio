@@ -1,14 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { IoCopyOutline } from 'react-icons/io5'
 import { cn } from '@/lib/utils'
 import { BackgroundGradientAnimation } from './GradientBg'
 import GridGlobe from './GridGlobe'
 import MagicButton from '../MagicButton'
 import dynamic from 'next/dynamic'
-import { Dictionary } from '@/app/dictionaries'
+import { DictionaryContext } from '@/components/PageContent'
 
 const ConfettiAnimation = dynamic(
   () => import('./ConfettiAnimation').then((mod) => mod.default),
@@ -43,7 +43,6 @@ export const BentoGridItem = ({
   imgClassName,
   titleClassName,
   spareImg,
-  dict,
 }: {
   className?: string
   id: number
@@ -53,8 +52,8 @@ export const BentoGridItem = ({
   imgClassName?: string
   titleClassName?: string
   spareImg?: string
-  dict: Dictionary
 }) => {
+  const dict = useContext(DictionaryContext)
   const leftLists = ['ReactJS', 'Express', 'Typescript']
   const rightLists = ['VueJS', 'NuxtJS', 'GraphQL']
 
