@@ -1,7 +1,7 @@
 {
   "page": {
     "approach": "Minha abordagem",
-    "experience": "Experiência de trabalho",
+    "experience": "Experiências",
     "hero": "Veja meu trabalho",
     "client": {
       "words": "Palavras gentis de",
@@ -19,8 +19,8 @@
     },
     "header": {
       "title": "Explorando a magia da web com Next.js",
-      "tagline": "Convertendo conceitos em experiências de usuário fluidas e contínuas.",
-      "introduction": "Oi! Sou Felipe, Desenvolvedor Fullstack no Brasil.",
+      "tagline": "Convertendo conceitos em resultados com qualidade",
+      "introduction": "Oi! Sou Felipe, Desenvolvedor Fullstack no Brasil",
       "callToAction": "Ver o meu trabalho"
     },
     "gridItems": [
@@ -41,7 +41,7 @@
         "description": ""
       },
       {
-        "title": "Trabalhando em uma biblioteca para implantações de software com CI/CD",
+        "title": "Implementando uma biblioteca de Integração Continua e Entrega Contínua CI/CD",
         "description": "Bastidores"
       },
       {
@@ -122,9 +122,9 @@
       }
     ],
     "footer": {
-      "presence": "Pronto para levar sua presença digital para o próximo nível?",
+      "presence": "Pronto para elevar sua presença digital?",
       "discussion": "Entre em contato comigo hoje mesmo e vamos discutir como posso ajudá-lo a alcançar seus objetivos.",
-      "contact": "Vamos entrar em contato"
+      "contact": "Entre em contato"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "page": {
     "approach": "My approach",
-    "experience": "Work experience",
+    "experience": "Experience",
     "hero": "Show my work",
     "client": {
       "words": "Kind words from",
@@ -33,12 +33,12 @@
         "description": ""
       },
       {
-        "title": "Tech enthusiast with a passion for development",
-        "description": ""
-      },
-      {
         "title": "My tech stack",
         "description": "I constantly try to improve things"
+      },
+      {
+        "title": "Tech enthusiast with a passion for development",
+        "description": ""
       },
       {
         "title": "Currently working on CI/CD library for software deployments",
