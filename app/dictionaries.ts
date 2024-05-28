@@ -15,7 +15,6 @@ export interface Dictionary {
     }
     floatingNav: {
       about: string
-      projects: string
       testimonials: string
       contact: string
     }

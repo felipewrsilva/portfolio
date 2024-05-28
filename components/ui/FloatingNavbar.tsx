@@ -20,8 +20,8 @@ export const FloatingNav = ({
 }) => {
   const navItems = [
     { name: dict.page.floatingNav.about, link: '#about' },
-    { name: dict.page.floatingNav.projects, link: '#projects' },
     { name: dict.page.floatingNav.testimonials, link: '#testimonials' },
+    { name: dict.page.experience, link: '#experience' },
     { name: dict.page.floatingNav.contact, link: '#contact' },
   ]
 
