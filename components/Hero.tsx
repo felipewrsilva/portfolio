@@ -5,9 +5,11 @@ import { FaLocationArrow } from 'react-icons/fa6'
 import MagicButton from '@/components/MagicButton'
 import { Spotlight } from '@/components/ui/Spotlight'
 import { TextGenerateEffect } from '@/components/ui/TextGenerateEffect'
-import { HeroProps } from '@/data'
+import { useContext } from 'react'
+import { DictionaryContext } from '@/components/PageContent'
 
-const Hero: React.FC<HeroProps> = ({ dict }) => {
+export const Hero = () => {
+  const dict = useContext(DictionaryContext)
   return (
     <div className="pb-20 pt-36">
       <div>

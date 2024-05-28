@@ -3,12 +3,15 @@
 
 import { FaLocationArrow } from 'react-icons/fa6'
 
-import { HeroProps, socialMedia } from '@/data'
+import { socialMedia } from '@/data'
 import MagicButton from './MagicButton'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useContext } from 'react'
+import { DictionaryContext } from '@/components/PageContent'
 
-const Footer: React.FC<HeroProps> = ({ dict }) => {
+export const Footer = () => {
+  const dict = useContext(DictionaryContext)
   return (
     <footer className="w-full pb-10 pt-20" id="contact">
       <div className="absolute -bottom-72 left-0 min-h-96 w-full">

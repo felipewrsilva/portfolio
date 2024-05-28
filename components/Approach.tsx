@@ -1,13 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
-import React from 'react'
+import React, { useContext } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import { CanvasRevealEffect } from './ui/CanvasRevealEffect'
-import { HeroProps } from '@/data'
+import { DictionaryContext } from '@/components/PageContent'
 
-const Approach: React.FC<HeroProps> = ({ dict }) => {
+export const Approach = () => {
+  const dict = useContext(DictionaryContext)
+
   return (
     <section className="w-full py-20">
       <h1 className="heading">

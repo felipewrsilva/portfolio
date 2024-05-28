@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {
   motion,
   AnimatePresence,
@@ -9,15 +9,10 @@ import {
 } from 'framer-motion'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
-import { Dictionary } from '@/app/dictionaries'
+import { DictionaryContext } from '@/components/PageContent'
 
-export const FloatingNav = ({
-  dict,
-  className,
-}: {
-  dict: Dictionary
-  className?: string
-}) => {
+export const FloatingNav = ({ className }: { className?: string }) => {
+  const dict = useContext(DictionaryContext)
   const navItems = [
     { name: dict.page.floatingNav.about, link: '#about' },
     { name: dict.page.floatingNav.testimonials, link: '#testimonials' },
