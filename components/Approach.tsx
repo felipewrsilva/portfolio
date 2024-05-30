@@ -107,14 +107,14 @@ const Card = ({
           {icon}
         </div>
         <h2
-          className="relative z-10 mt-4 text-center text-3xl
+          className="relative z-10 mt-4 select-none text-center text-3xl
          font-bold text-black opacity-0 transition  duration-200 group-hover/canvas-card:-translate-y-2 
          group-hover/canvas-card:text-white group-hover/canvas-card:opacity-100 dark:text-white"
         >
           {title}
         </h2>
         <p
-          className="relative z-10 mt-4
+          className="relative z-10 mt-4 select-none
          text-center text-sm opacity-0 transition duration-200
          group-hover/canvas-card:-translate-y-2 group-hover/canvas-card:text-white group-hover/canvas-card:opacity-100"
           style={{ color: '#E4ECFF' }}
@@ -134,7 +134,7 @@ const AceternityIcon = ({ order }: { order: string }) => {
          bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
         />
         <span
-          className="inline-flex h-full w-full cursor-pointer items-center 
+          className="inline-flex h-full w-full cursor-pointer select-none items-center 
         justify-center rounded-full bg-slate-950 px-5 py-2 text-2xl font-bold text-purple backdrop-blur-3xl"
         >
           {order}
