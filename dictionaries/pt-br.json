@@ -19,13 +19,13 @@
     },
     "header": {
       "title": "Explorando a magia da web com Next.js",
-      "tagline": "Convertendo conceitos em resultados com qualidade",
-      "introduction": "Oi! Sou Felipe, Desenvolvedor Fullstack no Brasil",
-      "callToAction": "Ver o meu trabalho"
+      "tagline": "Convertendo conceitos em resultados de qualidade",
+      "introduction": "Oi! Eu sou Felipe, Desenvolvedor Fullstack",
+      "callToAction": "Veja o meu trabalho"
     },
     "gridItems": [
       {
-        "title": "Priorizo a colaboração com o cliente, promovendo comunicação aberta",
+        "title": "Priorizo a colaboração, promovendo comunicação aberta",
         "description": ""
       },
       {
@@ -69,22 +69,17 @@
     ],
     "testimonials": [
       {
-        "quote": "Na UniChem, Felipe foi fundamental para garantir a privacidade dos dados e a conformidade com as regulamentações relevantes. Ele identificou e mitigou proativamente questões críticas no início do processo de desenvolvimento, prevenindo um aumento potencial de 30% nos defeitos pós-lançamento. Sua habilidade em desenvolver planos de teste abrangentes e resolver problemas antes que se tornassem grandes destaca sua abordagem meticulosa e voltada para o futuro no desenvolvimento de software.",
+        "quote": "Na UniChem, Felipe identificou e mitigou problemas críticos no desenvolvimento, prevenindo um aumento de 20% nos defeitos pós-lançamento. Sua habilidade em criar planos de teste abrangentes e resolver problemas antecipadamente destaca sua abordagem meticulosa e proativa no desenvolvimento de software.",
         "name": "Carlos Mendes",
         "role": "Líder de Garantia de Qualidade"
       },
       {
-        "quote": "Durante seu tempo na UniChem, Felipe se destacou em ambientes colaborativos, alinhando soluções técnicas com objetivos de negócios ao trabalhar de perto com gerentes de produto e stakeholders. Sua liderança em sessões de compartilhamento de conhecimento e facilitação do aprendizado em equipe promoveu uma cultura de melhoria contínua e inovação dentro da equipe.",
-        "name": "Pedro Santos",
-        "role": "Gerente de Desenvolvimento de Produto"
-      },
-      {
-        "quote": "Na Sollana, Felipe demonstrou habilidades excepcionais na geração de insights baseados em dados que apoiaram diretamente decisões empresariais importantes e aumentaram a receita. Sua proficiência em desenvolver e manter scripts SQL, otimizar o desempenho do banco de dados e reduzir os defeitos relatados pelos usuários em 30% através de testes automatizados de aplicativos web com Selenium, ressalta seu compromisso em entregar soluções de alta qualidade.",
+        "quote": "Na Sollana, Felipe usou dados para apoiar decisões empresariais e aumentar a receita. Ele desenvolveu e manteve scripts SQL, otimizou o desempenho do banco de dados e reduziu defeitos em 35% com testes automatizados de aplicativos web usando Selenium, destacando seu compromisso com soluções de alta qualidade.",
         "name": "Bruno Almeida",
         "role": "Diretor de Análise de Dados"
       },
       {
-        "quote": "Em seu papel na IQVia, Felipe aprimorou significativamente a eficiência operacional ao automatizar independentemente implantações de banco de dados em oito países da América Latina. Sua implementação de pipelines CI/CD e testes automatizados não apenas melhorou a qualidade do software, mas também acelerou os ciclos de desenvolvimento, demonstrando sua forte capacidade de otimizar processos.",
+        "quote": "Na IQVia, Felipe melhorou a eficiência operacional ao automatizar implantações de banco de dados em oito países da América Latina. Ele implementou pipelines CI/CD e testes automatizados, melhorando a qualidade do software e acelerando os ciclos de desenvolvimento, demonstrando sua habilidade em otimizar processos.",
         "name": "Mariano Pereira",
         "role": "Gerente de Operações de TI"
       }
@@ -95,12 +90,12 @@
         "description": "Assistiu no desenvolvimento de uma plataforma baseada na web, aprimorando a funcionalidade e interatividade."
       },
       {
-        "title": "Desenvolvedor de App Móvel - Sollana Tech",
+        "title": "Desenvolvedor de App Móvel",
         "description": "Desenvolveu e projetou aplicativo móvel para plataformas iOS e Android usando React Native."
       },
       {
-        "title": "Projeto de Desenvolvimento de App Freelance",
-        "description": "Liderou o desenvolvimento de um aplicativo móvel para um cliente, desde o conceito inicial até a implantação nas lojas de aplicativos."
+        "title": "Projeto de Sistema CRM",
+        "description": "Desenvolvi e implementei funcionalidades para um Sistema CRM, automatizando processos de vendas e suporte ao cliente, o que melhorou a eficiência operacional e a satisfação do cliente."
       },
       {
         "title": "Desenvolvedor Fullstack Líder",
@@ -110,20 +105,20 @@
     "approaches": [
       {
         "title": "Planejamento e Estratégia",
-        "description": "Vamos colaborar para mapear os objetivos do seu site, público-alvo e funcionalidades-chave. Vamos discutir coisas como estrutura do site, navegação e requisitos de conteúdo."
+        "description": "Definição clara dos objetivos do projeto e criação de um plano de ação detalhado, incluindo cronogramas, recursos necessários e análise de riscos."
       },
       {
         "title": "Desenvolvimento e Atualização de Progresso",
-        "description": "Assim que concordarmos com o plano, eu coloco minha playlist lofi para tocar e mergulho na codificação. Desde esboços iniciais até código refinado, mantenho você atualizado a cada passo do caminho."
+        "description": "Codificação do software conforme os requisitos estabelecidos, acompanhada de relatórios regulares para monitorar o progresso e assegurar que o projeto esteja no caminho certo."
       },
       {
         "title": "Desenvolvimento e Lançamento",
-        "description": "Aqui é onde a mágica acontece! Com base no design aprovado, traduzirei tudo em código funcional, construindo seu site do zero."
+        "description": "Conclusão da codificação, seguida pela implementação e integração do software no ambiente de produção, garantindo que todas as funcionalidades estejam operacionais e atendam aos critérios de qualidade."
       }
     ],
     "footer": {
-      "presence": "Pronto para elevar sua presença digital?",
-      "discussion": "Entre em contato comigo hoje mesmo e vamos discutir como posso ajudá-lo a alcançar seus objetivos.",
+      "presence": "Obrigado pela visita!",
+      "discussion": "Estou à disposição para mostrar mais exemplos do meu trabalho.",
       "contact": "Entre em contato"
     }
   }
