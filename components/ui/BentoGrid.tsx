@@ -54,8 +54,8 @@ export const BentoGridItem = ({
   spareImg?: string
 }) => {
   const dict = useContext(DictionaryContext)
-  const leftLists = ['ReactJS', 'Express', 'Typescript']
-  const rightLists = ['VueJS', 'NuxtJS', 'GraphQL']
+  const leftLists = ['ReactJS', '.Net/C#', 'Typescript']
+  const rightLists = ['Node.js', 'Next.js', 'Express']
 
   const [copied, setCopied] = useState(false)
 
