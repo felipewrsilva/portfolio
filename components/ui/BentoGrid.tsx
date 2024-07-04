@@ -83,7 +83,7 @@ export const BentoGridItem = ({
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName, 'object-cover object-center ')}
+              className={cn(imgClassName, 'object-cover object-center')}
             />
           )}
         </div>
@@ -127,21 +127,19 @@ export const BentoGridItem = ({
                 {leftLists.map((item, i) => (
                   <span
                     key={i}
-                    className="rounded-lg bg-[#10132E] px-3 py-2 text-center text-xs opacity-50 
-                    lg:px-3 lg:py-4 lg:text-base lg:opacity-100"
+                    className="rounded-lg bg-[#10132E] px-3 py-2 text-center text-xs opacity-50 lg:px-3 lg:py-4 lg:text-base lg:opacity-100"
                   >
                     {item}
                   </span>
                 ))}
-                <span className="rounded-lg bg-[#10132E] px-3 py-4  text-center lg:px-3 lg:py-4"></span>
+                <span className="rounded-lg bg-[#10132E] px-3 py-4 text-center lg:px-3 lg:py-4"></span>
               </div>
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                <span className="rounded-lg bg-[#10132E] px-3 py-4  text-center lg:px-3 lg:py-4"></span>
+                <span className="rounded-lg bg-[#10132E] px-3 py-4 text-center lg:px-3 lg:py-4"></span>
                 {rightLists.map((item, i) => (
                   <span
                     key={i}
-                    className="rounded-lg bg-[#10132E] px-3 py-2 text-center text-xs opacity-50 
-                    lg:px-3 lg:py-4 lg:text-base lg:opacity-100"
+                    className="rounded-lg bg-[#10132E] px-3 py-2 text-center text-xs opacity-50 lg:px-3 lg:py-4 lg:text-base lg:opacity-100"
                   >
                     {item}
                   </span>
