@@ -27,7 +27,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   }
 
   return (
-    <div className="mx-auto grid h-full w-full max-w-7xl grid-cols-1 gap-10 p-10 md:grid-cols-4 ">
+    <div className="mx-auto grid h-full w-full max-w-7xl grid-cols-1 gap-10 p-10 md:grid-cols-4">
       {cards.map((card, i) => (
         <Button
           key={i}

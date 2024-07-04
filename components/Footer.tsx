@@ -18,7 +18,7 @@ export const Footer = () => {
         <img
           src="/footer-grid.svg"
           alt="grid"
-          className="h-full w-full opacity-50 "
+          className="h-full w-full opacity-50"
         />
       </div>
 
