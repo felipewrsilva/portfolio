@@ -31,7 +31,7 @@ const AIChatInput = ({
         value={input}
         onChange={handleInputChange}
         placeholder="Say something..."
-        className="grow rounded border bg-background px-3 py-2"
+        className="grow rounded border px-3 py-2 dark:bg-black-100"
         ref={inputRef}
       />
       <button

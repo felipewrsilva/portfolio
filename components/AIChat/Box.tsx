@@ -46,7 +46,7 @@ const AIChatBox = ({ open, onClose }: AIChatBoxProps) => {
       )}
     >
       <CloseButton onClose={onClose} />
-      <div className="flex h-full flex-col overflow-hidden rounded border bg-background shadow-xl">
+      <div className="flex h-full flex-col overflow-hidden rounded border shadow-xl dark:bg-black-100">
         <AIChatMessageBody
           messages={messages}
           isLoading={isLoading}
