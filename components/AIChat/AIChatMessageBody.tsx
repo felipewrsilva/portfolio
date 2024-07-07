@@ -1,6 +1,6 @@
 import { Bot } from 'lucide-react'
 import { Message } from 'ai/react'
-import AIChatMessage from '@/components/AIChat/Message'
+import AIChatMessage from '@/components/AIChat/AIChatMessage'
 
 interface AIChatMessageBodyProps {
   messages: Message[]
