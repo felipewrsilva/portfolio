@@ -5,7 +5,7 @@ interface CloseButtonProps {
   onClose: () => void
 }
 
-const CloseButton = ({ onClose }: CloseButtonProps) => {
+const AIChatCloseButton = ({ onClose }: CloseButtonProps) => {
   return (
     <button onClick={onClose} className="mb-1 ml-auto block">
       <XCircle size={30} className="rounded-full bg-background" />
@@ -13,4 +13,4 @@ const CloseButton = ({ onClose }: CloseButtonProps) => {
   )
 }
 
-export default CloseButton
+export default AIChatCloseButton

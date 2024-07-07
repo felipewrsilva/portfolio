@@ -2,7 +2,7 @@
 
 import { Bot } from 'lucide-react'
 import React, { useState } from 'react'
-import AIChatBox from '@/components/AIChat/Box'
+import AIChatBox from '@/components/AIChat/AIChatBox'
 
 const AIChatButton = () => {
   const [chatBoxOpen, setChatBoxOpen] = useState(false)
