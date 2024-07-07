@@ -41,7 +41,7 @@ const AIChatBox = ({ open, onClose }: AIChatBoxProps) => {
   return (
     <div
       className={cn(
-        'fixed bottom-10 right-2 top-2 z-50 max-w-md p-1',
+        'fixed bottom-10 right-2 top-2 z-50 w-screen max-w-md p-1',
         open ? 'block' : 'hidden',
       )}
     >
