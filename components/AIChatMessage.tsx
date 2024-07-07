@@ -3,8 +3,11 @@ import { Bot } from 'lucide-react'
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import Link from 'next/link'
+import { Message } from 'ai'
 
-import { AIChatMessageProps } from '@/data'
+export interface AIChatMessageProps {
+  message: Message
+}
 
 const AIChatMessage = ({ message: { role, content } }: AIChatMessageProps) => {
   const isAiMessage = role === 'assistant'

@@ -1,9 +1,3 @@
-import { Message } from 'ai'
-
-export interface AIChatMessageProps {
-  message: Message
-}
-
 export interface Dictionary {
   page: {
     experience: string
