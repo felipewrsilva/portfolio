@@ -67,7 +67,7 @@ const AIChat = () => {
       </button>
       <div
         className={cn(
-          'fixed bottom-10 right-2 top-2 z-50 w-screen max-w-md p-1',
+          'fixed bottom-10 right-2 top-2 z-50 w-screen max-w-md p-3',
           open ? 'block' : 'hidden',
         )}
       >
@@ -110,10 +110,10 @@ const AIChat = () => {
               </div>
             )}
           </div>
-          <form onSubmit={handleSubmit} className="m-3 flex gap-1">
+          <form onSubmit={handleSubmit} className="m-3 flex w-full gap-1">
             <button
               type="button"
-              className="flex w-10 flex-none items-center justify-center"
+              className="flex h-10 w-10 items-center justify-center"
               title="Clear chat"
               onClick={() => setMessages([])}
             >
@@ -123,12 +123,12 @@ const AIChat = () => {
               value={input}
               onChange={handleInputChange}
               placeholder="Say something..."
-              className="grow rounded border px-3 py-2 dark:bg-black-100"
+              className="min-w-0 flex-grow rounded border px-3 py-2 dark:bg-black-100"
               ref={inputRef}
             />
             <button
               type="submit"
-              className="flex w-10 flex-none items-center justify-center disabled:opacity-50"
+              className="mr-5 flex h-10 w-10 items-center justify-center disabled:opacity-50"
               disabled={input.length === 0}
               title="Submit message"
             >
