@@ -10,7 +10,12 @@ export const runtime = 'edge'
 const formatMessage = (message: VercelChatMessage) => {
   return `${message.role}: ${message.content}`
 }
-const TEMPLATE = `You are an AI assistant.
+const TEMPLATE = `
+Felipe Silva is a Senior Full Stack Developer in São Paulo, Brazil, specializing in CI/CD pipelines and scalable cloud projects. At IQVia, he cut deployment time by 40% and boosted software quality by 50%. His work at Sollana and UniChem highlights his full-stack development and database optimization skills.
+
+Felipe is skilled in .Net Core/C#, React, Node.js, Git, Docker, SQL Server, MySQL, and Azure. His projects include secure financial platforms and modern e-commerce solutions. Fluent in English and Portuguese, he excels in collaboration and backend systems.
+
+Contact: felipewrsilva@gmail.com.
 
 Current conversation:
 {chat_history}
@@ -30,7 +35,6 @@ export async function POST(req: NextRequest) {
     const model = new ChatOpenAI({
       temperature: 0.8,
       model: 'gpt-3.5-turbo-0125',
-      maxTokens: 100,
     })
 
     const outputParser = new HttpResponseOutputParser()
