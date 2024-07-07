@@ -1,9 +1,9 @@
 import { cn } from '@/lib/utils'
 import { useChat } from 'ai/react'
 import { useEffect, useRef } from 'react'
-import CloseButton from '@/components/AIChat/CloseButton'
-import AIChatInput from '@/components/AIChat/Input'
-import AIChatMessageBody from '@/components/AIChat/MessageBody'
+import CloseButton from '@/components/AIChat/AIChatCloseButton'
+import AIChatInput from '@/components/AIChat/AIChatInput'
+import AIChatMessageBody from '@/components/AIChat/AIChatMessageBody'
 
 interface AIChatBoxProps {
   open: boolean
