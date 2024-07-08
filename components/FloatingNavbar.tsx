@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import React, { useContext, useState } from 'react'
 import {
@@ -11,9 +10,14 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { DictionaryContext } from '@/components/PageContent'
 
-export const FloatingNav = ({ className }: { className?: string }) => {
+interface NavbarItem {
+  name: string
+  link: string
+}
+
+export const FloatingNavbar = ({ className }: { className?: string }) => {
   const dict = useContext(DictionaryContext)
-  const navItems = [
+  const navItems: NavbarItem[] = [
     { name: dict.page.floatingNav.about, link: '#about' },
     { name: dict.page.floatingNav.testimonials, link: '#testimonials' },
     { name: dict.page.experience, link: '#experience' },
@@ -55,7 +59,7 @@ export const FloatingNav = ({ className }: { className?: string }) => {
           duration: 0.2,
         }}
         className={cn(
-          'border-black/.1 fixed inset-x-0 top-10 z-[5000] mx-auto flex max-w-fit items-center justify-center space-x-4 rounded-lg border px-10 py-5 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] md:min-w-[70vw] lg:min-w-fit',
+          'border-black/.1 fixed inset-x-0 top-10 z-40 mx-auto flex max-w-fit items-center justify-center space-x-4 rounded-lg border px-10 py-5 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] md:min-w-[70vw] lg:min-w-fit',
           className,
         )}
         style={{
@@ -65,7 +69,7 @@ export const FloatingNav = ({ className }: { className?: string }) => {
           border: '1px solid rgba(255, 255, 255, 0.125)',
         }}
       >
-        {navItems.map((navItem: any, idx: number) => (
+        {navItems.map((navItem: NavbarItem, idx: number) => (
           <Link
             key={`link=${idx}`}
             href={navItem.link}
@@ -73,7 +77,6 @@ export const FloatingNav = ({ className }: { className?: string }) => {
               'relative flex items-center space-x-1 text-neutral-600 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-300',
             )}
           >
-            <span className="block sm:hidden">{navItem.icon}</span>
             <span className="!cursor-pointer text-sm">{navItem.name}</span>
           </Link>
         ))}
@@ -81,3 +84,5 @@ export const FloatingNav = ({ className }: { className?: string }) => {
     </AnimatePresence>
   )
 }
+
+export default FloatingNavbar
