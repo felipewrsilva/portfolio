@@ -23,7 +23,7 @@ const AIChatMessage = ({ message: { role, content } }: AIChatMessageProps) => {
       <div
         className={cn(
           'rounded-md border px-3 py-2',
-          isAiMessage ? 'bg-background' : 'bg-foreground text-background',
+          isAiMessage ? 'bg-black-100' : 'bg-foreground text-background',
         )}
       >
         <ReactMarkdown
