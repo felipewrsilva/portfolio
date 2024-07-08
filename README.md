@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Modern Portfolio
+
+Welcome to my cutting-edge portfolio built on Next.js, where innovation meets functionality. This project is designed to showcase my skills, creativity, and technical proficiency through a modern, interactive, and aesthetically pleasing platform.
+
+## Features
+
+### AI-Powered Chatbot
+At the heart of this portfolio is an AI-powered chatbot. Utilizing OpenAI's ChatGPT API, the chatbot can answer queries about my background and expertise, providing an engaging and interactive experience. Key technologies used:
+- **Next.js:** Ensures a fast, scalable, and SEO-friendly application.
+- **TypeScript:** Provides robust type checking and enhances developer productivity.
+- **Tailwind CSS:** Adds a modern aesthetic with utility-first CSS for rapid UI development.
+- **LangChain.js:** Facilitates seamless communication between the user and the AI, ensuring personalized interactions.
+
+### Dynamic Visuals with Three.js
+Experience the power of dynamic visuals rendered in Three.js. This feature adds depth and interactivity, effectively showcasing my projects and skills. Key technologies used:
+- **Three.js:** Creates and displays animated 3D graphics in the browser.
+- **Framer Motion:** Enriches the interface with fluid animations, ensuring a delightful user journey.
+
+## Why This Portfolio Stands Out
+- **Technical Proficiency:** Demonstrates my expertise in modern web development technologies and tools.
+- **Creativity:** Showcases my ability to create visually appealing and interactive web experiences.
+- **Attention to Detail:** Reflects my commitment to delivering high-quality work, making a lasting impression on visitors and potential collaborators.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js
+- npm
 
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/felipewrsilva/portfolio.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd portfolio
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Project
+To start the development server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
