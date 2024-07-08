@@ -72,9 +72,9 @@ const AIChat = () => {
         )}
       >
         <button onClick={() => setOpen(false)} className="mb-1 ml-auto block">
-          <XCircle size={30} className="rounded-full bg-background" />
+          <XCircle size={30} className="rounded-full bg-black-100" />
         </button>
-        <div className="flex h-full flex-col overflow-hidden rounded border bg-background shadow-xl">
+        <div className="flex h-full flex-col overflow-hidden rounded border bg-black-100 shadow-xl">
           <div className="mt-3 flex-1 overflow-y-auto px-3" ref={scrollRef}>
             {messages.map((message) => (
               <AIChatMessage message={message} key={message.id} />
@@ -123,7 +123,7 @@ const AIChat = () => {
               value={input}
               onChange={handleInputChange}
               placeholder="Say something..."
-              className="min-w-0 flex-grow rounded border bg-background px-3 py-2"
+              className="min-w-0 flex-grow rounded border bg-black-100 px-3 py-2"
               ref={inputRef}
             />
             <button
