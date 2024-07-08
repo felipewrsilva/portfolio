@@ -6,7 +6,7 @@ import Footer from '@/components/Footer'
 import Clients from '@/components/Clients'
 import Approach from '@/components/Approach'
 import Experience from '@/components/Experience'
-import { FloatingNav } from '@/components/ui/FloatingNavbar'
+import FloatingNavbar from '@/components/FloatingNavbar'
 import React, { createContext, useEffect, useState } from 'react'
 import { Dictionary, defaultEnglishDictionary } from '@/data'
 
@@ -23,7 +23,7 @@ export const PageContent = ({ dictionary }: { dictionary: Dictionary }) => {
   return (
     <div className="w-full max-w-7xl">
       <DictionaryContext.Provider value={dict}>
-        <FloatingNav />
+        <FloatingNavbar />
         <Hero />
         <Grid />
         <Clients />
