@@ -4,16 +4,10 @@ import { Bot, Trash, SendHorizontal, XCircle } from 'lucide-react'
 import React, { useEffect, useRef, useState } from 'react'
 import { cn } from '@/lib/utils'
 import { toast } from 'react-toastify'
-import { Message, useChat } from 'ai/react'
-import Link from 'next/link'
-import ReactMarkdown from 'react-markdown'
+import { useChat } from 'ai/react'
+import AIChatMessage from '@/components/AIChatMessage'
 
 const AIChat = () => {
-  const [open, setOpen] = useState(false)
-  const [sourcesForMessages, setSourcesForMessages] = useState<
-    Record<string, unknown>
-  >({})
-
   const {
     messages,
     input,
@@ -47,6 +41,11 @@ const AIChat = () => {
   const inputRef = useRef<HTMLInputElement>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
 
+  const [open, setOpen] = useState(false)
+  const [sourcesForMessages, setSourcesForMessages] = useState<
+    Record<string, unknown>
+  >({})
+
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight
@@ -68,14 +67,14 @@ const AIChat = () => {
       </button>
       <div
         className={cn(
-          'fixed bottom-10 right-2 top-2 z-50 w-screen max-w-md p-1',
+          'fixed bottom-10 right-2 top-1 z-50 w-full max-w-sm sm:pl-10',
           open ? 'block' : 'hidden',
         )}
       >
         <button onClick={() => setOpen(false)} className="mb-1 ml-auto block">
-          <XCircle size={30} className="rounded-full bg-background" />
+          <XCircle size={30} className="rounded-full bg-black-100" />
         </button>
-        <div className="flex h-full flex-col overflow-hidden rounded border shadow-xl dark:bg-black-100">
+        <div className="flex h-full flex-col overflow-hidden rounded border bg-black-100 shadow-xl">
           <div className="mt-3 flex-1 overflow-y-auto px-3" ref={scrollRef}>
             {messages.map((message) => (
               <AIChatMessage message={message} key={message.id} />
@@ -111,10 +110,10 @@ const AIChat = () => {
               </div>
             )}
           </div>
-          <form onSubmit={handleSubmit} className="m-3 flex gap-1">
+          <form onSubmit={handleSubmit} className="m-3 flex w-full gap-1">
             <button
               type="button"
-              className="flex w-10 flex-none items-center justify-center"
+              className="flex h-10 w-10 items-center justify-center"
               title="Clear chat"
               onClick={() => setMessages([])}
             >
@@ -124,12 +123,12 @@ const AIChat = () => {
               value={input}
               onChange={handleInputChange}
               placeholder="Say something..."
-              className="grow rounded border px-3 py-2 dark:bg-black-100"
+              className="min-w-0 flex-grow rounded border bg-black-100 px-3 py-2"
               ref={inputRef}
             />
             <button
               type="submit"
-              className="flex w-10 flex-none items-center justify-center disabled:opacity-50"
+              className="mr-5 flex h-10 w-10 items-center justify-center disabled:opacity-50"
               disabled={input.length === 0}
               title="Submit message"
             >
@@ -137,53 +136,6 @@ const AIChat = () => {
             </button>
           </form>
         </div>
-      </div>
-    </div>
-  )
-}
-
-interface AIChatMessageProps {
-  message: Message
-}
-
-const AIChatMessage = ({ message: { role, content } }: AIChatMessageProps) => {
-  const isAiMessage = role === 'assistant'
-
-  return (
-    <div
-      className={cn(
-        'mb-3 flex items-center',
-        isAiMessage ? 'me-5 justify-start' : 'ms-5 justify-end',
-      )}
-    >
-      {isAiMessage && <Bot className="mr-2 flex-none" />}
-      <div
-        className={cn(
-          'rounded-md border px-3 py-2',
-          isAiMessage ? 'bg-background' : 'bg-foreground text-background',
-        )}
-      >
-        <ReactMarkdown
-          components={{
-            a: ({ ...props }) => (
-              <Link
-                {...props}
-                href={props.href ?? ''}
-                className="text-primary hover:underline"
-              />
-            ),
-            p: ({ ...props }) => <p {...props} className="mt-3 first:mt-0" />,
-            ul: ({ ...props }) => (
-              <ul
-                {...props}
-                className="mt-3 list-inside list-disc first:mt-0"
-              />
-            ),
-            li: ({ ...props }) => <li {...props} className="mt-1" />,
-          }}
-        >
-          {content}
-        </ReactMarkdown>
       </div>
     </div>
   )
