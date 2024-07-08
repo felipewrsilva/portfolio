@@ -1,6 +1,6 @@
 # Modern Portfolio
 
-Welcome to my cutting-edge portfolio built on Next.js, where innovation meets functionality. This project is designed to showcase my skills, creativity, and technical proficiency through a modern, interactive, and aesthetically pleasing platform.
+This is my cutting-edge portfolio built on Next.js, where innovation meets functionality. This project is designed to showcase my skills, creativity, and technical proficiency through a modern, interactive, and aesthetically pleasing platform.
 
 ## Features
 
