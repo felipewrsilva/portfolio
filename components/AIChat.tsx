@@ -67,7 +67,7 @@ const AIChat = () => {
       </button>
       <div
         className={cn(
-          'fixed bottom-10 right-2 top-1 z-50 w-full max-w-md sm:pl-10',
+          'fixed bottom-10 right-2 top-1 z-50 w-full max-w-sm sm:pl-10',
           open ? 'block' : 'hidden',
         )}
       >
