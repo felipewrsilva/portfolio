@@ -1,14 +1,33 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+/* eslint-disable camelcase -- next/font Google export names */
+import { IBM_Plex_Mono, IBM_Plex_Sans, Source_Serif_4 } from 'next/font/google'
 
 import './globals.css'
-import { ThemeProvider } from './provider'
 
-const inter = Inter({ subsets: ['latin'] })
+const display = Source_Serif_4({
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+})
+
+const sans = IBM_Plex_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-sans',
+  display: 'swap',
+})
+
+const mono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-mono',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: "Felipe's Portfolio",
-  description: 'Modern & Minimalist portfolio',
+  title: 'Felipe Silva — Senior Software Engineer',
+  description:
+    'Senior Software Engineer in Madrid specializing in backend, cloud and distributed systems. 11+ years designing and scaling software across healthcare, finance, education and SaaS.',
 }
 
 export default function RootLayout({
@@ -17,20 +36,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${display.variable} ${sans.variable} ${mono.variable}`}
+    >
       <head>
         <link rel="icon" href="/fs-logo.svg" sizes="any" />
       </head>
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
-      </body>
+      <body className="font-sans">{children}</body>
     </html>
   )
 }
