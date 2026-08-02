@@ -25,7 +25,7 @@ const mono = IBM_Plex_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Felipe Silva — Senior Software Engineer',
+  title: 'Felipe Silva | Senior Software Engineer',
   description:
     'Senior Software Engineer in Madrid specializing in backend, cloud and distributed systems. 11+ years designing and scaling software across healthcare, finance, education and SaaS.',
 }

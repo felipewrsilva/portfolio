@@ -13,7 +13,7 @@ export const profile = {
   whatsappHref:
     'https://wa.me/34661462819?text=' +
     encodeURIComponent(
-      'Hi Felipe — I found your portfolio and would like to connect.',
+      'Hi Felipe, I found your portfolio and would like to connect.',
     ),
 }
 
@@ -46,7 +46,7 @@ export const clients = [
     industry: 'Enterprise security',
     audience: 'Cross-platform enterprise customers',
     focus:
-      'Core architecture modernization for Windows, Linux and macOS security software',
+      'Core architecture modernization for cross-platform security software',
     highlight: 'Single cross-platform solution · fewer production defects',
   },
   {
@@ -181,7 +181,7 @@ export const experience: ExperienceRole[] = [
   {
     company: 'IQVIA',
     role: 'Senior Software Engineer',
-    period: 'Aug 2020 – Present',
+    period: 'Aug 2020 to Present',
     industry: 'Healthcare technology',
     audience: 'Global pharmaceutical organizations',
     overview:
@@ -201,14 +201,14 @@ export const experience: ExperienceRole[] = [
   {
     company: 'Fidelis',
     role: 'Senior Software Engineer',
-    period: 'Apr 2018 – Jul 2020',
+    period: 'Apr 2018 to Jul 2020',
     industry: 'Enterprise security',
-    audience: 'Windows, Linux and macOS enterprise customers',
+    audience: 'Cross-platform enterprise customers',
     overview:
-      'Modernized the core architecture of a cross-platform enterprise security solution supporting Windows, Linux and macOS.',
+      'Modernized the core architecture of a cross-platform enterprise security solution.',
     bullets: [
       "Led the refactoring of the application's core architecture, eliminating structural issues and reducing accumulated technical debt.",
-      'Solved critical compatibility issues across Windows, Linux and macOS, enabling customers to use a single cross-platform solution.',
+      'Solved critical compatibility issues across operating systems, enabling customers to use a single cross-platform solution.',
       'Redesigned integration layers, significantly improving platform stability and reducing recurring production defects.',
       'Simplified long-term maintenance through a modular architecture that accelerated future feature delivery.',
       'Collaborated on software architecture, engineering standards and technical decision-making.',
@@ -217,7 +217,7 @@ export const experience: ExperienceRole[] = [
   {
     company: 'Afya',
     role: 'Senior Software Engineer',
-    period: 'May 2017 – Mar 2018',
+    period: 'May 2017 to Mar 2018',
     industry: 'Healthcare education',
     audience: 'Acquisition and checkout customers',
     overview:
@@ -234,7 +234,7 @@ export const experience: ExperienceRole[] = [
   {
     company: 'Levilo',
     role: 'Software Engineer',
-    period: 'Feb 2016 – Apr 2017',
+    period: 'Feb 2016 to Apr 2017',
     industry: 'SaaS',
     audience: 'Desktop customers migrating to browser-based access',
     overview:
@@ -250,7 +250,7 @@ export const experience: ExperienceRole[] = [
   {
     company: 'Senac',
     role: 'Software Engineer',
-    period: 'Jan 2015 – Jan 2016',
+    period: 'Jan 2015 to Jan 2016',
     industry: 'Education',
     audience: 'Students managing invoices and payment methods',
     overview:
@@ -269,12 +269,12 @@ export const education = [
   {
     institution: 'University of São Paulo (USP)',
     degree: 'Bachelor of Information Systems',
-    period: 'Jan 2019 – Dec 2024',
+    period: 'Jan 2019 to Dec 2024',
   },
   {
-    institution: 'Faculdade de Engenharia de Sorocaba (Facens)',
+    institution: 'Sorocaba College of Engineering (Facens)',
     degree: 'Computer Engineering',
-    period: 'Jan 2014 – Dec 2018',
+    period: 'Jan 2014 to Dec 2018',
   },
 ]
 

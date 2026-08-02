@@ -29,7 +29,7 @@ export default function Contact() {
             Get in touch
           </h2>
           <p className="mt-4 max-w-prose text-base text-white/90">
-            {profile.focus} — {profile.location}
+            {profile.focus} · {profile.location}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
