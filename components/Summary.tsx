@@ -1,6 +1,6 @@
 'use client'
 
-import { summary } from '@/data/cv'
+import { industries, summary } from '@/data/cv'
 import { Reveal } from '@/components/Reveal'
 
 export default function Summary() {
@@ -8,8 +8,8 @@ export default function Summary() {
     <section id="about" className="section-pad">
       <div className="content-width">
         <Reveal>
-          <p className="section-label">Professional Summary</p>
-          <h2 className="section-title mt-3">About</h2>
+          <p className="section-label">About</p>
+          <h2 className="section-title mt-3">Professional summary</h2>
         </Reveal>
         <div className="body-copy mt-10 max-w-prose space-y-5">
           {summary.map((paragraph, index) => (
@@ -18,6 +18,18 @@ export default function Summary() {
             </Reveal>
           ))}
         </div>
+        <Reveal delay={0.12}>
+          <ul className="mt-8 flex flex-wrap gap-x-4 gap-y-2">
+            {industries.map((industry) => (
+              <li
+                key={industry}
+                className="font-mono text-xs uppercase tracking-[0.16em] text-accent"
+              >
+                {industry}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
       </div>
     </section>
   )
