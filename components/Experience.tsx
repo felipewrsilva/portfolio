@@ -1,86 +1,59 @@
-/* eslint-disable @next/next/no-img-element */
 'use client'
 
-import React, { useContext } from 'react'
+import { experience } from '@/data/cv'
+import { Reveal } from '@/components/Reveal'
 
-import { Button } from './ui/MovingBorders'
-import { DictionaryContext } from '@/components/PageContent'
-
-export const Experience = () => {
-  const dict = useContext(DictionaryContext)
-
-  const workExperience = [
-    {
-      id: 1,
-      title: dict.page.experiences[0].title,
-      desc: dict.page.experiences[0].description,
-      className: 'md:col-span-2',
-      thumbnail: '/exp1.svg',
-    },
-    {
-      id: 2,
-      title: dict.page.experiences[1].title,
-      desc: dict.page.experiences[1].description,
-      className: 'md:col-span-2',
-      thumbnail: '/exp2.svg',
-    },
-    {
-      id: 3,
-      title: dict.page.experiences[2].title,
-      desc: dict.page.experiences[2].description,
-      className: 'md:col-span-2',
-      thumbnail: '/exp3.svg',
-    },
-    {
-      id: 4,
-      title: dict.page.experiences[3].title,
-      desc: dict.page.experiences[3].description,
-      className: 'md:col-span-2',
-      thumbnail: '/exp4.svg',
-    },
-  ]
+export default function Experience() {
   return (
-    <section id="experience">
-      <div className="w-full py-20">
-        <h1 className="heading">
-          <span className="text-purple">{dict.page.experience}</span>
-        </h1>
+    <section id="experience" className="section-pad bg-paper-deep/60">
+      <div className="content-width">
+        <Reveal>
+          <p className="section-label">Career</p>
+          <h2 className="section-title mt-3">Professional Experience</h2>
+        </Reveal>
 
-        <div className="mt-12 grid w-full grid-cols-1 gap-10 lg:grid-cols-4">
-          {workExperience.map((card) => (
-            <Button
-              key={card.id}
-              duration={Math.floor(Math.random() * 10000) + 10000}
-              borderRadius="1.75rem"
-              style={{
-                background: 'rgb(4,7,29)',
-                backgroundColor:
-                  'linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)',
-                borderRadius: `calc(1.75rem* 0.96)`,
-              }}
-              className="flex-1 border-neutral-200 text-black dark:border-slate-800 dark:text-white"
-            >
-              <div className="flex flex-col gap-2 p-3 py-6 md:p-5 lg:flex-row lg:items-center lg:p-10">
-                <img
-                  src={card.thumbnail}
-                  alt={card.thumbnail}
-                  className="w-16 md:w-20 lg:w-32"
+        <div className="relative mt-14 space-y-16 before:absolute before:bottom-0 before:left-[0.4rem] before:top-2 before:w-px before:bg-[color:var(--line)] md:before:left-[0.55rem]">
+          {experience.map((role, index) => (
+            <Reveal key={`${role.company}-${role.period}`} delay={index * 0.04}>
+              <article className="relative grid gap-4 pl-8 md:pl-12">
+                <span
+                  className="absolute left-0 top-2 h-2.5 w-2.5 rounded-full bg-accent ring-4 ring-[color:var(--paper-deep)]"
+                  aria-hidden
                 />
-                <div className="lg:ms-5">
-                  <h1 className="text-start text-xl font-bold md:text-2xl">
-                    {card.title}
-                  </h1>
-                  <p className="mt-3 text-start font-semibold text-white-100">
-                    {card.desc}
+                <header className="space-y-1">
+                  <h3 className="font-display text-2xl tracking-tight text-ink md:text-3xl">
+                    {role.company}
+                  </h3>
+                  <p className="font-medium text-ink">{role.role}</p>
+                  <p className="font-mono text-xs uppercase tracking-[0.16em] text-ink-muted">
+                    {role.period}
                   </p>
+                  <p className="pt-1 text-sm text-ink-muted">
+                    <span className="text-accent">{role.industry}</span>
+                    <span className="mx-2 text-[color:var(--line)]">·</span>
+                    {role.audience}
+                  </p>
+                </header>
+
+                <p className="max-w-prose text-base leading-relaxed text-ink">
+                  {role.overview}
+                </p>
+
+                <div className="mt-2">
+                  <h4 className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-accent">
+                    Impact
+                  </h4>
+                  <ul className="mt-4 max-w-prose list-disc space-y-2 pl-5 text-base leading-relaxed text-ink marker:text-accent">
+                    {role.bullets.map((bullet) => (
+                      <li key={bullet.slice(0, 48)}>{bullet}</li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-            </Button>
+              </article>
+            </Reveal>
           ))}
         </div>
       </div>
     </section>
   )
 }
-
-export default Experience
