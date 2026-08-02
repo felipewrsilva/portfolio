@@ -1,6 +1,6 @@
 # Felipe Silva
 
-## Senior Software Engineer
+## Software Engineer
 
 **Backend • Cloud • Distributed Systems**
 
@@ -18,7 +18,7 @@
 
 # Professional Summary
 
-Senior Software Engineer with **11+ years of experience** designing, modernizing and scaling distributed software systems across healthcare, financial services, education and SaaS.
+Software Engineer with **10+ years of experience** designing, modernizing and scaling distributed software systems across healthcare, financial services, education and SaaS.
 
 Proven track record leading large-scale modernization initiatives, building cloud-native architectures, improving platform performance, reducing operational costs and delivering software that drives measurable business outcomes.
 
