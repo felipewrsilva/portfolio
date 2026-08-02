@@ -1,38 +1,31 @@
-'use client'
-
+import SiteHeader from '@/components/SiteHeader'
 import Hero from '@/components/Hero'
-import Grid from '@/components/Grid'
-import Footer from '@/components/Footer'
+import Summary from '@/components/Summary'
 import Clients from '@/components/Clients'
-import Approach from '@/components/Approach'
+import FeaturedCase from '@/components/FeaturedCase'
+import Achievements from '@/components/Achievements'
+import Technologies from '@/components/Technologies'
 import Experience from '@/components/Experience'
-import FloatingNavbar from '@/components/FloatingNavbar'
-import React, { createContext, useEffect, useState } from 'react'
-import { Dictionary, defaultEnglishDictionary } from '@/data'
+import Education from '@/components/Education'
+import Languages from '@/components/Languages'
+import Contact from '@/components/Contact'
+import WhatsAppButton from '@/components/WhatsAppButton'
 
-const DictionaryContext = createContext<Dictionary>(defaultEnglishDictionary)
-
-export const PageContent = ({ dictionary }: { dictionary: Dictionary }) => {
-  const [dict, setDict] = useState<Dictionary>(defaultEnglishDictionary)
-  useEffect(() => {
-    const fetchData = async () => {
-      setDict(dictionary)
-    }
-    fetchData()
-  })
+export default function PageContent() {
   return (
-    <div className="w-full max-w-7xl">
-      <DictionaryContext.Provider value={dict}>
-        <FloatingNavbar />
-        <Hero />
-        <Grid />
-        <Clients />
-        <Experience />
-        <Approach />
-        <Footer />
-      </DictionaryContext.Provider>
-    </div>
+    <>
+      <SiteHeader />
+      <Hero />
+      <Summary />
+      <Clients />
+      <FeaturedCase />
+      <Achievements />
+      <Technologies />
+      <Experience />
+      <Education />
+      <Languages />
+      <Contact />
+      <WhatsAppButton />
+    </>
   )
 }
-
-export { DictionaryContext, PageContent as default }

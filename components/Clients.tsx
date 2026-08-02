@@ -1,59 +1,63 @@
-/* eslint-disable @next/next/no-img-element */
 'use client'
 
-import React, { useContext } from 'react'
+import { clients, industries } from '@/data/cv'
+import { Reveal } from '@/components/Reveal'
 
-import { companies } from '@/data'
-import { InfiniteMovingCards } from './ui/InfiniteCards'
-import { DictionaryContext } from '@/components/PageContent'
-
-export const Clients = () => {
-  const dict = useContext(DictionaryContext)
-
-  const testimonials = dict.page.testimonials.map((testimonial) => ({
-    quote: testimonial.quote,
-    name: testimonial.name,
-    title: testimonial.role,
-  }))
-
+export default function Clients() {
   return (
-    <section id="testimonials" className="py-20">
-      <h1 className="heading">
-        {dict.page.client.words}
-        <span className="text-purple"> {dict.page.client.partners}</span>
-      </h1>
+    <section id="clients" className="section-pad">
+      <div className="content-width">
+        <Reveal>
+          <p className="section-label">Clients & domains</p>
+          <h2 className="section-title mt-3">Where the work landed</h2>
+          <p className="body-copy mt-4 max-w-prose">
+            Engaged across {industries.slice(0, -1).join(', ')} and{' '}
+            {industries[industries.length - 1]}, delivering platforms used by
+            pharmaceutical organizations, enterprise security customers,
+            education institutions and SaaS product teams.
+          </p>
+        </Reveal>
 
-      <div className="flex flex-col items-center max-lg:mt-10">
-        <div className="relative flex h-[50vh] flex-col items-center justify-center overflow-hidden rounded-md antialiased md:h-[30rem]">
-          <InfiniteMovingCards
-            items={testimonials}
-            direction="right"
-            speed="slow"
-          />
-        </div>
+        <Reveal delay={0.08}>
+          <ul className="mt-8 flex flex-wrap gap-x-4 gap-y-2">
+            {industries.map((industry) => (
+              <li
+                key={industry}
+                className="font-mono text-xs uppercase tracking-[0.16em] text-accent"
+              >
+                {industry}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 max-lg:mt-10 md:gap-16">
-          {companies.map((company) => (
-            <React.Fragment key={company.id}>
-              <div className="flex max-w-32 gap-2 md:max-w-60">
-                <img
-                  src={company.img}
-                  alt={company.name}
-                  className="w-5 md:w-10"
-                />
-                <img
-                  src={company.nameImg}
-                  alt={company.name}
-                  width={company.id === 4 || company.id === 5 ? 100 : 150}
-                  className="w-20 md:w-24"
-                />
-              </div>
-            </React.Fragment>
+        <div className="mt-12 grid gap-0 border-t border-[color:var(--line)] sm:grid-cols-2 sm:items-stretch">
+          {clients.map((client, index) => (
+            <Reveal key={client.company} delay={index * 0.04} className="h-full">
+              <article className="flex h-full flex-col border-b border-[color:var(--line)] py-8 sm:odd:pr-8 sm:even:border-l sm:even:pl-8 lg:py-10">
+                <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                  <h3 className="font-display text-2xl tracking-tight text-ink">
+                    {client.company}
+                  </h3>
+                  <p className="font-mono text-xs uppercase tracking-[0.16em] text-ink-muted">
+                    {client.industry}
+                  </p>
+                </div>
+                <p className="mt-3 text-sm text-ink">
+                  <span className="font-medium">Audience:</span>{' '}
+                  <span className="text-ink-muted">{client.audience}</span>
+                </p>
+                <p className="mt-2 text-base leading-relaxed text-ink">
+                  {client.focus}
+                </p>
+                <p className="mt-auto pt-4 font-mono text-xs uppercase tracking-[0.14em] text-accent">
+                  {client.highlight}
+                </p>
+              </article>
+            </Reveal>
           ))}
         </div>
       </div>
     </section>
   )
 }
-
-export default Clients
