@@ -8,11 +8,11 @@
 
 📞 +34 661 46 28 19
 
-📧 [felipewrsilva@gmail.com](mailto:felipewrsilva@gmail.com)
+📧 [contact@felipewrsilva.dev](mailto:contact@felipewrsilva.dev)
 
 💼 [https://linkedin.com/in/felipewrsilva](https://linkedin.com/in/felipewrsilva)
 
-🌐 [https://felipewrsilva.com.br](https://felipewrsilva.com.br)
+🌐 [https://felipewrsilva.dev](https://felipewrsilva.dev)
 
 ---
 
