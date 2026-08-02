@@ -9,7 +9,7 @@ export default function FeaturedCase() {
       <div className="content-width">
         <Reveal>
           <p className="font-mono text-xs font-medium uppercase tracking-[0.22em] text-accent-soft">
-            Featured client work
+            Featured work
           </p>
           <p className="mt-4 font-mono text-xs uppercase tracking-[0.16em] text-white/80">
             {featuredCase.client} · {featuredCase.industry}
@@ -20,44 +20,23 @@ export default function FeaturedCase() {
           <p className="mt-4 max-w-prose text-base leading-relaxed text-white/90 md:text-lg">
             {featuredCase.summary}
           </p>
-          <p className="mt-3 text-sm text-white/80">
-            Built for {featuredCase.audience}.
-          </p>
         </Reveal>
 
-        <div className="mt-12 grid gap-12 lg:grid-cols-2">
-          <Reveal delay={0.06}>
-            <h3 className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-accent-soft">
-              Outcomes for the client
-            </h3>
-            <ul className="mt-5 space-y-3">
-              {featuredCase.outcomes.map((outcome) => (
-                <li
-                  key={outcome}
-                  className="border-l-2 border-accent-soft pl-4 text-base leading-relaxed text-white"
-                >
-                  {outcome}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <h3 className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-accent-soft">
-              Technical approach
-            </h3>
-            <ul className="mt-5 space-y-3">
-              {featuredCase.approach.map((item) => (
-                <li
-                  key={item}
-                  className="border-l-2 border-accent-soft pl-4 text-base leading-relaxed text-white"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-        </div>
+        <Reveal delay={0.06}>
+          <h3 className="mt-12 font-mono text-xs font-medium uppercase tracking-[0.18em] text-accent-soft">
+            Outcomes
+          </h3>
+          <ul className="mt-5 grid gap-4 sm:grid-cols-2">
+            {featuredCase.outcomes.map((outcome) => (
+              <li
+                key={outcome}
+                className="border-l-2 border-accent-soft pl-4 text-base leading-relaxed text-white"
+              >
+                {outcome}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
       </div>
     </section>
   )

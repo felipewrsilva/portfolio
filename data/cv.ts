@@ -29,46 +29,6 @@ export const industries = [
   'Enterprise security',
 ]
 
-export const clients = [
-  {
-    company: 'IQVIA',
-    industry: 'Healthcare technology',
-    audience: 'Global pharmaceutical organizations',
-    focus:
-      'Enterprise healthcare platforms processing large volumes of healthcare data',
-    highlight: 'Hours → real-time data availability · ~20% sales growth',
-  },
-  {
-    company: 'Fidelis',
-    industry: 'Enterprise security',
-    audience: 'Cross-platform enterprise customers',
-    focus:
-      'Core architecture modernization for cross-platform security software',
-    highlight: 'Single cross-platform solution · fewer production defects',
-  },
-  {
-    company: 'Afya',
-    industry: 'Healthcare education',
-    audience: 'Students and acquisition funnels',
-    focus: 'Checkout and customer acquisition platform modernization',
-    highlight: '+80% checkout throughput',
-  },
-  {
-    company: 'Levilo',
-    industry: 'SaaS',
-    audience: 'Desktop product customers moving to the web',
-    focus: 'Desktop-to-cloud SaaS migration',
-    highlight: 'Churn 10% → 3%',
-  },
-  {
-    company: 'Senac',
-    industry: 'Education',
-    audience: 'Students managing invoices and payments',
-    focus: 'Payment modernization and operational self-service',
-    highlight: 'Automated payment workflows · less support load',
-  },
-]
-
 export const impactMetrics = [
   {
     value: 'Hours → real-time',
@@ -105,20 +65,7 @@ export const featuredCase = {
     'Enabled new real-time healthcare analytics products',
     'Contributed to approximately 20% product sales growth within the first year',
   ],
-  approach: [
-    'Near real-time data synchronization and automated ingestion pipelines',
-    'Event-driven processing across distributed backend services',
-    'Versioned REST APIs and internal gRPC contracts across distributed services',
-    'SQL Server optimization with Entity Framework Core and Dapper',
-  ],
 }
-
-export const achievements = [
-  'Reduced healthcare data availability from hours to real time and customer delivery SLAs from days to hours on a large data platform.',
-  'Contributed to approximately 20% product sales growth by enabling real-time healthcare analytics products.',
-  "Increased checkout throughput by more than 80% while modernizing Afya's acquisition platform.",
-  "Reduced monthly customer churn from 10% to 3% by leading Levilo's migration from desktop to SaaS.",
-]
 
 export const technologies = {
   Languages: ['C#', 'TypeScript', 'JavaScript', 'SQL'],
@@ -257,7 +204,6 @@ export const languages = [
 
 export const navLinks = [
   { label: 'About', href: '#about' },
-  { label: 'Clients', href: '#clients' },
   { label: 'Impact', href: '#achievements' },
   { label: 'Experience', href: '#experience' },
   { label: 'Contact', href: '#contact' },
