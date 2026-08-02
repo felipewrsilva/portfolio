@@ -85,11 +85,11 @@ SQL Server • Performance Tuning • Query Optimization
 
 ### Senior Software Engineer
 
-**Aug 2020 – Present**
+**Aug 2020 to Present**
 
 Design and develop enterprise healthcare platforms for one of the world's largest healthcare technology companies, supporting global pharmaceutical organizations through scalable software that processes large volumes of healthcare data.
 
-### Selected Project — Real-Time Healthcare Data Platform (DATASUS)
+### Selected Project: Real-Time Healthcare Data Platform (DATASUS)
 
 Led the architecture and development of a next-generation healthcare data platform replacing a legacy solution responsible for processing Brazilian DATASUS public datasets.
 
@@ -119,14 +119,14 @@ The platform enabled the launch of new real-time healthcare analytics products, 
 
 ### Senior Software Engineer
 
-**Apr 2018 – Jul 2020**
+**Apr 2018 to Jul 2020**
 
-Modernized the core architecture of a cross-platform enterprise security solution supporting Windows, Linux and macOS.
+Modernized the core architecture of a cross-platform enterprise security solution.
 
 ### Responsibilities & Impact
 
 - Led the refactoring of the application's core architecture, eliminating structural issues and reducing accumulated technical debt.
-- Solved critical compatibility issues across Windows, Linux and macOS, enabling customers to use a single cross-platform solution.
+- Solved critical compatibility issues across operating systems, enabling customers to use a single cross-platform solution.
 - Redesigned integration layers, significantly improving platform stability and reducing recurring production defects.
 - Simplified long-term maintenance through a modular architecture that accelerated future feature delivery.
 - Collaborated on software architecture, engineering standards and technical decision-making.
@@ -141,7 +141,7 @@ Modernized the core architecture of a cross-platform enterprise security solutio
 
 ### Senior Software Engineer
 
-**May 2017 – Mar 2018**
+**May 2017 to Mar 2018**
 
 Served as Technical Lead for the modernization of the checkout and customer acquisition platform for one of Brazil's largest healthcare education companies.
 
@@ -164,7 +164,7 @@ Served as Technical Lead for the modernization of the checkout and customer acqu
 
 ### Software Engineer
 
-**Feb 2016 – Apr 2017**
+**Feb 2016 to Apr 2017**
 
 Led the transformation of a desktop application into a modern cloud-native SaaS platform.
 
@@ -186,7 +186,7 @@ Led the transformation of a desktop application into a modern cloud-native SaaS 
 
 ### Software Engineer
 
-**Jan 2015 – Jan 2016**
+**Jan 2015 to Jan 2016**
 
 Developed digital education solutions focused on payment modernization and operational efficiency.
 
@@ -210,17 +210,17 @@ Developed digital education solutions focused on payment modernization and opera
 
 **Bachelor of Information Systems**
 
-Jan 2019 – Dec 2024
+Jan 2019 to Dec 2024
 
 ---
 
 
 
-## Faculdade de Engenharia de Sorocaba (Facens)
+## Sorocaba College of Engineering (Facens)
 
 **Computer Engineering**
 
-Jan 2014 – Dec 2018
+Jan 2014 to Dec 2018
 
 ---
 
@@ -228,6 +228,6 @@ Jan 2014 – Dec 2018
 
 # Languages
 
-- Portuguese — Native
-- English — Advanced
-- Spanish — Intermediate
+- Portuguese: Native
+- English: Advanced
+- Spanish: Intermediate

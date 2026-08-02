@@ -48,7 +48,7 @@
   }
 }
 
-/* Floating WhatsApp button — https://codepen.io/dantiii/pen/ZEjJrVE */
+/* Floating WhatsApp button: https://codepen.io/dantiii/pen/ZEjJrVE */
 @keyframes pulsing {
   to {
     box-shadow: 0 0 0 22px rgba(232, 76, 61, 0);

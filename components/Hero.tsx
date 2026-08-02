@@ -68,7 +68,7 @@ export default function Hero() {
           initial="hidden"
           animate="show"
         >
-          {profile.focus} — {profile.location}
+          {profile.focus} · {profile.location}
         </motion.p>
       </div>
     </section>
