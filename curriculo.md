@@ -29,7 +29,7 @@ Track record leading modernization initiatives, building cloud-native architectu
 - Reduced healthcare data availability from **hours to real time** and customer delivery SLAs from **days to hours** on a large data platform.
 - Contributed to approximately **20% product sales growth** by enabling real-time healthcare analytics products.
 - Increased checkout throughput by more than **80%** while modernizing Afya's acquisition platform.
-- Reduced monthly customer churn from **10% to 3%** by leading Levilo's migration from desktop to SaaS.
+- Reduced monthly customer churn from **18% to 3%** by leading Levilo's migration from desktop to SaaS.
 
 ---
 
@@ -126,7 +126,7 @@ Led the transformation of a desktop application into a modern cloud-native SaaS 
 ### Responsibilities & Impact
 
 - Migrated a desktop product to a browser-based SaaS platform.
-- Reduced monthly customer churn from approximately **10%** to **3%** after the migration.
+- Reduced monthly customer churn from approximately **18%** to **3%** after the migration.
 
 ---
 

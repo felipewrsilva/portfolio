@@ -11,12 +11,12 @@ export default function Achievements() {
           <p className="section-label">Impact</p>
           <h2 className="section-title mt-3">Selected outcomes</h2>
           <p className="body-copy mt-4 max-w-prose">
-            A few results that show how the work moved availability, growth,
-            throughput and retention.
+            Results beyond the featured IQVIA work: throughput, retention and
+            product reach across earlier roles.
           </p>
         </Reveal>
 
-        <div className="mt-12 grid gap-px overflow-hidden border border-[color:var(--line)] bg-[color:var(--line)] sm:grid-cols-2">
+        <div className="mt-12 grid gap-px overflow-hidden border border-[color:var(--line)] bg-[color:var(--line)] sm:grid-cols-3">
           {impactMetrics.map((metric, index) => (
             <Reveal key={metric.label} delay={index * 0.04}>
               <div className="flex h-full flex-col bg-paper px-5 py-6 md:px-6 md:py-8">
