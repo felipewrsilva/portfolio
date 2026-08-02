@@ -25,9 +25,14 @@ const mono = IBM_Plex_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Felipe Silva | Senior Software Engineer',
+  title: 'Felipe Silva | Software Engineer',
   description:
-    'Senior Software Engineer in Madrid specializing in backend, cloud and distributed systems. 11+ years designing and scaling software across healthcare, finance, education and SaaS.',
+    'Software Engineer in Madrid specializing in backend, cloud and distributed systems. 10+ years designing and scaling software across healthcare, finance, education and SaaS.',
+  icons: {
+    icon: [{ url: '/fs-logo.svg', type: 'image/svg+xml' }],
+    shortcut: '/fs-logo.svg',
+    apple: '/fs-logo.svg',
+  },
 }
 
 export default function RootLayout({
@@ -40,9 +45,6 @@ export default function RootLayout({
       lang="en"
       className={`${display.variable} ${sans.variable} ${mono.variable}`}
     >
-      <head>
-        <link rel="icon" href="/fs-logo.svg" sizes="any" />
-      </head>
       <body className="font-sans">{children}</body>
     </html>
   )

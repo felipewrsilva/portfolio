@@ -1,6 +1,6 @@
 export const profile = {
   name: 'Felipe Silva',
-  title: 'Senior Software Engineer',
+  title: 'Software Engineer',
   focus: 'Backend · Cloud · Distributed Systems',
   location: 'Madrid, Spain',
   phone: '+34 661 46 28 19',
@@ -18,7 +18,7 @@ export const profile = {
 }
 
 export const summary = [
-  'Senior Software Engineer with 11+ years of experience designing, modernizing and scaling distributed software systems across healthcare, financial services, education and SaaS.',
+  'Software Engineer with 10+ years of experience designing, modernizing and scaling distributed software systems across healthcare, financial services, education and SaaS.',
   'Proven track record leading large-scale modernization initiatives, building cloud-native architectures, improving platform performance, reducing operational costs and delivering software that drives measurable business outcomes.',
   'Experienced across backend, cloud and modern web development using .NET, Node.js, React, Next.js and AWS, combining strong software architecture principles with hands-on technical leadership.',
   'Passionate about solving complex engineering challenges, building scalable systems and creating technology that delivers long-term business value.',

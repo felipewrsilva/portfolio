@@ -16,7 +16,6 @@ export default function WhatsAppButton() {
           <FaWhatsapp className="my-float" aria-hidden="true" />
         </div>
       </a>
-      <p className="text_icon">Message me</p>
     </div>
   )
 }
