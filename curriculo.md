@@ -18,18 +18,19 @@ Website: [felipewrsilva.dev](https://felipewrsilva.dev)
 
 # Professional Summary
 
-Software Engineer with **10+ years of experience** designing, modernizing and scaling distributed systems across healthcare, education, enterprise security and SaaS.
+Backend and distributed systems engineer based in Madrid, with **10+ years** designing and modernizing platforms across healthcare, education, enterprise security and SaaS.
 
-Track record leading modernization initiatives, building cloud-native architectures and delivering measurable outcomes in performance, cost and product growth.
+I take ownership of architecture and delivery where the result is measurable: faster processing, higher conversion, lower cost and stronger retention.
 
 ---
 
 # Selected Achievements
 
-- Reduced healthcare data availability from **hours to real time** and customer delivery SLAs from **days to hours** on a large data platform.
-- Contributed to approximately **20% product sales growth** by enabling real-time healthcare analytics products.
-- Increased checkout throughput by more than **80%** while modernizing Afya's acquisition platform.
-- Reduced monthly customer churn from **18% to 3%** by leading Levilo's migration from desktop to SaaS.
+- Reduced complex healthcare data processing time by more than **90%** (several hours to a few minutes) while scaling ingestion to **terabyte-class** weekly volume (up to 1 TB/week).
+- Cut recurring infrastructure overhead by retiring a large legacy processing fleet (about a **128-node** cluster equivalent).
+- Established **GitLab CI/CD** and **DACPAC** database versioning with automated drift detection, eliminating production schema mismatches.
+- Increased Afya checkout **sales conversions by 12%** and throughput capacity by more than **80%**.
+- Reduced Levilo monthly customer churn from **18% to 3%** while scaling to **5,000+** active client operations.
 
 ---
 
@@ -37,27 +38,19 @@ Track record leading modernization initiatives, building cloud-native architectu
 
 ### Languages
 
-C#, TypeScript, JavaScript, SQL
+C#, TypeScript, SQL
 
 ### Backend
 
-.NET, ASP.NET Core, Node.js, REST APIs, gRPC, Entity Framework Core, Dapper
+.NET · ASP.NET Core · Node.js · REST · gRPC
 
-### Frontend
+### Cloud & Data
 
-React, Next.js
-
-### Cloud & DevOps
-
-AWS (Lambda, SNS, SQS), Docker, Git, GitHub Actions, Azure DevOps, CI/CD
+AWS (Lambda, SNS, SQS) · Docker · GitLab CI/CD · DACPAC · SQL Server
 
 ### Architecture
 
-Distributed Systems · Microservices · Event-Driven Architecture · Service-Oriented Architecture · Clean Architecture · Domain-Driven Design (DDD)
-
-### Data
-
-SQL Server · Performance Tuning · Query Optimization
+Distributed systems · Event-driven · Microservices
 
 ---
 
@@ -67,17 +60,17 @@ SQL Server · Performance Tuning · Query Optimization
 
 ### Senior Software Engineer
 
-**Aug 2020 to Present**
+**Aug 2020 to Present** · Healthcare technology · Global pharmaceutical organizations
 
-Design and develop enterprise healthcare platforms for one of the world's largest healthcare technology companies, supporting global pharmaceutical organizations through scalable software that processes large volumes of healthcare data.
+Design and deliver enterprise healthcare platforms that process large volumes of clinical data for global pharmaceutical customers.
 
-### Responsibilities & Impact
+### Impact
 
-- Led modernization of a large enterprise monolith into modular services, improving scalability and deployment flexibility.
-- Defined service contracts that unlocked reliable communication across distributed systems.
-- Cut recurring production incidents through RCA-driven permanent fixes.
-- Redesigned processing workflows that enabled decommissioning legacy servers and reduced recurring infrastructure cost.
-- Improved data-platform performance under large healthcare workloads through persistence and query optimization.
+- Redesigned ASP.NET Core and SQL Server pipelines, reducing complex healthcare data processing time by more than **90%** (several hours to a few minutes) and cutting timeout errors.
+- Scaled ingestion to **terabyte-class** weekly volume, reliably processing up to **1 TB** of new text-based clinical data per week from global sources.
+- Cut recurring infrastructure overhead by decommissioning a large legacy processing fleet (about a **128-node** cluster with 500GB RAM and 10TB storage).
+- Built GitLab CI/CD from scratch with test coverage tracking, and introduced DACPAC so database changes were fully versioned with automated pre-deploy and drift reports.
+- Reduced routine developer support time by **75%** (about 8 hours to 2 hours per developer monthly) through RCA-driven permanent production fixes.
 
 ---
 
@@ -85,15 +78,15 @@ Design and develop enterprise healthcare platforms for one of the world's larges
 
 ### Senior Software Engineer
 
-**Apr 2018 to Jul 2020**
+**Apr 2018 to Jul 2020** · Enterprise security · Cross-platform enterprise customers
 
-Modernized the core architecture of a cross-platform enterprise security solution.
+Modernized the core architecture of a cross-platform enterprise security product.
 
-### Responsibilities & Impact
+### Impact
 
-- Refactored the core architecture, reducing structural risk and accumulated technical debt.
-- Delivered one product experience across operating systems by resolving critical compatibility gaps.
-- Improved platform stability by redesigning integration layers and cutting recurring production defects.
+- Led backend work on a cross-platform product migration that improved operating-system compatibility and supported retention and new acquisitions.
+- Built automated integration testing that stabilized connections with major cybersecurity partners.
+- Reduced recurring production defects by redesigning integration layers and hardening platform reliability.
 - Scaled event-driven workloads on AWS to support cloud-native processing.
 
 ---
@@ -102,16 +95,14 @@ Modernized the core architecture of a cross-platform enterprise security solutio
 
 ### Senior Software Engineer
 
-**May 2017 to Mar 2018**
+**May 2017 to Mar 2018** · Healthcare education · Acquisition and checkout customers
 
-Served as Technical Lead for the modernization of the checkout and customer acquisition platform for one of Brazil's largest healthcare education companies.
+Technical Lead for modernizing the checkout and customer acquisition platform for one of Brazil's largest healthcare education companies.
 
-### Responsibilities & Impact
+### Impact
 
-- Led checkout modernization onto AWS, improving scalability of acquisition flows.
-- Shipped a new purchasing experience that improved customer conversion.
-- Increased checkout throughput by more than **80%** through backend redesign.
-- Enabled bundle and combo purchases, expanding commercial flexibility on the platform.
+- Led AWS-based modernization of the acquisition platform, increasing sales conversions by **12%** immediately after deployment.
+- Restructured the backend for more than **80%** higher throughput with a stable, zero-downtime checkout rollout.
 
 ---
 
@@ -119,14 +110,14 @@ Served as Technical Lead for the modernization of the checkout and customer acqu
 
 ### Software Engineer
 
-**Feb 2016 to Apr 2017**
+**Feb 2016 to Apr 2017** · SaaS · Desktop customers moving to the browser
 
-Led the transformation of a desktop application into a modern cloud-native SaaS platform.
+Led the transformation of a desktop application into a cloud-native SaaS platform.
 
-### Responsibilities & Impact
+### Impact
 
-- Migrated a desktop product to a browser-based SaaS platform.
-- Reduced monthly customer churn from approximately **18%** to **3%** after the migration.
+- Re-architected a legacy desktop product as SaaS, reducing monthly customer churn from **18% to 3%** by removing local stability failures.
+- Designed and scaled cloud infrastructure for more than **5,000** active client operations across Brazil, including high-availability integrations with large consumer platforms.
 
 ---
 
@@ -134,11 +125,11 @@ Led the transformation of a desktop application into a modern cloud-native SaaS 
 
 ### Software Engineer
 
-**Jan 2015 to Jan 2016**
+**Jan 2015 to Jan 2016** · Education · Students managing invoices and payments
 
-Developed digital education solutions focused on payment modernization and operational efficiency.
+Built digital education tools focused on payment modernization and operational efficiency.
 
-### Responsibilities & Impact
+### Impact
 
 - Launched a multi-method payment platform for students.
 - Replaced manual support workflows with self-service for invoices and payments, reducing operational load.

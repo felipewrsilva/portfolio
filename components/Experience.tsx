@@ -41,7 +41,7 @@ export default function Experience() {
 
                 <div className="mt-2">
                   <h4 className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-accent">
-                    Responsibilities & Impact
+                    Impact
                   </h4>
                   <ul className="mt-4 max-w-prose list-disc space-y-2 pl-5 text-base leading-relaxed text-ink marker:text-accent">
                     {role.bullets.map((bullet) => (
