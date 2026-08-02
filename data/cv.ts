@@ -18,15 +18,12 @@ export const profile = {
 }
 
 export const summary = [
-  'Software Engineer with 10+ years of experience designing, modernizing and scaling distributed software systems across healthcare, financial services, education and SaaS.',
-  'Proven track record leading large-scale modernization initiatives, building cloud-native architectures, improving platform performance, reducing operational costs and delivering software that drives measurable business outcomes.',
-  'Experienced across backend, cloud and modern web development using .NET, Node.js, React, Next.js and AWS, combining strong software architecture principles with hands-on technical leadership.',
-  'Passionate about solving complex engineering challenges, building scalable systems and creating technology that delivers long-term business value.',
+  'Software Engineer with 10+ years of experience designing, modernizing and scaling distributed systems across healthcare, education, enterprise security and SaaS.',
+  'Track record leading modernization initiatives, building cloud-native architectures and delivering measurable outcomes in performance, cost and product growth.',
 ]
 
 export const industries = [
   'Healthcare',
-  'Financial services',
   'Education',
   'SaaS',
   'Enterprise security',
@@ -60,7 +57,7 @@ export const clients = [
     company: 'Levilo',
     industry: 'SaaS',
     audience: 'Desktop product customers moving to the web',
-    focus: 'Desktop-to-cloud SaaS migration with React and Next.js',
+    focus: 'Desktop-to-cloud SaaS migration',
     highlight: 'Churn 10% → 3%',
   },
   {
@@ -84,11 +81,6 @@ export const impactMetrics = [
     detail: 'Enabled by real-time healthcare analytics products',
   },
   {
-    value: 'Days → hours',
-    label: 'Customer delivery SLAs',
-    detail: 'Automated real-time data ingestion',
-  },
-  {
     value: '+80%',
     label: 'Checkout throughput',
     detail: "Afya's acquisition platform modernization",
@@ -97,11 +89,6 @@ export const impactMetrics = [
     value: '10% → 3%',
     label: 'Monthly customer churn',
     detail: "Levilo's desktop-to-SaaS migration",
-  },
-  {
-    value: 'Legacy servers',
-    label: 'Infrastructure decommissioned',
-    detail: 'Recurring cost savings through workflow redesign',
   },
 ]
 
@@ -116,7 +103,6 @@ export const featuredCase = {
     'Reduced data availability from hours to real time',
     'Reduced customer delivery SLAs from days to hours',
     'Enabled new real-time healthcare analytics products',
-    'Preserved the existing customer base',
     'Contributed to approximately 20% product sales growth within the first year',
   ],
   approach: [
@@ -128,12 +114,10 @@ export const featuredCase = {
 }
 
 export const achievements = [
-  'Reduced healthcare data processing from hours to real time by designing a real-time healthcare data platform.',
+  'Reduced healthcare data availability from hours to real time and customer delivery SLAs from days to hours on a large data platform.',
   'Contributed to approximately 20% product sales growth by enabling real-time healthcare analytics products.',
-  'Reduced customer delivery SLAs from days to hours through automated real-time data ingestion.',
   "Increased checkout throughput by more than 80% while modernizing Afya's acquisition platform.",
   "Reduced monthly customer churn from 10% to 3% by leading Levilo's migration from desktop to SaaS.",
-  'Reduced infrastructure costs by redesigning processing workflows and enabling the decommissioning of multiple legacy servers.',
 ]
 
 export const technologies = {

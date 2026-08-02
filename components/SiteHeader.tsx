@@ -51,8 +51,9 @@ export default function SiteHeader() {
         </nav>
         <div className="flex items-center gap-2">
           <a
-            href={profile.resumePdf}
-            download
+            href={profile.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
             className={cn(
               'hidden rounded-sm px-3 py-2 font-mono text-xs font-medium uppercase tracking-[0.16em] transition-colors sm:inline-flex',
               scrolled
@@ -60,12 +61,11 @@ export default function SiteHeader() {
                 : 'text-white/90 hover:text-white',
             )}
           >
-            Resume
+            LinkedIn
           </a>
           <a
-            href={profile.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={profile.resumePdf}
+            download
             className={cn(
               'rounded-sm px-3 py-2 font-mono text-xs font-medium uppercase tracking-[0.16em] transition-colors',
               scrolled
@@ -73,7 +73,7 @@ export default function SiteHeader() {
                 : 'bg-white text-ink hover:bg-accent-soft',
             )}
           >
-            LinkedIn
+            Resume
           </a>
         </div>
       </div>
