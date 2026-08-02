@@ -3,189 +3,177 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R] /Count 3 >>
+<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
 endobj
 3 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
 endobj
 4 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
 endobj
 5 0 obj
-<< /Length 4895 >>
+<< /Length 4869 >>
 stream
 BT
-/F2 16 Tf
-1 0 0 1 48 738 Tm
+/F2 18 Tf
+1 0 0 1 50 742 Tm
 (FELIPE SILVA) Tj
+/F2 10 Tf
+1 0 0 1 50 731 Tm
+(Software Engineer) Tj
 /F1 9 Tf
-1 0 0 1 48 726 Tm
-(Senior Software Engineer) Tj
+1 0 0 1 50 720 Tm
+(Backend | Cloud | Distributed Systems | Madrid, Spain) Tj
 /F1 9 Tf
-1 0 0 1 48 714 Tm
-(Backend · Cloud · Distributed Systems — Madrid, Spain) Tj
+1 0 0 1 50 709 Tm
+(+34 661 46 28 19  |  contact@felipewrsilva.dev) Tj
 /F1 9 Tf
-1 0 0 1 48 702 Tm
-(+34 661 46 28 19  |  felipewrsilva@gmail.com) Tj
-/F1 9 Tf
-1 0 0 1 48 690 Tm
-(linkedin.com/in/felipewrsilva  |  felipewrsilva.com.br) Tj
-/F1 9 Tf
-1 0 0 1 48 678 Tm
-() Tj
+1 0 0 1 50 698 Tm
+(linkedin.com/in/felipewrsilva  |  felipewrsilva.dev) Tj
 /F2 11 Tf
-1 0 0 1 48 666 Tm
+1 0 0 1 50 676 Tm
 (PROFESSIONAL SUMMARY) Tj
 /F1 9 Tf
-1 0 0 1 48 654 Tm
-(Senior Software Engineer with 11+ years of experience designing, modernizing and scaling) Tj
+1 0 0 1 50 665 Tm
+(Backend and distributed systems engineer based in Madrid, with 10+ years designing and) Tj
 /F1 9 Tf
-1 0 0 1 48 642 Tm
-(distributed software systems across healthcare, financial services, education and SaaS.) Tj
+1 0 0 1 50 654 Tm
+(modernizing platforms across healthcare, education, enterprise security and SaaS.) Tj
 /F1 9 Tf
-1 0 0 1 48 630 Tm
-(Proven track record leading large-scale modernization initiatives, building cloud-native) Tj
+1 0 0 1 50 643 Tm
+(I take ownership of architecture and delivery where the result is measurable: faster) Tj
 /F1 9 Tf
-1 0 0 1 48 618 Tm
-(architectures, improving platform performance, reducing operational costs and delivering) Tj
-/F1 9 Tf
-1 0 0 1 48 606 Tm
-(software that drives measurable business outcomes.) Tj
-/F1 9 Tf
-1 0 0 1 48 594 Tm
-(Experienced across backend, cloud and modern web development using .NET, Node.js, React,) Tj
-/F1 9 Tf
-1 0 0 1 48 582 Tm
-(Next.js and AWS, combining strong software architecture principles with hands-on technical) Tj
-/F1 9 Tf
-1 0 0 1 48 570 Tm
-(leadership.) Tj
-/F1 9 Tf
-1 0 0 1 48 558 Tm
-(Passionate about solving complex engineering challenges, building scalable systems and) Tj
-/F1 9 Tf
-1 0 0 1 48 546 Tm
-(creating technology that delivers long-term business value.) Tj
-/F1 9 Tf
-1 0 0 1 48 534 Tm
-() Tj
+1 0 0 1 50 632 Tm
+(processing, higher conversion, lower cost and stronger retention.) Tj
 /F2 11 Tf
-1 0 0 1 48 522 Tm
+1 0 0 1 50 610 Tm
 (SELECTED ACHIEVEMENTS) Tj
 /F1 9 Tf
-1 0 0 1 48 510 Tm
-(• Reduced healthcare data processing from weeks to minutes by designing a real-time) Tj
+1 0 0 1 60 599 Tm
+(- Reduced complex healthcare data processing time by more than 90% \(several hours to a) Tj
 /F1 9 Tf
-1 0 0 1 48 498 Tm
-(healthcare data platform.) Tj
+1 0 0 1 60 588 Tm
+(few minutes\) while scaling ingestion to multi-terabyte daily peaks.) Tj
 /F1 9 Tf
-1 0 0 1 48 486 Tm
-(• Contributed to approximately 20% product sales growth by enabling real-time healthcare) Tj
+1 0 0 1 60 577 Tm
+(- Cut recurring infrastructure overhead by retiring a large legacy processing fleet) Tj
 /F1 9 Tf
-1 0 0 1 48 474 Tm
-(analytics products.) Tj
+1 0 0 1 60 566 Tm
+(\(about a 128-node cluster equivalent\).) Tj
 /F1 9 Tf
-1 0 0 1 48 462 Tm
-(• Reduced customer delivery SLAs from weeks to only a few hours through automated real-time) Tj
+1 0 0 1 60 555 Tm
+(- Established GitLab CI/CD and DACPAC database versioning with automated drift) Tj
 /F1 9 Tf
-1 0 0 1 48 450 Tm
-(data ingestion.) Tj
+1 0 0 1 60 544 Tm
+(detection, eliminating production schema mismatches.) Tj
 /F1 9 Tf
-1 0 0 1 48 438 Tm
-(• Increased checkout throughput by more than 80% while modernizing Afya's acquisition) Tj
+1 0 0 1 60 533 Tm
+(- Increased Afya checkout sales conversions by 12% and throughput capacity by more) Tj
 /F1 9 Tf
-1 0 0 1 48 426 Tm
-(platform.) Tj
+1 0 0 1 60 522 Tm
+(than 80%.) Tj
 /F1 9 Tf
-1 0 0 1 48 414 Tm
-(• Reduced monthly customer churn from 10% to 3% by leading Levilo's migration from desktop) Tj
+1 0 0 1 60 511 Tm
+(- Reduced Levilo monthly customer churn from 18% to 3% while scaling to 5,000+ active) Tj
 /F1 9 Tf
-1 0 0 1 48 402 Tm
-(to SaaS.) Tj
-/F1 9 Tf
-1 0 0 1 48 390 Tm
-(• Reduced infrastructure costs by redesigning processing workflows and enabling the) Tj
-/F1 9 Tf
-1 0 0 1 48 378 Tm
-(decommissioning of multiple legacy servers.) Tj
-/F1 9 Tf
-1 0 0 1 48 366 Tm
-() Tj
+1 0 0 1 60 500 Tm
+(client operations.) Tj
 /F2 11 Tf
-1 0 0 1 48 354 Tm
+1 0 0 1 50 478 Tm
 (CORE TECHNOLOGIES) Tj
 /F1 9 Tf
-1 0 0 1 48 342 Tm
-(Languages: C#, TypeScript, JavaScript, SQL) Tj
+1 0 0 1 50 467 Tm
+(Languages: C#, TypeScript, SQL) Tj
 /F1 9 Tf
-1 0 0 1 48 330 Tm
-(Backend: .NET, ASP.NET Core, Node.js, REST APIs, gRPC, Entity Framework Core, Dapper) Tj
+1 0 0 1 50 456 Tm
+(Backend: .NET | ASP.NET Core | Node.js | REST | gRPC) Tj
 /F1 9 Tf
-1 0 0 1 48 318 Tm
-(Frontend: React, Next.js) Tj
+1 0 0 1 50 445 Tm
+(Cloud & Data: AWS \(Lambda, SNS, SQS\) | Docker | GitLab CI/CD | DACPAC | SQL Server) Tj
 /F1 9 Tf
-1 0 0 1 48 306 Tm
-(Cloud & DevOps: AWS \(Lambda, SNS, SQS\), Docker, Git, GitHub Actions, Azure DevOps, CI/CD) Tj
-/F1 9 Tf
-1 0 0 1 48 294 Tm
-(Architecture: Distributed Systems, Microservices, Event-Driven Architecture, SOA, Clean) Tj
-/F1 9 Tf
-1 0 0 1 48 282 Tm
-(Architecture, DDD) Tj
-/F1 9 Tf
-1 0 0 1 48 270 Tm
-(Data: SQL Server, Performance Tuning, Query Optimization) Tj
-/F1 9 Tf
-1 0 0 1 48 258 Tm
-() Tj
+1 0 0 1 50 434 Tm
+(Architecture: Distributed systems | Event-driven | Microservices) Tj
 /F2 11 Tf
-1 0 0 1 48 246 Tm
+1 0 0 1 50 412 Tm
 (PROFESSIONAL EXPERIENCE) Tj
+/F2 10 Tf
+1 0 0 1 50 390 Tm
+(IQVIA  |  Senior Software Engineer) Tj
 /F1 9 Tf
-1 0 0 1 48 234 Tm
-() Tj
+1 0 0 1 50 379 Tm
+(Aug 2020 to Present  |  Healthcare technology | Global pharmaceutical organizations) Tj
 /F1 9 Tf
-1 0 0 1 48 222 Tm
-(IQVIA — Senior Software Engineer \(Aug 2020 – Present\)) Tj
+1 0 0 1 50 368 Tm
+(Design and deliver enterprise healthcare platforms that process large volumes of healthcare) Tj
 /F1 9 Tf
-1 0 0 1 48 210 Tm
-(Healthcare technology · Global pharmaceutical organizations) Tj
+1 0 0 1 50 357 Tm
+(and pharmaceutical data for global customers.) Tj
 /F1 9 Tf
-1 0 0 1 48 198 Tm
-(Design and develop enterprise healthcare platforms for one of the world's largest healthcare) Tj
+1 0 0 1 60 346 Tm
+(- Redesigned ASP.NET Core and SQL Server pipelines, reducing complex healthcare data) Tj
 /F1 9 Tf
-1 0 0 1 48 186 Tm
-(technology companies, supporting global pharmaceutical organizations through scalable) Tj
+1 0 0 1 60 335 Tm
+(processing time by more than 90% \(several hours to a few minutes\) and cutting timeout) Tj
 /F1 9 Tf
-1 0 0 1 48 174 Tm
-(software that processes large volumes of healthcare data.) Tj
+1 0 0 1 60 324 Tm
+(errors.) Tj
 /F1 9 Tf
-1 0 0 1 48 162 Tm
-() Tj
+1 0 0 1 60 313 Tm
+(- Scaled ingestion to multi-terabyte daily peaks, processing new healthcare and) Tj
 /F1 9 Tf
-1 0 0 1 48 150 Tm
-(Selected Project — Real-Time Healthcare Data Platform) Tj
+1 0 0 1 60 302 Tm
+(pharmaceutical data from global sources well beyond a terabyte in a single day when) Tj
 /F1 9 Tf
-1 0 0 1 48 138 Tm
-(Led the architecture and development of a next-generation healthcare data platform replacing) Tj
+1 0 0 1 60 291 Tm
+(load demanded it.) Tj
 /F1 9 Tf
-1 0 0 1 48 126 Tm
-(a legacy batch-oriented solution, enabling near real-time ingestion and delivery of large) Tj
+1 0 0 1 60 280 Tm
+(- Cut recurring infrastructure overhead by decommissioning a large legacy processing) Tj
 /F1 9 Tf
-1 0 0 1 48 114 Tm
-(healthcare datasets.) Tj
+1 0 0 1 60 269 Tm
+(fleet \(about a 128-node cluster with 500GB RAM and 10TB storage\).) Tj
 /F1 9 Tf
-1 0 0 1 48 102 Tm
-(The new platform synchronized data in near real time, reducing data availability from weeks) Tj
+1 0 0 1 60 258 Tm
+(- Built GitLab CI/CD from scratch with test coverage tracking, and introduced DACPAC) Tj
 /F1 9 Tf
-1 0 0 1 48 90 Tm
-(to minutes and customer delivery SLAs from weeks to only a few hours.) Tj
+1 0 0 1 60 247 Tm
+(so database changes were fully versioned with automated pre-deploy and drift reports.) Tj
 /F1 9 Tf
-1 0 0 1 48 78 Tm
-(The platform enabled the launch of new real-time healthcare analytics products, preserved) Tj
+1 0 0 1 60 236 Tm
+(- Reduced routine developer support time by 75% \(about 8 hours to 2 hours per) Tj
 /F1 9 Tf
-1 0 0 1 48 66 Tm
-(the existing customer base and contributed to approximately 20% product sales growth within) Tj
+1 0 0 1 60 225 Tm
+(developer monthly\) through RCA-driven permanent production fixes.) Tj
+/F2 10 Tf
+1 0 0 1 50 203 Tm
+(Fidelis  |  Senior Software Engineer) Tj
+/F1 9 Tf
+1 0 0 1 50 192 Tm
+(Apr 2018 to Jul 2020  |  Enterprise security | Cross-platform enterprise customers) Tj
+/F1 9 Tf
+1 0 0 1 50 181 Tm
+(Modernized the core architecture of a cross-platform enterprise security product.) Tj
+/F1 9 Tf
+1 0 0 1 60 170 Tm
+(- Led backend work on a cross-platform product migration that improved) Tj
+/F1 9 Tf
+1 0 0 1 60 159 Tm
+(operating-system compatibility and supported retention and new acquisitions.) Tj
+/F1 9 Tf
+1 0 0 1 60 148 Tm
+(- Built automated integration testing that stabilized connections with major) Tj
+/F1 9 Tf
+1 0 0 1 60 137 Tm
+(cybersecurity partners.) Tj
+/F1 9 Tf
+1 0 0 1 60 126 Tm
+(- Reduced recurring production defects by redesigning integration layers and hardening) Tj
+/F1 9 Tf
+1 0 0 1 60 115 Tm
+(platform reliability.) Tj
+/F1 9 Tf
+1 0 0 1 60 104 Tm
+(- Scaled event-driven workloads on AWS to support cloud-native processing.) Tj
 ET
 endstream
 endobj
@@ -193,217 +181,121 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 5 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>
 endobj
 7 0 obj
-<< /Length 5341 >>
+<< /Length 2610 >>
 stream
 BT
+/F2 10 Tf
+1 0 0 1 50 742 Tm
+(Afya  |  Senior Software Engineer) Tj
 /F1 9 Tf
-1 0 0 1 48 738 Tm
-(the first year.) Tj
+1 0 0 1 50 731 Tm
+(May 2017 to Mar 2018  |  Healthcare education | Acquisition and checkout customers) Tj
 /F1 9 Tf
-1 0 0 1 48 726 Tm
-() Tj
+1 0 0 1 50 720 Tm
+(Technical Lead for modernizing the checkout and customer acquisition platform for one of) Tj
 /F1 9 Tf
-1 0 0 1 48 714 Tm
-(Responsibilities & Impact) Tj
+1 0 0 1 50 709 Tm
+(Brazil's largest healthcare education companies.) Tj
 /F1 9 Tf
-1 0 0 1 48 702 Tm
-(• Led modernization of a large enterprise monolith into modular service-oriented components.) Tj
+1 0 0 1 60 698 Tm
+(- Led AWS-based modernization of the acquisition platform, increasing sales) Tj
 /F1 9 Tf
-1 0 0 1 48 690 Tm
-(• Designed versioned REST APIs and internal gRPC contracts across distributed services.) Tj
+1 0 0 1 60 687 Tm
+(conversions by 12% immediately after deployment.) Tj
 /F1 9 Tf
-1 0 0 1 48 678 Tm
-(• Architected cloud-native backend services using AWS Lambda, SNS and SQS.) Tj
+1 0 0 1 60 676 Tm
+(- Restructured the backend for more than 80% higher throughput with a stable,) Tj
 /F1 9 Tf
-1 0 0 1 48 666 Tm
-(• Optimized SQL Server workloads with Entity Framework Core and Dapper.) Tj
+1 0 0 1 60 665 Tm
+(zero-downtime checkout rollout.) Tj
+/F2 10 Tf
+1 0 0 1 50 643 Tm
+(Levilo  |  Software Engineer) Tj
 /F1 9 Tf
-1 0 0 1 48 654 Tm
-(• Expanded CI/CD pipelines with GitHub Actions and Azure DevOps.) Tj
+1 0 0 1 50 632 Tm
+(Feb 2016 to Apr 2017  |  SaaS | Desktop customers moving to the browser) Tj
 /F1 9 Tf
-1 0 0 1 48 642 Tm
-(• Investigated production incidents, conducted RCA and implemented permanent improvements.) Tj
+1 0 0 1 50 621 Tm
+(Led the transformation of a desktop application into a cloud-native SaaS platform.) Tj
 /F1 9 Tf
-1 0 0 1 48 630 Tm
-(• Produced OpenAPI specs, engineering standards, runbooks and technical documentation.) Tj
+1 0 0 1 60 610 Tm
+(- Re-architected a legacy desktop product as SaaS, reducing monthly customer churn) Tj
 /F1 9 Tf
-1 0 0 1 48 618 Tm
-(• Participated in architecture reviews, planning, code reviews and mentoring.) Tj
+1 0 0 1 60 599 Tm
+(from 18% to 3% by removing local stability failures.) Tj
 /F1 9 Tf
-1 0 0 1 48 606 Tm
-(• Redesigned processing workflows enabling decommissioning of multiple legacy servers.) Tj
+1 0 0 1 60 588 Tm
+(- Designed and scaled cloud infrastructure for more than 5,000 active client) Tj
 /F1 9 Tf
-1 0 0 1 48 594 Tm
-() Tj
+1 0 0 1 60 577 Tm
+(operations across Brazil, including high-availability integrations with large consumer) Tj
 /F1 9 Tf
-1 0 0 1 48 582 Tm
-(Fidelis — Senior Software Engineer \(Apr 2018 – Jul 2020\)) Tj
+1 0 0 1 60 566 Tm
+(platforms.) Tj
+/F2 10 Tf
+1 0 0 1 50 544 Tm
+(Senac  |  Software Engineer) Tj
 /F1 9 Tf
-1 0 0 1 48 570 Tm
-(Enterprise security · Windows, Linux and macOS enterprise customers) Tj
+1 0 0 1 50 533 Tm
+(Jan 2015 to Jan 2016  |  Education | Students managing invoices and payments) Tj
 /F1 9 Tf
-1 0 0 1 48 558 Tm
-(Modernized the core architecture of a cross-platform enterprise security solution supporting) Tj
+1 0 0 1 50 522 Tm
+(Built digital education tools focused on payment modernization and operational efficiency.) Tj
 /F1 9 Tf
-1 0 0 1 48 546 Tm
-(Windows, Linux and macOS.) Tj
+1 0 0 1 60 511 Tm
+(- Launched a multi-method payment platform for students.) Tj
 /F1 9 Tf
-1 0 0 1 48 534 Tm
-(• Led refactoring of the application core architecture, reducing technical debt.) Tj
+1 0 0 1 60 500 Tm
+(- Replaced manual support workflows with self-service for invoices and payments,) Tj
 /F1 9 Tf
-1 0 0 1 48 522 Tm
-(• Solved critical compatibility issues across Windows, Linux and macOS.) Tj
-/F1 9 Tf
-1 0 0 1 48 510 Tm
-(• Redesigned integration layers, improving stability and reducing recurring defects.) Tj
-/F1 9 Tf
-1 0 0 1 48 498 Tm
-(• Simplified long-term maintenance through a modular architecture.) Tj
-/F1 9 Tf
-1 0 0 1 48 486 Tm
-(• Collaborated on software architecture, engineering standards and technical decisions.) Tj
-/F1 9 Tf
-1 0 0 1 48 474 Tm
-() Tj
-/F1 9 Tf
-1 0 0 1 48 462 Tm
-(Afya — Senior Software Engineer \(May 2017 – Mar 2018\)) Tj
-/F1 9 Tf
-1 0 0 1 48 450 Tm
-(Healthcare education · Acquisition and checkout customers) Tj
-/F1 9 Tf
-1 0 0 1 48 438 Tm
-(Served as Technical Lead for the modernization of the checkout and customer acquisition) Tj
-/F1 9 Tf
-1 0 0 1 48 426 Tm
-(platform for one of Brazil's largest healthcare education companies.) Tj
-/F1 9 Tf
-1 0 0 1 48 414 Tm
-(• Led the migration toward a modern AWS-based architecture.) Tj
-/F1 9 Tf
-1 0 0 1 48 402 Tm
-(• Designed and delivered a new purchasing experience using React.) Tj
-/F1 9 Tf
-1 0 0 1 48 390 Tm
-(• Redesigned backend services, improving checkout performance by more than 80%.) Tj
-/F1 9 Tf
-1 0 0 1 48 378 Tm
-(• Integrated multiple internal and third-party systems for the purchasing journey.) Tj
-/F1 9 Tf
-1 0 0 1 48 366 Tm
-(• Enabled bundle and combo purchases, increasing platform flexibility.) Tj
-/F1 9 Tf
-1 0 0 1 48 354 Tm
-(• Improved platform security, scalability and maintainability.) Tj
-/F1 9 Tf
-1 0 0 1 48 342 Tm
-() Tj
-/F1 9 Tf
-1 0 0 1 48 330 Tm
-(Levilo — Software Engineer \(Feb 2016 – Apr 2017\)) Tj
-/F1 9 Tf
-1 0 0 1 48 318 Tm
-(SaaS · Desktop customers migrating to browser-based access) Tj
-/F1 9 Tf
-1 0 0 1 48 306 Tm
-(Led the transformation of a desktop application into a modern cloud-native SaaS platform.) Tj
-/F1 9 Tf
-1 0 0 1 48 294 Tm
-(• Migrated from desktop to a modern web platform using React and Next.js.) Tj
-/F1 9 Tf
-1 0 0 1 48 282 Tm
-(• Improved accessibility through browser-based access from any device.) Tj
-/F1 9 Tf
-1 0 0 1 48 270 Tm
-(• Reduced monthly customer churn from approximately 10% to 3%.) Tj
-/F1 9 Tf
-1 0 0 1 48 258 Tm
-(• Increased platform scalability while simplifying distribution and maintenance.) Tj
-/F1 9 Tf
-1 0 0 1 48 246 Tm
-(• Supported the company's long-term growth strategy via SaaS delivery.) Tj
-/F1 9 Tf
-1 0 0 1 48 234 Tm
-() Tj
-/F1 9 Tf
-1 0 0 1 48 222 Tm
-(Senac — Software Engineer \(Jan 2015 – Jan 2016\)) Tj
-/F1 9 Tf
-1 0 0 1 48 210 Tm
-(Education · Students managing invoices and payment methods) Tj
-/F1 9 Tf
-1 0 0 1 48 198 Tm
-(Developed digital education solutions focused on payment modernization and operational) Tj
-/F1 9 Tf
-1 0 0 1 48 186 Tm
-(efficiency.) Tj
-/F1 9 Tf
-1 0 0 1 48 174 Tm
-(• Designed and implemented a modern payment platform with multiple payment methods.) Tj
-/F1 9 Tf
-1 0 0 1 48 162 Tm
-(• Automated payment workflows that previously required manual customer support.) Tj
-/F1 9 Tf
-1 0 0 1 48 150 Tm
-(• Enabled students to independently manage invoices and financial operations.) Tj
-/F1 9 Tf
-1 0 0 1 48 138 Tm
-(• Eliminated major operational bottlenecks with self-service capabilities.) Tj
-/F1 9 Tf
-1 0 0 1 48 126 Tm
-(• Improved customer experience while reducing operational workload.) Tj
-/F1 9 Tf
-1 0 0 1 48 114 Tm
-() Tj
+1 0 0 1 60 489 Tm
+(reducing operational load.) Tj
 /F2 11 Tf
-1 0 0 1 48 102 Tm
+1 0 0 1 50 467 Tm
 (EDUCATION) Tj
+/F2 10 Tf
+1 0 0 1 50 445 Tm
+(University of S\343o Paulo \(USP\)) Tj
 /F1 9 Tf
-1 0 0 1 48 90 Tm
-(University of São Paulo \(USP\) — Bachelor of Information Systems \(Jan 2019 – Dec 2024\)) Tj
+1 0 0 1 62 423 Tm
+(Bachelor of Information Systems) Tj
 /F1 9 Tf
-1 0 0 1 48 78 Tm
-(Facens — Computer Engineering \(Jan 2014 – Dec 2018\)) Tj
+1 0 0 1 62 412 Tm
+(Jan 2019 to Dec 2024) Tj
+/F2 10 Tf
+1 0 0 1 50 390 Tm
+(Sorocaba College of Engineering \(Facens\)) Tj
 /F1 9 Tf
-1 0 0 1 48 66 Tm
-() Tj
+1 0 0 1 62 368 Tm
+(Computer Engineering) Tj
+/F1 9 Tf
+1 0 0 1 62 357 Tm
+(Jan 2014 to Dec 2018) Tj
+/F2 11 Tf
+1 0 0 1 50 335 Tm
+(LANGUAGES) Tj
+/F1 9 Tf
+1 0 0 1 50 324 Tm
+(Portuguese: Native  |  English: Advanced  |  Spanish: Intermediate) Tj
 ET
 endstream
 endobj
 8 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>
 endobj
-9 0 obj
-<< /Length 156 >>
-stream
-BT
-/F2 11 Tf
-1 0 0 1 48 738 Tm
-(LANGUAGES) Tj
-/F1 9 Tf
-1 0 0 1 48 726 Tm
-(Portuguese — Native  |  English — Advanced  |  Spanish — Intermediate) Tj
-ET
-endstream
-endobj
-10 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>
-endobj
 xref
-0 11
+0 9
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
-0000000128 00000 n 
-0000000198 00000 n 
-0000000273 00000 n 
-0000005220 00000 n 
-0000005356 00000 n 
-0000010749 00000 n 
-0000010885 00000 n 
-0000011092 00000 n 
+0000000121 00000 n 
+0000000218 00000 n 
+0000000320 00000 n 
+0000005241 00000 n 
+0000005377 00000 n 
+0000008039 00000 n 
 trailer
-<< /Size 11 /Root 1 0 R >>
+<< /Size 9 /Root 1 0 R >>
 startxref
-11229
+8175
 %%EOF

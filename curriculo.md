@@ -26,7 +26,7 @@ I take ownership of architecture and delivery where the result is measurable: fa
 
 # Selected Achievements
 
-- Reduced complex healthcare data processing time by more than **90%** (several hours to a few minutes) while scaling ingestion to **terabyte-class** weekly volume (up to 1 TB/week).
+- Reduced complex healthcare data processing time by more than **90%** (several hours to a few minutes) while scaling ingestion to **multi-terabyte daily peaks**.
 - Cut recurring infrastructure overhead by retiring a large legacy processing fleet (about a **128-node** cluster equivalent).
 - Established **GitLab CI/CD** and **DACPAC** database versioning with automated drift detection, eliminating production schema mismatches.
 - Increased Afya checkout **sales conversions by 12%** and throughput capacity by more than **80%**.
@@ -62,12 +62,12 @@ Distributed systems · Event-driven · Microservices
 
 **Aug 2020 to Present** · Healthcare technology · Global pharmaceutical organizations
 
-Design and deliver enterprise healthcare platforms that process large volumes of clinical data for global pharmaceutical customers.
+Design and deliver enterprise healthcare platforms that process large volumes of healthcare and pharmaceutical data for global customers.
 
 ### Impact
 
 - Redesigned ASP.NET Core and SQL Server pipelines, reducing complex healthcare data processing time by more than **90%** (several hours to a few minutes) and cutting timeout errors.
-- Scaled ingestion to **terabyte-class** weekly volume, reliably processing up to **1 TB** of new text-based clinical data per week from global sources.
+- Scaled ingestion to **multi-terabyte daily peaks**, processing new healthcare and pharmaceutical data from global sources well beyond a terabyte in a single day when load demanded it.
 - Cut recurring infrastructure overhead by decommissioning a large legacy processing fleet (about a **128-node** cluster with 500GB RAM and 10TB storage).
 - Built GitLab CI/CD from scratch with test coverage tracking, and introduced DACPAC so database changes were fully versioned with automated pre-deploy and drift reports.
 - Reduced routine developer support time by **75%** (about 8 hours to 2 hours per developer monthly) through RCA-driven permanent production fixes.
@@ -140,16 +140,12 @@ Built digital education tools focused on payment modernization and operational e
 
 ## University of São Paulo (USP)
 
-**Bachelor of Information Systems**
-
+**Bachelor of Information Systems**  
 Jan 2019 to Dec 2024
-
----
 
 ## Sorocaba College of Engineering (Facens)
 
-**Computer Engineering**
-
+**Computer Engineering**  
 Jan 2014 to Dec 2018
 
 ---
