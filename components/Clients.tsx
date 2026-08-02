@@ -33,7 +33,11 @@ export default function Clients() {
 
         <div className="mt-12 grid gap-0 border-t border-[color:var(--line)] sm:grid-cols-2 sm:items-stretch">
           {clients.map((client, index) => (
-            <Reveal key={client.company} delay={index * 0.04} className="h-full">
+            <Reveal
+              key={client.company}
+              delay={index * 0.04}
+              className="h-full"
+            >
               <article className="flex h-full flex-col border-b border-[color:var(--line)] py-8 sm:odd:pr-8 sm:even:border-l sm:even:pl-8 lg:py-10">
                 <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
                   <h3 className="font-display text-2xl tracking-tight text-ink">
