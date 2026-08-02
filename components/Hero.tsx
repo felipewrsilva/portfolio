@@ -1,57 +1,83 @@
 'use client'
 
-import { FaLocationArrow } from 'react-icons/fa6'
+import { motion, useReducedMotion } from 'framer-motion'
+import { profile } from '@/data/cv'
 
-import MagicButton from '@/components/MagicButton'
-import { Spotlight } from '@/components/ui/Spotlight'
-import { TextGenerateEffect } from '@/components/ui/TextGenerateEffect'
-import { useContext } from 'react'
-import { DictionaryContext } from '@/components/PageContent'
+export default function Hero() {
+  const reduce = useReducedMotion()
 
-export const Hero = () => {
-  const dict = useContext(DictionaryContext)
+  const item = {
+    hidden: { opacity: 0, y: reduce ? 0 : 28 },
+    show: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: reduce ? 0 : 0.12 + i * 0.1,
+        duration: 0.65,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    }),
+  }
+
   return (
-    <div className="pb-20 pt-36">
-      <div>
-        <Spotlight
-          className="-left-10 -top-40 h-screen md:-left-32 md:-top-20"
-          fill="white"
-        />
-        <Spotlight
-          className="left-full top-10 h-[80vh] w-[50vw]"
-          fill="purple"
-        />
-        <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
+    <section
+      id="top"
+      className="relative flex min-h-[100svh] items-end overflow-hidden bg-ink"
+    >
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(ellipse 80% 60% at 15% 20%, rgba(44,74,54,0.45), transparent 55%), radial-gradient(ellipse 70% 50% at 90% 10%, rgba(197,214,203,0.12), transparent 50%), linear-gradient(160deg, #0b1220 0%, #121a28 45%, #0f1a16 100%)',
+        }}
+      />
+      <div className="blueprint-grid absolute inset-0 opacity-[0.14] mix-blend-overlay" />
+      <div className="pointer-events-none absolute -right-16 top-24 hidden select-none font-display text-[14rem] leading-none tracking-tighter text-white/[0.04] sm:block md:text-[18rem]">
+        FS
       </div>
-      <div className="absolute left-0 top-0 flex h-screen w-full items-center justify-center bg-white bg-grid-black-100/[0.2] dark:bg-black-100 dark:bg-grid-white/[0.03]">
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black-100" />
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink/80 to-transparent" />
+
+      <div className="content-width section-pad relative z-10 w-full pb-16 pt-32 md:pb-24">
+        <motion.p
+          className="font-mono text-xs font-medium uppercase tracking-[0.22em] text-accent-soft"
+          custom={0}
+          variants={item}
+          initial="hidden"
+          animate="show"
+        >
+          {profile.location}
+        </motion.p>
+
+        <motion.p
+          className="mt-5 font-display text-5xl leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl"
+          custom={1}
+          variants={item}
+          initial="hidden"
+          animate="show"
+        >
+          {profile.name}
+        </motion.p>
+
+        <motion.h1
+          className="mt-6 max-w-2xl font-sans text-xl font-medium text-white md:text-2xl"
+          custom={2}
+          variants={item}
+          initial="hidden"
+          animate="show"
+        >
+          {profile.title}
+        </motion.h1>
+
+        <motion.p
+          className="mt-4 max-w-xl text-base text-white/90 md:text-lg"
+          custom={3}
+          variants={item}
+          initial="hidden"
+          animate="show"
+        >
+          {profile.focus}
+        </motion.p>
       </div>
-
-      <div className="relative z-10 my-20 flex justify-center">
-        <div className="flex max-w-[89vw] flex-col items-center justify-center md:max-w-2xl lg:max-w-[60vw]">
-          <p className="max-w-80 text-center text-xs uppercase tracking-widest text-blue-100">
-            {dict.page.header.title}
-          </p>
-          <TextGenerateEffect
-            words={dict.page.header.tagline}
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
-          />
-
-          <p className="mb-4 text-center text-sm md:text-lg md:tracking-wider lg:text-2xl">
-            {dict.page.header.introduction}
-          </p>
-
-          <a href="#about">
-            <MagicButton
-              title={dict.page.hero}
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
-        </div>
-      </div>
-    </div>
+    </section>
   )
 }
-
-export default Hero
