@@ -121,7 +121,7 @@ export const featuredCase = {
   ],
   approach: [
     'Near real-time data synchronization and automated ingestion pipelines',
-    'Cloud-native event-driven processing with AWS Lambda, SNS and SQS',
+    'Event-driven processing across distributed backend services',
     'Versioned REST APIs and internal gRPC contracts across distributed services',
     'SQL Server optimization with Entity Framework Core and Dapper',
   ],
@@ -187,15 +187,11 @@ export const experience: ExperienceRole[] = [
     overview:
       "Design and develop enterprise healthcare platforms for one of the world's largest healthcare technology companies, supporting global pharmaceutical organizations through scalable software that processes large volumes of healthcare data.",
     bullets: [
-      'Led the modernization of a large enterprise monolith into modular service-oriented components, significantly improving scalability, maintainability and deployment flexibility.',
-      'Designed versioned REST APIs and internal gRPC contracts supporting communication across distributed services.',
-      'Architected cloud-native backend services using AWS Lambda, SNS and SQS for highly scalable event-driven processing.',
-      'Optimized SQL Server workloads through indexing strategies, execution plan analysis and hybrid persistence using Entity Framework Core and Dapper.',
-      'Expanded CI/CD pipelines with GitHub Actions and Azure DevOps, improving deployment reliability while reducing manual operational effort.',
-      'Investigated production incidents, conducted Root Cause Analysis (RCA) and implemented permanent engineering improvements that significantly reduced recurring production issues.',
-      'Produced OpenAPI specifications, engineering standards, operational runbooks and technical documentation.',
-      'Participated in software architecture reviews, technical planning, code reviews and mentoring initiatives.',
-      'Redesigned critical processing workflows, enabling the decommissioning of multiple legacy servers and generating recurring infrastructure savings worth thousands of US dollars annually.',
+      'Led modernization of a large enterprise monolith into modular services, improving scalability and deployment flexibility.',
+      'Defined service contracts that unlocked reliable communication across distributed systems.',
+      'Cut recurring production incidents through RCA-driven permanent fixes.',
+      'Redesigned processing workflows that enabled decommissioning legacy servers and reduced recurring infrastructure cost.',
+      'Improved data-platform performance under large healthcare workloads through persistence and query optimization.',
     ],
   },
   {
@@ -207,11 +203,10 @@ export const experience: ExperienceRole[] = [
     overview:
       'Modernized the core architecture of a cross-platform enterprise security solution.',
     bullets: [
-      "Led the refactoring of the application's core architecture, eliminating structural issues and reducing accumulated technical debt.",
-      'Solved critical compatibility issues across operating systems, enabling customers to use a single cross-platform solution.',
-      'Redesigned integration layers, significantly improving platform stability and reducing recurring production defects.',
-      'Simplified long-term maintenance through a modular architecture that accelerated future feature delivery.',
-      'Collaborated on software architecture, engineering standards and technical decision-making.',
+      'Refactored the core architecture, reducing structural risk and accumulated technical debt.',
+      'Delivered one product experience across operating systems by resolving critical compatibility gaps.',
+      'Improved platform stability by redesigning integration layers and cutting recurring production defects.',
+      'Scaled event-driven workloads on AWS to support cloud-native processing.',
     ],
   },
   {
@@ -223,12 +218,10 @@ export const experience: ExperienceRole[] = [
     overview:
       "Served as Technical Lead for the modernization of the checkout and customer acquisition platform for one of Brazil's largest healthcare education companies.",
     bullets: [
-      'Led the migration toward a modern AWS-based architecture.',
-      'Designed and delivered a completely new purchasing experience using React, significantly improving customer conversion.',
-      'Redesigned backend services, increasing throughput and improving checkout performance by more than 80%.',
-      'Integrated multiple internal and third-party systems supporting the complete purchasing journey.',
-      'Enabled bundle and combo purchases, creating new commercial opportunities and increasing platform flexibility.',
-      'Improved platform security, scalability and maintainability through modern software engineering practices.',
+      'Led checkout modernization onto AWS, improving scalability of acquisition flows.',
+      'Shipped a new purchasing experience that improved customer conversion.',
+      'Increased checkout throughput by more than 80% through backend redesign.',
+      'Enabled bundle and combo purchases, expanding commercial flexibility on the platform.',
     ],
   },
   {
@@ -240,11 +233,8 @@ export const experience: ExperienceRole[] = [
     overview:
       'Led the transformation of a desktop application into a modern cloud-native SaaS platform.',
     bullets: [
-      'Planned and executed the migration from a desktop application to a modern web platform using React and Next.js.',
-      'Improved customer accessibility through browser-based access from any device.',
+      'Migrated a desktop product to a browser-based SaaS platform.',
       'Reduced monthly customer churn from approximately 10% to 3% after the migration.',
-      'Increased platform scalability while simplifying software distribution and maintenance.',
-      "Supported the company's long-term growth strategy by transitioning the product to a SaaS delivery model.",
     ],
   },
   {
@@ -256,11 +246,8 @@ export const experience: ExperienceRole[] = [
     overview:
       'Developed digital education solutions focused on payment modernization and operational efficiency.',
     bullets: [
-      'Designed and implemented a modern payment platform supporting multiple payment methods.',
-      'Automated payment workflows that previously required manual customer support.',
-      'Enabled students to independently manage invoices, payment methods and financial operations.',
-      'Eliminated major operational bottlenecks by replacing manual processes with self-service capabilities.',
-      'Improved customer experience while significantly reducing operational workload.',
+      'Launched a multi-method payment platform for students.',
+      'Replaced manual support workflows with self-service for invoices and payments, reducing operational load.',
     ],
   },
 ]
