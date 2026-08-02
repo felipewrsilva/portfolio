@@ -27,7 +27,7 @@ const mono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: 'Felipe Silva | Software Engineer',
   description:
-    'Software Engineer in Madrid specializing in backend, cloud and distributed systems. 10+ years designing and scaling software across healthcare, finance, education and SaaS.',
+    'Software Engineer in Madrid specializing in backend, cloud and distributed systems. 10+ years designing and scaling software across healthcare, education, enterprise security and SaaS.',
   icons: {
     icon: [{ url: '/fs-logo.svg', type: 'image/svg+xml' }],
     shortcut: '/fs-logo.svg',

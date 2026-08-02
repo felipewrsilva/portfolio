@@ -2,50 +2,38 @@
 
 ## Software Engineer
 
-**Backend • Cloud • Distributed Systems**
+**Backend · Cloud · Distributed Systems**
 
-📍 Madrid, Spain
+Madrid, Spain
 
-📞 +34 661 46 28 19
+Phone: +34 661 46 28 19
 
-📧 [contact@felipewrsilva.dev](mailto:contact@felipewrsilva.dev)
+Email: [contact@felipewrsilva.dev](mailto:contact@felipewrsilva.dev)
 
-💼 [https://linkedin.com/in/felipewrsilva](https://linkedin.com/in/felipewrsilva)
+LinkedIn: [linkedin.com/in/felipewrsilva](https://linkedin.com/in/felipewrsilva)
 
-🌐 [https://felipewrsilva.dev](https://felipewrsilva.dev)
+Website: [felipewrsilva.dev](https://felipewrsilva.dev)
 
 ---
 
 # Professional Summary
 
-Software Engineer with **10+ years of experience** designing, modernizing and scaling distributed software systems across healthcare, financial services, education and SaaS.
+Software Engineer with **10+ years of experience** designing, modernizing and scaling distributed systems across healthcare, education, enterprise security and SaaS.
 
-Proven track record leading large-scale modernization initiatives, building cloud-native architectures, improving platform performance, reducing operational costs and delivering software that drives measurable business outcomes.
-
-Experienced across backend, cloud and modern web development using .NET, Node.js, React, Next.js and AWS, combining strong software architecture principles with hands-on technical leadership.
-
-Passionate about solving complex engineering challenges, building scalable systems and creating technology that delivers long-term business value.
+Track record leading modernization initiatives, building cloud-native architectures and delivering measurable outcomes in performance, cost and product growth.
 
 ---
-
-
 
 # Selected Achievements
 
-- Reduced healthcare data processing from **weeks to minutes** by designing the DATASUS real-time data platform.
+- Reduced healthcare data availability from **hours to real time** and customer delivery SLAs from **days to hours** on a large data platform.
 - Contributed to approximately **20% product sales growth** by enabling real-time healthcare analytics products.
-- Reduced customer delivery SLAs from **weeks to only a few hours** through automated real-time data ingestion.
 - Increased checkout throughput by more than **80%** while modernizing Afya's acquisition platform.
 - Reduced monthly customer churn from **10% to 3%** by leading Levilo's migration from desktop to SaaS.
-- Reduced infrastructure costs by redesigning processing workflows and enabling the decommissioning of multiple legacy servers.
 
 ---
 
-
-
 # Core Technologies
-
-
 
 ### Languages
 
@@ -65,37 +53,23 @@ AWS (Lambda, SNS, SQS), Docker, Git, GitHub Actions, Azure DevOps, CI/CD
 
 ### Architecture
 
-Distributed Systems • Microservices • Event-Driven Architecture • Service-Oriented Architecture • Clean Architecture • Domain-Driven Design (DDD)
+Distributed Systems · Microservices · Event-Driven Architecture · Service-Oriented Architecture · Clean Architecture · Domain-Driven Design (DDD)
 
 ### Data
 
-SQL Server • Performance Tuning • Query Optimization
+SQL Server · Performance Tuning · Query Optimization
 
 ---
 
-
-
 # Professional Experience
 
-
-
 ## IQVIA
-
-
 
 ### Senior Software Engineer
 
 **Aug 2020 to Present**
 
 Design and develop enterprise healthcare platforms for one of the world's largest healthcare technology companies, supporting global pharmaceutical organizations through scalable software that processes large volumes of healthcare data.
-
-### Selected Project: Real-Time Healthcare Data Platform (DATASUS)
-
-Led the architecture and development of a next-generation healthcare data platform replacing a legacy solution responsible for processing Brazilian DATASUS public datasets.
-
-The new platform continuously monitors government FTP updates and synchronizes data in near real time, reducing data availability from **weeks to minutes** and customer delivery SLAs from **weeks to only a few hours**.
-
-The platform enabled the launch of new real-time healthcare analytics products, preserved the existing customer base and contributed to approximately **20% product sales growth within the first year**.
 
 ### Responsibilities & Impact
 
@@ -107,11 +81,7 @@ The platform enabled the launch of new real-time healthcare analytics products, 
 
 ---
 
-
-
 ## Fidelis
-
-
 
 ### Senior Software Engineer
 
@@ -128,11 +98,7 @@ Modernized the core architecture of a cross-platform enterprise security solutio
 
 ---
 
-
-
 ## Afya
-
-
 
 ### Senior Software Engineer
 
@@ -149,11 +115,7 @@ Served as Technical Lead for the modernization of the checkout and customer acqu
 
 ---
 
-
-
 ## Levilo
-
-
 
 ### Software Engineer
 
@@ -168,11 +130,7 @@ Led the transformation of a desktop application into a modern cloud-native SaaS 
 
 ---
 
-
-
 ## Senac
-
-
 
 ### Software Engineer
 
@@ -187,11 +145,7 @@ Developed digital education solutions focused on payment modernization and opera
 
 ---
 
-
-
 # Education
-
-
 
 ## University of São Paulo (USP)
 
@@ -201,8 +155,6 @@ Jan 2019 to Dec 2024
 
 ---
 
-
-
 ## Sorocaba College of Engineering (Facens)
 
 **Computer Engineering**
@@ -210,8 +162,6 @@ Jan 2019 to Dec 2024
 Jan 2014 to Dec 2018
 
 ---
-
-
 
 # Languages
 
