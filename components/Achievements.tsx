@@ -11,8 +11,8 @@ export default function Achievements() {
           <p className="section-label">Impact</p>
           <h2 className="section-title mt-3">Selected outcomes</h2>
           <p className="body-copy mt-4 max-w-prose">
-            Results beyond the featured IQVIA work: throughput, retention and
-            product reach across earlier roles.
+            Career outcomes in relative terms: processing speed, conversion and
+            retention.
           </p>
         </Reveal>
 

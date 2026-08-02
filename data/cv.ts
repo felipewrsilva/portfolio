@@ -18,8 +18,8 @@ export const profile = {
 }
 
 export const summary = [
-  'Backend and distributed systems engineer based in Madrid, with 10+ years modernizing platforms across healthcare, education, enterprise security and SaaS.',
-  'I lead architecture and delivery work that shows up in availability, throughput, cost and retention, not just shipped features.',
+  'Backend and distributed systems engineer based in Madrid, with 10+ years designing and modernizing platforms across healthcare, education, enterprise security and SaaS.',
+  'I take ownership of architecture and delivery where the result is measurable: faster processing, higher conversion, lower cost and stronger retention.',
 ]
 
 export const industries = [
@@ -31,19 +31,19 @@ export const industries = [
 
 export const impactMetrics = [
   {
-    value: '+80%',
-    label: 'Checkout throughput',
-    detail: "Afya's acquisition platform modernization",
+    value: '>90%',
+    label: 'Faster data processing',
+    detail: 'Healthcare pipelines at IQVIA (hours to minutes)',
+  },
+  {
+    value: '+12%',
+    label: 'Sales conversions',
+    detail: 'Afya checkout modernization on AWS',
   },
   {
     value: '18% → 3%',
     label: 'Monthly customer churn',
     detail: "Levilo's desktop-to-SaaS migration",
-  },
-  {
-    value: '1 product',
-    label: 'Across operating systems',
-    detail: 'Fidelis cross-platform security modernization',
   },
 ]
 
@@ -51,21 +51,27 @@ export const featuredCase = {
   client: 'IQVIA',
   industry: 'Healthcare technology',
   audience: 'Global pharmaceutical organizations',
-  title: 'Real-Time Healthcare Data Platform',
+  title: 'Healthcare Data Platform at Scale',
   summary:
-    'Led the architecture and development of a next-generation healthcare data platform replacing a legacy batch-oriented solution, enabling near real-time ingestion and delivery of large healthcare datasets.',
+    'Led architecture and delivery for a healthcare data platform that replaced slow batch pipelines with scalable ASP.NET Core and SQL Server processing, supporting global clinical data ingestion at weekly terabyte scale.',
   outcomes: [
-    'Reduced data availability from hours to real time',
-    'Reduced customer delivery SLAs from days to hours',
-    'Enabled new real-time healthcare analytics products',
-    'Contributed to approximately 20% product sales growth within the first year',
+    'Reduced complex processing time by more than 90% (several hours to a few minutes)',
+    'Scaled weekly clinical ingestion to terabyte-class volume (up to 1 TB/week)',
+    'Cut recurring infrastructure overhead by retiring a large legacy fleet (about 128-node equivalent)',
+    'Shipped GitLab CI/CD and DACPAC versioning with automated drift reports',
   ],
 }
 
 export const technologies = {
   Languages: ['C#', 'TypeScript', 'SQL'],
   Backend: ['.NET', 'ASP.NET Core', 'Node.js', 'REST', 'gRPC'],
-  'Cloud & data': ['AWS (Lambda, SNS, SQS)', 'Docker', 'CI/CD', 'SQL Server'],
+  'Cloud & data': [
+    'AWS (Lambda, SNS, SQS)',
+    'Docker',
+    'GitLab CI/CD',
+    'DACPAC',
+    'SQL Server',
+  ],
   Architecture: ['Distributed systems', 'Event-driven', 'Microservices'],
 } as const
 
@@ -87,13 +93,13 @@ export const experience: ExperienceRole[] = [
     industry: 'Healthcare technology',
     audience: 'Global pharmaceutical organizations',
     overview:
-      "Design and develop enterprise healthcare platforms for one of the world's largest healthcare technology companies, supporting global pharmaceutical organizations through scalable software that processes large volumes of healthcare data.",
+      'Design and deliver enterprise healthcare platforms that process large volumes of clinical data for global pharmaceutical customers.',
     bullets: [
-      'Led modernization of a large enterprise monolith into modular services, improving scalability and deployment flexibility.',
-      'Defined service contracts that unlocked reliable communication across distributed systems.',
-      'Cut recurring production incidents through RCA-driven permanent fixes.',
-      'Redesigned processing workflows that enabled decommissioning legacy servers and reduced recurring infrastructure cost.',
-      'Improved data-platform performance under large healthcare workloads through persistence and query optimization.',
+      'Redesigned ASP.NET Core and SQL Server pipelines, reducing complex healthcare data processing time by more than 90% (several hours to a few minutes) and cutting timeout errors.',
+      'Scaled ingestion to terabyte-class weekly volume, reliably processing up to 1 TB of new text-based clinical data per week from global sources.',
+      'Cut recurring infrastructure overhead by decommissioning a large legacy processing fleet (about a 128-node cluster with 500GB RAM and 10TB storage).',
+      'Built GitLab CI/CD from scratch with test coverage tracking, and introduced DACPAC so database changes were fully versioned with automated pre-deploy and drift reports.',
+      'Reduced routine developer support time by 75% (about 8 hours to 2 hours per developer monthly) through RCA-driven permanent production fixes.',
     ],
   },
   {
@@ -103,11 +109,11 @@ export const experience: ExperienceRole[] = [
     industry: 'Enterprise security',
     audience: 'Cross-platform enterprise customers',
     overview:
-      'Modernized the core architecture of a cross-platform enterprise security solution.',
+      'Modernized the core architecture of a cross-platform enterprise security product.',
     bullets: [
-      'Refactored the core architecture, reducing structural risk and accumulated technical debt.',
-      'Delivered one product experience across operating systems by resolving critical compatibility gaps.',
-      'Improved platform stability by redesigning integration layers and cutting recurring production defects.',
+      'Led backend work on a cross-platform product migration that improved operating-system compatibility and supported retention and new acquisitions.',
+      'Built automated integration testing that stabilized connections with major cybersecurity partners.',
+      'Reduced recurring production defects by redesigning integration layers and hardening platform reliability.',
       'Scaled event-driven workloads on AWS to support cloud-native processing.',
     ],
   },
@@ -118,12 +124,10 @@ export const experience: ExperienceRole[] = [
     industry: 'Healthcare education',
     audience: 'Acquisition and checkout customers',
     overview:
-      "Served as Technical Lead for the modernization of the checkout and customer acquisition platform for one of Brazil's largest healthcare education companies.",
+      "Technical Lead for modernizing the checkout and customer acquisition platform for one of Brazil's largest healthcare education companies.",
     bullets: [
-      'Led checkout modernization onto AWS, improving scalability of acquisition flows.',
-      'Shipped a new purchasing experience that improved customer conversion.',
-      'Increased checkout throughput by more than 80% through backend redesign.',
-      'Enabled bundle and combo purchases, expanding commercial flexibility on the platform.',
+      'Led AWS-based modernization of the acquisition platform, increasing sales conversions by 12% immediately after deployment.',
+      'Restructured the backend for more than 80% higher throughput with a stable, zero-downtime checkout rollout.',
     ],
   },
   {
@@ -131,12 +135,12 @@ export const experience: ExperienceRole[] = [
     role: 'Software Engineer',
     period: 'Feb 2016 to Apr 2017',
     industry: 'SaaS',
-    audience: 'Desktop customers migrating to browser-based access',
+    audience: 'Desktop customers moving to the browser',
     overview:
-      'Led the transformation of a desktop application into a modern cloud-native SaaS platform.',
+      'Led the transformation of a desktop application into a cloud-native SaaS platform.',
     bullets: [
-      'Migrated a desktop product to a browser-based SaaS platform.',
-      'Reduced monthly customer churn from approximately 18% to 3% after the migration.',
+      'Re-architected a legacy desktop product as SaaS, reducing monthly customer churn from 18% to 3% by removing local stability failures.',
+      'Designed and scaled cloud infrastructure for more than 5,000 active client operations across Brazil, including high-availability integrations with large consumer platforms.',
     ],
   },
   {
@@ -144,9 +148,9 @@ export const experience: ExperienceRole[] = [
     role: 'Software Engineer',
     period: 'Jan 2015 to Jan 2016',
     industry: 'Education',
-    audience: 'Students managing invoices and payment methods',
+    audience: 'Students managing invoices and payments',
     overview:
-      'Developed digital education solutions focused on payment modernization and operational efficiency.',
+      'Built digital education tools focused on payment modernization and operational efficiency.',
     bullets: [
       'Launched a multi-method payment platform for students.',
       'Replaced manual support workflows with self-service for invoices and payments, reducing operational load.',

@@ -25,7 +25,7 @@ const mono = IBM_Plex_Mono({
 })
 
 const description =
-  'Backend and distributed systems engineer in Madrid. 10+ years modernizing platforms across healthcare, education, enterprise security and SaaS.'
+  'Backend and distributed systems engineer in Madrid. 10+ years modernizing platforms with measurable outcomes in processing, conversion, cost and retention.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://felipewrsilva.dev'),
