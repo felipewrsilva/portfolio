@@ -24,14 +24,30 @@ const mono = IBM_Plex_Mono({
   display: 'swap',
 })
 
+const description =
+  'Backend and distributed systems engineer in Madrid. 10+ years modernizing platforms across healthcare, education, enterprise security and SaaS.'
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://felipewrsilva.dev'),
   title: 'Felipe Silva | Software Engineer',
-  description:
-    'Software Engineer in Madrid specializing in backend, cloud and distributed systems. 10+ years designing and scaling software across healthcare, education, enterprise security and SaaS.',
+  description,
   icons: {
     icon: [{ url: '/fs-logo.svg', type: 'image/svg+xml' }],
     shortcut: '/fs-logo.svg',
     apple: '/fs-logo.svg',
+  },
+  openGraph: {
+    title: 'Felipe Silva | Software Engineer',
+    description,
+    url: 'https://felipewrsilva.dev',
+    siteName: 'Felipe Silva',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Felipe Silva | Software Engineer',
+    description,
   },
 }
 

@@ -15,8 +15,8 @@ export default function PageContent() {
       <SiteHeader />
       <Hero />
       <Summary />
-      <Achievements />
       <FeaturedCase />
+      <Achievements />
       <Experience />
       <Technologies />
       <Background />

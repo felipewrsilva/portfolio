@@ -4,7 +4,7 @@ import { profile } from '@/data/cv'
 import { Reveal } from '@/components/Reveal'
 
 const links = [
-  { label: 'Phone', value: profile.phone, href: profile.whatsappHref },
+  { label: 'WhatsApp', value: profile.phone, href: profile.whatsappHref },
   { label: 'Email', value: profile.email, href: profile.emailHref },
   {
     label: 'LinkedIn',

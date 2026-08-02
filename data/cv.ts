@@ -18,8 +18,8 @@ export const profile = {
 }
 
 export const summary = [
-  'Software Engineer with 10+ years of experience designing, modernizing and scaling distributed systems across healthcare, education, enterprise security and SaaS.',
-  'Track record leading modernization initiatives, building cloud-native architectures and delivering measurable outcomes in performance, cost and product growth.',
+  'Backend and distributed systems engineer based in Madrid, with 10+ years modernizing platforms across healthcare, education, enterprise security and SaaS.',
+  'I lead architecture and delivery work that shows up in availability, throughput, cost and retention, not just shipped features.',
 ]
 
 export const industries = [
@@ -31,24 +31,19 @@ export const industries = [
 
 export const impactMetrics = [
   {
-    value: 'Hours → real-time',
-    label: 'Healthcare data availability',
-    detail: 'Real-time data platform at IQVIA',
-  },
-  {
-    value: '~20%',
-    label: 'Product sales growth',
-    detail: 'Enabled by real-time healthcare analytics products',
-  },
-  {
     value: '+80%',
     label: 'Checkout throughput',
     detail: "Afya's acquisition platform modernization",
   },
   {
-    value: '10% → 3%',
+    value: '18% → 3%',
     label: 'Monthly customer churn',
     detail: "Levilo's desktop-to-SaaS migration",
+  },
+  {
+    value: '1 product',
+    label: 'Across operating systems',
+    detail: 'Fidelis cross-platform security modernization',
   },
 ]
 
@@ -68,34 +63,10 @@ export const featuredCase = {
 }
 
 export const technologies = {
-  Languages: ['C#', 'TypeScript', 'JavaScript', 'SQL'],
-  Backend: [
-    '.NET',
-    'ASP.NET Core',
-    'Node.js',
-    'REST APIs',
-    'gRPC',
-    'Entity Framework Core',
-    'Dapper',
-  ],
-  Frontend: ['React', 'Next.js'],
-  'Cloud & DevOps': [
-    'AWS (Lambda, SNS, SQS)',
-    'Docker',
-    'Git',
-    'GitHub Actions',
-    'Azure DevOps',
-    'CI/CD',
-  ],
-  Architecture: [
-    'Distributed Systems',
-    'Microservices',
-    'Event-Driven Architecture',
-    'Service-Oriented Architecture',
-    'Clean Architecture',
-    'Domain-Driven Design (DDD)',
-  ],
-  Data: ['SQL Server', 'Performance Tuning', 'Query Optimization'],
+  Languages: ['C#', 'TypeScript', 'SQL'],
+  Backend: ['.NET', 'ASP.NET Core', 'Node.js', 'REST', 'gRPC'],
+  'Cloud & data': ['AWS (Lambda, SNS, SQS)', 'Docker', 'CI/CD', 'SQL Server'],
+  Architecture: ['Distributed systems', 'Event-driven', 'Microservices'],
 } as const
 
 export type ExperienceRole = {
@@ -165,7 +136,7 @@ export const experience: ExperienceRole[] = [
       'Led the transformation of a desktop application into a modern cloud-native SaaS platform.',
     bullets: [
       'Migrated a desktop product to a browser-based SaaS platform.',
-      'Reduced monthly customer churn from approximately 10% to 3% after the migration.',
+      'Reduced monthly customer churn from approximately 18% to 3% after the migration.',
     ],
   },
   {
