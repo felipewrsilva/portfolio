@@ -12,7 +12,7 @@ export default function Achievements() {
           <h2 className="section-title mt-3">Selected Achievements</h2>
           <p className="body-copy mt-4 max-w-prose">
             Measurable outcomes delivered for healthcare, education and SaaS
-            clients — from data platform SLAs to checkout performance and churn
+            clients, from data platform SLAs to checkout performance and churn
             reduction.
           </p>
         </Reveal>
