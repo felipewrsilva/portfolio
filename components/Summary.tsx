@@ -23,7 +23,7 @@ export default function Summary() {
             {industries.map((industry) => (
               <li
                 key={industry}
-                className="font-mono text-xs uppercase tracking-[0.16em] text-accent"
+                className="font-mono text-xs uppercase tracking-[0.14em] text-ink-muted"
               >
                 {industry}
               </li>

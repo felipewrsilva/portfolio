@@ -49,12 +49,6 @@
 }
 
 @layer utilities {
-  .blueprint-grid {
-    background-image: linear-gradient(var(--line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line) 1px, transparent 1px);
-    background-size: 48px 48px;
-  }
-
   .section-pad {
     @apply px-5 py-20 sm:px-8 md:px-12 lg:px-16;
   }
