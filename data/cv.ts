@@ -3,12 +3,16 @@ export const profile = {
   title: 'Senior Software Engineer',
   focus: '.NET · SQL Server · Data platform modernization',
   tagline:
-    'I modernize backend platforms where slow pipelines, brittle schemas, and operational cost become the product risk.',
+    'I take existing .NET and SQL Server platforms and make the slow, expensive, or unsafe parts shippable again.',
   company: 'IQVIA',
   yearsExperience: '10+ years',
   location: 'Madrid, Spain',
+  workAuthorization:
+    'Authorized to work in Europe. No visa sponsorship or endorsement required, now or later.',
   availability:
-    'Open to senior backend roles and consulting on .NET modernization.',
+    'Open to senior backend roles and consulting on .NET modernization. Open to employment and to contracting.',
+  contactBrief:
+    'For roles, send the req and the stack. For consulting, send the system, the constraint, and whether you want an employee or a contractor.',
   phone: '+34 657 99 00 70',
   phoneHref: 'tel:+34657990070',
   email: 'contact@felipewrsilva.dev',
@@ -19,8 +23,8 @@ export const profile = {
 }
 
 export const summary = [
-  'Senior .NET backend engineer based in Madrid, with 10+ years building and modernizing data-heavy platforms across healthcare, education, enterprise security and SaaS.',
-  'I take ownership of architecture and delivery on existing systems: processing time, schema change safety, operational cost, and whether the platform can keep shipping without breaking production.',
+  'Senior .NET backend engineer based in Madrid, with 10+ years building and modernizing data-heavy platforms across healthcare, education, enterprise security and SaaS. Authorized to work in Europe. No visa sponsorship or endorsement required, now or later.',
+  'I own architecture and delivery on systems that already have customers. That means processing time, safe schema changes, operating cost, and releases that do not break production.',
 ]
 
 export const industries = [
@@ -40,9 +44,9 @@ export const featuredCase = {
   constraint:
     'Existing ASP.NET and SQL Server investments had to keep running for global customers. A full rewrite was not acceptable. Database changes also needed to stop drifting between environments.',
   approach:
-    'Rebuilt the critical processing paths on ASP.NET Core and SQL Server, introduced versioned DACPAC deployments with pre-deploy and drift reports, and put GitLab CI/CD in place with test coverage tracking so releases stopped depending on manual tribal knowledge.',
+    'The bottleneck was long-running serial batch jobs that timed out under peak load. I reworked those critical processing paths on ASP.NET Core and SQL Server while leaving the surrounding ASP.NET and SQL Server estate in place, introduced versioned DACPAC deployments with pre-deploy and drift reports, and put GitLab CI/CD in place with test coverage tracking so releases no longer depended on undocumented release steps.',
   tradeOff:
-    'Kept SQL Server as the system of record instead of chasing a greenfield stack, and retired legacy compute only after the new pipelines proved they could absorb multi-terabyte daily peaks.',
+    'Kept SQL Server as the system of record instead of replacing the stack, and retired legacy compute only after the new pipelines proved they could absorb multi-terabyte daily peaks.',
   result:
     'Complex jobs that previously took several hours finished in minutes. Timeout errors dropped. A large legacy processing fleet could be decommissioned. Schema mismatches stopped reaching production.',
   outcomes: [
@@ -86,7 +90,7 @@ export const experience: ExperienceRole[] = [
     overview:
       'Design and deliver backend platforms that process large volumes of healthcare and pharmaceutical data for customers across multiple markets.',
     bullets: [
-      'Redesigned ASP.NET Core and SQL Server pipelines, reducing complex healthcare data processing time by more than 90% (several hours to a few minutes) and cutting timeout errors.',
+      'Reworked the serial batch paths that timed out under peak load on ASP.NET Core and SQL Server, cutting complex healthcare data processing from several hours to a few minutes and reducing timeout errors.',
       'Scaled ingestion to multi-terabyte daily peaks from healthcare and pharmaceutical sources.',
       'Cut recurring infrastructure overhead by decommissioning a large legacy processing fleet after the redesigned pipelines proved stable.',
       'Built GitLab CI/CD from scratch with test coverage tracking, and introduced DACPAC so database changes were versioned with automated pre-deploy and drift reports.',
@@ -102,10 +106,10 @@ export const experience: ExperienceRole[] = [
     overview:
       'Backend work on modernizing a cross-platform enterprise security product and stabilizing partner integrations.',
     bullets: [
-      'Owned backend work on a product migration that improved operating-system compatibility and supported customer retention.',
-      'Built automated integration testing that stabilized connections with cybersecurity partners.',
-      'Reduced recurring production defects by redesigning integration layers.',
-      'Moved event-driven workloads onto AWS (Lambda, SNS, SQS) to support cloud processing.',
+      'Owned the backend side of an OS migration so the product ran reliably across customer environments that previously blocked upgrades.',
+      'Built automated integration tests for cybersecurity partner connections that were failing in production.',
+      'Reworked brittle integration layers that were producing recurring production defects.',
+      'Moved partner and processing workloads that needed async fan-out onto AWS Lambda, SNS, and SQS.',
     ],
   },
   {
@@ -115,10 +119,10 @@ export const experience: ExperienceRole[] = [
     industry: 'Healthcare education',
     audience: 'Checkout and customer acquisition users',
     overview:
-      'Technical lead for modernizing the checkout and customer acquisition platform for a major Brazilian healthcare education company.',
+      'Owned backend modernization of the checkout and customer acquisition platform for a major Brazilian healthcare education company.',
     bullets: [
-      'Led AWS-based modernization of the acquisition platform, increasing sales conversions by 12% after launch.',
-      'Restructured the backend for more than 80% higher throughput with a zero-downtime checkout rollout.',
+      'Led AWS-based modernization of the acquisition platform, improving checkout conversion after launch.',
+      'Raised checkout throughput and shipped the cutover without downtime for live users.',
     ],
   },
   {
@@ -128,10 +132,10 @@ export const experience: ExperienceRole[] = [
     industry: 'SaaS',
     audience: 'Users migrating from desktop to web',
     overview:
-      'Helped turn a desktop application into a SaaS product and support cloud operations for active clients across Brazil.',
+      'Owned backend and cloud work that moved a desktop product to SaaS for active clients across Brazil.',
     bullets: [
-      'Re-architected a legacy desktop product as SaaS, reducing monthly customer churn from 18% to 3% by removing local stability failures.',
-      'Designed and scaled cloud infrastructure for more than 5,000 active client operations, including high-availability integrations with large consumer platforms.',
+      'Moved a legacy desktop product to SaaS and removed local install stability failures that were driving customer churn.',
+      'Operated cloud infrastructure for thousands of active client operations, including high-availability integrations with large consumer platforms.',
     ],
   },
   {

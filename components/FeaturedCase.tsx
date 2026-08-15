@@ -27,14 +27,14 @@ export default function FeaturedCase() {
           </h2>
         </Reveal>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
+        <div className="mt-12 max-w-3xl space-y-8">
           {sections.map((section, index) => (
             <Reveal key={section.label} delay={index * 0.04}>
               <div>
                 <h3 className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-accent-soft">
                   {section.label}
                 </h3>
-                <p className="mt-3 max-w-prose text-base leading-relaxed text-white/90">
+                <p className="mt-3 text-base leading-relaxed text-white/90">
                   {section.text}
                 </p>
               </div>

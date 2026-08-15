@@ -68,7 +68,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.p
-          className="mt-3 max-w-xl font-mono text-sm uppercase tracking-[0.14em] text-accent-soft"
+          className="mt-3 max-w-2xl font-mono text-sm uppercase tracking-[0.1em] text-accent-soft"
           custom={3}
           variants={item}
           initial="hidden"

@@ -11,7 +11,6 @@ const links = [
     value: 'linkedin.com/in/felipewrsilva',
     href: profile.linkedin,
   },
-  { label: 'GitHub', value: 'github.com/felipewrsilva', href: profile.github },
 ]
 
 export default function Contact() {
@@ -30,6 +29,9 @@ export default function Contact() {
           </h2>
           <p className="mt-4 max-w-prose text-base text-white/90">
             {profile.availability}
+          </p>
+          <p className="mt-3 max-w-prose text-base text-white/75">
+            {profile.workAuthorization} {profile.contactBrief}
           </p>
           <p className="mt-3 max-w-prose text-base text-white/75">
             {profile.focus} · {profile.location}
@@ -59,7 +61,7 @@ export default function Contact() {
           </div>
         </Reveal>
 
-        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {links.map((link) => (
             <li key={link.label}>
               <p className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-white/75">
