@@ -24,29 +24,33 @@ const mono = IBM_Plex_Mono({
   display: 'swap',
 })
 
+const title = 'Felipe Silva | Senior Software Engineer'
 const description =
-  'Backend and distributed systems engineer in Madrid. 10+ years modernizing platforms with measurable outcomes in processing, conversion, cost and retention.'
+  'Senior .NET backend engineer in Madrid. 10+ years modernizing healthcare and enterprise data platforms with ASP.NET Core and SQL Server.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://felipewrsilva.dev'),
-  title: 'Felipe Silva | Software Engineer',
+  title,
   description,
+  alternates: {
+    canonical: 'https://felipewrsilva.dev',
+  },
   icons: {
     icon: [{ url: '/fs-logo.svg', type: 'image/svg+xml' }],
     shortcut: '/fs-logo.svg',
     apple: '/fs-logo.svg',
   },
   openGraph: {
-    title: 'Felipe Silva | Software Engineer',
+    title,
     description,
     url: 'https://felipewrsilva.dev',
     siteName: 'Felipe Silva',
-    locale: 'en_US',
+    locale: 'en_GB',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Felipe Silva | Software Engineer',
+    title,
     description,
   },
 }
@@ -56,12 +60,43 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Felipe Silva',
+    jobTitle: 'Senior Software Engineer',
+    url: 'https://felipewrsilva.dev',
+    email: 'mailto:contact@felipewrsilva.dev',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Madrid',
+      addressCountry: 'ES',
+    },
+    sameAs: [
+      'https://linkedin.com/in/felipewrsilva',
+      'https://github.com/felipewrsilva',
+    ],
+    knowsAbout: [
+      '.NET',
+      'ASP.NET Core',
+      'SQL Server',
+      'Data platform modernization',
+      'Backend engineering',
+    ],
+  }
+
   return (
     <html
       lang="en"
       className={`${display.variable} ${sans.variable} ${mono.variable}`}
     >
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   )
 }
