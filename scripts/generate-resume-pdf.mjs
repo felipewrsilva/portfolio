@@ -92,30 +92,14 @@ function measureRuns(runs, size, tracking = 0) {
   )
 }
 
-/** Split markdown inline syntax into styled runs. */
+/** Split markdown inline syntax into plain runs. No bold in body copy. */
 function parseRuns(text) {
-  const runs = []
-  const source = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1')
-  const pattern = /\*\*(.+?)\*\*|`([^`]+)`/g
-  let cursor = 0
-  let match
-  while ((match = pattern.exec(source))) {
-    if (match.index > cursor) {
-      runs.push({
-        text: normalizeText(source.slice(cursor, match.index)),
-        bold: false,
-      })
-    }
-    runs.push({
-      text: normalizeText(match[1] ?? match[2]),
-      bold: Boolean(match[1]),
-    })
-    cursor = match.index + match[0].length
-  }
-  if (cursor < source.length) {
-    runs.push({ text: normalizeText(source.slice(cursor)), bold: false })
-  }
-  return runs.filter((run) => run.text !== '')
+  const source = text
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1')
+    .replace(/\*\*(.+?)\*\*/g, '$1')
+    .replace(/`([^`]+)`/g, '$1')
+  const normalized = normalizeText(source)
+  return normalized ? [{ text: normalized, bold: false }] : []
 }
 
 function plainText(text) {

@@ -15,7 +15,7 @@ endobj
 << /Title (FELIPE SILVA - Senior Software Engineer) /Author (FELIPE SILVA) /Subject (.NET \225 SQL Server \225 Data platform modernization) /Creator (curriculo.md) /Producer (portfolio resume builder) >>
 endobj
 6 0 obj
-<< /Length 8126 >>
+<< /Length 7161 >>
 stream
 BT 0.040 0.070 0.130 rg 1.10 Tc
 /F2 21 Tf
@@ -67,13 +67,7 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 54.00 626.00 Tm
-(Senior .NET backend engineer based in Madrid, with ) Tj
-/F2 9.3 Tf
-1 0 0 1 274.20 626.00 Tm
-(10+ years) Tj
-/F1 9.3 Tf
-1 0 0 1 316.86 626.00 Tm
-( building and modernizing data-heavy platforms across) Tj
+(Senior .NET backend engineer based in Madrid, with 10+ years building and modernizing data-heavy platforms across) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
@@ -109,21 +103,12 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 66.00 513.58 Tm
-(Reduced complex healthcare data processing time by more than ) Tj
-/F2 9.3 Tf
-1 0 0 1 334.27 513.58 Tm
-(90%) Tj
-/F1 9.3 Tf
-1 0 0 1 352.88 513.58 Tm
-( \(several hours to a few minutes\) while absorbing) Tj
+(Reduced complex healthcare data processing time by more than 90% \(several hours to a few minutes\) while absorbing) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
-/F2 9.3 Tf
-1 0 0 1 66.00 500.09 Tm
-(multi-terabyte daily peaks) Tj
 /F1 9.3 Tf
-1 0 0 1 180.22 500.09 Tm
-(.) Tj
+1 0 0 1 66.00 500.09 Tm
+(multi-terabyte daily peaks.) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9.3 Tf
@@ -148,19 +133,7 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 66.00 454.63 Tm
-(Established ) Tj
-/F2 9.3 Tf
-1 0 0 1 116.66 454.63 Tm
-(GitLab CI/CD) Tj
-/F1 9.3 Tf
-1 0 0 1 174.01 454.63 Tm
-( and ) Tj
-/F2 9.3 Tf
-1 0 0 1 194.69 454.63 Tm
-(DACPAC) Tj
-/F1 9.3 Tf
-1 0 0 1 234.47 454.63 Tm
-( database versioning with automated drift detection, eliminating production) Tj
+(Established GitLab CI/CD and DACPAC database versioning with automated drift detection, eliminating production) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
@@ -175,19 +148,7 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 66.00 425.16 Tm
-(Increased Afya checkout ) Tj
-/F2 9.3 Tf
-1 0 0 1 170.42 425.16 Tm
-(sales conversions by 12%) Tj
-/F1 9.3 Tf
-1 0 0 1 285.69 425.16 Tm
-( and throughput capacity by more than ) Tj
-/F2 9.3 Tf
-1 0 0 1 446.98 425.16 Tm
-(80%) Tj
-/F1 9.3 Tf
-1 0 0 1 465.59 425.16 Tm
-(.) Tj
+(Increased Afya checkout sales conversions by 12% and throughput capacity by more than 80%.) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9.3 Tf
@@ -197,19 +158,7 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 66.00 409.18 Tm
-(Reduced Levilo monthly customer churn from ) Tj
-/F2 9.3 Tf
-1 0 0 1 255.68 409.18 Tm
-(18% to 3%) Tj
-/F1 9.3 Tf
-1 0 0 1 301.68 409.18 Tm
-( while scaling to ) Tj
-/F2 9.3 Tf
-1 0 0 1 369.91 409.18 Tm
-(5,000+) Tj
-/F1 9.3 Tf
-1 0 0 1 398.61 409.18 Tm
-( active client operations.) Tj
+(Reduced Levilo monthly customer churn from 18% to 3% while scaling to 5,000+ active client operations.) Tj
 ET
 BT 0.170 0.290 0.210 rg 1.40 Tc
 /F2 8.5 Tf
@@ -301,13 +250,7 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 66.00 206.80 Tm
-(than ) Tj
-/F2 9.3 Tf
-1 0 0 1 86.68 206.80 Tm
-(90%) Tj
-/F1 9.3 Tf
-1 0 0 1 105.29 206.80 Tm
-( \(several hours to a few minutes\) and cutting timeout errors.) Tj
+(than 90% \(several hours to a few minutes\) and cutting timeout errors.) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9.3 Tf
@@ -317,13 +260,7 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 66.00 190.81 Tm
-(Scaled ingestion to ) Tj
-/F2 9.3 Tf
-1 0 0 1 147.16 190.81 Tm
-(multi-terabyte daily peaks) Tj
-/F1 9.3 Tf
-1 0 0 1 261.38 190.81 Tm
-( from healthcare and pharmaceutical sources.) Tj
+(Scaled ingestion to multi-terabyte daily peaks from healthcare and pharmaceutical sources.) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9.3 Tf
@@ -363,13 +300,7 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 66.00 115.89 Tm
-(Reduced routine developer support time by ) Tj
-/F2 9.3 Tf
-1 0 0 1 246.40 115.89 Tm
-(75%) Tj
-/F1 9.3 Tf
-1 0 0 1 265.01 115.89 Tm
-( \(about 8 hours to 2 hours per developer monthly\) through RCA-driven) Tj
+(Reduced routine developer support time by 75% \(about 8 hours to 2 hours per developer monthly\) through RCA-driven) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
@@ -385,7 +316,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Annots [<< /Type /Annot /Subtype /Link /Rect [491.60 718.60 558.00 728.60] /Border [0 0 0] /A << /S /URI /URI (tel:+34657990070) >> >> << /Type /Annot /Subtype /Link /Rect [459.62 707.20 558.00 717.20] /Border [0 0 0] /A << /S /URI /URI (mailto:contact@felipewrsilva.dev) >> >> << /Type /Annot /Subtype /Link /Rect [453.14 695.80 558.00 705.80] /Border [0 0 0] /A << /S /URI /URI (https://linkedin.com/in/felipewrsilva) >> >> << /Type /Annot /Subtype /Link /Rect [495.65 684.40 558.00 694.40] /Border [0 0 0] /A << /S /URI /URI (https://felipewrsilva.dev) >> >>] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>
 endobj
 8 0 obj
-<< /Length 6384 >>
+<< /Length 6048 >>
 stream
 BT 0.040 0.070 0.130 rg 0 Tc
 /F2 10.6 Tf
@@ -485,13 +416,7 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 66.00 556.12 Tm
-(Led AWS-based modernization of the acquisition platform, increasing sales conversions by ) Tj
-/F2 9.3 Tf
-1 0 0 1 442.29 556.12 Tm
-(12%) Tj
-/F1 9.3 Tf
-1 0 0 1 460.90 556.12 Tm
-( after launch.) Tj
+(Led AWS-based modernization of the acquisition platform, increasing sales conversions by 12% after launch.) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9.3 Tf
@@ -501,13 +426,7 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 66.00 540.13 Tm
-(Restructured the backend for more than ) Tj
-/F2 9.3 Tf
-1 0 0 1 232.96 540.13 Tm
-(80%) Tj
-/F1 9.3 Tf
-1 0 0 1 251.57 540.13 Tm
-( higher throughput with a zero-downtime checkout rollout.) Tj
+(Restructured the backend for more than 80% higher throughput with a zero-downtime checkout rollout.) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F2 10.6 Tf
@@ -537,13 +456,7 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 66.00 474.66 Tm
-(Re-architected a legacy desktop product as SaaS, reducing monthly customer churn from ) Tj
-/F2 9.3 Tf
-1 0 0 1 436.61 474.66 Tm
-(18% to 3%) Tj
-/F1 9.3 Tf
-1 0 0 1 482.60 474.66 Tm
-( by removing local) Tj
+(Re-architected a legacy desktop product as SaaS, reducing monthly customer churn from 18% to 3% by removing local) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
@@ -558,13 +471,7 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 66.00 445.19 Tm
-(Designed and scaled cloud infrastructure for more than ) Tj
-/F2 9.3 Tf
-1 0 0 1 294.98 445.19 Tm
-(5,000) Tj
-/F1 9.3 Tf
-1 0 0 1 318.25 445.19 Tm
-( active client operations, including high-availability) Tj
+(Designed and scaled cloud infrastructure for more than 5,000 active client operations, including high-availability) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
@@ -675,11 +582,11 @@ xref
 0000000232 00000 n 
 0000000334 00000 n 
 0000000553 00000 n 
-0000008731 00000 n 
-0000009431 00000 n 
-0000015867 00000 n 
+0000007766 00000 n 
+0000008466 00000 n 
+0000014566 00000 n 
 trailer
 << /Size 10 /Root 1 0 R /Info 5 0 R >>
 startxref
-16003
+14702
 %%EOF

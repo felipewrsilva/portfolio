@@ -18,7 +18,7 @@ Website: [felipewrsilva.dev](https://felipewrsilva.dev)
 
 # Professional Summary
 
-Senior .NET backend engineer based in Madrid, with **10+ years** building and modernizing data-heavy platforms across healthcare, education, enterprise security and SaaS.
+Senior .NET backend engineer based in Madrid, with 10+ years building and modernizing data-heavy platforms across healthcare, education, enterprise security and SaaS.
 
 I take ownership of architecture and delivery on existing systems: processing time, schema change safety, operational cost, and whether the platform can keep shipping without breaking production.
 
@@ -28,11 +28,11 @@ Open to senior backend roles and consulting on .NET modernization.
 
 # Selected Achievements
 
-- Reduced complex healthcare data processing time by more than **90%** (several hours to a few minutes) while absorbing **multi-terabyte daily peaks**.
+- Reduced complex healthcare data processing time by more than 90% (several hours to a few minutes) while absorbing multi-terabyte daily peaks.
 - Cut recurring infrastructure overhead by retiring a large legacy processing fleet after redesigned ASP.NET Core and SQL Server pipelines proved stable.
-- Established **GitLab CI/CD** and **DACPAC** database versioning with automated drift detection, eliminating production schema mismatches.
-- Increased Afya checkout **sales conversions by 12%** and throughput capacity by more than **80%**.
-- Reduced Levilo monthly customer churn from **18% to 3%** while scaling to **5,000+** active client operations.
+- Established GitLab CI/CD and DACPAC database versioning with automated drift detection, eliminating production schema mismatches.
+- Increased Afya checkout sales conversions by 12% and throughput capacity by more than 80%.
+- Reduced Levilo monthly customer churn from 18% to 3% while scaling to 5,000+ active client operations.
 
 ---
 
@@ -68,11 +68,11 @@ Design and deliver backend platforms that process large volumes of healthcare an
 
 ### Impact
 
-- Redesigned ASP.NET Core and SQL Server pipelines, reducing complex healthcare data processing time by more than **90%** (several hours to a few minutes) and cutting timeout errors.
-- Scaled ingestion to **multi-terabyte daily peaks** from healthcare and pharmaceutical sources.
+- Redesigned ASP.NET Core and SQL Server pipelines, reducing complex healthcare data processing time by more than 90% (several hours to a few minutes) and cutting timeout errors.
+- Scaled ingestion to multi-terabyte daily peaks from healthcare and pharmaceutical sources.
 - Cut recurring infrastructure overhead by decommissioning a large legacy processing fleet after the redesigned pipelines proved stable.
 - Built GitLab CI/CD from scratch with test coverage tracking, and introduced DACPAC so database changes were versioned with automated pre-deploy and drift reports.
-- Reduced routine developer support time by **75%** (about 8 hours to 2 hours per developer monthly) through RCA-driven permanent production fixes.
+- Reduced routine developer support time by 75% (about 8 hours to 2 hours per developer monthly) through RCA-driven permanent production fixes.
 
 ---
 
@@ -103,8 +103,8 @@ Technical lead for modernizing the checkout and customer acquisition platform fo
 
 ### Impact
 
-- Led AWS-based modernization of the acquisition platform, increasing sales conversions by **12%** after launch.
-- Restructured the backend for more than **80%** higher throughput with a zero-downtime checkout rollout.
+- Led AWS-based modernization of the acquisition platform, increasing sales conversions by 12% after launch.
+- Restructured the backend for more than 80% higher throughput with a zero-downtime checkout rollout.
 
 ---
 
@@ -118,8 +118,8 @@ Helped turn a desktop application into a SaaS product and support cloud operatio
 
 ### Impact
 
-- Re-architected a legacy desktop product as SaaS, reducing monthly customer churn from **18% to 3%** by removing local stability failures.
-- Designed and scaled cloud infrastructure for more than **5,000** active client operations, including high-availability integrations with large consumer platforms.
+- Re-architected a legacy desktop product as SaaS, reducing monthly customer churn from 18% to 3% by removing local stability failures.
+- Designed and scaled cloud infrastructure for more than 5,000 active client operations, including high-availability integrations with large consumer platforms.
 
 ---
 
