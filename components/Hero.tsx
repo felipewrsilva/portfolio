@@ -61,7 +61,10 @@ export default function Hero() {
           initial="hidden"
           animate="show"
         >
-          {profile.title}
+          {profile.title}{' '}
+          <span className="font-normal text-white/70">
+            at {profile.company}
+          </span>
         </motion.p>
 
         <motion.p
@@ -75,18 +78,8 @@ export default function Hero() {
         </motion.p>
 
         <motion.p
-          className="mt-2 text-base text-white/80"
-          custom={4}
-          variants={item}
-          initial="hidden"
-          animate="show"
-        >
-          {profile.currentRole}
-        </motion.p>
-
-        <motion.p
           className="mt-6 max-w-xl text-base leading-relaxed text-white/90 md:text-lg"
-          custom={5}
+          custom={4}
           variants={item}
           initial="hidden"
           animate="show"
@@ -96,7 +89,7 @@ export default function Hero() {
 
         <motion.div
           className="mt-8 flex flex-wrap gap-3"
-          custom={6}
+          custom={5}
           variants={item}
           initial="hidden"
           animate="show"

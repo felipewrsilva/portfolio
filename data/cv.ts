@@ -4,7 +4,7 @@ export const profile = {
   focus: '.NET · SQL Server · Data platform modernization',
   tagline:
     'I modernize backend platforms where slow pipelines, brittle schemas, and operational cost become the product risk.',
-  currentRole: 'Senior Software Engineer at IQVIA',
+  company: 'IQVIA',
   yearsExperience: '10+ years',
   location: 'Madrid, Spain',
   availability:
