@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'Felipe Silva | Software Engineer'
+export const alt = 'Felipe Silva | Senior Software Engineer'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -26,7 +26,7 @@ export default function OpenGraphImage() {
             position: 'absolute',
             inset: 0,
             background:
-              'radial-gradient(ellipse 70% 50% at 20% 20%, rgba(44,74,54,0.55), transparent 55%), radial-gradient(ellipse 50% 40% at 90% 10%, rgba(197,214,203,0.18), transparent 50%)',
+              'radial-gradient(ellipse 70% 50% at 20% 20%, rgba(44,74,54,0.55), transparent 55%)',
           }}
         />
         <div
@@ -54,7 +54,7 @@ export default function OpenGraphImage() {
               color: '#E4E8EE',
             }}
           >
-            Software Engineer
+            Senior Software Engineer
           </div>
           <div
             style={{
@@ -64,7 +64,7 @@ export default function OpenGraphImage() {
               letterSpacing: '0.08em',
             }}
           >
-            Backend · Cloud · Distributed Systems
+            .NET · SQL Server · Data platform modernization
           </div>
         </div>
       </div>
