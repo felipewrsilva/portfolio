@@ -11,9 +11,9 @@ export default function Technologies() {
       <div className="content-width">
         <Reveal>
           <p className="section-label">Stack</p>
-          <h2 className="section-title mt-3">Day-to-day tools</h2>
+          <h2 className="section-title mt-3">Core stack</h2>
           <p className="body-copy mt-4 max-w-prose">
-            The core languages, platforms and patterns I use to design and ship
+            Languages and platforms I use to design, modernize and operate
             backend systems.
           </p>
         </Reveal>
