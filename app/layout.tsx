@@ -24,7 +24,7 @@ const mono = IBM_Plex_Mono({
   display: 'swap',
 })
 
-const title = 'Felipe Silva | Senior Software Engineer'
+const title = 'Felipe Silva | Senior .NET Engineer, Madrid'
 const description =
   'Senior .NET backend engineer in Madrid. 10+ years modernizing healthcare and enterprise data platforms with ASP.NET Core and SQL Server.'
 
@@ -72,6 +72,11 @@ export default function RootLayout({
       addressLocality: 'Madrid',
       addressCountry: 'ES',
     },
+    worksFor: {
+      '@type': 'Organization',
+      name: 'IQVIA',
+    },
+    knowsLanguage: ['Portuguese', 'English', 'Spanish'],
     sameAs: [
       'https://linkedin.com/in/felipewrsilva',
       'https://github.com/felipewrsilva',
