@@ -14,6 +14,7 @@ Use the same facts everywhere. The website and resume are the source of truth.
 | IQVIA period | Aug 2020 to Present |
 | Website | https://felipewrsilva.dev |
 | Email | contact@felipewrsilva.dev |
+| Phone | +34 657 99 00 70 |
 | LinkedIn | https://linkedin.com/in/felipewrsilva |
 | GitHub | https://github.com/felipewrsilva |
 | English | C2 (EF SET) |
