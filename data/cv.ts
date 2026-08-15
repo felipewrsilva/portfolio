@@ -9,8 +9,8 @@ export const profile = {
   location: 'Madrid, Spain',
   availability:
     'Open to senior backend roles and consulting on .NET modernization.',
-  phone: '+34 661 46 28 19',
-  phoneHref: 'tel:+34661462819',
+  phone: '+34 657 99 00 70',
+  phoneHref: 'tel:+34657990070',
   email: 'contact@felipewrsilva.dev',
   emailHref: 'mailto:contact@felipewrsilva.dev',
   linkedin: 'https://linkedin.com/in/felipewrsilva',

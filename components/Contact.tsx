@@ -5,6 +5,7 @@ import { Reveal } from '@/components/Reveal'
 
 const links = [
   { label: 'Email', value: profile.email, href: profile.emailHref },
+  { label: 'Phone', value: profile.phone, href: profile.phoneHref },
   {
     label: 'LinkedIn',
     value: 'linkedin.com/in/felipewrsilva',
@@ -58,7 +59,7 @@ export default function Contact() {
           </div>
         </Reveal>
 
-        <ul className="mt-12 grid gap-6 sm:grid-cols-3">
+        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {links.map((link) => (
             <li key={link.label}>
               <p className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-white/75">
