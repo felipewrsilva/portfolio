@@ -2,7 +2,7 @@
 
 ## Senior Software Engineer
 
-**.NET · SQL Server · Data platform modernization**
+**.NET · TypeScript · AWS**
 
 Madrid, Spain
 
@@ -18,21 +18,9 @@ Website: [felipewrsilva.dev](https://felipewrsilva.dev)
 
 # Professional Summary
 
-Senior .NET backend engineer based in Madrid, with 10+ years building and modernizing data-heavy platforms across healthcare, education, enterprise security and SaaS. Authorized to work in Europe. No visa sponsorship or endorsement required, now or later.
+Senior Software Engineer in Madrid with 10+ years building and operating production systems in healthcare, education, enterprise security, and SaaS. Primary stacks: C# / .NET, TypeScript, and Go. Authorized to work in Europe.
 
-I own architecture and delivery on systems that already have customers. That means processing time, safe schema changes, operating cost, and releases that do not break production.
-
-Open to senior backend roles and consulting on .NET modernization. Open to employment and to contracting.
-
----
-
-# Selected Achievements
-
-- Reduced complex healthcare data processing time by more than 90% (several hours to a few minutes) while absorbing multi-terabyte daily peaks.
-- Cut recurring infrastructure overhead by retiring a large legacy processing fleet after redesigned ASP.NET Core and SQL Server pipelines proved stable.
-- Established GitLab CI/CD and DACPAC database versioning with automated drift detection, eliminating production schema mismatches.
-- Improved Afya checkout conversion and throughput after an AWS-based acquisition platform modernization.
-- Moved Levilo from desktop to SaaS and operated cloud infrastructure for thousands of active client operations.
+Work spans backend, frontend, and full-stack delivery, plus data platforms and cloud infrastructure on systems already serving customers.
 
 ---
 
@@ -40,19 +28,19 @@ Open to senior backend roles and consulting on .NET modernization. Open to emplo
 
 ### Languages
 
-C#, SQL, TypeScript
+C#, TypeScript, JavaScript, Go, SQL
 
 ### Backend
 
-.NET · ASP.NET Core · REST APIs
+.NET · ASP.NET Core · Node.js · REST APIs
+
+### Frontend
+
+HTML · CSS · JavaScript · TypeScript · React · Next.js · ASP.NET
 
 ### Cloud & Data
 
-SQL Server · DACPAC · AWS (Lambda, SNS, SQS) · Docker · GitLab CI/CD
-
-### Focus
-
-System modernization · Data pipelines · Production reliability
+SQL Server · MongoDB · AWS (Lambda, SNS, SQS) · Azure · Databricks · Parquet
 
 ---
 
@@ -64,15 +52,14 @@ System modernization · Data pipelines · Production reliability
 
 **Aug 2020 to Present** · Healthcare technology · Pharmaceutical and healthcare data customers
 
-Design and deliver backend platforms that process large volumes of healthcare and pharmaceutical data for customers across multiple markets.
+Backend and data platform engineering for high-volume healthcare and pharmaceutical data used across multiple markets.
 
 ### Impact
 
-- Reworked the serial batch paths that timed out under peak load on ASP.NET Core and SQL Server, cutting complex healthcare data processing from several hours to a few minutes and reducing timeout errors.
-- Scaled ingestion to multi-terabyte daily peaks from healthcare and pharmaceutical sources.
-- Cut recurring infrastructure overhead by decommissioning a large legacy processing fleet after the redesigned pipelines proved stable.
-- Built GitLab CI/CD from scratch with test coverage tracking, and introduced DACPAC so database changes were versioned with automated pre-deploy and drift reports.
-- Reduced routine developer support time by 75% (about 8 hours to 2 hours per developer monthly) through RCA-driven permanent production fixes.
+- Stabilized a high-volume file path after SQL deadlocks, timeouts, and 3+ hour or failed runs on the largest files. Every file now finishes within 20 minutes, usually faster, while ingesting dozens of very large files per hour.
+- Built a live extract pipeline in Go that replaced SSIS and a manual CSV/Spark/SQL Server path with FTP watch, Parquet, Azure Blob, and analyst-triggered Databricks loads in minutes.
+- Built GitLab CI/CD and DACPAC versioning with automated pre-deploy and drift reports.
+- Cut routine developer support time by 75% through RCA-driven production fixes.
 
 ---
 
@@ -82,13 +69,12 @@ Design and deliver backend platforms that process large volumes of healthcare an
 
 **Apr 2018 to Jul 2020** · Enterprise security · Enterprise customers on multiple operating systems
 
-Backend work on modernizing a cross-platform enterprise security product and stabilizing partner integrations.
+Backend work on a cross-platform enterprise security product, including OS migration and partner integrations.
 
 ### Impact
 
-- Owned the backend side of an OS migration so the product ran reliably across customer environments that previously blocked upgrades.
-- Built automated integration tests for cybersecurity partner connections that were failing in production.
-- Reworked brittle integration layers that were producing recurring production defects.
+- Led backend work for an OS migration so the product ran reliably across customer environments that previously blocked upgrades.
+- Repaired partner integrations and built Go tooling for simulation and alerts around failing cybersecurity partner connections.
 - Moved partner and processing workloads that needed async fan-out onto AWS Lambda, SNS, and SQS.
 
 ---
@@ -99,12 +85,12 @@ Backend work on modernizing a cross-platform enterprise security product and sta
 
 **May 2017 to Mar 2018** · Healthcare education · Checkout and customer acquisition users
 
-Owned backend modernization of the checkout and customer acquisition platform for a major Brazilian healthcare education company.
+Full-stack work on the checkout and customer acquisition platform for a major Brazilian healthcare education company.
 
 ### Impact
 
-- Led AWS-based modernization of the acquisition platform, improving checkout conversion after launch.
-- Raised checkout throughput and shipped the cutover without downtime for live users.
+- Built and operated end-to-end checkout and acquisition flows in TypeScript, Next.js, React, Node.js, MongoDB, and AWS, including payments, contracts, and production support.
+- Led AWS modernization of the acquisition platform, improving conversion and throughput without downtime for live users.
 
 ---
 
@@ -114,12 +100,11 @@ Owned backend modernization of the checkout and customer acquisition platform fo
 
 **Feb 2016 to Apr 2017** · SaaS · Users migrating from desktop to web
 
-Owned backend and cloud work that moved a desktop product to SaaS for active clients across Brazil.
+Full-stack and cloud work that moved a desktop product to SaaS for active clients.
 
 ### Impact
 
-- Moved a legacy desktop product to SaaS and removed local install stability failures that were driving customer churn.
-- Operated cloud infrastructure for thousands of active client operations, including high-availability integrations with large consumer platforms.
+- Migrated a legacy desktop product to SaaS and operated cloud infrastructure for thousands of active client operations.
 
 ---
 
@@ -129,12 +114,11 @@ Owned backend and cloud work that moved a desktop product to SaaS for active cli
 
 **Jan 2015 to Jan 2016** · Education · Students managing invoices and payments
 
-Built education tools focused on payment flows and self-service for invoices.
+Full-stack delivery of education payment tools and self-service invoice flows.
 
 ### Impact
 
-- Launched a multi-method payment platform for students.
-- Replaced manual support workflows with self-service for invoices and payments.
+- Launched an education payment platform end to end and replaced manual invoice support with self-service.
 
 ---
 
