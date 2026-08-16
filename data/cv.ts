@@ -1,18 +1,16 @@
 export const profile = {
   name: 'Felipe Silva',
   title: 'Senior Software Engineer',
-  focus: '.NET · SQL Server · Data platform modernization',
+  focus: '.NET · TypeScript · AWS',
   tagline:
-    'I take existing .NET and SQL Server platforms and make the slow, expensive, or unsafe parts shippable again.',
+    'I take existing production platforms, .NET or TypeScript, and make the slow, expensive, or unsafe parts shippable again.',
   company: 'IQVIA',
   yearsExperience: '10+ years',
   location: 'Madrid, Spain',
-  workAuthorization:
-    'Authorized to work in Europe. No visa sponsorship or endorsement required, now or later.',
+  workAuthorization: 'Authorized to work in Europe.',
   availability:
-    'Open to senior backend roles and consulting on .NET modernization. Open to employment and to contracting.',
-  contactBrief:
-    'For roles, send the req and the stack. For consulting, send the system, the constraint, and whether you want an employee or a contractor.',
+    'Backend, frontend, and full-stack production systems. .NET, TypeScript, React, AWS.',
+  contactBrief: 'Based in Madrid. Email with the role and stack.',
   phone: '+34 657 99 00 70',
   phoneHref: 'tel:+34657990070',
   email: 'contact@felipewrsilva.dev',
@@ -23,8 +21,8 @@ export const profile = {
 }
 
 export const summary = [
-  'Senior .NET backend engineer based in Madrid, with 10+ years building and modernizing data-heavy platforms across healthcare, education, enterprise security and SaaS. Authorized to work in Europe. No visa sponsorship or endorsement required, now or later.',
-  'I own architecture and delivery on systems that already have customers. That means processing time, safe schema changes, operating cost, and releases that do not break production.',
+  'Senior Software Engineer in Madrid with 10+ years building and operating production systems in healthcare, education, enterprise security, and SaaS. Primary stacks: C# / .NET, TypeScript, and Go. Authorized to work in Europe.',
+  'Work spans backend, frontend, and full-stack delivery, plus data platforms and cloud infrastructure on systems already serving customers.',
 ]
 
 export const industries = [
@@ -38,36 +36,45 @@ export const featuredCase = {
   client: 'IQVIA',
   industry: 'Healthcare technology',
   audience: 'Pharmaceutical and healthcare data customers',
-  title: 'Healthcare data platform modernization',
+  title: 'Live healthcare extract pipeline on Azure and Databricks',
   problem:
-    'Batch pipelines for healthcare and pharmaceutical data were taking hours, timing out under peak load, and leaving the team with a large legacy processing fleet that was expensive to keep alive.',
+    'Ingestion was manual. An analyst waited until every source file was available, then downloaded, converted compressed extracts to CSV, and loaded data on demand through a Spark API into SQL Server. Download and conversion failed often. An upstream layout change, such as a new column, broke Spark and required hand-edited CSVs to restore the load.',
   constraint:
-    'Existing ASP.NET and SQL Server investments had to keep running for global customers. A full rewrite was not acceptable. Database changes also needed to stop drifting between environments.',
+    'Analysts still needed to choose when data landed in tables. The new path had to keep files current without a full rewrite of the surrounding platform.',
   approach:
-    'The bottleneck was long-running serial batch jobs that timed out under peak load. I reworked those critical processing paths on ASP.NET Core and SQL Server while leaving the surrounding ASP.NET and SQL Server estate in place, introduced versioned DACPAC deployments with pre-deploy and drift reports, and put GitLab CI/CD in place with test coverage tracking so releases no longer depended on undocumented release steps.',
+    'I migrated the SSIS path to an always-on Go process that watches FTP in real time. New or replaced files update the local extracts, dropping superseded files for the same slice. The service converts to Parquet and lands the files on Azure Blob. The analyst then loads Databricks tables when it is the right moment, in a few minutes.',
   tradeOff:
-    'Kept SQL Server as the system of record instead of replacing the stack, and retired legacy compute only after the new pipelines proved they could absorb multi-terabyte daily peaks.',
+    'Kept the table load analyst-triggered instead of writing straight into production. Databricks replaced SQL Server for this path because the same load was cheaper and faster there.',
   result:
-    'Complex jobs that previously took several hours finished in minutes. Timeout errors dropped. A large legacy processing fleet could be decommissioned. Schema mismatches stopped reaching production.',
+    'Files stay current as the source changes. Loads that used to wait on a full manual batch now take a few minutes. Layout changes no longer take the Spark CSV path down.',
   outcomes: [
-    'Reduced complex processing time by more than 90% (several hours to a few minutes)',
-    'Absorbed multi-terabyte daily ingestion peaks from healthcare and pharmaceutical sources',
-    'Cut recurring infrastructure overhead by retiring a large legacy processing fleet',
-    'Shipped GitLab CI/CD and DACPAC versioning with automated drift reports',
+    'Replaced SSIS and a manual CSV/Spark/SQL Server path with a live Go pipeline',
+    'Detects FTP changes in real time and keeps local extracts in sync',
+    'Converts source files to Parquet and lands them on Azure Blob',
+    'Analysts load Databricks tables in minutes instead of waiting on a full batch',
   ],
 }
 
 export const technologies = {
-  Languages: ['C#', 'SQL', 'TypeScript'],
-  Backend: ['.NET', 'ASP.NET Core', 'REST APIs'],
+  Languages: ['C#', 'TypeScript', 'JavaScript', 'Go', 'SQL'],
+  Backend: ['.NET', 'ASP.NET Core', 'Node.js', 'REST APIs'],
+  Frontend: [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Next.js',
+    'ASP.NET',
+  ],
   'Cloud & data': [
     'SQL Server',
-    'DACPAC',
+    'MongoDB',
     'AWS (Lambda, SNS, SQS)',
-    'Docker',
-    'GitLab CI/CD',
+    'Azure',
+    'Databricks',
+    'Parquet',
   ],
-  Focus: ['System modernization', 'Data pipelines', 'Production reliability'],
 } as const
 
 export type ExperienceRole = {
@@ -88,13 +95,12 @@ export const experience: ExperienceRole[] = [
     industry: 'Healthcare technology',
     audience: 'Pharmaceutical and healthcare data customers',
     overview:
-      'Design and deliver backend platforms that process large volumes of healthcare and pharmaceutical data for customers across multiple markets.',
+      'Backend and data platform engineering for high-volume healthcare and pharmaceutical data used across multiple markets.',
     bullets: [
-      'Reworked the serial batch paths that timed out under peak load on ASP.NET Core and SQL Server, cutting complex healthcare data processing from several hours to a few minutes and reducing timeout errors.',
-      'Scaled ingestion to multi-terabyte daily peaks from healthcare and pharmaceutical sources.',
-      'Cut recurring infrastructure overhead by decommissioning a large legacy processing fleet after the redesigned pipelines proved stable.',
-      'Built GitLab CI/CD from scratch with test coverage tracking, and introduced DACPAC so database changes were versioned with automated pre-deploy and drift reports.',
-      'Reduced routine developer support time by 75% (about 8 hours to 2 hours per developer monthly) through RCA-driven permanent production fixes.',
+      'Stabilized a high-volume file path after SQL deadlocks, timeouts, and 3+ hour or failed runs on the largest files. Every file now finishes within 20 minutes, usually faster, while ingesting dozens of very large files per hour.',
+      'Built a live extract pipeline in Go that replaced SSIS and a manual CSV/Spark/SQL Server path with FTP watch, Parquet, Azure Blob, and analyst-triggered Databricks loads in minutes.',
+      'Built GitLab CI/CD and DACPAC versioning with automated pre-deploy and drift reports.',
+      'Cut routine developer support time by 75% through RCA-driven production fixes.',
     ],
   },
   {
@@ -104,11 +110,10 @@ export const experience: ExperienceRole[] = [
     industry: 'Enterprise security',
     audience: 'Enterprise customers on multiple operating systems',
     overview:
-      'Backend work on modernizing a cross-platform enterprise security product and stabilizing partner integrations.',
+      'Backend work on a cross-platform enterprise security product, including OS migration and partner integrations.',
     bullets: [
-      'Owned the backend side of an OS migration so the product ran reliably across customer environments that previously blocked upgrades.',
-      'Built automated integration tests for cybersecurity partner connections that were failing in production.',
-      'Reworked brittle integration layers that were producing recurring production defects.',
+      'Led backend work for an OS migration so the product ran reliably across customer environments that previously blocked upgrades.',
+      'Repaired partner integrations and built Go tooling for simulation and alerts around failing cybersecurity partner connections.',
       'Moved partner and processing workloads that needed async fan-out onto AWS Lambda, SNS, and SQS.',
     ],
   },
@@ -119,10 +124,10 @@ export const experience: ExperienceRole[] = [
     industry: 'Healthcare education',
     audience: 'Checkout and customer acquisition users',
     overview:
-      'Owned backend modernization of the checkout and customer acquisition platform for a major Brazilian healthcare education company.',
+      'Full-stack work on the checkout and customer acquisition platform for a major Brazilian healthcare education company.',
     bullets: [
-      'Led AWS-based modernization of the acquisition platform, improving checkout conversion after launch.',
-      'Raised checkout throughput and shipped the cutover without downtime for live users.',
+      'Built and operated end-to-end checkout and acquisition flows in TypeScript, Next.js, React, Node.js, MongoDB, and AWS, including payments, contracts, and production support.',
+      'Led AWS modernization of the acquisition platform, improving conversion and throughput without downtime for live users.',
     ],
   },
   {
@@ -132,10 +137,9 @@ export const experience: ExperienceRole[] = [
     industry: 'SaaS',
     audience: 'Users migrating from desktop to web',
     overview:
-      'Owned backend and cloud work that moved a desktop product to SaaS for active clients across Brazil.',
+      'Full-stack and cloud work that moved a desktop product to SaaS for active clients.',
     bullets: [
-      'Moved a legacy desktop product to SaaS and removed local install stability failures that were driving customer churn.',
-      'Operated cloud infrastructure for thousands of active client operations, including high-availability integrations with large consumer platforms.',
+      'Migrated a legacy desktop product to SaaS and operated cloud infrastructure for thousands of active client operations.',
     ],
   },
   {
@@ -145,10 +149,9 @@ export const experience: ExperienceRole[] = [
     industry: 'Education',
     audience: 'Students managing invoices and payments',
     overview:
-      'Built education tools focused on payment flows and self-service for invoices.',
+      'Full-stack delivery of education payment tools and self-service invoice flows.',
     bullets: [
-      'Launched a multi-method payment platform for students.',
-      'Replaced manual support workflows with self-service for invoices and payments.',
+      'Launched an education payment platform end to end and replaced manual invoice support with self-service.',
     ],
   },
 ]
