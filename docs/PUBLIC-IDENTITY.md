@@ -8,11 +8,17 @@ Use the same facts everywhere. The website and resume are the source of truth.
 | --- | --- |
 | Name | Felipe Silva |
 | Title | Senior Software Engineer |
-| Specialty | .NET, SQL Server, data platform modernization |
+| Specialty | .NET, TypeScript, AWS |
 | Location | Madrid, Spain |
 | Current employer | IQVIA |
 | IQVIA period | Aug 2020 to Present |
-| Work authorization | Authorized to work in Europe. No visa sponsorship or endorsement required, now or later. |
+| Fidelis period | Apr 2018 to Jul 2020 |
+| Afya period | May 2017 to Mar 2018 |
+| Levilo period | Feb 2016 to Apr 2017 |
+| Senac period | Jan 2015 to Jan 2016 |
+| Public clients on site and PDF | Name Fidelis, Afya, Levilo, and Senac as separate experience entries. |
+| Public clients on LinkedIn | Do not name those companies as separate jobs. Group them under Independent, Jan 2015 to Jul 2020. |
+| Work authorization | Authorized to work in Europe. |
 | Website | https://felipewrsilva.dev |
 | Email | contact@felipewrsilva.dev |
 | Phone | +34 657 99 00 70 |
@@ -32,12 +38,14 @@ These fields must match the table and `data/cv.ts`.
 
 ### Profile settings
 
-1. Headline: `Senior Software Engineer | .NET · SQL Server · Data Platforms`
+1. Headline: `Senior Software Engineer | .NET · TypeScript · AWS`
 2. Location: `Madrid, Spain` (not Spain alone, not São Paulo)
 3. Profile language: English (not Português as primary)
-4. Current role: `Senior Software Engineer` at IQVIA, `Aug 2020 – Present`, location `Madrid, Community of Madrid, Spain`
-5. About: paste the Professional Summary from the resume (authorized to work, ownership paragraph, open to roles and consulting)
+4. Current role: `Senior Software Engineer` at IQVIA only, `Aug 2020 – Present`. Past grouped role: `Software Engineer` at Independent, `Jan 2015 – Jul 2020`, employment type Contract. Leave experience location blank. Do not mark Independent as current. Do not use Self-employed as the company label. Do not add Fidelis, Afya, Levilo, or Senac as separate LinkedIn jobs.
+5. About: paste the Professional Summary from the resume. Do not mention visa sponsorship. Do not add "open to" job-seeking lines.
 6. Featured: add link `https://felipewrsilva.dev` with title `Portfolio and resume`
+
+Note: the website and PDF list Fidelis, Afya, Levilo, and Senac separately. LinkedIn keeps those years under Independent only.
 
 ### Skills (lead with these)
 
@@ -45,56 +53,56 @@ Add and pin, in this order when possible:
 
 1. C#
 2. .NET
-3. Microsoft SQL Server
-4. ASP.NET Core
-5. DACPAC / database versioning (if available as a skill, otherwise CI/CD + SQL Server)
-6. Continuous Integration and Continuous Delivery (CI/CD)
-7. Amazon Web Services (AWS)
-8. Docker
+3. TypeScript
+4. React.js
+5. Next.js
+6. Node.js
+7. MongoDB
+8. Microsoft SQL Server
+9. Amazon Web Services (AWS)
+10. Microsoft Azure
+11. Databricks
+12. Go
 
-Remove or demote from the public story unless you want frontend or NoSQL work: HTML, CSS, React.js, Next.js, MongoDB.
+Do not hide React, Next.js, or MongoDB. Do not claim 10 years in TypeScript, React, MongoDB, Azure, Databricks, or Go.
 
-### Experience entries to add
+IQVIA public story is two led projects. Do not name internal systems or source datasets. Do not use ownership language that implies the systems were yours.
 
-LinkedIn currently shows IQVIA only. Add the four roles below with the same titles and dates as the site. Without them, the 10+ years claim looks unsupported.
+1. High-volume file processing: volume spike, SQL deadlocks, timeouts, largest files took 3+ hours or failed. Now every file finishes within 20 minutes worst case, usually much faster, dozens of very large files per hour.
+2. Live healthcare extract pipeline in Go: old path was SSIS plus manual wait, download, compressed extract to CSV, Spark API into SQL Server, brittle on layout changes. New path is always-on Go FTP watch, sync extracts, Parquet, Azure Blob, analyst-triggered Databricks load in minutes.
 
-#### Fidelis — Senior Software Engineer
+Do not name client source systems in public copy. Do not use the old 90 percent wording.
 
-Apr 2018 to Jul 2020 · Enterprise security · Enterprise customers on multiple operating systems
+### Experience on LinkedIn
 
-Backend work on modernizing a cross-platform enterprise security product and stabilizing partner integrations.
+Only two experience entries on LinkedIn. Site and PDF use five named companies. Do not show overlapping employment.
 
-- Owned the backend side of an OS migration so the product ran reliably across customer environments that previously blocked upgrades.
-- Built automated integration tests for cybersecurity partner connections that were failing in production.
-- Reworked brittle integration layers that were producing recurring production defects.
-- Moved partner and processing workloads that needed async fan-out onto AWS Lambda, SNS, and SQS.
+#### IQVIA — Senior Software Engineer
 
-#### Afya — Senior Software Engineer
+Aug 2020 to Present · Full-time
 
-May 2017 to Mar 2018 · Healthcare education · Checkout and customer acquisition users
+Leave location blank on experience entries. Location for the profile header is Madrid, Spain only.
 
-Owned backend modernization of the checkout and customer acquisition platform for a major Brazilian healthcare education company.
+Backend and data platform engineering for high-volume healthcare and pharmaceutical data used across multiple markets.
 
-- Led AWS-based modernization of the acquisition platform, improving checkout conversion after launch.
-- Raised checkout throughput and shipped the cutover without downtime for live users.
+- Stabilized a high-volume file path after SQL deadlocks, timeouts, and 3+ hour or failed runs on the largest files. Every file now finishes within 20 minutes, usually faster, while ingesting dozens of very large files per hour.
+- Built a live extract pipeline in Go that replaced SSIS and a manual CSV/Spark/SQL Server path with FTP watch, Parquet, Azure Blob, and analyst-triggered Databricks loads in minutes.
+- Built GitLab CI/CD and DACPAC versioning with automated pre-deploy and drift reports.
+- Cut routine developer support time by 75% through RCA-driven production fixes.
 
-#### Levilo — Software Engineer
+#### Independent — Software Engineer
 
-Feb 2016 to Apr 2017 · SaaS · Users migrating from desktop to web
+Jan 2015 to Jul 2020 · Contract
 
-Owned backend and cloud work that moved a desktop product to SaaS for active clients across Brazil.
+Contract engineering for clients in healthcare education, enterprise security, SaaS, and education. Full-stack delivery across frontend, backend, and cloud on systems already in production.
 
-- Moved a legacy desktop product to SaaS and removed local install stability failures that were driving customer churn.
-- Operated cloud infrastructure for thousands of active client operations, including high-availability integrations with large consumer platforms.
+- Built and operated end-to-end checkout and acquisition platforms in TypeScript, Next.js, React, Node.js, MongoDB, and AWS, including payments, contracts, and production support.
+- Led AWS modernization of a healthcare education acquisition platform, improving conversion and throughput without downtime for live users.
+- Led backend work on a cross-platform enterprise security product, including an OS migration, partner integration repairs, AWS Lambda, SNS, SQS, and Go tooling for simulation and alerts.
+- Migrated a legacy desktop product to SaaS and operated cloud infrastructure for thousands of active client operations.
+- Launched an education payment platform end to end and replaced manual invoice support with self-service.
 
-#### Senac — Software Engineer
-
-Jan 2015 to Jan 2016 · Education · Students managing invoices and payments
-
-Built education tools focused on payment flows and self-service for invoices.
-
-- Launched a multi-method payment platform for students.
-- Replaced manual support workflows with self-service for invoices and payments.
+Do not add named client companies as separate LinkedIn jobs. Do not use Self-employed as the company name.
 
 ### Education (must match the site)
 
@@ -109,12 +117,12 @@ Do not leave São Paulo or "Software Developer" as the public current title whil
 
 Account `felipewrsilva`:
 
-1. Bio: `Senior Software Engineer. .NET, SQL Server, healthcare and enterprise data platforms. Based in Madrid.`
+1. Bio: `Senior Software Engineer. .NET, TypeScript, AWS. Based in Madrid.`
 2. Location: `Madrid, Spain`
 3. Website: `https://felipewrsilva.dev`
 4. Portfolio repo description: `Personal site and resume for Felipe Silva, Senior Software Engineer.`
 5. Portfolio homepage: `https://felipewrsilva.dev`
-6. Keep tutorial repos archived (`finwiz`, `finance`, `datasus`, `datasusdbc`). Prefer private if they still read junior on the profile.
+6. Keep early tutorial parser repos archived. Prefer private if they still read junior on the profile.
 
 The site contact block no longer links to GitHub. Recruiters should land on LinkedIn and the PDF first.
 
