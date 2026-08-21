@@ -269,7 +269,9 @@ function parseResume(markdown) {
     pushBlock({ type: 'paragraph', runs: parseRuns(line) })
   }
 
-  const languages = doc.sections.find((item) => item.title === 'LANGUAGES')
+  const languages = doc.sections.find((item) =>
+    item.title.startsWith('LANGUAGES'),
+  )
   if (languages) {
     const runs = []
     languages.blocks.forEach((block, index) => {
