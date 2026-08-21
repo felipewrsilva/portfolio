@@ -1,15 +1,14 @@
 export const profile = {
   name: 'Felipe Silva',
   title: 'Senior Software Engineer',
-  focus: '.NET · TypeScript · AWS',
+  focus: '.NET · SQL Server · AWS',
   tagline:
-    'I take existing production platforms, .NET or TypeScript, and make the slow, expensive, or unsafe parts shippable again.',
+    'Backend-first .NET engineer. I also ship frontend and CI/CD when the product needs the full path.',
   company: 'IQVIA',
   yearsExperience: '10+ years',
   location: 'Madrid, Spain',
-  workAuthorization: 'Authorized to work in Europe.',
   availability:
-    'Backend, frontend, and full-stack production systems. .NET, TypeScript, React, AWS.',
+    'Backend-first. Full-stack across .NET, TypeScript/React, and CI/CD when needed.',
   contactBrief: 'Based in Madrid. Email with the role and stack.',
   phone: '+34 657 99 00 70',
   phoneHref: 'tel:+34657990070',
@@ -21,8 +20,8 @@ export const profile = {
 }
 
 export const summary = [
-  'Senior Software Engineer in Madrid with 10+ years building and operating production systems in healthcare, education, enterprise security, and SaaS. Primary stack: C# / .NET and SQL Server, with TypeScript and Go where the platform needed it. Authorized to work in Europe.',
-  'Work spans backend, data platforms, and cloud infrastructure on systems already serving customers, plus full-stack delivery when the product required it.',
+  'Senior .NET engineer in Madrid with 10+ years building and operating production systems in healthcare, education, enterprise security, and SaaS. Primary stack: C# / .NET, ASP.NET Core, and SQL Server.',
+  'Backend-first, and full-stack when needed: TypeScript / React on the frontend, plus CI/CD and cloud delivery on systems already serving customers.',
 ]
 
 export const industries = [
@@ -56,24 +55,24 @@ export const featuredCase = {
 }
 
 export const technologies = {
-  Languages: ['C#', 'TypeScript', 'JavaScript', 'Go', 'SQL'],
-  Backend: ['.NET', 'ASP.NET Core', 'Node.js', 'REST APIs', 'GitLab CI/CD'],
+  Languages: ['C#', 'SQL', 'TypeScript', 'JavaScript', 'Go'],
+  Backend: ['.NET', 'ASP.NET Core', 'REST APIs', 'Node.js', 'GitLab CI/CD'],
   Frontend: [
-    'HTML',
-    'CSS',
-    'JavaScript',
     'TypeScript',
     'React',
     'Next.js',
+    'JavaScript',
+    'HTML',
+    'CSS',
     'ASP.NET',
   ],
   'Cloud & data': [
     'SQL Server',
     'DACPAC',
-    'MongoDB',
     'AWS (Lambda, SNS, SQS)',
     'Azure',
     'Azure Blob',
+    'MongoDB',
     'Databricks',
     'Parquet',
   ],
@@ -128,7 +127,7 @@ export const experience: ExperienceRole[] = [
     industry: 'Healthcare education',
     audience: 'Checkout and customer acquisition users',
     overview:
-      'Full-stack work on the checkout and customer acquisition platform for a major Brazilian healthcare education company.',
+      'Full-stack work on the checkout and customer acquisition platform for a major healthcare education company.',
     bullets: [
       'Built and operated end-to-end checkout and acquisition flows in TypeScript, Next.js, React, Node.js, MongoDB, and AWS, including payments, contracts, and production support.',
       'Led AWS modernization of the acquisition platform, increasing sales conversions by 12% after launch.',
@@ -171,11 +170,11 @@ export const education = [
   {
     institution: 'University of São Paulo (USP)',
     degree: 'Bachelor of Information Systems',
-    period: 'Jan 2019 to Dec 2024',
+    period: 'Jan 2019 to Dec 2022',
   },
   {
     institution: 'Sorocaba College of Engineering (Facens)',
-    degree: 'Computer Engineering studies',
+    degree: 'Computer Engineering',
     period: 'Jan 2014 to Dec 2018',
   },
 ]

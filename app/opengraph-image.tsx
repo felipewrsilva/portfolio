@@ -64,7 +64,7 @@ export default function OpenGraphImage() {
               letterSpacing: '0.08em',
             }}
           >
-            .NET · TypeScript · AWS
+            .NET · SQL Server · AWS
           </div>
         </div>
       </div>

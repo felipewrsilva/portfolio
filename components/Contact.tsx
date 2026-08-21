@@ -31,7 +31,7 @@ export default function Contact() {
             {profile.availability}
           </p>
           <p className="mt-3 max-w-prose text-base text-white/75">
-            {profile.workAuthorization} {profile.contactBrief}
+            {profile.contactBrief}
           </p>
           <p className="mt-3 max-w-prose text-base text-white/75">
             {profile.focus} · {profile.location}
