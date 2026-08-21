@@ -1,49 +1,49 @@
-# Modern Portfolio
+# Felipe Silva — Portfolio
 
-This is my cutting-edge portfolio built on Next.js, where innovation meets functionality. This project is designed to showcase my skills, creativity, and technical proficiency through a modern, interactive, and aesthetically pleasing platform.
+Personal website and resume for Felipe Silva, Senior Software Engineer based in Madrid.
 
-## Features
+Live site: [https://felipewrsilva.dev](https://felipewrsilva.dev)
 
-### AI-Powered Chatbot
-At the heart of this portfolio is an AI-powered chatbot. Utilizing OpenAI's ChatGPT API, the chatbot can answer queries about my background and expertise, providing an engaging and interactive experience. Key technologies used:
-- **Next.js:** Ensures a fast, scalable, and SEO-friendly application.
-- **TypeScript:** Provides robust type checking and enhances developer productivity.
-- **Tailwind CSS:** Adds a modern aesthetic with utility-first CSS for rapid UI development.
-- **LangChain.js:** Facilitates seamless communication between the user and the AI, ensuring personalized interactions.
+## Stack
 
-### Dynamic Visuals with Three.js
-Experience the power of dynamic visuals rendered in Three.js. This feature adds depth and interactivity, effectively showcasing my projects and skills. Key technologies used:
-- **Three.js:** Creates and displays animated 3D graphics in the browser.
-- **Framer Motion:** Enriches the interface with fluid animations, ensuring a delightful user journey.
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- Framer Motion (subtle reveal animations)
 
-## Why This Portfolio Stands Out
-- **Technical Proficiency:** Demonstrates my expertise in modern web development technologies and tools.
-- **Creativity:** Showcases my ability to create visually appealing and interactive web experiences.
-- **Attention to Detail:** Reflects my commitment to delivering high-quality work, making a lasting impression on visitors and potential collaborators.
+Content lives in `data/cv.ts`. The downloadable PDF is generated from `curriculo.md`.
 
-## Getting Started
+## Scripts
 
-### Prerequisites
-- Node.js
-- npm
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/felipewrsilva/portfolio.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd portfolio
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-### Running the Project
-To start the development server:
 ```bash
+npm install
 npm run dev
+npm run build
+npm run lint
+npm run resume:pdf
 ```
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## Domains
+
+Canonical host: `felipewrsilva.dev`
+
+`felipewrsilva.com.br` and `www` variants redirect to the canonical host via `next.config.mjs`.
+
+Nameservers for the site should be Vercel (`ns1.vercel-dns.com`, `ns2.vercel-dns.com`). Mail can remain on Hostinger MX.
+
+See [docs/PUBLIC-IDENTITY.md](docs/PUBLIC-IDENTITY.md) for LinkedIn/GitHub alignment and DNS checks.
+
+To sync GitHub bio, location, homepage and archive tutorial repos (must be logged in as `felipewrsilva`):
+
+```bash
+gh auth login
+./scripts/sync-github-profile.sh
+```
+
+## Resume PDF
+
+```bash
+npm run resume:pdf
+```
+
+Writes `public/felipe-silva-resume.pdf` from `curriculo.md`. Keep that file in sync with `data/cv.ts`.

@@ -7,13 +7,13 @@ export default function Hero() {
   const reduce = useReducedMotion()
 
   const item = {
-    hidden: { opacity: 0, y: reduce ? 0 : 28 },
+    hidden: { opacity: 0, y: reduce ? 0 : 20 },
     show: (i: number) => ({
       opacity: 1,
       y: 0,
       transition: {
-        delay: reduce ? 0 : 0.12 + i * 0.1,
-        duration: 0.65,
+        delay: reduce ? 0 : 0.08 + i * 0.08,
+        duration: 0.55,
         ease: [0.22, 1, 0.36, 1],
       },
     }),
@@ -22,22 +22,18 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[100svh] items-end overflow-hidden bg-ink"
+      className="relative flex min-h-[78svh] items-end overflow-hidden bg-ink md:min-h-[70svh]"
     >
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 80% 60% at 15% 20%, rgba(44,74,54,0.45), transparent 55%), radial-gradient(ellipse 70% 50% at 90% 10%, rgba(197,214,203,0.12), transparent 50%), linear-gradient(160deg, #0b1220 0%, #121a28 45%, #0f1a16 100%)',
+            'radial-gradient(ellipse 80% 60% at 15% 20%, rgba(44,74,54,0.35), transparent 55%), linear-gradient(160deg, #0b1220 0%, #121a28 55%, #0f1a16 100%)',
         }}
       />
-      <div className="blueprint-grid absolute inset-0 opacity-[0.14] mix-blend-overlay" />
-      <div className="pointer-events-none absolute -right-16 top-24 hidden select-none font-display text-[14rem] leading-none tracking-tighter text-white/[0.04] sm:block md:text-[18rem]">
-        FS
-      </div>
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink/80 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-ink/70 to-transparent" />
 
-      <div className="content-width section-pad relative z-10 w-full pb-16 pt-32 md:pb-24">
+      <div className="content-width section-pad relative z-10 w-full pb-14 pt-28 md:pb-20">
         <motion.p
           className="font-mono text-xs font-medium uppercase tracking-[0.22em] text-accent-soft"
           custom={0}
@@ -45,31 +41,34 @@ export default function Hero() {
           initial="hidden"
           animate="show"
         >
-          {profile.location}
+          {profile.location} · {profile.yearsExperience}
         </motion.p>
 
-        <motion.p
-          className="mt-5 font-display text-5xl leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl"
+        <motion.h1
+          className="mt-5 font-display text-5xl leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
           custom={1}
           variants={item}
           initial="hidden"
           animate="show"
         >
           {profile.name}
-        </motion.p>
+        </motion.h1>
 
-        <motion.h1
-          className="mt-6 max-w-2xl font-sans text-xl font-medium text-white md:text-2xl"
+        <motion.p
+          className="mt-5 max-w-2xl font-sans text-xl font-medium text-white md:text-2xl"
           custom={2}
           variants={item}
           initial="hidden"
           animate="show"
         >
-          {profile.title}
-        </motion.h1>
+          {profile.title}{' '}
+          <span className="font-normal text-white/70">
+            at {profile.company}
+          </span>
+        </motion.p>
 
         <motion.p
-          className="mt-4 max-w-xl text-base text-white/90 md:text-lg"
+          className="mt-3 max-w-2xl font-mono text-sm uppercase tracking-[0.1em] text-accent-soft"
           custom={3}
           variants={item}
           initial="hidden"
@@ -77,6 +76,46 @@ export default function Hero() {
         >
           {profile.focus}
         </motion.p>
+
+        <motion.p
+          className="mt-6 max-w-xl text-base leading-relaxed text-white/90 md:text-lg"
+          custom={4}
+          variants={item}
+          initial="hidden"
+          animate="show"
+        >
+          {profile.tagline}
+        </motion.p>
+
+        <motion.div
+          className="mt-8 flex flex-wrap gap-3"
+          custom={5}
+          variants={item}
+          initial="hidden"
+          animate="show"
+        >
+          <a
+            href={profile.emailHref}
+            className="inline-flex items-center bg-white px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-ink transition hover:bg-accent-soft"
+          >
+            Email
+          </a>
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center border border-white/30 px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-white transition hover:border-accent-soft hover:text-accent-soft"
+          >
+            LinkedIn
+          </a>
+          <a
+            href={profile.resumePdf}
+            download
+            className="inline-flex items-center border border-white/30 px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-white transition hover:border-accent-soft hover:text-accent-soft"
+          >
+            Resume
+          </a>
+        </motion.div>
       </div>
     </section>
   )
