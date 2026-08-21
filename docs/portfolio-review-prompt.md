@@ -40,7 +40,7 @@ Sections in order:
 4. Featured work: one IQVIA case, Healthcare data platform modernization, structured as Problem, Constraint, Approach, Trade-off, Result, plus Outcomes
 5. Professional Experience: IQVIA, Fidelis, Afya, Levilo, Senac, each with industry, audience, overview, and Impact bullets
 6. Core stack: C#, SQL, TypeScript, .NET, ASP.NET Core, REST APIs, SQL Server, DACPAC, AWS (Lambda, SNS, SQS), Docker, GitLab CI/CD, System modernization, Data pipelines, Production reliability
-7. Education and languages: USP Bachelor of Information Systems (Jan 2019 to Dec 2024), Facens Computer Engineering studies (Jan 2014 to Dec 2018), Portuguese, English C2, Spanish intermediate
+7. Education and languages: USP Bachelor of Information Systems (Jan 2019 to Dec 2022), Facens Computer Engineering (Jan 2014 to Dec 2018), English, Portuguese, Spanish without levels on the public CV
 8. Contact: availability line, Email, LinkedIn, Download resume, plus email, phone, LinkedIn, GitHub
 
 Availability as written: Open to senior backend roles and consulting on .NET modernization.
@@ -85,7 +85,7 @@ Do not spend the review recommending that he add a sitemap, canonical URL, or me
 Do not skip these. They are the likely remaining risk, not whether the site has a tech list.
 
 1. Brazilian career history (Afya, Levilo, Senac, USP, Facens) versus Madrid and European hiring.
-2. Degree dates 2019 to 2024 while professional work starts in 2015. Facens is listed as studies.
+2. Degree dates 2019 to 2022 while professional work starts in 2015.
 3. Public GitHub and this repo are Next.js and TypeScript. The professional claim is .NET, SQL Server, and data platforms. There is no public .NET system the visitor can inspect.
 4. Only one deep case study (IQVIA). Fidelis, Afya, Levilo, and Senac are shorter and thinner.
 5. Strong quantitative claims (more than 90% faster processing, multi-terabyte daily peaks, 12% conversion lift, churn 18% to 3%, 5,000+ client operations, 75% less developer support time). Ask where a skeptical CTO would still doubt them.

@@ -11,14 +11,14 @@ const GH = process.env.GH_PATH || 'C:\\Program Files\\GitHub CLI\\gh.exe'
 
 const profile = {
   name: 'Felipe Silva',
-  bio: 'Software Engineer in Madrid · Backend · Cloud · Distributed Systems. 10+ years modernizing platforms across healthcare, education, enterprise security and SaaS.',
+  bio: 'Senior Software Engineer. .NET, SQL Server, AWS. Based in Madrid.',
   blog: 'https://felipewrsilva.dev',
   location: 'Madrid, Spain',
   hireable: true,
 }
 
 const portfolioDescription =
-  'Software Engineer portfolio — backend, cloud and distributed systems.'
+  'Personal site and resume for Felipe Silva, Senior Software Engineer.'
 
 function gh(args, input) {
   const result = spawnSync(GH, args, {

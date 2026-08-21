@@ -8,7 +8,7 @@ Use the same facts everywhere. The website and resume are the source of truth.
 | --- | --- |
 | Name | Felipe Silva |
 | Title | Senior Software Engineer |
-| Specialty | .NET, TypeScript, AWS |
+| Specialty | .NET, SQL Server, AWS |
 | Location | Madrid, Spain |
 | Current employer | IQVIA |
 | IQVIA period | Aug 2020 to Present |
@@ -18,7 +18,7 @@ Use the same facts everywhere. The website and resume are the source of truth.
 | Senac period | Jan 2015 to Jan 2016 |
 | Public clients on site and PDF | Name Fidelis, Afya, Levilo, and Senac as separate experience entries. |
 | Public clients on LinkedIn | Do not name those companies as separate jobs. Group them under Independent, Jan 2015 to Jul 2020. |
-| Work authorization | Authorized to work in Europe. |
+| Work authorization | Do not put on the public CV or site. For application forms only: authorized to work in Europe / no visa needed. |
 | Website | https://felipewrsilva.dev |
 | Email | contact@felipewrsilva.dev |
 | Phone | +34 657 99 00 70 |
@@ -27,8 +27,8 @@ Use the same facts everywhere. The website and resume are the source of truth.
 | English | Speaks (public CV lists without level; forms: C2 / EF SET) |
 | Spanish | Speaks (public CV lists without level; forms: Intermediate) |
 | Portuguese | Speaks (public CV lists without level; forms: Native) |
-| USP | Bachelor of Information Systems, Jan 2019 to Dec 2024 |
-| Facens | Computer Engineering studies, Jan 2014 to Dec 2018 |
+| USP | Bachelor of Information Systems, Jan 2019 to Dec 2022 |
+| Facens | Computer Engineering, Jan 2014 to Dec 2018 |
 
 If Facens or USP dates on a diploma differ from this table, update the site, PDF, and this file first. Do not leave LinkedIn on a different story.
 
@@ -38,11 +38,11 @@ These fields must match the table and `data/cv.ts`.
 
 ### Profile settings
 
-1. Headline: `Senior Software Engineer | .NET · TypeScript · AWS`
+1. Headline: `Senior Software Engineer | .NET · SQL Server · AWS`
 2. Location: `Madrid, Spain` (not Spain alone, not São Paulo)
 3. Profile language: English (not Português as primary)
 4. Current role: `Senior Software Engineer` at IQVIA only, `Aug 2020 – Present`. Past grouped role: `Software Engineer` at Independent, `Jan 2015 – Jul 2020`, employment type Contract. Leave experience location blank. Do not mark Independent as current. Do not use Self-employed as the company label. Do not add Fidelis, Afya, Levilo, or Senac as separate LinkedIn jobs.
-5. About: paste the Professional Summary from the resume (leads with C# / .NET and SQL Server). Do not mention visa sponsorship. Do not add "open to" job-seeking lines.
+5. About: paste the Professional Summary from the resume (backend-first .NET, full-stack when needed). Do not mention visa sponsorship or EU work authorization. Do not add "open to" job-seeking lines.
 6. Featured: add link `https://felipewrsilva.dev` with title `Portfolio and resume`
 
 Note: the website and PDF list Fidelis, Afya, Levilo, and Senac separately. LinkedIn keeps those years under Independent only.
@@ -108,10 +108,10 @@ Do not add named client companies as separate LinkedIn jobs. Do not use Self-emp
 
 ### Education (must match the site)
 
-1. University of São Paulo (USP) — Bachelor of Information Systems — Jan 2019 to Dec 2024
-2. Sorocaba College of Engineering (Facens) — Computer Engineering studies — Jan 2014 to Dec 2018
+1. University of São Paulo (USP) — Bachelor of Information Systems — Jan 2019 to Dec 2022
+2. Sorocaba College of Engineering (Facens) — Computer Engineering — Jan 2014 to Dec 2018
 
-Do not leave USP ending in 2022 while the site says Dec 2024.
+Do not leave USP ending in 2024 while the site says Dec 2022.
 
 Do not leave São Paulo or "Software Developer" as the public current title while the site says Madrid and Senior.
 
@@ -119,7 +119,7 @@ Do not leave São Paulo or "Software Developer" as the public current title whil
 
 Account `felipewrsilva`:
 
-1. Bio: `Senior Software Engineer. .NET, TypeScript, AWS. Based in Madrid.`
+1. Bio: `Senior Software Engineer. .NET, SQL Server, AWS. Based in Madrid.`
 2. Location: `Madrid, Spain`
 3. Website: `https://felipewrsilva.dev`
 4. Portfolio repo description: `Personal site and resume for Felipe Silva, Senior Software Engineer.`
