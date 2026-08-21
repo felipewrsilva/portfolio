@@ -24,9 +24,9 @@ Use the same facts everywhere. The website and resume are the source of truth.
 | Phone | +34 657 99 00 70 |
 | LinkedIn | https://linkedin.com/in/felipewrsilva |
 | GitHub | https://github.com/felipewrsilva |
-| English | C2 (EF SET) |
-| Spanish | Intermediate |
-| Portuguese | Native |
+| English | Speaks (public CV lists without level; forms: C2 / EF SET) |
+| Spanish | Speaks (public CV lists without level; forms: Intermediate) |
+| Portuguese | Speaks (public CV lists without level; forms: Native) |
 | USP | Bachelor of Information Systems, Jan 2019 to Dec 2024 |
 | Facens | Computer Engineering studies, Jan 2014 to Dec 2018 |
 
@@ -42,7 +42,7 @@ These fields must match the table and `data/cv.ts`.
 2. Location: `Madrid, Spain` (not Spain alone, not São Paulo)
 3. Profile language: English (not Português as primary)
 4. Current role: `Senior Software Engineer` at IQVIA only, `Aug 2020 – Present`. Past grouped role: `Software Engineer` at Independent, `Jan 2015 – Jul 2020`, employment type Contract. Leave experience location blank. Do not mark Independent as current. Do not use Self-employed as the company label. Do not add Fidelis, Afya, Levilo, or Senac as separate LinkedIn jobs.
-5. About: paste the Professional Summary from the resume. Do not mention visa sponsorship. Do not add "open to" job-seeking lines.
+5. About: paste the Professional Summary from the resume (leads with C# / .NET and SQL Server). Do not mention visa sponsorship. Do not add "open to" job-seeking lines.
 6. Featured: add link `https://felipewrsilva.dev` with title `Portfolio and resume`
 
 Note: the website and PDF list Fidelis, Afya, Levilo, and Senac separately. LinkedIn keeps those years under Independent only.
@@ -68,7 +68,7 @@ Do not hide React, Next.js, or MongoDB. Do not claim 10 years in TypeScript, Rea
 
 IQVIA public story is two led projects. Do not name internal systems or source datasets. Do not use ownership language that implies the systems were yours.
 
-1. High-volume file processing: volume spike, SQL deadlocks, timeouts, largest files took 3+ hours or failed. Now every file finishes within 20 minutes worst case, usually much faster, dozens of very large files per hour.
+1. High-volume file processing in C# / .NET and SQL Server: volume spike, SQL deadlocks, timeouts, largest files took 3+ hours or failed. Now every file finishes within 20 minutes worst case, usually much faster, dozens of very large files per hour.
 2. Live healthcare extract pipeline in Go: old path was SSIS plus manual wait, download, compressed extract to CSV, Spark API into SQL Server, brittle on layout changes. New path is always-on Go FTP watch, sync extracts, Parquet, Azure Blob, analyst-triggered Databricks load in minutes.
 
 Do not name client source systems in public copy. Do not use the old 90 percent wording.
@@ -83,12 +83,13 @@ Aug 2020 to Present · Full-time
 
 Leave location blank on experience entries. Location for the profile header is Madrid, Spain only.
 
-Backend and data platform engineering for high-volume healthcare and pharmaceutical data used across multiple markets.
+Backend and data platform engineering in C# / .NET and SQL Server for high-volume healthcare and pharmaceutical data used across multiple markets.
 
-- Stabilized a high-volume file path after SQL deadlocks, timeouts, and 3+ hour or failed runs on the largest files. Every file now finishes within 20 minutes, usually faster, while ingesting dozens of very large files per hour.
+- Stabilized a high-volume C# / .NET and SQL Server file path after SQL deadlocks, timeouts, and 3+ hour or failed runs on the largest files. Every file now finishes within 20 minutes, usually faster, while ingesting dozens of very large files per hour.
 - Built a live extract pipeline in Go that replaced SSIS and a manual CSV/Spark/SQL Server path with FTP watch, Parquet, Azure Blob, and analyst-triggered Databricks loads in minutes.
-- Built GitLab CI/CD and DACPAC versioning with automated pre-deploy and drift reports.
-- Cut routine developer support time by 75% through RCA-driven production fixes.
+- Introduced GitLab CI/CD and DACPAC versioning with automated pre-deploy checks and schema drift reports, so database changes shipped with the same review path as application code.
+- Cut routine developer support time by 75% through RCA-driven production fixes on live ingestion and extract paths.
+- Kept production data paths reliable under layout and volume changes without rewriting the surrounding platform.
 
 #### Independent — Software Engineer
 
@@ -97,10 +98,11 @@ Jan 2015 to Jul 2020 · Contract
 Contract engineering for clients in healthcare education, enterprise security, SaaS, and education. Full-stack delivery across frontend, backend, and cloud on systems already in production.
 
 - Built and operated end-to-end checkout and acquisition platforms in TypeScript, Next.js, React, Node.js, MongoDB, and AWS, including payments, contracts, and production support.
-- Led AWS modernization of a healthcare education acquisition platform, improving conversion and throughput without downtime for live users.
-- Led backend work on a cross-platform enterprise security product, including an OS migration, partner integration repairs, AWS Lambda, SNS, SQS, and Go tooling for simulation and alerts.
-- Migrated a legacy desktop product to SaaS and operated cloud infrastructure for thousands of active client operations.
-- Launched an education payment platform end to end and replaced manual invoice support with self-service.
+- Led AWS modernization of a healthcare education acquisition platform, increasing sales conversions by 12% and checkout throughput by more than 80% with a zero-downtime cutover.
+- Enabled bundle and combo purchases on the acquisition path while owning day-to-day production support.
+- Led backend work on a cross-platform enterprise security product, including an OS migration, partner integration repairs, fewer recurring production defects, AWS Lambda, SNS, SQS, and Go tooling for simulation, alerts, and integration tests.
+- Re-architected a legacy desktop product as SaaS, reducing monthly churn from 18% to 3%, and operated cloud infrastructure for more than 5,000 active client operations.
+- Launched a multi-method education payment platform and replaced manual invoice support with self-service.
 
 Do not add named client companies as separate LinkedIn jobs. Do not use Self-employed as the company name.
 

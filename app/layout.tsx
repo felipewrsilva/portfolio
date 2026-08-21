@@ -76,7 +76,7 @@ export default function RootLayout({
       '@type': 'Organization',
       name: 'IQVIA',
     },
-    knowsLanguage: ['Portuguese', 'English', 'Spanish'],
+    knowsLanguage: ['English', 'Portuguese', 'Spanish'],
     sameAs: [
       'https://linkedin.com/in/felipewrsilva',
       'https://github.com/felipewrsilva',
