@@ -483,11 +483,136 @@ pageIds.forEach((pageId, index) => {
     `<< /Type /Page /Parent ${pagesId} 0 R /MediaBox [0 0 ${PAGE_WIDTH} ${PAGE_HEIGHT}] /Contents ${contentIds[index]} 0 R /Resources << /Font << /F1 ${fontId} 0 R /F2 ${fontBoldId} 0 R >> >> >>`
 })
 
+const now = new Date()
+const pdfDate = (() => {
+  const pad = (n) => String(n).padStart(2, '0')
+  const y = now.getUTCFullYear()
+  const m = pad(now.getUTCMonth() + 1)
+  const d = pad(now.getUTCDate())
+  const h = pad(now.getUTCHours())
+  const min = pad(now.getUTCMinutes())
+  const s = pad(now.getUTCSeconds())
+  return `D:${y}${m}${d}${h}${min}${s}Z`
+})()
+
+const meta = {
+  title: 'Felipe Silva - Software Engineer Resume',
+  author: 'Felipe Silva',
+  subject:
+    'Backend and distributed systems engineer based in Madrid. 10+ years across healthcare, education, enterprise security and SaaS.',
+  keywords: [
+    'Software Engineer',
+    'Backend',
+    'Cloud',
+    'Distributed Systems',
+    '.NET',
+    'C#',
+    'ASP.NET Core',
+    'TypeScript',
+    'Node.js',
+    'AWS',
+    'SQL Server',
+    'gRPC',
+    'Microservices',
+    'Event-Driven Architecture',
+    'GitLab CI/CD',
+    'DACPAC',
+    'Madrid',
+    'Healthcare',
+    'SaaS',
+    'Enterprise Security',
+    'IQVIA',
+    'felipewrsilva.dev',
+  ].join(', '),
+  creator: 'curriculo.md via scripts/generate-resume-pdf.mjs',
+  producer: 'felipewrsilva.dev portfolio resume generator',
+  website: 'https://felipewrsilva.dev',
+  email: 'contact@felipewrsilva.dev',
+  linkedin: 'https://linkedin.com/in/felipewrsilva',
+  github: 'https://github.com/felipewrsilva/',
+  role: 'Software Engineer',
+  location: 'Madrid, Spain',
+  focus: 'Backend, Cloud, Distributed Systems',
+}
+
+function xmlEscape(text) {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+}
+
+const xmp = `<?xpacket begin="" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/">
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <rdf:Description rdf:about=""
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+      xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+      xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/"
+      xmlns:cv="https://felipewrsilva.dev/ns/cv/1.0/">
+      <dc:format>application/pdf</dc:format>
+      <dc:title><rdf:Alt><rdf:li xml:lang="x-default">${xmlEscape(meta.title)}</rdf:li></rdf:Alt></dc:title>
+      <dc:creator><rdf:Seq><rdf:li>${xmlEscape(meta.author)}</rdf:li></rdf:Seq></dc:creator>
+      <dc:description><rdf:Alt><rdf:li xml:lang="x-default">${xmlEscape(meta.subject)}</rdf:li></rdf:Alt></dc:description>
+      <dc:subject><rdf:Bag>${meta.keywords
+        .split(', ')
+        .map((k) => `<rdf:li>${xmlEscape(k)}</rdf:li>`)
+        .join('')}</rdf:Bag></dc:subject>
+      <dc:language>en</dc:language>
+      <xmp:CreatorTool>${xmlEscape(meta.creator)}</xmp:CreatorTool>
+      <pdf:Producer>${xmlEscape(meta.producer)}</pdf:Producer>
+      <pdf:Keywords>${xmlEscape(meta.keywords)}</pdf:Keywords>
+      <cv:fullName>${xmlEscape(meta.author)}</cv:fullName>
+      <cv:jobTitle>${xmlEscape(meta.role)}</cv:jobTitle>
+      <cv:focus>${xmlEscape(meta.focus)}</cv:focus>
+      <cv:location>${xmlEscape(meta.location)}</cv:location>
+      <cv:email>${xmlEscape(meta.email)}</cv:email>
+      <cv:website>${xmlEscape(meta.website)}</cv:website>
+      <cv:linkedin>${xmlEscape(meta.linkedin)}</cv:linkedin>
+      <cv:github>${xmlEscape(meta.github)}</cv:github>
+      <cv:source>https://felipewrsilva.dev</cv:source>
+      <cv:documentType>resume</cv:documentType>
+    </rdf:Description>
+  </rdf:RDF>
+</x:xmpmeta>
+<?xpacket end="w"?>`
+
+const xmpBytes = Buffer.from(xmp, 'utf8')
+const metadataId = add('__XMP_METADATA__')
+
+const infoId = add(
+  [
+    '<<',
+    `/Title ${pdfString(meta.title)}`,
+    `/Author ${pdfString(meta.author)}`,
+    `/Subject ${pdfString(meta.subject)}`,
+    `/Keywords ${pdfString(meta.keywords)}`,
+    `/Creator ${pdfString(meta.creator)}`,
+    `/Producer ${pdfString(meta.producer)}`,
+    `/CreationDate (${pdfDate})`,
+    `/ModDate (${pdfDate})`,
+    '>>',
+  ].join('\n'),
+)
+
+objects[catalogId - 1] =
+  `<< /Type /Catalog /Pages ${pagesId} 0 R /Metadata ${metadataId} 0 R /Lang (en-US) >>`
+
 const chunks = [Buffer.from('%PDF-1.4\n', 'ascii')]
 const offsets = [0]
 for (let i = 0; i < objects.length; i++) {
   offsets.push(Buffer.concat(chunks).length)
-  chunks.push(Buffer.from(`${i + 1} 0 obj\n${objects[i]}\nendobj\n`, 'ascii'))
+  // Metadata stream may contain UTF-8; write object bytes carefully
+  const obj = objects[i]
+  if (obj === '__XMP_METADATA__') {
+    const header = `${i + 1} 0 obj\n<< /Type /Metadata /Subtype /XML /Length ${xmpBytes.length} >>\nstream\n`
+    const footer = `\nendstream\nendobj\n`
+    chunks.push(Buffer.from(header, 'ascii'), xmpBytes, Buffer.from(footer, 'ascii'))
+  } else {
+    chunks.push(Buffer.from(`${i + 1} 0 obj\n${obj}\nendobj\n`, 'ascii'))
+  }
 }
 const xrefStart = Buffer.concat(chunks).length
 let xref = `xref\n0 ${objects.length + 1}\n`
@@ -495,10 +620,11 @@ xref += '0000000000 65535 f \n'
 for (let i = 1; i <= objects.length; i++) {
   xref += `${String(offsets[i]).padStart(10, '0')} 00000 n \n`
 }
-xref += `trailer\n<< /Size ${objects.length + 1} /Root ${catalogId} 0 R >>\n`
+xref += `trailer\n<< /Size ${objects.length + 1} /Root ${catalogId} 0 R /Info ${infoId} 0 R >>\n`
 xref += `startxref\n${xrefStart}\n%%EOF`
 chunks.push(Buffer.from(xref, 'ascii'))
 
 mkdirSync(dirname(outPath), { recursive: true })
 writeFileSync(outPath, Buffer.concat(chunks))
 console.log(`Wrote ${outPath} from ${mdPath} (${pages.length} page(s))`)
+console.log(`Embedded PDF Info + XMP metadata for ${meta.author}`)
