@@ -1,12 +1,12 @@
 # Felipe Silva
 
-## Software Engineer
+## Senior Software Engineer
 
-**Backend · Cloud · Distributed Systems**
+**.NET · TypeScript · AWS**
 
 Madrid, Spain
 
-Phone: +34 661 46 28 19
+Phone: +34 657 99 00 70
 
 Email: [contact@felipewrsilva.dev](mailto:contact@felipewrsilva.dev)
 
@@ -18,19 +18,9 @@ Website: [felipewrsilva.dev](https://felipewrsilva.dev)
 
 # Professional Summary
 
-Backend and distributed systems engineer based in Madrid, with **10+ years** designing and modernizing platforms across healthcare, education, enterprise security and SaaS.
+Senior Software Engineer in Madrid with 10+ years building and operating production systems in healthcare, education, enterprise security, and SaaS. Primary stacks: C# / .NET, TypeScript, and Go. Authorized to work in Europe.
 
-I take ownership of architecture and delivery where the result is measurable: faster processing, higher conversion, lower cost and stronger retention.
-
----
-
-# Selected Achievements
-
-- Reduced complex healthcare data processing time by more than **90%** (several hours to a few minutes) while scaling ingestion to **multi-terabyte daily peaks**.
-- Cut recurring infrastructure overhead by retiring a large legacy processing fleet (about a **128-node** cluster equivalent).
-- Established **GitLab CI/CD** and **DACPAC** database versioning with automated drift detection, eliminating production schema mismatches.
-- Increased Afya checkout **sales conversions by 12%** and throughput capacity by more than **80%**.
-- Reduced Levilo monthly customer churn from **18% to 3%** while scaling to **5,000+** active client operations.
+Work spans backend, frontend, and full-stack delivery, plus data platforms and cloud infrastructure on systems already serving customers.
 
 ---
 
@@ -38,19 +28,19 @@ I take ownership of architecture and delivery where the result is measurable: fa
 
 ### Languages
 
-C#, TypeScript, SQL
+C#, TypeScript, JavaScript, Go, SQL
 
 ### Backend
 
-.NET · ASP.NET Core · Node.js · REST · gRPC
+.NET · ASP.NET Core · Node.js · REST APIs
+
+### Frontend
+
+HTML · CSS · JavaScript · TypeScript · React · Next.js · ASP.NET
 
 ### Cloud & Data
 
-AWS (Lambda, SNS, SQS) · Docker · GitLab CI/CD · DACPAC · SQL Server
-
-### Architecture
-
-Distributed systems · Event-driven · Microservices
+SQL Server · MongoDB · AWS (Lambda, SNS, SQS) · Azure · Databricks · Parquet
 
 ---
 
@@ -60,17 +50,16 @@ Distributed systems · Event-driven · Microservices
 
 ### Senior Software Engineer
 
-**Aug 2020 to Present** · Healthcare technology · Global pharmaceutical organizations
+**Aug 2020 to Present** · Healthcare technology · Pharmaceutical and healthcare data customers
 
-Design and deliver enterprise healthcare platforms that process large volumes of healthcare and pharmaceutical data for global customers.
+Backend and data platform engineering for high-volume healthcare and pharmaceutical data used across multiple markets.
 
 ### Impact
 
-- Redesigned ASP.NET Core and SQL Server pipelines, reducing complex healthcare data processing time by more than **90%** (several hours to a few minutes) and cutting timeout errors.
-- Scaled ingestion to **multi-terabyte daily peaks**, processing new healthcare and pharmaceutical data from global sources well beyond a terabyte in a single day when load demanded it.
-- Cut recurring infrastructure overhead by decommissioning a large legacy processing fleet (about a **128-node** cluster with 500GB RAM and 10TB storage).
-- Built GitLab CI/CD from scratch with test coverage tracking, and introduced DACPAC so database changes were fully versioned with automated pre-deploy and drift reports.
-- Reduced routine developer support time by **75%** (about 8 hours to 2 hours per developer monthly) through RCA-driven permanent production fixes.
+- Stabilized a high-volume file path after SQL deadlocks, timeouts, and 3+ hour or failed runs on the largest files. Every file now finishes within 20 minutes, usually faster, while ingesting dozens of very large files per hour.
+- Built a live extract pipeline in Go that replaced SSIS and a manual CSV/Spark/SQL Server path with FTP watch, Parquet, Azure Blob, and analyst-triggered Databricks loads in minutes.
+- Built GitLab CI/CD and DACPAC versioning with automated pre-deploy and drift reports.
+- Cut routine developer support time by 75% through RCA-driven production fixes.
 
 ---
 
@@ -78,16 +67,15 @@ Design and deliver enterprise healthcare platforms that process large volumes of
 
 ### Senior Software Engineer
 
-**Apr 2018 to Jul 2020** · Enterprise security · Cross-platform enterprise customers
+**Apr 2018 to Jul 2020** · Enterprise security · Enterprise customers on multiple operating systems
 
-Modernized the core architecture of a cross-platform enterprise security product.
+Backend work on a cross-platform enterprise security product, including OS migration and partner integrations.
 
 ### Impact
 
-- Led backend work on a cross-platform product migration that improved operating-system compatibility and supported retention and new acquisitions.
-- Built automated integration testing that stabilized connections with major cybersecurity partners.
-- Reduced recurring production defects by redesigning integration layers and hardening platform reliability.
-- Scaled event-driven workloads on AWS to support cloud-native processing.
+- Led backend work for an OS migration so the product ran reliably across customer environments that previously blocked upgrades.
+- Repaired partner integrations and built Go tooling for simulation and alerts around failing cybersecurity partner connections.
+- Moved partner and processing workloads that needed async fan-out onto AWS Lambda, SNS, and SQS.
 
 ---
 
@@ -95,14 +83,14 @@ Modernized the core architecture of a cross-platform enterprise security product
 
 ### Senior Software Engineer
 
-**May 2017 to Mar 2018** · Healthcare education · Acquisition and checkout customers
+**May 2017 to Mar 2018** · Healthcare education · Checkout and customer acquisition users
 
-Technical Lead for modernizing the checkout and customer acquisition platform for one of Brazil's largest healthcare education companies.
+Full-stack work on the checkout and customer acquisition platform for a major Brazilian healthcare education company.
 
 ### Impact
 
-- Led AWS-based modernization of the acquisition platform, increasing sales conversions by **12%** immediately after deployment.
-- Restructured the backend for more than **80%** higher throughput with a stable, zero-downtime checkout rollout.
+- Built and operated end-to-end checkout and acquisition flows in TypeScript, Next.js, React, Node.js, MongoDB, and AWS, including payments, contracts, and production support.
+- Led AWS modernization of the acquisition platform, improving conversion and throughput without downtime for live users.
 
 ---
 
@@ -110,14 +98,13 @@ Technical Lead for modernizing the checkout and customer acquisition platform fo
 
 ### Software Engineer
 
-**Feb 2016 to Apr 2017** · SaaS · Desktop customers moving to the browser
+**Feb 2016 to Apr 2017** · SaaS · Users migrating from desktop to web
 
-Led the transformation of a desktop application into a cloud-native SaaS platform.
+Full-stack and cloud work that moved a desktop product to SaaS for active clients.
 
 ### Impact
 
-- Re-architected a legacy desktop product as SaaS, reducing monthly customer churn from **18% to 3%** by removing local stability failures.
-- Designed and scaled cloud infrastructure for more than **5,000** active client operations across Brazil, including high-availability integrations with large consumer platforms.
+- Migrated a legacy desktop product to SaaS and operated cloud infrastructure for thousands of active client operations.
 
 ---
 
@@ -127,12 +114,11 @@ Led the transformation of a desktop application into a cloud-native SaaS platfor
 
 **Jan 2015 to Jan 2016** · Education · Students managing invoices and payments
 
-Built digital education tools focused on payment modernization and operational efficiency.
+Full-stack delivery of education payment tools and self-service invoice flows.
 
 ### Impact
 
-- Launched a multi-method payment platform for students.
-- Replaced manual support workflows with self-service for invoices and payments, reducing operational load.
+- Launched an education payment platform end to end and replaced manual invoice support with self-service.
 
 ---
 
@@ -145,7 +131,7 @@ Jan 2019 to Dec 2024
 
 ## Sorocaba College of Engineering (Facens)
 
-**Computer Engineering**  
+**Computer Engineering studies**  
 Jan 2014 to Dec 2018
 
 ---
@@ -153,5 +139,5 @@ Jan 2014 to Dec 2018
 # Languages
 
 - Portuguese: Native
-- English: Advanced
+- English: C2
 - Spanish: Intermediate
