@@ -2,7 +2,7 @@
 
 ## Senior Software Engineer
 
-**.NET · TypeScript · AWS**
+**.NET · SQL Server · AWS**
 
 Madrid, Spain
 
@@ -18,9 +18,9 @@ Website: [felipewrsilva.dev](https://felipewrsilva.dev)
 
 # Professional Summary
 
-Senior Software Engineer in Madrid with 10+ years building and operating production systems in healthcare, education, enterprise security, and SaaS. Primary stack: C# / .NET and SQL Server, with TypeScript and Go where the platform needed it. Authorized to work in Europe.
+Senior .NET engineer in Madrid with 10+ years building and operating production systems in healthcare, education, enterprise security, and SaaS. Primary stack: C# / .NET, ASP.NET Core, and SQL Server.
 
-Work spans backend, data platforms, and cloud infrastructure on systems already serving customers, plus full-stack delivery when the product required it.
+Backend-first, and full-stack when needed: TypeScript / React on the frontend, plus CI/CD and cloud delivery on systems already serving customers.
 
 ---
 
@@ -28,19 +28,19 @@ Work spans backend, data platforms, and cloud infrastructure on systems already 
 
 ### Languages
 
-C#, TypeScript, JavaScript, Go, SQL
+C#, SQL, TypeScript, JavaScript, Go
 
 ### Backend
 
-.NET · ASP.NET Core · Node.js · REST APIs · GitLab CI/CD
+.NET · ASP.NET Core · REST APIs · Node.js · GitLab CI/CD
 
 ### Frontend
 
-HTML · CSS · JavaScript · TypeScript · React · Next.js · ASP.NET
+TypeScript · React · Next.js · JavaScript · HTML · CSS · ASP.NET
 
 ### Cloud & Data
 
-SQL Server · DACPAC · MongoDB · AWS (Lambda, SNS, SQS) · Azure · Azure Blob · Databricks · Parquet
+SQL Server · DACPAC · AWS (Lambda, SNS, SQS) · Azure · Azure Blob · MongoDB · Databricks · Parquet
 
 ---
 
@@ -87,7 +87,7 @@ Backend work on a cross-platform enterprise security product, including OS migra
 
 **May 2017 to Mar 2018** · Healthcare education · Checkout and customer acquisition users
 
-Full-stack work on the checkout and customer acquisition platform for a major Brazilian healthcare education company.
+Full-stack work on the checkout and customer acquisition platform for a major healthcare education company.
 
 ### Impact
 
@@ -136,11 +136,11 @@ Full-stack delivery of education payment tools and self-service invoice flows.
 ## University of São Paulo (USP)
 
 **Bachelor of Information Systems**  
-Jan 2019 to Dec 2024
+Jan 2019 to Dec 2022
 
 ## Sorocaba College of Engineering (Facens)
 
-**Computer Engineering studies**  
+**Computer Engineering**  
 Jan 2014 to Dec 2018
 
 ---
