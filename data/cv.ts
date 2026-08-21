@@ -1,25 +1,28 @@
 export const profile = {
   name: 'Felipe Silva',
-  title: 'Software Engineer',
-  focus: 'Backend · Cloud · Distributed Systems',
+  title: 'Senior Software Engineer',
+  focus: '.NET · TypeScript · AWS',
+  tagline:
+    'I take existing production platforms, .NET or TypeScript, and make the slow, expensive, or unsafe parts shippable again.',
+  company: 'IQVIA',
+  yearsExperience: '10+ years',
   location: 'Madrid, Spain',
-  phone: '+34 661 46 28 19',
-  phoneHref: 'tel:+34661462819',
+  workAuthorization: 'Authorized to work in Europe.',
+  availability:
+    'Backend, frontend, and full-stack production systems. .NET, TypeScript, React, AWS.',
+  contactBrief: 'Based in Madrid. Email with the role and stack.',
+  phone: '+34 657 99 00 70',
+  phoneHref: 'tel:+34657990070',
   email: 'contact@felipewrsilva.dev',
   emailHref: 'mailto:contact@felipewrsilva.dev',
   linkedin: 'https://linkedin.com/in/felipewrsilva',
   github: 'https://github.com/felipewrsilva/',
   resumePdf: '/felipe-silva-resume.pdf',
-  whatsappHref:
-    'https://wa.me/34661462819?text=' +
-    encodeURIComponent(
-      'Hi Felipe, I found your portfolio and would like to connect.',
-    ),
 }
 
 export const summary = [
-  'Backend and distributed systems engineer based in Madrid, with 10+ years designing and modernizing platforms across healthcare, education, enterprise security and SaaS.',
-  'I take ownership of architecture and delivery where the result is measurable: faster processing, higher conversion, lower cost and stronger retention.',
+  'Senior Software Engineer in Madrid with 10+ years building and operating production systems in healthcare, education, enterprise security, and SaaS. Primary stacks: C# / .NET, TypeScript, and Go. Authorized to work in Europe.',
+  'Work spans backend, frontend, and full-stack delivery, plus data platforms and cloud infrastructure on systems already serving customers.',
 ]
 
 export const industries = [
@@ -29,50 +32,49 @@ export const industries = [
   'Enterprise security',
 ]
 
-export const impactMetrics = [
-  {
-    value: '>90%',
-    label: 'Faster data processing',
-    detail: 'Healthcare pipelines at IQVIA (hours to minutes)',
-  },
-  {
-    value: '+12%',
-    label: 'Sales conversions',
-    detail: 'Afya checkout modernization on AWS',
-  },
-  {
-    value: '18% → 3%',
-    label: 'Monthly customer churn',
-    detail: "Levilo's desktop-to-SaaS migration",
-  },
-]
-
 export const featuredCase = {
   client: 'IQVIA',
   industry: 'Healthcare technology',
-  audience: 'Global pharmaceutical organizations',
-  title: 'Healthcare Data Platform at Scale',
-  summary:
-    'Led architecture and delivery for a healthcare data platform that replaced slow batch pipelines with scalable ASP.NET Core and SQL Server processing, supporting global healthcare and pharmaceutical data ingestion at multi-terabyte scale.',
+  audience: 'Pharmaceutical and healthcare data customers',
+  title: 'Live healthcare extract pipeline on Azure and Databricks',
+  problem:
+    'Ingestion was manual. An analyst waited until every source file was available, then downloaded, converted compressed extracts to CSV, and loaded data on demand through a Spark API into SQL Server. Download and conversion failed often. An upstream layout change, such as a new column, broke Spark and required hand-edited CSVs to restore the load.',
+  constraint:
+    'Analysts still needed to choose when data landed in tables. The new path had to keep files current without a full rewrite of the surrounding platform.',
+  approach:
+    'I migrated the SSIS path to an always-on Go process that watches FTP in real time. New or replaced files update the local extracts, dropping superseded files for the same slice. The service converts to Parquet and lands the files on Azure Blob. The analyst then loads Databricks tables when it is the right moment, in a few minutes.',
+  tradeOff:
+    'Kept the table load analyst-triggered instead of writing straight into production. Databricks replaced SQL Server for this path because the same load was cheaper and faster there.',
+  result:
+    'Files stay current as the source changes. Loads that used to wait on a full manual batch now take a few minutes. Layout changes no longer take the Spark CSV path down.',
   outcomes: [
-    'Reduced complex processing time by more than 90% (several hours to a few minutes)',
-    'Scaled healthcare and pharmaceutical data ingestion to multi-terabyte daily peaks from global sources',
-    'Cut recurring infrastructure overhead by retiring a large legacy fleet (about 128-node equivalent)',
-    'Shipped GitLab CI/CD and DACPAC versioning with automated drift reports',
+    'Replaced SSIS and a manual CSV/Spark/SQL Server path with a live Go pipeline',
+    'Detects FTP changes in real time and keeps local extracts in sync',
+    'Converts source files to Parquet and lands them on Azure Blob',
+    'Analysts load Databricks tables in minutes instead of waiting on a full batch',
   ],
 }
 
 export const technologies = {
-  Languages: ['C#', 'TypeScript', 'SQL'],
-  Backend: ['.NET', 'ASP.NET Core', 'Node.js', 'REST', 'gRPC'],
-  'Cloud & data': [
-    'AWS (Lambda, SNS, SQS)',
-    'Docker',
-    'GitLab CI/CD',
-    'DACPAC',
-    'SQL Server',
+  Languages: ['C#', 'TypeScript', 'JavaScript', 'Go', 'SQL'],
+  Backend: ['.NET', 'ASP.NET Core', 'Node.js', 'REST APIs'],
+  Frontend: [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Next.js',
+    'ASP.NET',
   ],
-  Architecture: ['Distributed systems', 'Event-driven', 'Microservices'],
+  'Cloud & data': [
+    'SQL Server',
+    'MongoDB',
+    'AWS (Lambda, SNS, SQS)',
+    'Azure',
+    'Databricks',
+    'Parquet',
+  ],
 } as const
 
 export type ExperienceRole = {
@@ -91,15 +93,14 @@ export const experience: ExperienceRole[] = [
     role: 'Senior Software Engineer',
     period: 'Aug 2020 to Present',
     industry: 'Healthcare technology',
-    audience: 'Global pharmaceutical organizations',
+    audience: 'Pharmaceutical and healthcare data customers',
     overview:
-      'Design and deliver enterprise healthcare platforms that process large volumes of healthcare and pharmaceutical data for global customers.',
+      'Backend and data platform engineering for high-volume healthcare and pharmaceutical data used across multiple markets.',
     bullets: [
-      'Redesigned ASP.NET Core and SQL Server pipelines, reducing complex healthcare data processing time by more than 90% (several hours to a few minutes) and cutting timeout errors.',
-      'Scaled ingestion to multi-terabyte daily peaks, processing new healthcare and pharmaceutical data from global sources well beyond a terabyte in a single day when load demanded it.',
-      'Cut recurring infrastructure overhead by decommissioning a large legacy processing fleet (about a 128-node cluster with 500GB RAM and 10TB storage).',
-      'Built GitLab CI/CD from scratch with test coverage tracking, and introduced DACPAC so database changes were fully versioned with automated pre-deploy and drift reports.',
-      'Reduced routine developer support time by 75% (about 8 hours to 2 hours per developer monthly) through RCA-driven permanent production fixes.',
+      'Stabilized a high-volume file path after SQL deadlocks, timeouts, and 3+ hour or failed runs on the largest files. Every file now finishes within 20 minutes, usually faster, while ingesting dozens of very large files per hour.',
+      'Built a live extract pipeline in Go that replaced SSIS and a manual CSV/Spark/SQL Server path with FTP watch, Parquet, Azure Blob, and analyst-triggered Databricks loads in minutes.',
+      'Built GitLab CI/CD and DACPAC versioning with automated pre-deploy and drift reports.',
+      'Cut routine developer support time by 75% through RCA-driven production fixes.',
     ],
   },
   {
@@ -107,14 +108,13 @@ export const experience: ExperienceRole[] = [
     role: 'Senior Software Engineer',
     period: 'Apr 2018 to Jul 2020',
     industry: 'Enterprise security',
-    audience: 'Cross-platform enterprise customers',
+    audience: 'Enterprise customers on multiple operating systems',
     overview:
-      'Modernized the core architecture of a cross-platform enterprise security product.',
+      'Backend work on a cross-platform enterprise security product, including OS migration and partner integrations.',
     bullets: [
-      'Led backend work on a cross-platform product migration that improved operating-system compatibility and supported retention and new acquisitions.',
-      'Built automated integration testing that stabilized connections with major cybersecurity partners.',
-      'Reduced recurring production defects by redesigning integration layers and hardening platform reliability.',
-      'Scaled event-driven workloads on AWS to support cloud-native processing.',
+      'Led backend work for an OS migration so the product ran reliably across customer environments that previously blocked upgrades.',
+      'Repaired partner integrations and built Go tooling for simulation and alerts around failing cybersecurity partner connections.',
+      'Moved partner and processing workloads that needed async fan-out onto AWS Lambda, SNS, and SQS.',
     ],
   },
   {
@@ -122,12 +122,12 @@ export const experience: ExperienceRole[] = [
     role: 'Senior Software Engineer',
     period: 'May 2017 to Mar 2018',
     industry: 'Healthcare education',
-    audience: 'Acquisition and checkout customers',
+    audience: 'Checkout and customer acquisition users',
     overview:
-      "Technical Lead for modernizing the checkout and customer acquisition platform for one of Brazil's largest healthcare education companies.",
+      'Full-stack work on the checkout and customer acquisition platform for a major Brazilian healthcare education company.',
     bullets: [
-      'Led AWS-based modernization of the acquisition platform, increasing sales conversions by 12% immediately after deployment.',
-      'Restructured the backend for more than 80% higher throughput with a stable, zero-downtime checkout rollout.',
+      'Built and operated end-to-end checkout and acquisition flows in TypeScript, Next.js, React, Node.js, MongoDB, and AWS, including payments, contracts, and production support.',
+      'Led AWS modernization of the acquisition platform, improving conversion and throughput without downtime for live users.',
     ],
   },
   {
@@ -135,12 +135,11 @@ export const experience: ExperienceRole[] = [
     role: 'Software Engineer',
     period: 'Feb 2016 to Apr 2017',
     industry: 'SaaS',
-    audience: 'Desktop customers moving to the browser',
+    audience: 'Users migrating from desktop to web',
     overview:
-      'Led the transformation of a desktop application into a cloud-native SaaS platform.',
+      'Full-stack and cloud work that moved a desktop product to SaaS for active clients.',
     bullets: [
-      'Re-architected a legacy desktop product as SaaS, reducing monthly customer churn from 18% to 3% by removing local stability failures.',
-      'Designed and scaled cloud infrastructure for more than 5,000 active client operations across Brazil, including high-availability integrations with large consumer platforms.',
+      'Migrated a legacy desktop product to SaaS and operated cloud infrastructure for thousands of active client operations.',
     ],
   },
   {
@@ -150,10 +149,9 @@ export const experience: ExperienceRole[] = [
     industry: 'Education',
     audience: 'Students managing invoices and payments',
     overview:
-      'Built digital education tools focused on payment modernization and operational efficiency.',
+      'Full-stack delivery of education payment tools and self-service invoice flows.',
     bullets: [
-      'Launched a multi-method payment platform for students.',
-      'Replaced manual support workflows with self-service for invoices and payments, reducing operational load.',
+      'Launched an education payment platform end to end and replaced manual invoice support with self-service.',
     ],
   },
 ]
@@ -166,20 +164,20 @@ export const education = [
   },
   {
     institution: 'Sorocaba College of Engineering (Facens)',
-    degree: 'Computer Engineering',
+    degree: 'Computer Engineering studies',
     period: 'Jan 2014 to Dec 2018',
   },
 ]
 
 export const languages = [
   { name: 'Portuguese', level: 'Native' },
-  { name: 'English', level: 'Advanced' },
+  { name: 'English', level: 'C2' },
   { name: 'Spanish', level: 'Intermediate' },
 ]
 
 export const navLinks = [
   { label: 'About', href: '#about' },
-  { label: 'Impact', href: '#achievements' },
+  { label: 'Work', href: '#featured' },
   { label: 'Experience', href: '#experience' },
   { label: 'Contact', href: '#contact' },
 ]

@@ -68,8 +68,20 @@ export default function SiteHeader() {
         </nav>
         <div className="flex items-center gap-2">
           <a
-            href={profile.resumePdf}
-            download
+            href={profile.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              'hidden rounded-sm px-3 py-2 font-mono text-xs font-medium uppercase tracking-[0.16em] transition-colors sm:inline-flex',
+              scrolled || menuOpen
+                ? 'text-ink/85 hover:text-ink'
+                : 'text-white/90 hover:text-white',
+            )}
+          >
+            LinkedIn
+          </a>
+          <a
+            href={profile.emailHref}
             className={cn(
               'rounded-sm px-3 py-2 font-mono text-xs font-medium uppercase tracking-[0.16em] transition-colors',
               scrolled || menuOpen
@@ -77,7 +89,7 @@ export default function SiteHeader() {
                 : 'bg-white text-ink hover:bg-accent-soft',
             )}
           >
-            Resume
+            Email
           </a>
           <button
             type="button"
