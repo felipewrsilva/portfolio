@@ -32,15 +32,15 @@ C#, SQL, TypeScript, JavaScript, Go
 
 ### Backend
 
-.NET · ASP.NET Core · REST APIs · Node.js · GitLab CI/CD
+.NET · ASP.NET Core · Razor Pages · Entity Framework Core · ASP.NET Core Identity · CQRS · REST APIs · Node.js · GitLab CI/CD · Azure DevOps
 
 ### Frontend
 
-TypeScript · React · Next.js · JavaScript · HTML · CSS · ASP.NET
+TypeScript · React · Next.js · JavaScript · HTML · CSS · jQuery · Bootstrap / AdminLTE · ASP.NET
 
 ### Cloud & Data
 
-SQL Server · DACPAC · AWS (Lambda, SNS, SQS) · Azure · Azure Blob · MongoDB · Databricks · Parquet
+SQL Server · DACPAC · AWS (Lambda, SNS, SQS) · Azure · Azure SQL · Azure App Service · Azure Functions · Azure Blob · MongoDB · Databricks · Parquet
 
 ---
 
@@ -52,13 +52,14 @@ SQL Server · DACPAC · AWS (Lambda, SNS, SQS) · Azure · Azure Blob · MongoDB
 
 **Aug 2020 to Present** · Healthcare technology · Pharmaceutical and healthcare data customers
 
-Backend and data platform engineering in C# / .NET and SQL Server for high-volume healthcare and pharmaceutical data used across multiple markets.
+Backend and data platform engineering in C# / .NET, ASP.NET Core (Razor Pages, Entity Framework Core, Identity), SQL Server, and Clean Architecture / CQRS for high-volume healthcare and pharmaceutical data used across multiple markets.
 
 ### Impact
 
-- Stabilized a high-volume C# / .NET and SQL Server file path after SQL deadlocks, timeouts, and 3+ hour or failed runs on the largest files. Every file now finishes within 20 minutes, usually faster, while ingesting dozens of very large files per hour.
-- Built a live extract pipeline in Go that replaced SSIS and a manual CSV/Spark/SQL Server path with FTP watch, Parquet, Azure Blob, and analyst-triggered Databricks loads in minutes.
-- Introduced GitLab CI/CD and DACPAC versioning with automated pre-deploy checks and schema drift reports, so database changes shipped with the same review path as application code.
+- Stabilized a high-volume C# / .NET, Entity Framework Core, and SQL Server file path after SQL deadlocks, timeouts, and 3+ hour or failed runs on the largest files. Every file now finishes within 20 minutes, usually faster, while ingesting dozens of very large files per hour.
+- Built a live extract pipeline in Go that replaced SSIS and a manual CSV/Spark/SQL Server path with FTP watch, Parquet, Azure Blob, Azure Functions, and analyst-triggered Databricks loads in minutes.
+- Delivered ASP.NET Core Razor Pages operator tooling with Identity, CQRS, jQuery, and AdminLTE on the same estate.
+- Introduced GitLab CI/CD, Azure DevOps, and DACPAC versioning with automated pre-deploy checks and schema drift reports, so database changes shipped with the same review path as application code.
 - Cut routine developer support time by 75% through RCA-driven production fixes on live ingestion and extract paths.
 - Kept production data paths reliable under layout and volume changes without rewriting the surrounding platform.
 
