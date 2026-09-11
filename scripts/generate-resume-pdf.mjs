@@ -1,10 +1,18 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
-import { dirname, join } from 'node:path'
+import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const mdPath = join(__dirname, '..', 'curriculo.md')
-const outPath = join(__dirname, '..', 'public', 'felipe-silva-resume.pdf')
+
+function cliArg(name) {
+  const index = process.argv.indexOf(name)
+  return index >= 0 ? process.argv[index + 1] : null
+}
+
+const mdPath = resolve(cliArg('--in') || join(__dirname, '..', 'curriculo.md'))
+const outPath = resolve(
+  cliArg('--out') || join(__dirname, '..', 'public', 'felipe-silva-resume.pdf'),
+)
 
 const PAGE_WIDTH = 612
 const PAGE_HEIGHT = 792
