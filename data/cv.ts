@@ -3,7 +3,7 @@ export const profile = {
   title: 'Senior Software Engineer',
   focus: '.NET · SQL Server · Azure',
   tagline:
-    'I keep high-volume .NET and SQL Server platforms fast, predictable, and cheap to run — and I own the frontend and CI/CD when the product needs it.',
+    'I keep high-volume .NET and SQL Server platforms fast, predictable, and cheap to run. I also own the frontend and CI/CD when the product needs it.',
   company: 'IQVIA',
   yearsExperience: '10+ years',
   location: 'Madrid, Spain',
@@ -21,7 +21,7 @@ export const profile = {
 }
 
 export const summary = [
-  'I have spent 10+ years building and operating production systems that cannot go down — healthcare data platforms at IQVIA, enterprise security products, and payment flows serving thousands of customers. Primary stack: C# / .NET, ASP.NET Core, SQL Server, and Azure.',
+  'I have spent 10+ years building and operating production systems that cannot go down, including healthcare data platforms at IQVIA, enterprise security products, and payment flows serving thousands of customers. Primary stack: C# / .NET, ASP.NET Core, SQL Server, and Azure.',
   'Backend-first, and full-stack when needed: TypeScript / React on the frontend, plus CI/CD and cloud delivery on systems already serving customers.',
 ]
 
