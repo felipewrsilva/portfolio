@@ -17,39 +17,49 @@ export default function Hero() {
 
       <div className="content-width section-pad relative z-10 w-full pb-14 pt-28 md:pb-20">
         <h1
-          className="rise font-display text-5xl leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
+          className="rise font-display text-[2.5rem] leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
           style={{ animationDelay: '0.08s' }}
         >
           <span className="block">{profile.name}</span>
-          <span className="mt-5 block font-sans text-xl font-medium text-white md:text-2xl">
+          <span className="mt-5 block font-sans text-lg font-medium text-white sm:text-xl md:text-2xl">
             {profile.title}{' '}
-            <span className="font-normal text-white/70">
+            <span className="whitespace-nowrap font-normal text-white/70">
               at {profile.company}
             </span>
           </span>
         </h1>
 
-        <p
-          className="rise mt-3 max-w-2xl font-mono text-sm uppercase tracking-[0.1em] text-accent-soft"
+        <ul
+          className="rise mt-3 flex max-w-2xl flex-wrap gap-y-1 font-mono text-sm uppercase tracking-[0.1em] text-accent-soft"
           style={{ animationDelay: '0.16s' }}
+          aria-label="Focus areas"
         >
-          {profile.focus}
-        </p>
+          {profile.focus.map((item, index) => (
+            <li key={item} className="flex items-center">
+              {index > 0 ? (
+                <span className="mx-3 text-accent-soft/50" aria-hidden>
+                  ·
+                </span>
+              ) : null}
+              <span className="whitespace-nowrap">{item}</span>
+            </li>
+          ))}
+        </ul>
 
         <p
-          className="rise mt-6 max-w-xl text-base leading-relaxed text-white/90 md:text-lg"
+          className="rise mt-6 max-w-xl text-pretty text-base leading-relaxed text-white/90 md:text-lg"
           style={{ animationDelay: '0.24s' }}
         >
           {profile.tagline}
         </p>
 
         <div
-          className="rise mt-8 flex flex-wrap gap-3"
+          className="rise mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
           style={{ animationDelay: '0.32s' }}
         >
           <a
             href={profile.emailHref}
-            className="inline-flex items-center bg-white px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-ink transition hover:bg-accent-soft"
+            className="inline-flex items-center justify-center bg-white px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-ink transition hover:bg-accent-soft sm:justify-start"
           >
             Email
           </a>
@@ -57,14 +67,14 @@ export default function Hero() {
             href={profile.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center border border-white/30 px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-white transition hover:border-accent-soft hover:text-accent-soft"
+            className="inline-flex items-center justify-center border border-white/30 px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-white transition hover:border-accent-soft hover:text-accent-soft sm:justify-start"
           >
             LinkedIn
           </a>
           <a
             href={profile.resumePdf}
             download
-            className="inline-flex items-center border border-white/30 px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-white transition hover:border-accent-soft hover:text-accent-soft"
+            className="inline-flex items-center justify-center border border-white/30 px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-white transition hover:border-accent-soft hover:text-accent-soft sm:justify-start"
           >
             Resume
           </a>

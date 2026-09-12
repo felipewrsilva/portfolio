@@ -22,7 +22,7 @@ export default function FeaturedCase() {
           <p className="mt-4 font-mono text-xs uppercase tracking-[0.16em] text-white/80">
             {featuredCase.client} · {featuredCase.industry}
           </p>
-          <h2 className="mt-3 max-w-3xl font-display text-3xl tracking-tight md:text-4xl">
+          <h2 className="mt-3 max-w-3xl text-balance font-display text-3xl tracking-tight md:text-4xl">
             {featuredCase.title}
           </h2>
         </Reveal>
@@ -34,7 +34,7 @@ export default function FeaturedCase() {
                 <h3 className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-accent-soft">
                   {section.label}
                 </h3>
-                <p className="mt-3 text-base leading-relaxed text-white/90">
+                <p className="mt-3 text-pretty text-base leading-relaxed text-white/90">
                   {section.text}
                 </p>
               </div>
@@ -50,7 +50,7 @@ export default function FeaturedCase() {
             {featuredCase.outcomes.map((outcome) => (
               <li
                 key={outcome}
-                className="border-l-2 border-accent-soft pl-4 text-base leading-relaxed text-white"
+                className="border-l-2 border-accent-soft pl-4 text-pretty text-base leading-relaxed text-white"
               >
                 {outcome}
               </li>

@@ -28,16 +28,16 @@ export default function Experience() {
                   <p className="font-mono text-xs uppercase tracking-[0.16em] text-ink-muted">
                     {role.period}
                   </p>
-                  <p className="pt-1 text-sm text-ink-muted">
+                  <p className="flex flex-col gap-1 pt-1 text-sm text-ink-muted sm:block">
                     <span className="text-accent">{role.industry}</span>
-                    <span className="mx-2 text-ink-muted/60" aria-hidden>
+                    <span className="mx-2 hidden text-ink-muted/60 sm:inline" aria-hidden>
                       ·
                     </span>
-                    {role.audience}
+                    <span>{role.audience}</span>
                   </p>
                 </header>
 
-                <p className="max-w-prose text-base leading-relaxed text-ink">
+                <p className="max-w-prose text-pretty text-base leading-relaxed text-ink">
                   {role.overview}
                 </p>
 
@@ -45,7 +45,7 @@ export default function Experience() {
                   <h4 className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-accent">
                     Impact
                   </h4>
-                  <ul className="mt-4 max-w-prose list-disc space-y-2 pl-5 text-base leading-relaxed text-ink marker:text-accent">
+                  <ul className="mt-4 max-w-prose list-disc space-y-2 pl-5 text-pretty text-base leading-relaxed text-ink marker:text-accent">
                     {role.bullets.map((bullet, bulletIndex) => (
                       <li key={`${role.company}-bullet-${bulletIndex}`}>
                         {bullet}

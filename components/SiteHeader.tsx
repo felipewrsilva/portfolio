@@ -76,12 +76,12 @@ export default function SiteHeader() {
           : 'border-white/10 bg-ink/80 backdrop-blur-md',
       )}
     >
-      <div className="content-width flex items-center justify-between gap-4 px-5 py-4 sm:px-8 md:px-12 lg:px-16">
+      <div className="content-width flex min-w-0 items-center justify-between gap-3 px-5 py-3 sm:gap-4 sm:px-8 sm:py-4 md:px-12 lg:px-16">
         <a
           href="#top"
           onClick={closeMenu}
           className={cn(
-            'font-display text-lg tracking-tight transition-colors',
+            'min-w-0 truncate font-display text-lg tracking-tight transition-colors',
             scrolled || menuOpen ? 'text-ink' : 'text-white',
           )}
         >
@@ -103,13 +103,13 @@ export default function SiteHeader() {
             </a>
           ))}
         </nav>
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
           <a
             href={profile.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
-              'hidden rounded-sm px-3 py-2 font-mono text-xs font-medium uppercase tracking-[0.16em] transition-colors sm:inline-flex',
+              'hidden rounded-sm px-3 py-2.5 font-mono text-xs font-medium uppercase tracking-[0.16em] transition-colors sm:inline-flex',
               scrolled || menuOpen
                 ? 'text-ink/85 hover:text-ink'
                 : 'text-white/90 hover:text-white',
@@ -120,7 +120,7 @@ export default function SiteHeader() {
           <a
             href={profile.emailHref}
             className={cn(
-              'rounded-sm px-3 py-2 font-mono text-xs font-medium uppercase tracking-[0.16em] transition-colors',
+              'rounded-sm px-3 py-2.5 font-mono text-xs font-medium uppercase tracking-[0.16em] transition-colors',
               scrolled || menuOpen
                 ? 'bg-accent text-white hover:bg-ink'
                 : 'bg-white text-ink hover:bg-accent-soft',
@@ -132,7 +132,7 @@ export default function SiteHeader() {
             ref={toggleRef}
             type="button"
             className={cn(
-              'inline-flex h-9 w-9 items-center justify-center rounded-sm lg:hidden',
+              'inline-flex h-11 w-11 items-center justify-center rounded-sm lg:hidden',
               scrolled || menuOpen ? 'text-ink' : 'text-white',
             )}
             aria-expanded={menuOpen}

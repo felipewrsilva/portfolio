@@ -28,17 +28,17 @@ export default function Contact() {
             </p>
             <h2
               id="contact-heading"
-              className="mt-3 font-display text-3xl tracking-tight md:text-4xl"
+              className="mt-3 text-balance font-display text-3xl tracking-tight md:text-4xl"
             >
               Hiring for a senior backend role?
             </h2>
-            <p className="mt-4 max-w-prose text-base text-white/90">
+            <p className="mt-4 max-w-prose text-pretty text-base text-white/90">
               {profile.contactBrief}
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href={profile.emailHref}
-                className="inline-flex items-center bg-white px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-ink transition hover:bg-accent-soft"
+                className="inline-flex items-center justify-center bg-white px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-ink transition hover:bg-accent-soft sm:justify-start"
               >
                 Email
               </a>
@@ -46,14 +46,14 @@ export default function Contact() {
                 href={profile.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center border border-white/30 px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-white transition hover:border-accent-soft hover:text-accent-soft"
+                className="inline-flex items-center justify-center border border-white/30 px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-white transition hover:border-accent-soft hover:text-accent-soft sm:justify-start"
               >
                 LinkedIn
               </a>
               <a
                 href={profile.resumePdf}
                 download
-                className="inline-flex items-center border border-white/30 px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-white transition hover:border-accent-soft hover:text-accent-soft"
+                className="inline-flex items-center justify-center border border-white/30 px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-white transition hover:border-accent-soft hover:text-accent-soft sm:justify-start"
               >
                 Download resume
               </a>
@@ -62,7 +62,7 @@ export default function Contact() {
 
           <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {links.map((link) => (
-              <li key={link.label}>
+              <li key={link.label} className="min-w-0">
                 <p className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-white/75">
                   {link.label}
                 </p>
@@ -74,7 +74,7 @@ export default function Contact() {
                       ? 'noopener noreferrer'
                       : undefined
                   }
-                  className="mt-2 inline-block text-lg text-white transition hover:text-accent-soft"
+                  className="mt-2 inline-block max-w-full break-all text-lg text-white transition hover:text-accent-soft"
                 >
                   {link.value}
                 </a>
