@@ -3,14 +3,14 @@ export const profile = {
   title: 'Senior Software Engineer',
   focus: ['.NET', 'SQL Server', 'Azure'] as const,
   tagline:
-    'I keep high-volume .NET and SQL\u00A0Server platforms fast, predictable, and cheap to run. I also own the frontend and CI/CD when the product needs it.',
+    'I build and operate .NET and SQL\u00A0Server platforms that carry real production load. At IQVIA that means healthcare data paths that have to stay reliable under volume. Earlier roles covered checkout systems, enterprise security products, and SaaS migrations where I also owned frontend and delivery when the product needed it.',
   company: 'IQVIA',
   yearsExperience: '10+ years',
   location: 'Madrid, Spain',
   availability:
-    'Based in Madrid. Open to remote senior backend and platform roles with full EU overlap and up to 2\u00A0pm US\u00A0Eastern. Authorized to work in the EU; no sponsorship required.',
+    'Based in Madrid and open to remote senior backend and platform roles. I cover full EU hours and overlap with US\u00A0Eastern until about 2\u00A0pm. Authorized to work in the EU with no sponsorship required.',
   contactBrief:
-    'Send the role, the stack, and the timezone you need covered. I reply within one business day.',
+    'Send the role, stack, and timezone you need covered. I reply within one business day.',
   phone: '+34 657 99 00 70',
   phoneHref: 'tel:+34657990070',
   email: 'contact@felipewrsilva.dev',
@@ -21,8 +21,8 @@ export const profile = {
 }
 
 export const summary = [
-  'I have spent 10+ years building and operating production systems that cannot go down, including healthcare data platforms at IQVIA, enterprise security products, and payment flows serving thousands of customers. Primary stack: C#\u00A0/\u00A0.NET, ASP.NET\u00A0Core, SQL\u00A0Server, and Azure.',
-  'Backend-first, and full-stack when needed: TypeScript\u00A0/\u00A0React on the frontend, plus CI/CD and cloud delivery on systems already serving customers.',
+  'I have spent more than ten years building and operating production systems in healthcare data, enterprise security, education, and SaaS. Most of that work is backend. The stack I use every day is C#\u00A0/\u00A0.NET, ASP.NET\u00A0Core, SQL\u00A0Server, and Azure.',
+  'At IQVIA I keep high-volume healthcare extract and ingestion paths stable, including a live Go pipeline that replaced a brittle SSIS and CSV flow. Before that I led backend work on a cross-platform security product at Fidelis, rebuilt checkout and acquisition at Afya, moved a desktop product to SaaS at Levilo, and shipped student payment tools at Senac. I stay backend-first, and I pick up frontend and CI/CD when the product needs the same person on both sides.',
 ]
 
 export const industries = [
@@ -38,13 +38,13 @@ export const featuredCase = {
   audience: 'Pharmaceutical and healthcare data customers',
   title: 'Live healthcare extract pipeline on Azure\u00A0and\u00A0Databricks',
   problem:
-    'Ingestion was manual. An analyst waited until every source file was available, then downloaded, converted compressed extracts to CSV, and loaded data on demand through a Spark API into SQL\u00A0Server. Download and conversion failed often. An upstream layout change, such as a new column, broke Spark and required hand-edited CSVs to restore the load.',
+    'Ingestion was manual. An analyst waited until every source file was available, then downloaded the files, converted compressed extracts to CSV, and loaded the data through a Spark API into SQL\u00A0Server. Download and conversion failed often. An upstream layout change such as a new column could break Spark and force hand-edited CSVs before the load would run again.',
   constraint:
-    'Analysts still needed to choose when data landed in tables. The new path had to keep files current without a full rewrite of the surrounding platform.',
+    'Analysts still needed to choose when data landed in tables. The new path had to keep files current without rewriting the surrounding platform.',
   approach:
-    'I migrated the SSIS path to an always-on Go process that watches FTP in real time. New or replaced files update the local extracts, dropping superseded files for the same reporting period. The service converts to Parquet and lands the files on Azure\u00A0Blob. The analyst then loads Databricks tables when it is the right moment, in a few minutes.',
+    'I migrated the SSIS path to an always-on Go process that watches FTP in real time. New or replaced files update the local extracts, and superseded files for the same reporting period are dropped. The service converts to Parquet, lands the files on Azure\u00A0Blob, and leaves the analyst free to load Databricks tables when the moment is right, usually in a few minutes.',
   tradeOff:
-    'Kept the table load analyst-triggered instead of writing straight into production. Databricks replaced SQL\u00A0Server for this path because the same load was cheaper and faster there.',
+    'I kept the table load analyst-triggered instead of writing straight into production. Databricks replaced SQL\u00A0Server for this path because the same load was cheaper and faster there.',
   result:
     'Extracts that used to wait on a full manual batch now land in minutes. Files stay current as the source changes, and layout changes no longer take the Spark CSV path down.',
   outcomes: [
@@ -83,7 +83,7 @@ export const technologies = {
   'Cloud & data': [
     'SQL Server',
     'DACPAC',
-    'AWS (Lambda, SNS, SQS)',
+    'AWS Lambda, SNS, SQS',
     'Azure',
     'Azure SQL',
     'Azure App Service',
@@ -113,12 +113,12 @@ export const experience: ExperienceRole[] = [
     industry: 'Healthcare technology',
     audience: 'Pharmaceutical and healthcare data customers',
     overview:
-      'Backend and data platform engineering in C#\u00A0/\u00A0.NET, ASP.NET\u00A0Core (Razor\u00A0Pages, Entity\u00A0Framework\u00A0Core, Identity), SQL\u00A0Server, and Clean\u00A0Architecture\u00A0/\u00A0CQRS for high-volume healthcare and pharmaceutical data used across multiple markets.',
+      'Backend and data platform engineering for high-volume healthcare and pharmaceutical data used across multiple markets. Main stack is C#\u00A0/\u00A0.NET, ASP.NET\u00A0Core with Razor\u00A0Pages, Entity\u00A0Framework\u00A0Core, Identity, SQL\u00A0Server, and Clean\u00A0Architecture with CQRS.',
     bullets: [
-      'Stabilized a high-volume C#\u00A0/\u00A0.NET, Entity\u00A0Framework\u00A0Core, and SQL\u00A0Server file path after SQL deadlocks, timeouts, and 3+\u00A0hour or failed runs on the largest files. Every file now finishes within 20 minutes, usually faster, while ingesting dozens of very large files per hour.',
-      'Built a live extract pipeline in Go that replaced SSIS and a manual CSV/Spark/SQL\u00A0Server path with FTP watch, Parquet, Azure\u00A0Blob, Azure\u00A0Functions, and analyst-triggered Databricks loads in minutes.',
+      'Stabilized a high-volume C#\u00A0/\u00A0.NET, Entity\u00A0Framework\u00A0Core, and SQL\u00A0Server file path that had been failing under SQL deadlocks, timeouts, and multi-hour runs on the largest files. Every file now finishes within 20 minutes, usually faster, while the path ingests dozens of very large files per hour.',
+      'Built a live extract pipeline in Go that replaced SSIS and a manual CSV/Spark/SQL\u00A0Server path. The new flow watches FTP, lands Parquet on Azure\u00A0Blob through Azure\u00A0Functions, and lets analysts trigger Databricks loads in minutes.',
       'Delivered ASP.NET\u00A0Core Razor\u00A0Pages operator tooling with Identity, CQRS, jQuery, and AdminLTE on the same estate.',
-      'Introduced GitLab\u00A0CI/CD, Azure\u00A0DevOps, and DACPAC versioning with automated pre-deploy checks and schema drift reports, so database changes shipped with the same review path as application code.',
+      'Introduced GitLab\u00A0CI/CD, Azure\u00A0DevOps, and DACPAC versioning with automated pre-deploy checks and schema drift reports so database changes ship with the same review path as application code.',
       'Cut routine developer support time by 75% through RCA-driven production fixes on live ingestion and extract paths.',
     ],
   },
@@ -129,7 +129,7 @@ export const experience: ExperienceRole[] = [
     industry: 'Enterprise security',
     audience: 'Enterprise customers on multiple operating systems',
     overview:
-      'Backend work on a cross-platform enterprise security product, including OS migration, partner integrations, and AWS async processing.',
+      'Backend engineering on a cross-platform enterprise security product, including OS migration work, partner integrations, and AWS async processing.',
     bullets: [
       'Led backend work for an OS migration so the product ran reliably across customer environments that previously blocked upgrades, supporting retention and new acquisitions.',
       'Repaired brittle cybersecurity partner integrations and cut recurring production defects by redesigning the integration layers.',
@@ -146,10 +146,10 @@ export const experience: ExperienceRole[] = [
     overview:
       'Full-stack work on the checkout and customer acquisition platform for a major healthcare education company.',
     bullets: [
-      'Built and operated end-to-end checkout and acquisition flows in TypeScript, Next.js, React, Node.js, MongoDB, and AWS, including payments, contracts, and production support.',
-      'Led AWS modernization of the acquisition platform, increasing sales conversions by 12% after launch.',
+      'Built and operated end-to-end checkout and acquisition flows in TypeScript, Next.js, React, Node.js, MongoDB, and AWS, covering payments, contracts, and production support.',
+      'Led AWS modernization of the acquisition platform. Sales conversions rose 12% after launch.',
       'Restructured the backend for more than 80% higher checkout throughput and shipped the cutover without downtime for live users.',
-      'Enabled bundle and combo purchases on the acquisition path, expanding commercial options without breaking existing checkout flows.',
+      'Enabled bundle and combo purchases on the acquisition path without breaking existing checkout flows.',
       'Owned day-to-day production support for checkout and acquisition while shipping feature work on the same codebase.',
     ],
   },
@@ -162,7 +162,7 @@ export const experience: ExperienceRole[] = [
     overview:
       'Full-stack and cloud work that moved a desktop product to SaaS for active clients.',
     bullets: [
-      'Re-architected a legacy desktop product as SaaS, reducing monthly customer churn from 18% to 3% by removing local stability failures.',
+      'Re-architected a legacy desktop product as SaaS. Monthly customer churn fell from 18% to 3% after local stability failures were removed.',
       'Designed and operated cloud infrastructure for more than 5,000 active client operations, including high-availability integrations with large consumer platforms.',
       'Delivered the web product path while keeping existing client operations running during the cutover.',
     ],
@@ -186,8 +186,7 @@ export const experience: ExperienceRole[] = [
 export const education = [
   {
     institution: 'University of São Paulo (USP)',
-    degree:
-      'Bachelor of Information Systems (completed while working full time)',
+    degree: 'Bachelor of Information Systems',
     period: 'Jan 2019 to Dec 2022',
   },
   {
@@ -198,10 +197,10 @@ export const education = [
 ]
 
 export const languages = [
-  'English (C2, working language)',
-  'Portuguese (native)',
-  'Spanish (conversational)',
-]
+  { name: 'English', level: 'C2 working language' },
+  { name: 'Portuguese', level: 'Native' },
+  { name: 'Spanish', level: 'Conversational' },
+] as const
 
 export const navLinks = [
   { label: 'About', href: '#about' },
