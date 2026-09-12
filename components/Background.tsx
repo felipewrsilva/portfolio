@@ -31,9 +31,18 @@ export default function Background() {
             <p className="font-mono text-xs uppercase tracking-[0.16em] text-ink-muted">
               Languages
             </p>
-            <p className="mt-3 text-pretty font-display text-xl text-ink">
-              {languages.join(', ')}
-            </p>
+            <ul className="mt-6 grid gap-6 sm:grid-cols-3">
+              {languages.map((language) => (
+                <li key={language.name}>
+                  <p className="font-display text-xl tracking-tight text-ink">
+                    {language.name}
+                  </p>
+                  <p className="mt-2 font-mono text-xs uppercase tracking-[0.16em] text-ink-muted">
+                    {language.level}
+                  </p>
+                </li>
+              ))}
+            </ul>
           </div>
         </Reveal>
       </div>

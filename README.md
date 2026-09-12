@@ -1,4 +1,4 @@
-# Felipe Silva — Portfolio
+# Felipe Silva Portfolio
 
 Personal website and resume for Felipe Silva, Senior Software Engineer based in Madrid.
 
@@ -31,16 +31,16 @@ Open [http://localhost:3000](http://localhost:3000).
 ```bash
 npm run build        # production build
 npm run lint         # ESLint
-npm run typecheck    # TypeScript
 npm run resume:pdf   # regenerate public/felipe-silva-resume.pdf
+npm run typecheck    # TypeScript
 ```
 
 ## Architecture
 
-- `app/` — Next.js App Router entry, metadata, sitemap, robots, OG image
-- `components/` — page sections (Hero is a server component; scroll reveals are client-side)
-- `data/cv.ts` — single source of truth for site copy and resume PDF
-- `scripts/` — resume PDF generator
+- `app/`: Next.js App Router entry, metadata, sitemap, robots, OG image
+- `components/`: page sections (Hero is a server component; scroll reveals are client-side)
+- `data/cv.ts`: single source of truth for site copy and resume PDF
+- `scripts/`: resume PDF generator
 
 Canonical host: `felipewrsilva.dev`. Alternate hosts redirect via `next.config.mjs`.
 
@@ -48,4 +48,3 @@ Canonical host: `felipewrsilva.dev`. Alternate hosts redirect via `next.config.m
 
 - Email: [contact@felipewrsilva.dev](mailto:contact@felipewrsilva.dev)
 - LinkedIn: [linkedin.com/in/felipewrsilva](https://linkedin.com/in/felipewrsilva)
-- GitHub: [github.com/felipewrsilva](https://github.com/felipewrsilva)

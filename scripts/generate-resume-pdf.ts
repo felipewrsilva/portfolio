@@ -29,7 +29,7 @@ type CvData = {
   technologies: typeof baseTechnologies
   experience: ExperienceRole[]
   education: typeof baseEducation
-  languages: string[]
+  languages: typeof baseLanguages
 }
 
 function loadCvData(): CvData {
@@ -298,7 +298,13 @@ function buildDoc(): Doc {
       },
       {
         title: 'LANGUAGES',
-        blocks: [paragraphBlock(languages.join('  \u0095  '))],
+        blocks: [
+          paragraphBlock(
+            languages
+              .map((language) => `${language.name} · ${language.level}`)
+              .join('  \u0095  '),
+          ),
+        ],
         entries: [],
       },
     ],

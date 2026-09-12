@@ -13,7 +13,7 @@ export default function Technologies() {
           <p className="section-label">Stack</p>
           <h2 className="section-title mt-3">Core stack</h2>
           <p className="body-copy mt-4 max-w-prose">
-            Languages and platforms I use to design, modernize and operate
+            Languages and platforms I use to design, modernize, and operate
             production systems.
           </p>
         </Reveal>
