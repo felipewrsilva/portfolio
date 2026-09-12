@@ -8,7 +8,7 @@ export const profile = {
   yearsExperience: '10+ years',
   location: 'Madrid, Spain',
   availability:
-    'Open to senior backend and platform roles, remote from Madrid. Full overlap with EU hours and up to 2 pm US Eastern. Authorized to work in the EU; no sponsorship required.',
+    'Based in Madrid. Open to remote senior backend and platform roles with full EU overlap and up to 2 pm US Eastern. Authorized to work in the EU; no sponsorship required.',
   contactBrief:
     'Send the role, the stack, and the timezone you need covered. I reply within one business day.',
   phone: '+34 657 99 00 70',
