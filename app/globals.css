@@ -25,10 +25,12 @@
 
   html {
     @apply scroll-smooth;
+    overflow-x: clip;
   }
 
   body {
     @apply bg-[color:var(--paper)] text-[color:var(--ink)] antialiased;
+    overflow-x: clip;
     background-image: radial-gradient(
         ellipse 120% 80% at 10% -10%,
         rgba(44, 74, 54, 0.1),
@@ -62,11 +64,11 @@
   }
 
   .section-title {
-    @apply font-display text-3xl tracking-tight text-[color:var(--ink)] md:text-4xl;
+    @apply text-balance font-display text-3xl tracking-tight text-[color:var(--ink)] md:text-4xl;
   }
 
   .body-copy {
-    @apply text-base leading-relaxed text-[color:var(--ink-muted)] md:text-lg;
+    @apply text-pretty text-base leading-relaxed text-[color:var(--ink-muted)] md:text-lg;
   }
 
   .rise {

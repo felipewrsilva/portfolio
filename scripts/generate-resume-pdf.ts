@@ -260,7 +260,7 @@ function buildDoc(): Doc {
     header: {
       name: profile.name.toUpperCase(),
       title: profile.title,
-      focus: profile.focus,
+      focus: profile.focus.join(' · '),
       location: profile.location,
       phone: profile.phone,
       email: profile.email,

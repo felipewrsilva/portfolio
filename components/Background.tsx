@@ -31,7 +31,7 @@ export default function Background() {
             <p className="font-mono text-xs uppercase tracking-[0.16em] text-ink-muted">
               Languages
             </p>
-            <p className="mt-3 font-display text-xl text-ink">
+            <p className="mt-3 text-pretty font-display text-xl text-ink">
               {languages.join(', ')}
             </p>
           </div>

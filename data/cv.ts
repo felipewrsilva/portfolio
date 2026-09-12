@@ -1,14 +1,14 @@
 export const profile = {
   name: 'Felipe Silva',
   title: 'Senior Software Engineer',
-  focus: '.NET · SQL Server · Azure',
+  focus: ['.NET', 'SQL Server', 'Azure'] as const,
   tagline:
-    'I keep high-volume .NET and SQL Server platforms fast, predictable, and cheap to run. I also own the frontend and CI/CD when the product needs it.',
+    'I keep high-volume .NET and SQL\u00A0Server platforms fast, predictable, and cheap to run. I also own the frontend and CI/CD when the product needs it.',
   company: 'IQVIA',
   yearsExperience: '10+ years',
   location: 'Madrid, Spain',
   availability:
-    'Based in Madrid. Open to remote senior backend and platform roles with full EU overlap and up to 2 pm US Eastern. Authorized to work in the EU; no sponsorship required.',
+    'Based in Madrid. Open to remote senior backend and platform roles with full EU overlap and up to 2\u00A0pm US\u00A0Eastern. Authorized to work in the EU; no sponsorship required.',
   contactBrief:
     'Send the role, the stack, and the timezone you need covered. I reply within one business day.',
   phone: '+34 657 99 00 70',
@@ -21,8 +21,8 @@ export const profile = {
 }
 
 export const summary = [
-  'I have spent 10+ years building and operating production systems that cannot go down, including healthcare data platforms at IQVIA, enterprise security products, and payment flows serving thousands of customers. Primary stack: C# / .NET, ASP.NET Core, SQL Server, and Azure.',
-  'Backend-first, and full-stack when needed: TypeScript / React on the frontend, plus CI/CD and cloud delivery on systems already serving customers.',
+  'I have spent 10+ years building and operating production systems that cannot go down, including healthcare data platforms at IQVIA, enterprise security products, and payment flows serving thousands of customers. Primary stack: C#\u00A0/\u00A0.NET, ASP.NET\u00A0Core, SQL\u00A0Server, and Azure.',
+  'Backend-first, and full-stack when needed: TypeScript\u00A0/\u00A0React on the frontend, plus CI/CD and cloud delivery on systems already serving customers.',
 ]
 
 export const industries = [
@@ -36,21 +36,21 @@ export const featuredCase = {
   client: 'IQVIA',
   industry: 'Healthcare technology',
   audience: 'Pharmaceutical and healthcare data customers',
-  title: 'Live healthcare extract pipeline on Azure and Databricks',
+  title: 'Live healthcare extract pipeline on Azure\u00A0and\u00A0Databricks',
   problem:
-    'Ingestion was manual. An analyst waited until every source file was available, then downloaded, converted compressed extracts to CSV, and loaded data on demand through a Spark API into SQL Server. Download and conversion failed often. An upstream layout change, such as a new column, broke Spark and required hand-edited CSVs to restore the load.',
+    'Ingestion was manual. An analyst waited until every source file was available, then downloaded, converted compressed extracts to CSV, and loaded data on demand through a Spark API into SQL\u00A0Server. Download and conversion failed often. An upstream layout change, such as a new column, broke Spark and required hand-edited CSVs to restore the load.',
   constraint:
     'Analysts still needed to choose when data landed in tables. The new path had to keep files current without a full rewrite of the surrounding platform.',
   approach:
-    'I migrated the SSIS path to an always-on Go process that watches FTP in real time. New or replaced files update the local extracts, dropping superseded files for the same reporting period. The service converts to Parquet and lands the files on Azure Blob. The analyst then loads Databricks tables when it is the right moment, in a few minutes.',
+    'I migrated the SSIS path to an always-on Go process that watches FTP in real time. New or replaced files update the local extracts, dropping superseded files for the same reporting period. The service converts to Parquet and lands the files on Azure\u00A0Blob. The analyst then loads Databricks tables when it is the right moment, in a few minutes.',
   tradeOff:
-    'Kept the table load analyst-triggered instead of writing straight into production. Databricks replaced SQL Server for this path because the same load was cheaper and faster there.',
+    'Kept the table load analyst-triggered instead of writing straight into production. Databricks replaced SQL\u00A0Server for this path because the same load was cheaper and faster there.',
   result:
     'Extracts that used to wait on a full manual batch now land in minutes. Files stay current as the source changes, and layout changes no longer take the Spark CSV path down.',
   outcomes: [
-    'Replaced SSIS and a manual CSV/Spark/SQL Server path with a live Go pipeline',
+    'Replaced SSIS and a manual CSV/Spark/SQL\u00A0Server path with a live Go pipeline',
     'Detects FTP changes in real time and keeps local extracts in sync',
-    'Converts source files to Parquet and lands them on Azure Blob',
+    'Converts source files to Parquet and lands them on Azure\u00A0Blob',
     'Analysts load Databricks tables in minutes instead of waiting on a full batch',
   ],
 }
@@ -113,12 +113,12 @@ export const experience: ExperienceRole[] = [
     industry: 'Healthcare technology',
     audience: 'Pharmaceutical and healthcare data customers',
     overview:
-      'Backend and data platform engineering in C# / .NET, ASP.NET Core (Razor Pages, Entity Framework Core, Identity), SQL Server, and Clean Architecture / CQRS for high-volume healthcare and pharmaceutical data used across multiple markets.',
+      'Backend and data platform engineering in C#\u00A0/\u00A0.NET, ASP.NET\u00A0Core (Razor\u00A0Pages, Entity\u00A0Framework\u00A0Core, Identity), SQL\u00A0Server, and Clean\u00A0Architecture\u00A0/\u00A0CQRS for high-volume healthcare and pharmaceutical data used across multiple markets.',
     bullets: [
-      'Stabilized a high-volume C# / .NET, Entity Framework Core, and SQL Server file path after SQL deadlocks, timeouts, and 3+ hour or failed runs on the largest files. Every file now finishes within 20 minutes, usually faster, while ingesting dozens of very large files per hour.',
-      'Built a live extract pipeline in Go that replaced SSIS and a manual CSV/Spark/SQL Server path with FTP watch, Parquet, Azure Blob, Azure Functions, and analyst-triggered Databricks loads in minutes.',
-      'Delivered ASP.NET Core Razor Pages operator tooling with Identity, CQRS, jQuery, and AdminLTE on the same estate.',
-      'Introduced GitLab CI/CD, Azure DevOps, and DACPAC versioning with automated pre-deploy checks and schema drift reports, so database changes shipped with the same review path as application code.',
+      'Stabilized a high-volume C#\u00A0/\u00A0.NET, Entity\u00A0Framework\u00A0Core, and SQL\u00A0Server file path after SQL deadlocks, timeouts, and 3+\u00A0hour or failed runs on the largest files. Every file now finishes within 20 minutes, usually faster, while ingesting dozens of very large files per hour.',
+      'Built a live extract pipeline in Go that replaced SSIS and a manual CSV/Spark/SQL\u00A0Server path with FTP watch, Parquet, Azure\u00A0Blob, Azure\u00A0Functions, and analyst-triggered Databricks loads in minutes.',
+      'Delivered ASP.NET\u00A0Core Razor\u00A0Pages operator tooling with Identity, CQRS, jQuery, and AdminLTE on the same estate.',
+      'Introduced GitLab\u00A0CI/CD, Azure\u00A0DevOps, and DACPAC versioning with automated pre-deploy checks and schema drift reports, so database changes shipped with the same review path as application code.',
       'Cut routine developer support time by 75% through RCA-driven production fixes on live ingestion and extract paths.',
     ],
   },
