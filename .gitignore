@@ -39,3 +39,8 @@ next-env.d.ts
 # private job-application materials (keep local only)
 /historico_vagas/
 /docs/job-applications-log.md
+/docs/PUBLIC-IDENTITY.md
+/docs/portfolio-review-prompt.md
+
+# Cursor local skills and agent config (keep local only)
+/.cursor/
