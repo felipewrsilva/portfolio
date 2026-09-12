@@ -26,7 +26,7 @@ const mono = IBM_Plex_Mono({
 })
 
 const title =
-  'Felipe Silva — Senior Backend Engineer (.NET) | Madrid, Remote EU/US'
+  'Felipe Silva | Senior Backend Engineer (.NET) | Madrid, Remote EU/US'
 const description =
   'Senior .NET engineer in Madrid (UTC+1). 10+ years in C# / .NET, SQL Server, and Azure. Remote-ready for EU hours and US Eastern overlap.'
 
