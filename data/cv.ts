@@ -1,15 +1,16 @@
 export const profile = {
   name: 'Felipe Silva',
   title: 'Senior Software Engineer',
-  focus: '.NET · SQL Server · AWS',
+  focus: '.NET · SQL Server · Azure',
   tagline:
-    'Backend-first .NET engineer. I also ship frontend and CI/CD when the product needs the full path.',
+    'I keep high-volume .NET and SQL Server platforms fast, predictable, and cheap to run — and I own the frontend and CI/CD when the product needs it.',
   company: 'IQVIA',
   yearsExperience: '10+ years',
   location: 'Madrid, Spain',
   availability:
-    'Backend-first. Full-stack across .NET, TypeScript/React, and CI/CD when needed.',
-  contactBrief: 'Based in Madrid. Email with the role and stack.',
+    'Open to senior backend and platform roles, remote from Madrid. Full overlap with EU hours and up to 2 pm US Eastern. Authorized to work in the EU; no sponsorship required.',
+  contactBrief:
+    'Send the role, the stack, and the timezone you need covered. I reply within one business day.',
   phone: '+34 657 99 00 70',
   phoneHref: 'tel:+34657990070',
   email: 'contact@felipewrsilva.dev',
@@ -20,7 +21,7 @@ export const profile = {
 }
 
 export const summary = [
-  'Senior .NET engineer in Madrid with 10+ years building and operating production systems in healthcare, education, enterprise security, and SaaS. Primary stack: C# / .NET, ASP.NET Core, and SQL Server.',
+  'I have spent 10+ years building and operating production systems that cannot go down — healthcare data platforms at IQVIA, enterprise security products, and payment flows serving thousands of customers. Primary stack: C# / .NET, ASP.NET Core, SQL Server, and Azure.',
   'Backend-first, and full-stack when needed: TypeScript / React on the frontend, plus CI/CD and cloud delivery on systems already serving customers.',
 ]
 
@@ -41,11 +42,11 @@ export const featuredCase = {
   constraint:
     'Analysts still needed to choose when data landed in tables. The new path had to keep files current without a full rewrite of the surrounding platform.',
   approach:
-    'I migrated the SSIS path to an always-on Go process that watches FTP in real time. New or replaced files update the local extracts, dropping superseded files for the same slice. The service converts to Parquet and lands the files on Azure Blob. The analyst then loads Databricks tables when it is the right moment, in a few minutes.',
+    'I migrated the SSIS path to an always-on Go process that watches FTP in real time. New or replaced files update the local extracts, dropping superseded files for the same reporting period. The service converts to Parquet and lands the files on Azure Blob. The analyst then loads Databricks tables when it is the right moment, in a few minutes.',
   tradeOff:
     'Kept the table load analyst-triggered instead of writing straight into production. Databricks replaced SQL Server for this path because the same load was cheaper and faster there.',
   result:
-    'Files stay current as the source changes. Loads that used to wait on a full manual batch now take a few minutes. Layout changes no longer take the Spark CSV path down.',
+    'Extracts that used to wait on a full manual batch now land in minutes. Files stay current as the source changes, and layout changes no longer take the Spark CSV path down.',
   outcomes: [
     'Replaced SSIS and a manual CSV/Spark/SQL Server path with a live Go pipeline',
     'Detects FTP changes in real time and keeps local extracts in sync',
@@ -119,11 +120,10 @@ export const experience: ExperienceRole[] = [
       'Delivered ASP.NET Core Razor Pages operator tooling with Identity, CQRS, jQuery, and AdminLTE on the same estate.',
       'Introduced GitLab CI/CD, Azure DevOps, and DACPAC versioning with automated pre-deploy checks and schema drift reports, so database changes shipped with the same review path as application code.',
       'Cut routine developer support time by 75% through RCA-driven production fixes on live ingestion and extract paths.',
-      'Kept production data paths reliable under layout and volume changes without rewriting the surrounding platform.',
     ],
   },
   {
-    company: 'Fidelis',
+    company: 'Fidelis Security',
     role: 'Senior Software Engineer',
     period: 'Apr 2018 to Jul 2020',
     industry: 'Enterprise security',
@@ -186,7 +186,8 @@ export const experience: ExperienceRole[] = [
 export const education = [
   {
     institution: 'University of São Paulo (USP)',
-    degree: 'Bachelor of Information Systems',
+    degree:
+      'Bachelor of Information Systems (completed while working full time)',
     period: 'Jan 2019 to Dec 2022',
   },
   {
@@ -196,7 +197,11 @@ export const education = [
   },
 ]
 
-export const languages = ['English', 'Portuguese', 'Spanish']
+export const languages = [
+  'English (C2, working language)',
+  'Portuguese (native)',
+  'Spanish (conversational)',
+]
 
 export const navLinks = [
   { label: 'About', href: '#about' },

@@ -12,10 +12,10 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
 endobj
 5 0 obj
-<< /Title (FELIPE SILVA - Senior Software Engineer) /Author (FELIPE SILVA) /Subject (.NET \225 SQL Server \225 AWS) /Creator (curriculo.md) /Producer (portfolio resume builder) >>
+<< /Title (FELIPE SILVA - Senior Software Engineer) /Author (FELIPE SILVA) /Subject (.NET \267 SQL Server \267 Azure) /Creator (data/cv.ts) /Producer (portfolio resume builder) >>
 endobj
 6 0 obj
-<< /Length 7763 >>
+<< /Length 7666 >>
 stream
 BT 0.040 0.070 0.130 rg 1.10 Tc
 /F2 21 Tf
@@ -55,7 +55,7 @@ ET
 BT 0.290 0.330 0.400 rg 0 Tc
 /F1 9.5 Tf
 1 0 0 1 54.00 692.00 Tm
-(.NET \225 SQL Server \225 AWS) Tj
+(.NET \267 SQL Server \267 Azure) Tj
 ET
 0.170 0.290 0.210 rg 54 665.90 504 1.1 re f
 BT 0.170 0.290 0.210 rg 1.40 Tc
@@ -67,253 +67,248 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 54.00 626.00 Tm
-(Senior .NET engineer in Madrid with 10+ years building and operating production systems in healthcare, education,) Tj
+(I have spent 10+ years building and operating production systems that cannot go down ? healthcare data platforms at) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 54.00 612.52 Tm
-(enterprise security, and SaaS. Primary stack: C# / .NET, ASP.NET Core, and SQL Server.) Tj
+(IQVIA, enterprise security products, and payment flows serving thousands of customers. Primary stack: C# / .NET,) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 54.00 593.03 Tm
-(Backend-first, and full-stack when needed: TypeScript / React on the frontend, plus CI/CD and cloud delivery on systems) Tj
+1 0 0 1 54.00 599.03 Tm
+(ASP.NET Core, SQL Server, and Azure.) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 54.00 579.55 Tm
+(Backend-first, and full-stack when needed: TypeScript / React on the frontend, plus CI/CD and cloud delivery on systems) Tj
+ET
+BT 0.040 0.070 0.130 rg 0 Tc
+/F1 9.3 Tf
+1 0 0 1 54.00 566.06 Tm
 (already serving customers.) Tj
 ET
 BT 0.170 0.290 0.210 rg 1.40 Tc
 /F2 8.5 Tf
-1 0 0 1 54.00 554.06 Tm
+1 0 0 1 54.00 540.58 Tm
 (CORE TECHNOLOGIES) Tj
 ET
-0.780 0.800 0.830 rg 54 547.46 504 0.6 re f
+0.780 0.800 0.830 rg 54 533.98 504 0.6 re f
 BT 0.170 0.290 0.210 rg 0 Tc
 /F2 9.3 Tf
-1 0 0 1 54.00 533.06 Tm
+1 0 0 1 54.00 519.58 Tm
 (Languages  ) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 108.27 533.06 Tm
-(C#, SQL, TypeScript, JavaScript, Go) Tj
+1 0 0 1 108.27 519.58 Tm
+(C# \225 SQL \225 TypeScript \225 JavaScript \225 Go) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F2 9.3 Tf
-1 0 0 1 54.00 517.58 Tm
+1 0 0 1 54.00 504.09 Tm
 (Backend  ) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 97.93 517.58 Tm
+1 0 0 1 97.93 504.09 Tm
 (.NET \225 ASP.NET Core \225 Razor Pages \225 Entity Framework Core \225 ASP.NET Core Identity \225 CQRS \225 REST APIs \225) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 97.93 504.09 Tm
+1 0 0 1 97.93 490.61 Tm
 (Node.js \225 GitLab CI/CD \225 Azure DevOps) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F2 9.3 Tf
-1 0 0 1 54.00 488.61 Tm
+1 0 0 1 54.00 475.12 Tm
 (Frontend  ) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 99.47 488.61 Tm
+1 0 0 1 99.47 475.12 Tm
 (TypeScript \225 React \225 Next.js \225 JavaScript \225 HTML \225 CSS \225 jQuery \225 Bootstrap / AdminLTE \225 ASP.NET) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F2 9.3 Tf
-1 0 0 1 54.00 473.12 Tm
-(Cloud & Data  ) Tj
+1 0 0 1 54.00 459.63 Tm
+(Cloud & data  ) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 117.56 473.12 Tm
+1 0 0 1 116.52 459.63 Tm
 (SQL Server \225 DACPAC \225 AWS \(Lambda, SNS, SQS\) \225 Azure \225 Azure SQL \225 Azure App Service \225 Azure) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 117.56 459.63 Tm
+1 0 0 1 116.52 446.15 Tm
 (Functions \225 Azure Blob \225 MongoDB \225 Databricks \225 Parquet) Tj
 ET
 BT 0.170 0.290 0.210 rg 1.40 Tc
 /F2 8.5 Tf
-1 0 0 1 54.00 438.15 Tm
+1 0 0 1 54.00 424.66 Tm
 (PROFESSIONAL EXPERIENCE) Tj
 ET
-0.780 0.800 0.830 rg 54 431.55 504 0.6 re f
+0.780 0.800 0.830 rg 54 418.06 504 0.6 re f
 BT 0.040 0.070 0.130 rg 0 Tc
 /F2 10.6 Tf
-1 0 0 1 54.00 417.15 Tm
+1 0 0 1 54.00 403.66 Tm
 (IQVIA) Tj
 ET
 BT 0.290 0.330 0.400 rg 0 Tc
 /F1 8.8 Tf
-1 0 0 1 477.77 417.15 Tm
+1 0 0 1 477.77 403.66 Tm
 (Aug 2020 to Present) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9 Tf
-1 0 0 1 54.00 404.15 Tm
+1 0 0 1 54.00 390.66 Tm
 (Senior Software Engineer  \225  Healthcare technology \225 Pharmaceutical and healthcare data customers) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 54.00 391.15 Tm
+1 0 0 1 54.00 377.66 Tm
 (Backend and data platform engineering in C# / .NET, ASP.NET Core \(Razor Pages, Entity Framework Core, Identity\),) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 54.00 377.66 Tm
+1 0 0 1 54.00 364.18 Tm
 (SQL Server, and Clean Architecture / CQRS for high-volume healthcare and pharmaceutical data used across multiple) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 54.00 364.18 Tm
+1 0 0 1 54.00 350.69 Tm
 (markets.) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 55.50 346.69 Tm
+1 0 0 1 55.50 333.21 Tm
 (\225) Tj
-ET
-BT 0.040 0.070 0.130 rg 0 Tc
-/F1 9.3 Tf
-1 0 0 1 66.00 346.69 Tm
-(Stabilized a high-volume C# / .NET, Entity Framework Core, and SQL Server file path after SQL deadlocks, timeouts,) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 66.00 333.21 Tm
-(and 3+ hour or failed runs on the largest files. Every file now finishes within 20 minutes, usually faster, while ingesting) Tj
+(Stabilized a high-volume C# / .NET, Entity Framework Core, and SQL Server file path after SQL deadlocks, timeouts,) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 66.00 319.72 Tm
+(and 3+ hour or failed runs on the largest files. Every file now finishes within 20 minutes, usually faster, while ingesting) Tj
+ET
+BT 0.040 0.070 0.130 rg 0 Tc
+/F1 9.3 Tf
+1 0 0 1 66.00 306.24 Tm
 (dozens of very large files per hour.) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 55.50 303.74 Tm
+1 0 0 1 55.50 290.25 Tm
 (\225) Tj
-ET
-BT 0.040 0.070 0.130 rg 0 Tc
-/F1 9.3 Tf
-1 0 0 1 66.00 303.74 Tm
-(Built a live extract pipeline in Go that replaced SSIS and a manual CSV/Spark/SQL Server path with FTP watch,) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 66.00 290.25 Tm
+(Built a live extract pipeline in Go that replaced SSIS and a manual CSV/Spark/SQL Server path with FTP watch,) Tj
+ET
+BT 0.040 0.070 0.130 rg 0 Tc
+/F1 9.3 Tf
+1 0 0 1 66.00 276.77 Tm
 (Parquet, Azure Blob, Azure Functions, and analyst-triggered Databricks loads in minutes.) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 55.50 274.27 Tm
+1 0 0 1 55.50 260.78 Tm
 (\225) Tj
-ET
-BT 0.040 0.070 0.130 rg 0 Tc
-/F1 9.3 Tf
-1 0 0 1 66.00 274.27 Tm
-(Delivered ASP.NET Core Razor Pages operator tooling with Identity, CQRS, jQuery, and AdminLTE on the same) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 66.00 260.78 Tm
+(Delivered ASP.NET Core Razor Pages operator tooling with Identity, CQRS, jQuery, and AdminLTE on the same) Tj
+ET
+BT 0.040 0.070 0.130 rg 0 Tc
+/F1 9.3 Tf
+1 0 0 1 66.00 247.30 Tm
 (estate.) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 55.50 244.80 Tm
+1 0 0 1 55.50 231.31 Tm
 (\225) Tj
-ET
-BT 0.040 0.070 0.130 rg 0 Tc
-/F1 9.3 Tf
-1 0 0 1 66.00 244.80 Tm
-(Introduced GitLab CI/CD, Azure DevOps, and DACPAC versioning with automated pre-deploy checks and schema drift) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 66.00 231.31 Tm
+(Introduced GitLab CI/CD, Azure DevOps, and DACPAC versioning with automated pre-deploy checks and schema drift) Tj
+ET
+BT 0.040 0.070 0.130 rg 0 Tc
+/F1 9.3 Tf
+1 0 0 1 66.00 217.83 Tm
 (reports, so database changes shipped with the same review path as application code.) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 55.50 215.33 Tm
+1 0 0 1 55.50 201.84 Tm
 (\225) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 66.00 215.33 Tm
+1 0 0 1 66.00 201.84 Tm
 (Cut routine developer support time by 75% through RCA-driven production fixes on live ingestion and extract paths.) Tj
-ET
-BT 0.170 0.290 0.210 rg 0 Tc
-/F1 9.3 Tf
-1 0 0 1 55.50 199.34 Tm
-(\225) Tj
-ET
-BT 0.040 0.070 0.130 rg 0 Tc
-/F1 9.3 Tf
-1 0 0 1 66.00 199.34 Tm
-(Kept production data paths reliable under layout and volume changes without rewriting the surrounding platform.) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F2 10.6 Tf
-1 0 0 1 54.00 177.36 Tm
-(Fidelis) Tj
+1 0 0 1 54.00 179.86 Tm
+(Fidelis Security) Tj
 ET
 BT 0.290 0.330 0.400 rg 0 Tc
 /F1 8.8 Tf
-1 0 0 1 476.79 177.36 Tm
+1 0 0 1 476.79 179.86 Tm
 (Apr 2018 to Jul 2020) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9 Tf
-1 0 0 1 54.00 164.36 Tm
+1 0 0 1 54.00 166.86 Tm
 (Senior Software Engineer  \225  Enterprise security \225 Enterprise customers on multiple operating systems) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 54.00 151.36 Tm
+1 0 0 1 54.00 153.86 Tm
 (Backend work on a cross-platform enterprise security product, including OS migration, partner integrations, and AWS) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 54.00 137.87 Tm
+1 0 0 1 54.00 140.37 Tm
 (async processing.) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 55.50 120.39 Tm
+1 0 0 1 55.50 122.89 Tm
 (\225) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 66.00 120.39 Tm
+1 0 0 1 66.00 122.89 Tm
 (Led backend work for an OS migration so the product ran reliably across customer environments that previously) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 66.00 106.90 Tm
+1 0 0 1 66.00 109.40 Tm
 (blocked upgrades, supporting retention and new acquisitions.) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 55.50 90.92 Tm
+1 0 0 1 55.50 93.42 Tm
 (\225) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 66.00 90.92 Tm
+1 0 0 1 66.00 93.42 Tm
 (Repaired brittle cybersecurity partner integrations and cut recurring production defects by redesigning the integration) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 66.00 77.43 Tm
+1 0 0 1 66.00 79.93 Tm
 (layers.) Tj
 ET
 0.780 0.800 0.830 rg 54 48 504 0.5 re f
@@ -325,7 +320,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Annots [<< /Type /Annot /Subtype /Link /Rect [491.60 718.60 558.00 728.60] /Border [0 0 0] /A << /S /URI /URI (tel:+34657990070) >> >> << /Type /Annot /Subtype /Link /Rect [459.62 707.20 558.00 717.20] /Border [0 0 0] /A << /S /URI /URI (mailto:contact@felipewrsilva.dev) >> >> << /Type /Annot /Subtype /Link /Rect [453.14 695.80 558.00 705.80] /Border [0 0 0] /A << /S /URI /URI (https://linkedin.com/in/felipewrsilva) >> >> << /Type /Annot /Subtype /Link /Rect [495.65 684.40 558.00 694.40] /Border [0 0 0] /A << /S /URI /URI (https://felipewrsilva.dev) >> >>] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>
 endobj
 8 0 obj
-<< /Length 6674 >>
+<< /Length 6775 >>
 stream
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9.3 Tf
@@ -571,7 +566,7 @@ ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9 Tf
 1 0 0 1 54.00 243.34 Tm
-(Bachelor of Information Systems) Tj
+(Bachelor of Information Systems \(completed while working full time\)) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F2 10.6 Tf
@@ -597,7 +592,7 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 54.00 165.34 Tm
-(English, Portuguese, Spanish) Tj
+(English \(C2, working language\) \225 Portuguese \(native\) \225 Spanish \(conversational\)) Tj
 ET
 0.780 0.800 0.830 rg 54 48 504 0.5 re f
 BT 0 Tc 0.290 0.330 0.400 rg /F1 7.6 Tf 1 0 0 1 54 36 Tm (felipewrsilva.dev) Tj ET
@@ -616,11 +611,11 @@ xref
 0000000232 00000 n 
 0000000334 00000 n 
 0000000529 00000 n 
-0000008344 00000 n 
-0000009044 00000 n 
-0000015770 00000 n 
+0000008247 00000 n 
+0000008947 00000 n 
+0000015774 00000 n 
 trailer
 << /Size 10 /Root 1 0 R /Info 5 0 R >>
 startxref
-15906
+15910
 %%EOF

@@ -1,18 +1,69 @@
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import {
+  education as baseEducation,
+  experience as baseExperience,
+  languages as baseLanguages,
+  profile as baseProfile,
+  summary as baseSummary,
+  technologies as baseTechnologies,
+  type ExperienceRole,
+} from '../data/cv'
+
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-function cliArg(name) {
+function cliArg(name: string) {
   const index = process.argv.indexOf(name)
   return index >= 0 ? process.argv[index + 1] : null
 }
 
-const mdPath = resolve(cliArg('--in') || join(__dirname, '..', 'curriculo.md'))
 const outPath = resolve(
   cliArg('--out') || join(__dirname, '..', 'public', 'felipe-silva-resume.pdf'),
 )
+
+type CvData = {
+  profile: typeof baseProfile
+  summary: string[]
+  technologies: typeof baseTechnologies
+  experience: ExperienceRole[]
+  education: typeof baseEducation
+  languages: string[]
+}
+
+function loadCvData(): CvData {
+  const dataPath = cliArg('--data')
+  if (!dataPath) {
+    return {
+      profile: baseProfile,
+      summary: baseSummary,
+      technologies: baseTechnologies,
+      experience: baseExperience,
+      education: baseEducation,
+      languages: baseLanguages,
+    }
+  }
+
+  const parsed = JSON.parse(readFileSync(resolve(dataPath), 'utf8')) as CvData
+  return {
+    profile: { ...baseProfile, ...parsed.profile },
+    summary: parsed.summary ?? baseSummary,
+    technologies: parsed.technologies ?? baseTechnologies,
+    experience: parsed.experience ?? baseExperience,
+    education: parsed.education ?? baseEducation,
+    languages: parsed.languages ?? baseLanguages,
+  }
+}
+
+const {
+  profile,
+  summary,
+  technologies,
+  experience,
+  education,
+  languages,
+} = loadCvData()
 
 const PAGE_WIDTH = 612
 const PAGE_HEIGHT = 792
@@ -21,20 +72,55 @@ const MARGIN_TOP = 52
 const MARGIN_BOTTOM = 56
 const CONTENT_WIDTH = PAGE_WIDTH - MARGIN_X * 2
 
-const INK = [0.04, 0.07, 0.13]
-const MUTED = [0.29, 0.33, 0.4]
-const ACCENT = [0.17, 0.29, 0.21]
-const RULE_STRONG = [0.17, 0.29, 0.21]
-const RULE_SOFT = [0.78, 0.8, 0.83]
+const INK: [number, number, number] = [0.04, 0.07, 0.13]
+const MUTED: [number, number, number] = [0.29, 0.33, 0.4]
+const ACCENT: [number, number, number] = [0.17, 0.29, 0.21]
+const RULE_STRONG: [number, number, number] = [0.17, 0.29, 0.21]
+const RULE_SOFT: [number, number, number] = [0.78, 0.8, 0.83]
 
 const HELVETICA_WIDTHS =
   '278 278 355 556 556 889 667 191 333 333 389 584 278 333 278 278 556 556 556 556 556 556 556 556 556 556 278 278 584 584 584 556 1015 667 667 722 722 667 611 778 722 278 500 667 556 833 722 778 667 778 722 667 611 722 667 944 667 667 611 278 278 278 469 556 333 556 556 500 556 556 278 556 556 222 222 500 222 833 556 556 556 556 333 500 278 556 500 722 500 500 500 334 260 334 584'
 const HELVETICA_BOLD_WIDTHS =
   '278 333 474 556 556 889 722 238 333 333 389 584 278 333 278 278 556 556 556 556 556 556 556 556 556 556 333 333 584 584 584 611 975 722 722 722 722 667 611 778 722 278 556 722 611 833 722 778 667 778 722 667 611 722 667 944 667 667 611 333 278 333 584 556 333 556 611 556 611 556 333 611 611 278 278 556 278 889 611 611 611 611 389 556 333 611 556 778 556 556 500 389 280 389 584'
 
-function toWidthTable(spec) {
+type TextRun = { text: string; bold: boolean }
+
+type Block =
+  | { type: 'paragraph'; runs: TextRun[] }
+  | { type: 'bullet'; runs: TextRun[] }
+  | { type: 'labelled'; label: string; runs: TextRun[] }
+
+type Entry = {
+  heading: string
+  role: string
+  period: string
+  meta: string
+  blocks: Block[]
+}
+
+type Section = {
+  title: string
+  blocks: Block[]
+  entries: Entry[]
+}
+
+type Doc = {
+  header: {
+    name: string
+    title: string
+    focus: string
+    location: string
+    phone: string
+    email: string
+    linkedin: string
+    website: string
+  }
+  sections: Section[]
+}
+
+function toWidthTable(spec: string) {
   const values = spec.split(' ').map(Number)
-  const table = new Map()
+  const table = new Map<number, number>()
   values.forEach((width, index) => table.set(32 + index, width))
   table.set(0x95, 350)
   return table
@@ -45,7 +131,7 @@ const WIDTHS = {
   bold: toWidthTable(HELVETICA_BOLD_WIDTHS),
 }
 
-const UNICODE_REPLACEMENTS = {
+const UNICODE_REPLACEMENTS: Record<string, string> = {
   '\u2192': '->',
   '\u2248': '~',
   '\u00b7': '\u0095',
@@ -58,14 +144,14 @@ const UNICODE_REPLACEMENTS = {
   '\u00a0': ' ',
 }
 
-function normalizeText(text) {
+function normalizeText(text: string) {
   let out = ''
   for (const ch of text) {
     if (Object.prototype.hasOwnProperty.call(UNICODE_REPLACEMENTS, ch)) {
       out += UNICODE_REPLACEMENTS[ch]
       continue
     }
-    const cp = ch.codePointAt(0)
+    const cp = ch.codePointAt(0) ?? 0
     if (cp <= 0xff) {
       out += ch
       continue
@@ -76,65 +162,47 @@ function normalizeText(text) {
   return out.replace(/\s{2,}/g, ' ')
 }
 
-function charWidth(code, bold) {
+function charWidth(code: number, bold: boolean) {
   const table = bold ? WIDTHS.bold : WIDTHS.regular
-  if (table.has(code)) return table.get(code)
+  if (table.has(code)) return table.get(code) as number
   const folded = String.fromCharCode(code)
     .normalize('NFD')
     .replace(/\p{M}/gu, '')
   const foldedCode = folded.charCodeAt(0)
-  if (table.has(foldedCode)) return table.get(foldedCode)
+  if (table.has(foldedCode)) return table.get(foldedCode) as number
   return 556
 }
 
-function measure(text, size, bold, tracking = 0) {
+function measure(text: string, size: number, bold: boolean, tracking = 0) {
   let total = 0
   for (const ch of text) total += charWidth(ch.charCodeAt(0), bold)
   return (total / 1000) * size + tracking * text.length
 }
 
-function measureRuns(runs, size, tracking = 0) {
-  return runs.reduce(
-    (total, run) => total + measure(run.text, size, run.bold, tracking),
-    0,
-  )
+function run(text: string, bold = false): TextRun[] {
+  const normalized = normalizeText(text)
+  return normalized ? [{ text: normalized, bold }] : []
 }
 
-/** Split markdown inline syntax into plain runs. No bold in body copy. */
-function parseRuns(text) {
-  const source = text
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1')
-    .replace(/\*\*(.+?)\*\*/g, '$1')
-    .replace(/`([^`]+)`/g, '$1')
-  const normalized = normalizeText(source)
-  return normalized ? [{ text: normalized, bold: false }] : []
-}
-
-function plainText(text) {
-  return parseRuns(text)
-    .map((run) => run.text)
-    .join('')
-    .trim()
-}
-
-/** Greedy word wrap that preserves bold runs across line breaks. */
-function wrapRuns(runs, maxWidth, size, tracking = 0) {
-  const words = []
-  runs.forEach((run) => {
-    const pieces = run.text.split(/(\s+)/)
+function wrapRuns(runs: TextRun[], maxWidth: number, size: number, tracking = 0) {
+  const words: Array<TextRun & { space: boolean }> = []
+  runs.forEach((item) => {
+    const pieces = item.text.split(/(\s+)/)
     pieces.forEach((piece) => {
       if (!piece) return
-      words.push({ text: piece, bold: run.bold, space: /^\s+$/.test(piece) })
+      words.push({ text: piece, bold: item.bold, space: /^\s+$/.test(piece) })
     })
   })
 
-  const lines = []
-  let line = []
+  const lines: TextRun[][] = []
+  let line: Array<TextRun & { space: boolean }> = []
   let width = 0
 
   const flush = () => {
     while (line.length && line[line.length - 1].space) line.pop()
-    if (line.length) lines.push(line)
+    if (line.length) {
+      lines.push(line.map(({ text, bold }) => ({ text, bold })))
+    }
     line = []
     width = 0
   }
@@ -152,7 +220,7 @@ function wrapRuns(runs, maxWidth, size, tracking = 0) {
   flush()
 
   return lines.map((parts) => {
-    const merged = []
+    const merged: TextRun[] = []
     parts.forEach((part) => {
       const last = merged[merged.length - 1]
       if (last && last.bold === part.bold) last.text += part.text
@@ -162,151 +230,96 @@ function wrapRuns(runs, maxWidth, size, tracking = 0) {
   })
 }
 
-function parseResume(markdown) {
-  const lines = markdown.replace(/\r\n/g, '\n').split('\n')
-  const doc = { header: {}, sections: [] }
-
-  doc.header.name = plainText(
-    (lines.find((l) => l.startsWith('# ')) || '# Felipe Silva').slice(2),
-  ).toUpperCase()
-  doc.header.title = plainText(
-    (lines.find((l) => l.startsWith('## ')) || '## Software Engineer').slice(3),
-  )
-  doc.header.focus = plainText(
-    lines.find(
-      (l) => l.startsWith('**') && !/^\*\*(Bachelor|Computer)/i.test(l),
-    ) || '',
-  )
-  doc.header.location = plainText(
-    lines.find(
-      (l) => /Madrid/i.test(l) && !l.startsWith('#') && !l.startsWith('**'),
-    ) || 'Madrid, Spain',
-  )
-  doc.header.phone = plainText(
-    (markdown.match(/Phone:\s*(.+)/i) || [])[1] || '',
-  )
-  doc.header.email = (markdown.match(/Email:\s*\[([^\]]+)\]/i) || [])[1] || ''
-  doc.header.linkedin =
-    (markdown.match(/LinkedIn:\s*\[([^\]]+)\]/i) || [])[1] || ''
-  doc.header.website =
-    (markdown.match(/Website:\s*\[([^\]]+)\]/i) || [])[1] || ''
-
-  let start = lines.findIndex((l) => l.trim() === '---')
-  if (start < 0) start = 0
-
-  let section = null
-  let entry = null
-  let pendingLabel = null
-
-  const pushBlock = (block) => {
-    if (!section) return
-    if (entry) entry.blocks.push(block)
-    else section.blocks.push(block)
-  }
-
-  for (let i = start; i < lines.length; i++) {
-    const line = lines[i].trim()
-    if (!line || line === '---') continue
-
-    if (line.startsWith('# ')) {
-      section = {
-        title: plainText(line.slice(2)).toUpperCase(),
-        blocks: [],
-        entries: [],
-      }
-      doc.sections.push(section)
-      entry = null
-      pendingLabel = null
-      continue
-    }
-
-    if (line.startsWith('## ')) {
-      entry = {
-        heading: plainText(line.slice(3)),
-        role: '',
-        meta: '',
-        blocks: [],
-      }
-      section.entries.push(entry)
-      continue
-    }
-
-    if (line.startsWith('### ')) {
-      const heading = plainText(line.slice(4))
-      if (/^impact$/i.test(heading)) continue
-      if (entry && !entry.role) entry.role = heading
-      else pendingLabel = heading
-      continue
-    }
-
-    if (line.startsWith('- ')) {
-      pushBlock({ type: 'bullet', runs: parseRuns(line.slice(2)) })
-      continue
-    }
-
-    const isMetaLine =
-      entry && !entry.meta && /^\*\*/.test(line) && /\d{4}/.test(line)
-    if (isMetaLine) {
-      const text = plainText(line)
-      const [period, ...rest] = text.split('\u0095').map((part) => part.trim())
-      entry.period = period
-      entry.meta = rest.join(' \u0095 ')
-      continue
-    }
-
-    if (pendingLabel) {
-      pushBlock({
-        type: 'labelled',
-        label: pendingLabel,
-        runs: parseRuns(line),
-      })
-      pendingLabel = null
-      continue
-    }
-
-    if (entry && /^\*\*/.test(line)) {
-      entry.role = plainText(line)
-      continue
-    }
-
-    if (entry && !entry.period && /\d{4}/.test(line) && line.length < 40) {
-      entry.period = plainText(line)
-      continue
-    }
-
-    pushBlock({ type: 'paragraph', runs: parseRuns(line) })
-  }
-
-  const languages = doc.sections.find((item) =>
-    item.title.startsWith('LANGUAGES'),
-  )
-  if (languages) {
-    const runs = []
-    languages.blocks.forEach((block, index) => {
-      if (index > 0) runs.push({ text: '  \u0095  ', bold: false })
-      runs.push(...block.runs)
-    })
-    languages.blocks = runs.length ? [{ type: 'paragraph', runs }] : []
-  }
-
-  return doc
+function paragraphBlock(text: string): Block {
+  return { type: 'paragraph', runs: run(text) }
 }
 
-const ops = []
-const links = []
-let pageOps = []
-let pageLinks = []
+function bulletBlock(text: string): Block {
+  return { type: 'bullet', runs: run(text) }
+}
+
+function labelledBlock(label: string, text: string): Block {
+  return { type: 'labelled', label, runs: run(text) }
+}
+
+function experienceEntry(role: ExperienceRole): Entry {
+  return {
+    heading: role.company,
+    role: role.role,
+    period: role.period,
+    meta: `${role.industry} \u0095 ${role.audience}`,
+    blocks: [
+      paragraphBlock(role.overview),
+      ...role.bullets.map((bullet) => bulletBlock(bullet)),
+    ],
+  }
+}
+
+function buildDoc(): Doc {
+  return {
+    header: {
+      name: profile.name.toUpperCase(),
+      title: profile.title,
+      focus: profile.focus,
+      location: profile.location,
+      phone: profile.phone,
+      email: profile.email,
+      linkedin: 'linkedin.com/in/felipewrsilva',
+      website: 'felipewrsilva.dev',
+    },
+    sections: [
+      {
+        title: 'PROFESSIONAL SUMMARY',
+        blocks: summary.map((text) => paragraphBlock(text)),
+        entries: [],
+      },
+      {
+        title: 'CORE TECHNOLOGIES',
+        blocks: Object.entries(technologies).map(([label, items]) =>
+          labelledBlock(label, items.join(' \u0095 ')),
+        ),
+        entries: [],
+      },
+      {
+        title: 'PROFESSIONAL EXPERIENCE',
+        blocks: [],
+        entries: experience.map(experienceEntry),
+      },
+      {
+        title: 'EDUCATION',
+        blocks: [],
+        entries: education.map((entry) => ({
+          heading: entry.institution,
+          role: entry.degree,
+          period: entry.period,
+          meta: '',
+          blocks: [],
+        })),
+      },
+      {
+        title: 'LANGUAGES',
+        blocks: [paragraphBlock(languages.join('  \u0095  '))],
+        entries: [],
+      },
+    ],
+  }
+}
+
+const ops: string[][] = []
+const links: Array<Array<{ rect: number[]; uri: string }>> = []
+let pageOps: string[] = []
+let pageLinks: Array<{ rect: number[]; uri: string }> = []
 let cursorY = 0
 let pageNumber = 0
 
-function rgb(color) {
+function rgb(color: number[]) {
   return color.map((value) => value.toFixed(3)).join(' ')
 }
 
-function pdfString(text) {
+function pdfString(text: string) {
   let out = '('
   for (const ch of text) {
-    const cp = ch.codePointAt(0)
+    const cp = ch.codePointAt(0) ?? 0
     if (ch === '(' || ch === ')' || ch === '\\') out += `\\${ch}`
     else if (cp >= 32 && cp <= 126) out += ch
     else if (cp <= 0xff) out += `\\${cp.toString(8).padStart(3, '0')}`
@@ -315,39 +328,46 @@ function pdfString(text) {
   return `${out})`
 }
 
-function drawRuns(runs, x, y, size, color, tracking = 0) {
+function drawRuns(
+  runs: TextRun[],
+  x: number,
+  y: number,
+  size: number,
+  color: number[],
+  tracking = 0,
+) {
   let cursorX = x
   pageOps.push(
     `BT ${rgb(color)} rg ${tracking ? `${tracking.toFixed(2)} Tc` : '0 Tc'}`,
   )
-  runs.forEach((run) => {
-    pageOps.push(`/${run.bold ? 'F2' : 'F1'} ${size} Tf`)
+  runs.forEach((item) => {
+    pageOps.push(`/${item.bold ? 'F2' : 'F1'} ${size} Tf`)
     pageOps.push(`1 0 0 1 ${cursorX.toFixed(2)} ${y.toFixed(2)} Tm`)
-    pageOps.push(`${pdfString(run.text)} Tj`)
-    cursorX += measure(run.text, size, run.bold, tracking)
+    pageOps.push(`${pdfString(item.text)} Tj`)
+    cursorX += measure(item.text, size, item.bold, tracking)
   })
   pageOps.push('ET')
   return cursorX
 }
 
 function drawText(
-  text,
-  x,
-  y,
-  size,
-  color,
-  { bold = false, tracking = 0 } = {},
+  text: string,
+  x: number,
+  y: number,
+  size: number,
+  color: number[],
+  { bold = false, tracking = 0 }: { bold?: boolean; tracking?: number } = {},
 ) {
   return drawRuns([{ text, bold }], x, y, size, color, tracking)
 }
 
-function drawRule(y, color, thickness = 0.6, width = CONTENT_WIDTH) {
+function drawRule(y: number, color: number[], thickness = 0.6, width = CONTENT_WIDTH) {
   pageOps.push(
     `${rgb(color)} rg ${MARGIN_X} ${(y - thickness).toFixed(2)} ${width} ${thickness} re f`,
   )
 }
 
-function addLink(x, y, width, height, uri) {
+function addLink(x: number, y: number, width: number, height: number, uri: string) {
   pageLinks.push({ rect: [x, y, x + width, y + height], uri })
 }
 
@@ -362,11 +382,11 @@ function startPage() {
   cursorY = PAGE_HEIGHT - MARGIN_TOP
 }
 
-function ensureSpace(height) {
+function ensureSpace(height: number) {
   if (cursorY - height < MARGIN_BOTTOM) startPage()
 }
 
-function drawHeader(header) {
+function drawHeader(header: Doc['header']) {
   drawText(header.name, MARGIN_X, cursorY - 18, 21, INK, {
     bold: true,
     tracking: 1.1,
@@ -401,7 +421,7 @@ function drawHeader(header) {
   cursorY -= 20
 }
 
-function drawSectionTitle(title) {
+function drawSectionTitle(title: string) {
   ensureSpace(44)
   drawText(title, MARGIN_X, cursorY, 8.5, ACCENT, { bold: true, tracking: 1.4 })
   cursorY -= 6
@@ -410,7 +430,7 @@ function drawSectionTitle(title) {
 }
 
 function drawParagraph(
-  runs,
+  runs: TextRun[],
   { size = 9.3, color = INK, indent = 0, gap = 6 } = {},
 ) {
   const lines = wrapRuns(runs, CONTENT_WIDTH - indent, size)
@@ -422,7 +442,7 @@ function drawParagraph(
   cursorY -= gap
 }
 
-function drawBullet(runs, { size = 9.3 } = {}) {
+function drawBullet(runs: TextRun[], { size = 9.3 } = {}) {
   const indent = 12
   const lines = wrapRuns(runs, CONTENT_WIDTH - indent, size)
   lines.forEach((line, index) => {
@@ -436,7 +456,7 @@ function drawBullet(runs, { size = 9.3 } = {}) {
   cursorY -= 2.5
 }
 
-function drawLabelled(label, runs) {
+function drawLabelled(label: string, runs: TextRun[]) {
   const size = 9.3
   const labelText = `${label}  `
   const labelWidth = measure(labelText, size, true)
@@ -451,8 +471,7 @@ function drawLabelled(label, runs) {
   cursorY -= 2
 }
 
-/** Height of an entry header plus its first paragraph line, to avoid orphans. */
-function entryLeadHeight(entry) {
+function entryLeadHeight(entry: Entry) {
   let height = 14
   if (entry.role || entry.meta) height += 13
   const first = entry.blocks[0]
@@ -460,7 +479,7 @@ function entryLeadHeight(entry) {
   return height
 }
 
-function drawEntry(entry) {
+function drawEntry(entry: Entry) {
   ensureSpace(entryLeadHeight(entry))
 
   const periodText = entry.period || ''
@@ -492,8 +511,7 @@ function drawEntry(entry) {
   cursorY -= 6
 }
 
-const markdown = readFileSync(mdPath, 'utf8')
-const doc = parseResume(markdown)
+const doc = buildDoc()
 
 startPage()
 drawHeader(doc.header)
@@ -512,8 +530,8 @@ doc.sections.forEach((section) => {
 ops.push(pageOps)
 links.push(pageLinks)
 
-const objects = []
-const add = (content) => {
+const objects: string[] = []
+const add = (content: string) => {
   objects.push(content)
   return objects.length
 }
@@ -527,10 +545,10 @@ const fontBoldId = add(
   '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>',
 )
 const infoId = add(
-  `<< /Title ${pdfString(`${doc.header.name} - ${doc.header.title}`)} /Author ${pdfString(doc.header.name)} /Subject ${pdfString(doc.header.focus)} /Creator ${pdfString('curriculo.md')} /Producer ${pdfString('portfolio resume builder')} >>`,
+  `<< /Title ${pdfString(`${doc.header.name} - ${doc.header.title}`)} /Author ${pdfString(doc.header.name)} /Subject ${pdfString(doc.header.focus)} /Creator ${pdfString('data/cv.ts')} /Producer ${pdfString('portfolio resume builder')} >>`,
 )
 
-const pageIds = []
+const pageIds: number[] = []
 
 ops.forEach((pageContent, index) => {
   const total = ops.length
@@ -589,4 +607,4 @@ chunks.push(Buffer.from(xref, 'latin1'))
 
 mkdirSync(dirname(outPath), { recursive: true })
 writeFileSync(outPath, Buffer.concat(chunks))
-console.log(`Wrote ${outPath} from ${mdPath} (${ops.length} page(s))`)
+console.log(`Wrote ${outPath} from data/cv.ts (${ops.length} page(s))`)

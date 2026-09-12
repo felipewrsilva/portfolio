@@ -68,4 +68,41 @@
   .body-copy {
     @apply text-base leading-relaxed text-[color:var(--ink-muted)] md:text-lg;
   }
+
+  .rise {
+    animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .reveal-ready {
+    opacity: 1;
+    transform: none;
+  }
+
+  .reveal-pending {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  .reveal-pending.rise {
+    opacity: 1;
+    transform: none;
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rise {
+      animation: none;
+    }
+
+    .reveal-pending {
+      opacity: 1;
+      transform: none;
+    }
+  }
 }

@@ -30,7 +30,9 @@ export default function Experience() {
                   </p>
                   <p className="pt-1 text-sm text-ink-muted">
                     <span className="text-accent">{role.industry}</span>
-                    <span className="mx-2 text-[color:var(--line)]">·</span>
+                    <span className="mx-2 text-ink-muted/60" aria-hidden>
+                      ·
+                    </span>
                     {role.audience}
                   </p>
                 </header>
@@ -44,8 +46,10 @@ export default function Experience() {
                     Impact
                   </h4>
                   <ul className="mt-4 max-w-prose list-disc space-y-2 pl-5 text-base leading-relaxed text-ink marker:text-accent">
-                    {role.bullets.map((bullet) => (
-                      <li key={bullet.slice(0, 48)}>{bullet}</li>
+                    {role.bullets.map((bullet, bulletIndex) => (
+                      <li key={`${role.company}-bullet-${bulletIndex}`}>
+                        {bullet}
+                      </li>
                     ))}
                   </ul>
                 </div>

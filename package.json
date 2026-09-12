@@ -7,12 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "resume:pdf": "node scripts/generate-resume-pdf.mjs"
+    "typecheck": "tsc --noEmit",
+    "resume:pdf": "tsx scripts/generate-resume-pdf.ts"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.2.6",
-    "next": "14.2.3",
+    "next": "14.2.25",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.3.0"
@@ -21,11 +22,12 @@
     "@types/node": "20.12.12",
     "@types/react": "^18",
     "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.3",
+    "eslint-config-next": "^14.2.25",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "tailwindcss": "^3.4.1",
+    "tsx": "^4.19.2",
     "typescript": "^5"
   }
 }
