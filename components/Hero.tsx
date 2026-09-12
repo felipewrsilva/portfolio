@@ -20,8 +20,7 @@ export default function Hero() {
           className="rise font-mono text-xs font-medium uppercase tracking-[0.22em] text-accent-soft"
           style={{ animationDelay: '0.08s' }}
         >
-          {profile.location} · UTC+1 · {profile.yearsExperience} · Remote EU
-          & US overlap
+          {profile.yearsExperience}
         </p>
 
         <h1

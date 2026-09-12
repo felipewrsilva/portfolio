@@ -38,9 +38,6 @@ export default function Contact() {
             <p className="mt-3 max-w-prose text-base text-white/75">
               {profile.contactBrief}
             </p>
-            <p className="mt-3 max-w-prose text-base text-white/75">
-              {profile.focus} · {profile.location}
-            </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href={profile.emailHref}
