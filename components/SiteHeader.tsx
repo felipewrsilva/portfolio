@@ -1,30 +1,67 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import { navLinks, profile } from '@/data/cv'
 import { cn } from '@/lib/utils'
 
 export default function SiteHeader() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const menuId = useId()
+  const toggleRef = useRef<HTMLButtonElement>(null)
+  const menuRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24)
+    let frame = 0
+    const onScroll = () => {
+      if (frame) return
+      frame = window.requestAnimationFrame(() => {
+        frame = 0
+        setScrolled(window.scrollY > 24)
+      })
+    }
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      if (frame) window.cancelAnimationFrame(frame)
+    }
   }, [])
 
   useEffect(() => {
     if (!menuOpen) return
+
+    const menu = menuRef.current
+    const toggle = toggleRef.current
+    const focusable = menu?.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled])',
+    )
+    const first = focusable?.[0]
+    const last = focusable?.[focusable.length - 1]
+    first?.focus()
+
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setMenuOpen(false)
+      if (event.key === 'Escape') {
+        setMenuOpen(false)
+        return
+      }
+      if (event.key !== 'Tab' || !focusable?.length) return
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault()
+        last?.focus()
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault()
+        first?.focus()
+      }
     }
+
     document.body.style.overflow = 'hidden'
     window.addEventListener('keydown', onKey)
     return () => {
       document.body.style.overflow = ''
       window.removeEventListener('keydown', onKey)
+      toggle?.focus()
     }
   }, [menuOpen])
 
@@ -92,13 +129,14 @@ export default function SiteHeader() {
             Email
           </a>
           <button
+            ref={toggleRef}
             type="button"
             className={cn(
               'inline-flex h-9 w-9 items-center justify-center rounded-sm lg:hidden',
               scrolled || menuOpen ? 'text-ink' : 'text-white',
             )}
             aria-expanded={menuOpen}
-            aria-controls="mobile-nav"
+            aria-controls={menuId}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             onClick={() => setMenuOpen((open) => !open)}
           >
@@ -129,7 +167,8 @@ export default function SiteHeader() {
 
       {menuOpen ? (
         <nav
-          id="mobile-nav"
+          ref={menuRef}
+          id={menuId}
           aria-label="Mobile"
           className="border-t border-[color:var(--line)] bg-[color:var(--paper)] lg:hidden"
         >

@@ -1,24 +1,6 @@
-'use client'
-
-import { motion, useReducedMotion } from 'framer-motion'
 import { profile } from '@/data/cv'
 
 export default function Hero() {
-  const reduce = useReducedMotion()
-
-  const item = {
-    hidden: { opacity: 0, y: reduce ? 0 : 20 },
-    show: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: reduce ? 0 : 0.08 + i * 0.08,
-        duration: 0.55,
-        ease: [0.22, 1, 0.36, 1],
-      },
-    }),
-  }
-
   return (
     <section
       id="top"
@@ -34,65 +16,44 @@ export default function Hero() {
       <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-ink/70 to-transparent" />
 
       <div className="content-width section-pad relative z-10 w-full pb-14 pt-28 md:pb-20">
-        <motion.p
-          className="font-mono text-xs font-medium uppercase tracking-[0.22em] text-accent-soft"
-          custom={0}
-          variants={item}
-          initial="hidden"
-          animate="show"
+        <p
+          className="rise font-mono text-xs font-medium uppercase tracking-[0.22em] text-accent-soft"
+          style={{ animationDelay: '0.08s' }}
         >
-          {profile.location} · {profile.yearsExperience}
-        </motion.p>
+          {profile.location} · UTC+1 · {profile.yearsExperience} · Remote EU
+          & US overlap
+        </p>
 
-        <motion.h1
-          className="mt-5 font-display text-5xl leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
-          custom={1}
-          variants={item}
-          initial="hidden"
-          animate="show"
+        <h1
+          className="rise mt-5 font-display text-5xl leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
+          style={{ animationDelay: '0.16s' }}
         >
-          {profile.name}
-        </motion.h1>
-
-        <motion.p
-          className="mt-5 max-w-2xl font-sans text-xl font-medium text-white md:text-2xl"
-          custom={2}
-          variants={item}
-          initial="hidden"
-          animate="show"
-        >
-          {profile.title}{' '}
-          <span className="font-normal text-white/70">
-            at {profile.company}
+          <span className="block">{profile.name}</span>
+          <span className="mt-5 block font-sans text-xl font-medium text-white md:text-2xl">
+            {profile.title}{' '}
+            <span className="font-normal text-white/70">
+              at {profile.company}
+            </span>
           </span>
-        </motion.p>
+        </h1>
 
-        <motion.p
-          className="mt-3 max-w-2xl font-mono text-sm uppercase tracking-[0.1em] text-accent-soft"
-          custom={3}
-          variants={item}
-          initial="hidden"
-          animate="show"
+        <p
+          className="rise mt-3 max-w-2xl font-mono text-sm uppercase tracking-[0.1em] text-accent-soft"
+          style={{ animationDelay: '0.24s' }}
         >
           {profile.focus}
-        </motion.p>
+        </p>
 
-        <motion.p
-          className="mt-6 max-w-xl text-base leading-relaxed text-white/90 md:text-lg"
-          custom={4}
-          variants={item}
-          initial="hidden"
-          animate="show"
+        <p
+          className="rise mt-6 max-w-xl text-base leading-relaxed text-white/90 md:text-lg"
+          style={{ animationDelay: '0.32s' }}
         >
           {profile.tagline}
-        </motion.p>
+        </p>
 
-        <motion.div
-          className="mt-8 flex flex-wrap gap-3"
-          custom={5}
-          variants={item}
-          initial="hidden"
-          animate="show"
+        <div
+          className="rise mt-8 flex flex-wrap gap-3"
+          style={{ animationDelay: '0.4s' }}
         >
           <a
             href={profile.emailHref}
@@ -115,7 +76,7 @@ export default function Hero() {
           >
             Resume
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

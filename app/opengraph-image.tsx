@@ -64,7 +64,7 @@ export default function OpenGraphImage() {
               letterSpacing: '0.08em',
             }}
           >
-            .NET · SQL Server · AWS
+            .NET · SQL Server · Azure
           </div>
         </div>
       </div>

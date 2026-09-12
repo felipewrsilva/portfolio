@@ -14,16 +14,14 @@ export default function Background() {
 
         <ul className="mt-10 space-y-10">
           {education.map((entry, index) => (
-            <Reveal key={entry.institution} delay={index * 0.05}>
-              <li className="max-w-prose">
-                <h3 className="font-display text-2xl tracking-tight text-ink">
-                  {entry.institution}
-                </h3>
-                <p className="mt-2 font-medium text-ink">{entry.degree}</p>
-                <p className="mt-2 font-mono text-xs uppercase tracking-[0.16em] text-ink-muted">
-                  {entry.period}
-                </p>
-              </li>
+            <Reveal key={entry.institution} delay={index * 0.05} as="li">
+              <h3 className="font-display text-2xl tracking-tight text-ink">
+                {entry.institution}
+              </h3>
+              <p className="mt-2 font-medium text-ink">{entry.degree}</p>
+              <p className="mt-2 font-mono text-xs uppercase tracking-[0.16em] text-ink-muted">
+                {entry.period}
+              </p>
             </Reveal>
           ))}
         </ul>

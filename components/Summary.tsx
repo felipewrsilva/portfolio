@@ -13,7 +13,7 @@ export default function Summary() {
         </Reveal>
         <div className="body-copy mt-10 max-w-prose space-y-5">
           {summary.map((paragraph, index) => (
-            <Reveal key={paragraph.slice(0, 24)} delay={index * 0.06}>
+            <Reveal key={`summary-${index}`} delay={index * 0.06}>
               <p>{paragraph}</p>
             </Reveal>
           ))}

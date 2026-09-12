@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 /* eslint-disable camelcase -- next/font Google export names */
 import { IBM_Plex_Mono, IBM_Plex_Sans, Source_Serif_4 } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 
 import './globals.css'
 
@@ -24,9 +25,10 @@ const mono = IBM_Plex_Mono({
   display: 'swap',
 })
 
-const title = 'Felipe Silva | Senior Software Engineer, Madrid'
+const title =
+  'Felipe Silva — Senior Backend Engineer (.NET) | Madrid, Remote EU/US'
 const description =
-  'Senior .NET engineer in Madrid. 10+ years in C# / .NET, SQL Server, full-stack TypeScript/React, and CI/CD across healthcare, education, and enterprise security.'
+  'Senior .NET engineer in Madrid (UTC+1). 10+ years in C# / .NET, SQL Server, and Azure. Remote-ready for EU hours and US Eastern overlap.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://felipewrsilva.dev'),
@@ -38,14 +40,15 @@ export const metadata: Metadata = {
   icons: {
     icon: [{ url: '/fs-logo.svg', type: 'image/svg+xml' }],
     shortcut: '/fs-logo.svg',
-    apple: '/fs-logo.svg',
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
   openGraph: {
     title,
     description,
     url: 'https://felipewrsilva.dev',
     siteName: 'Felipe Silva',
-    locale: 'en_GB',
+    locale: 'en_US',
+    alternateLocale: ['en_GB'],
     type: 'website',
   },
   twitter: {
@@ -66,7 +69,7 @@ export default function RootLayout({
     name: 'Felipe Silva',
     jobTitle: 'Senior Software Engineer',
     url: 'https://felipewrsilva.dev',
-    email: 'mailto:contact@felipewrsilva.dev',
+    email: 'contact@felipewrsilva.dev',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Madrid',
@@ -85,15 +88,14 @@ export default function RootLayout({
       '.NET',
       'ASP.NET Core',
       'ASP.NET',
+      'C#',
+      'SQL Server',
+      'Azure',
       'TypeScript',
       'JavaScript',
-      'HTML',
-      'CSS',
       'React',
       'Next.js',
-      'SQL Server',
       'Data platform modernization',
-      'Full-stack engineering',
       'Backend engineering',
     ],
   }
@@ -104,11 +106,18 @@ export default function RootLayout({
       className={`${display.variable} ${sans.variable} ${mono.variable}`}
     >
       <body className="font-sans">
+        <a
+          href="#about"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:bg-white focus:px-4 focus:py-2 focus:text-ink"
+        >
+          Skip to content
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   )
