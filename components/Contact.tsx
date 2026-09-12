@@ -33,9 +33,6 @@ export default function Contact() {
               Hiring for a senior backend role?
             </h2>
             <p className="mt-4 max-w-prose text-base text-white/90">
-              {profile.availability}
-            </p>
-            <p className="mt-3 max-w-prose text-base text-white/75">
               {profile.contactBrief}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">

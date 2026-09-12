@@ -16,16 +16,9 @@ export default function Hero() {
       <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-ink/70 to-transparent" />
 
       <div className="content-width section-pad relative z-10 w-full pb-14 pt-28 md:pb-20">
-        <p
-          className="rise font-mono text-xs font-medium uppercase tracking-[0.22em] text-accent-soft"
-          style={{ animationDelay: '0.08s' }}
-        >
-          {profile.yearsExperience}
-        </p>
-
         <h1
-          className="rise mt-5 font-display text-5xl leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
-          style={{ animationDelay: '0.16s' }}
+          className="rise font-display text-5xl leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
+          style={{ animationDelay: '0.08s' }}
         >
           <span className="block">{profile.name}</span>
           <span className="mt-5 block font-sans text-xl font-medium text-white md:text-2xl">
@@ -38,21 +31,21 @@ export default function Hero() {
 
         <p
           className="rise mt-3 max-w-2xl font-mono text-sm uppercase tracking-[0.1em] text-accent-soft"
-          style={{ animationDelay: '0.24s' }}
+          style={{ animationDelay: '0.16s' }}
         >
           {profile.focus}
         </p>
 
         <p
           className="rise mt-6 max-w-xl text-base leading-relaxed text-white/90 md:text-lg"
-          style={{ animationDelay: '0.32s' }}
+          style={{ animationDelay: '0.24s' }}
         >
           {profile.tagline}
         </p>
 
         <div
           className="rise mt-8 flex flex-wrap gap-3"
-          style={{ animationDelay: '0.4s' }}
+          style={{ animationDelay: '0.32s' }}
         >
           <a
             href={profile.emailHref}
