@@ -1,14 +1,14 @@
 export const profile = {
   name: 'Felipe Silva',
-  title: 'Senior Software Engineer',
-  focus: ['.NET', 'SQL Server', 'Azure'] as const,
+  title: 'Senior Software Engineer (.NET)',
+  focus: ['C#', '.NET', 'SQL Server', 'Azure'] as const,
   tagline:
     'I build and operate .NET and SQL\u00A0Server platforms that carry real production load. At IQVIA that means healthcare data paths that have to stay reliable under volume. Earlier roles covered checkout systems, enterprise security products, and SaaS migrations where I also owned frontend and delivery when the product needed it.',
   company: 'IQVIA',
   yearsExperience: '10+ years',
   location: 'Madrid, Spain',
   availability:
-    'Based in Madrid and open to remote senior backend and platform roles. I cover full EU hours and overlap with US\u00A0Eastern until about 2\u00A0pm. Authorized to work in the EU with no sponsorship required.',
+    'Based in Madrid and open to remote senior backend and platform roles. I cover full EU hours and overlap with US\u00A0Eastern until about 2\u00A0pm.',
   contactBrief:
     'Send the role, stack, and timezone you need covered. I reply within one business day.',
   phone: '+34 657 99 00 70',
@@ -21,8 +21,8 @@ export const profile = {
 }
 
 export const summary = [
-  'Senior Software Engineer with more than ten years of backend experience in C#, .NET, ASP.NET Core, SQL Server, and Azure. I design, build, and operate production systems for healthcare data, enterprise security, education, and SaaS.',
-  'At IQVIA I own high-volume healthcare extract and ingestion paths on .NET and SQL Server, including a live Go pipeline on Azure Blob, Azure Functions, and Databricks that replaced a brittle SSIS and CSV flow. Earlier I led backend work on a cross-platform security product at Fidelis Security, rebuilt checkout and acquisition at Afya with TypeScript and React, moved a desktop product to SaaS at Levilo, and shipped student payment tools at Senac. I stay backend-first and take frontend and CI/CD when the product needs one owner across the stack.',
+  'Senior Software Engineer and backend engineer based in Madrid with 10+ years in C#, .NET, ASP.NET Core, Entity Framework Core, SQL Server, T-SQL, REST APIs, and Azure. I design, build, and operate high-volume production systems and data platforms in healthcare, enterprise security, education, and SaaS.',
+  'At IQVIA I own healthcare extract and ingestion pipelines on .NET and SQL Server, including performance tuning, Azure Functions, Azure Blob, Databricks, CI/CD, and Azure DevOps. Earlier I led backend and API integration work at Fidelis Security on AWS Lambda, SNS, and SQS, rebuilt checkout and acquisition at Afya with TypeScript, React, Node.js, and MongoDB, migrated a desktop product to SaaS at Levilo, and shipped student payment systems at Senac. I stay backend-first and take frontend and DevOps when the product needs one owner across the stack.',
 ]
 
 export const industries = [
@@ -56,18 +56,23 @@ export const featuredCase = {
 }
 
 export const technologies = {
-  Languages: ['C#', 'SQL', 'TypeScript', 'JavaScript', 'Go'],
+  Languages: ['C#', 'SQL', 'T-SQL', 'TypeScript', 'JavaScript', 'Go'],
   Backend: [
     '.NET',
     'ASP.NET Core',
+    'ASP.NET',
+    'REST APIs',
+    'Web APIs',
     'Razor Pages',
     'Entity Framework Core',
+    'Entity Framework',
     'ASP.NET Core Identity',
     'CQRS',
-    'REST APIs',
+    'Clean Architecture',
     'Node.js',
     'GitLab CI/CD',
     'Azure DevOps',
+    'CI/CD',
   ],
   Frontend: [
     'TypeScript',
@@ -77,23 +82,26 @@ export const technologies = {
     'HTML',
     'CSS',
     'jQuery',
-    'Bootstrap / AdminLTE',
-    'ASP.NET',
+    'Bootstrap',
+    'AdminLTE',
   ],
   'Cloud & data': [
     'SQL Server',
-    'DACPAC',
-    'AWS Lambda',
-    'AWS SNS',
-    'AWS SQS',
     'Azure',
     'Azure SQL',
     'Azure App Service',
     'Azure Functions',
-    'Azure Blob',
-    'MongoDB',
+    'Azure Blob Storage',
+    'DACPAC',
+    'SSIS',
+    'ETL',
     'Databricks',
     'Parquet',
+    'MongoDB',
+    'AWS',
+    'AWS Lambda',
+    'AWS SNS',
+    'AWS SQS',
   ],
 } as const
 
@@ -111,60 +119,60 @@ export const experience: ExperienceRole[] = [
   {
     company: 'IQVIA',
     role: 'Senior Software Engineer',
-    period: 'Aug 2020 to Present',
+    period: 'August 2020 - Present',
     industry: 'Healthcare technology',
     audience: 'Pharmaceutical and healthcare data customers',
     overview:
-      'Backend and data platform engineering for high-volume healthcare and pharmaceutical data used across multiple markets. Main stack: C#, .NET, ASP.NET Core, Razor Pages, Entity Framework Core, ASP.NET Core Identity, SQL Server, Clean Architecture, and CQRS.',
+      'Backend engineer and data platform engineer for high-volume healthcare and pharmaceutical data used across multiple markets. Stack: C#, .NET, ASP.NET Core, Razor Pages, Entity Framework Core, ASP.NET Core Identity, SQL Server, T-SQL, Clean Architecture, CQRS, REST APIs, Azure, and CI/CD.',
     bullets: [
-      'Stabilized a high-volume C#, .NET, Entity Framework Core, and SQL Server file ingestion path that failed under SQL deadlocks, timeouts, and multi-hour runs on the largest files. Every file now finishes within 20 minutes, usually faster, while the path ingests dozens of very large files per hour.',
-      'Built a live extract pipeline in Go that replaced SSIS and a manual CSV, Spark, and SQL Server path. The new flow watches FTP, lands Parquet on Azure Blob through Azure Functions, and lets analysts trigger Databricks loads in minutes.',
-      'Delivered ASP.NET Core Razor Pages operator tooling with ASP.NET Core Identity, CQRS, REST-oriented workflows, jQuery, and AdminLTE on the same estate.',
-      'Introduced GitLab CI/CD, Azure DevOps, and DACPAC versioning with automated pre-deploy checks and schema drift reports so database changes ship with the same review path as application code.',
-      'Cut routine developer support time by 75% through root-cause production fixes on live ingestion and extract paths.',
+      'Optimized a high-volume C#, .NET, Entity Framework Core, and SQL Server file ingestion path that failed under SQL deadlocks, timeouts, and multi-hour runs. Reduced largest-file runtime from 3+ hours or failure to under 20 minutes while ingesting dozens of very large files per hour.',
+      'Designed and implemented a live ETL extract pipeline in Go that replaced SSIS and a manual CSV, Spark, and SQL Server path. Watches FTP, lands Parquet on Azure Blob Storage through Azure Functions, and supports analyst-triggered Databricks loads in minutes.',
+      'Built ASP.NET Core Razor Pages operator tooling with ASP.NET Core Identity, CQRS, REST-oriented workflows, jQuery, and AdminLTE for production operations on the same estate.',
+      'Implemented GitLab CI/CD, Azure DevOps pipelines, and DACPAC database versioning with automated pre-deploy checks and schema drift reports so SQL Server changes ship with the same review path as application code.',
+      'Reduced routine developer production support time by 75% through root-cause analysis and fixes on live ingestion and extract paths.',
     ],
   },
   {
     company: 'Fidelis Security',
     role: 'Senior Software Engineer',
-    period: 'Apr 2018 to Jul 2020',
+    period: 'April 2018 - July 2020',
     industry: 'Enterprise security',
     audience: 'Enterprise customers on multiple operating systems',
     overview:
-      'Backend engineering on a cross-platform enterprise security product, including OS migration work, partner API integrations, and AWS asynchronous processing with Lambda, SNS, and SQS.',
+      'Backend engineer on a cross-platform enterprise security product. Work covered OS migration, partner REST API integrations, and event-driven AWS processing with Lambda, SNS, and SQS.',
     bullets: [
-      'Led backend work for an OS migration so the product ran reliably across customer environments that previously blocked upgrades, supporting retention and new acquisitions.',
-      'Repaired brittle cybersecurity partner integrations and cut recurring production defects by redesigning the integration layers.',
-      'Built Go tooling for simulation and alerts around failing partner connections, plus automated integration tests for those paths.',
-      'Moved partner and processing workloads that needed async fan-out onto AWS Lambda, SNS, and SQS, reducing coupling between partner calls and core processing.',
+      'Led backend development for an OS migration so the product ran reliably across customer environments that previously blocked upgrades, supporting retention and new acquisitions.',
+      'Redesigned brittle cybersecurity partner API integrations and reduced recurring production defects in those integration layers.',
+      'Built Go tooling for simulation, monitoring, and alerts around failing partner connections, plus automated integration tests for those paths.',
+      'Migrated partner and processing workloads that needed async fan-out to AWS Lambda, SNS, and SQS, reducing coupling between partner calls and core processing.',
     ],
   },
   {
     company: 'Afya',
     role: 'Senior Software Engineer',
-    period: 'May 2017 to Mar 2018',
+    period: 'May 2017 - March 2018',
     industry: 'Healthcare education',
     audience: 'Checkout and customer acquisition users',
     overview:
-      'Full-stack engineering on the checkout and customer acquisition platform for a major healthcare education company using TypeScript, Next.js, React, Node.js, MongoDB, and AWS.',
+      'Full-stack engineer on the checkout and customer acquisition platform for a major healthcare education company. Stack: TypeScript, Next.js, React, Node.js, MongoDB, REST APIs, and AWS.',
     bullets: [
-      'Built and operated end-to-end checkout and acquisition flows in TypeScript, Next.js, React, Node.js, MongoDB, and AWS, covering payments, contracts, and production support.',
-      'Led AWS modernization of the acquisition platform. Sales conversions rose 12% after launch.',
-      'Restructured the backend for more than 80% higher checkout throughput and shipped the cutover without downtime for live users.',
+      'Built and operated end-to-end checkout and acquisition flows in TypeScript, Next.js, React, Node.js, MongoDB, and AWS, covering payments, contracts, APIs, and production support.',
+      'Led AWS modernization of the acquisition platform and increased sales conversions by 12% after launch.',
+      'Restructured the backend for more than 80% higher checkout throughput and shipped a zero-downtime cutover for live users.',
       'Enabled bundle and combo purchases on the acquisition path without breaking existing checkout flows.',
-      'Owned day-to-day production support for checkout and acquisition while shipping feature work on the same codebase.',
+      'Owned day-to-day production support for checkout and acquisition while delivering feature work on the same codebase.',
     ],
   },
   {
     company: 'Levilo',
     role: 'Software Engineer',
-    period: 'Feb 2016 to Apr 2017',
+    period: 'February 2016 - April 2017',
     industry: 'SaaS',
     audience: 'Users migrating from desktop to web',
     overview:
-      'Full-stack and cloud engineering that moved a desktop product to a SaaS web platform for active clients.',
+      'Full-stack and cloud engineer who migrated a desktop product to a SaaS web platform for active clients.',
     bullets: [
-      'Re-architected a legacy desktop product as SaaS. Monthly customer churn fell from 18% to 3% after local stability failures were removed.',
+      'Re-architected a legacy desktop product as SaaS and reduced monthly customer churn from 18% to 3% by removing local stability failures.',
       'Designed and operated cloud infrastructure for more than 5,000 active client operations, including high-availability integrations with large consumer platforms.',
       'Delivered the web product path while keeping existing client operations running during the cutover.',
     ],
@@ -172,14 +180,14 @@ export const experience: ExperienceRole[] = [
   {
     company: 'Senac',
     role: 'Software Engineer',
-    period: 'Jan 2015 to Jan 2016',
+    period: 'January 2015 - January 2016',
     industry: 'Education',
     audience: 'Students managing invoices and payments',
     overview:
-      'Full-stack delivery of education payment tools and self-service invoice flows.',
+      'Full-stack engineer for education payment tools and self-service invoice flows.',
     bullets: [
       'Launched a multi-method student payment platform end to end.',
-      'Replaced manual invoice and payment support with self-service flows, cutting operational load on the support team.',
+      'Replaced manual invoice and payment support with self-service flows and cut operational load on the support team.',
       'Gave students a direct path to pay and manage invoices without waiting on manual back-office handling.',
     ],
   },
@@ -187,14 +195,14 @@ export const experience: ExperienceRole[] = [
 
 export const education = [
   {
-    institution: 'University of São Paulo (USP)',
-    degree: 'Bachelor of Information Systems',
-    period: 'Jan 2019 to Dec 2022',
+    institution: 'University of Sao Paulo (USP)',
+    degree: "Bachelor's degree in Information Systems",
+    period: 'January 2019 - December 2022',
   },
   {
     institution: 'Sorocaba College of Engineering (Facens)',
     degree: 'Computer Engineering',
-    period: 'Jan 2014 to Dec 2018',
+    period: 'January 2014 - December 2018',
   },
 ]
 
