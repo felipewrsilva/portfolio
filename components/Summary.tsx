@@ -1,6 +1,6 @@
 'use client'
 
-import { industries, profile, summary } from '@/data/cv'
+import { industries, summary } from '@/data/cv'
 import { Reveal } from '@/components/Reveal'
 
 export default function Summary() {
@@ -17,9 +17,6 @@ export default function Summary() {
               <p>{paragraph}</p>
             </Reveal>
           ))}
-          <Reveal delay={summary.length * 0.06}>
-            <p>{profile.availability}</p>
-          </Reveal>
         </div>
         <Reveal delay={0.12}>
           <ul className="mt-8 flex flex-wrap gap-x-4 gap-y-2">
