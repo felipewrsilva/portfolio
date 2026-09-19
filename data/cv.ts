@@ -3,12 +3,12 @@ export const profile = {
   title: 'Senior Software Engineer (.NET)',
   focus: ['C#', '.NET', 'SQL Server', 'Azure'] as const,
   tagline:
-    'I build and operate .NET and SQL\u00A0Server platforms that carry real production load. At IQVIA that means healthcare data paths that have to stay reliable under volume. Earlier roles covered checkout systems, enterprise security products, and SaaS migrations where I also owned frontend and delivery when the product needed it.',
+    'I build and operate .NET and SQL\u00A0Server platforms that carry real production load. That includes CI/CD, DACPAC database delivery, and frontend when the product needs one owner. At IQVIA the work is healthcare data under volume. Earlier roles covered checkout, enterprise security, and SaaS migrations.',
   company: 'IQVIA',
   yearsExperience: '10+ years',
   location: 'Madrid, Spain',
   availability:
-    'Based in Madrid and open to remote senior backend and platform roles. I cover full EU hours and overlap with US\u00A0Eastern until about 2\u00A0pm.',
+    'Based in Madrid. I cover full EU hours and overlap with US\u00A0Eastern until about 2\u00A0pm.',
   contactBrief:
     'Send the role, stack, and timezone you need covered. I reply within one business day.',
   phone: '+34 657 99 00 70',
@@ -21,8 +21,8 @@ export const profile = {
 }
 
 export const summary = [
-  'Senior Software Engineer and backend engineer based in Madrid with 10+ years in C#, .NET, ASP.NET Core, Entity Framework Core, SQL Server, T-SQL, REST APIs, and Azure. I design, build, and operate high-volume production systems and data platforms in healthcare, enterprise security, education, and SaaS.',
-  'At IQVIA I own healthcare extract and ingestion pipelines on .NET and SQL Server, including performance tuning, Azure Functions, Azure Blob, Databricks, CI/CD, and Azure DevOps. Earlier I led backend and API integration work at Fidelis Security on AWS Lambda, SNS, and SQS, rebuilt checkout and acquisition at Afya with TypeScript, React, Node.js, and MongoDB, migrated a desktop product to SaaS at Levilo, and shipped student payment systems at Senac. I stay backend-first and take frontend and DevOps when the product needs one owner across the stack.',
+  'Senior Software Engineer based in Madrid with 10+ years in C#, .NET, ASP.NET Core, Entity Framework Core, SQL Server, and Azure. I design, build, and operate high-volume production systems. I ship CI/CD and SQL Server DACPAC delivery with the same review path as application code, and I take frontend when the product needs one owner across the stack.',
+  'At IQVIA I own healthcare ingestion and extract platforms on .NET and SQL Server, including Azure Functions, Azure Blob, Databricks, GitLab CI/CD, Azure DevOps, and DACPAC. Earlier I led backend and API work at Fidelis Security on AWS, rebuilt checkout at Afya with TypeScript, React, and Node.js, migrated a desktop product to SaaS at Levilo, and shipped student payment systems at Senac.',
 ]
 
 export const industries = [
@@ -36,67 +36,52 @@ export const featuredCase = {
   client: 'IQVIA',
   industry: 'Healthcare technology',
   audience: 'Pharmaceutical and healthcare data customers',
-  title: 'Live healthcare extract pipeline on Azure\u00A0and\u00A0Databricks',
+  title: 'High-volume healthcare file ingestion on .NET and SQL\u00A0Server',
   problem:
-    'Ingestion was manual. An analyst waited until every source file was available, then downloaded the files, converted compressed extracts to CSV, and loaded the data through a Spark API into SQL\u00A0Server. Download and conversion failed often. An upstream layout change such as a new column could break Spark and force hand-edited CSVs before the load would run again.',
+    'A high-volume C#, .NET, Entity Framework Core, and SQL\u00A0Server ingestion path failed under load. SQL deadlocks and timeouts were common. The largest files took three hours or more, or never finished.',
   constraint:
-    'Analysts still needed to choose when data landed in tables. The new path had to keep files current without rewriting the surrounding platform.',
+    'Throughput had to rise without rewriting the surrounding platform or breaking downstream consumers that already depended on the same tables and contracts.',
   approach:
-    'I migrated the SSIS path to an always-on Go process that watches FTP in real time. New or replaced files update the local extracts, and superseded files for the same reporting period are dropped. The service converts to Parquet, lands the files on Azure\u00A0Blob, and leaves the analyst free to load Databricks tables when the moment is right, usually in a few minutes.',
+    'I stabilized the live C#, .NET, Entity Framework Core, and SQL\u00A0Server file path so concurrent large-file loads no longer collapsed into deadlocks, timeouts, and multi-hour or failed runs.',
   tradeOff:
-    'I kept the table load analyst-triggered instead of writing straight into production. Databricks replaced SQL\u00A0Server for this path because the same load was cheaper and faster there.',
+    'The fix stayed inside the existing ingestion estate rather than replacing it with a new pipeline and a full cutover.',
   result:
-    'Extracts that used to wait on a full manual batch now land in minutes. Files stay current as the source changes, and layout changes no longer take the Spark CSV path down.',
+    'Largest-file runtime dropped from three-plus hours or failure to under 20 minutes. The path now ingests dozens of very large files per hour under production volume.',
   outcomes: [
-    'Replaced SSIS and a manual CSV/Spark/SQL\u00A0Server path with a live Go pipeline',
-    'Detects FTP changes in real time and keeps local extracts in sync',
-    'Converts source files to Parquet and lands them on Azure\u00A0Blob',
-    'Analysts load Databricks tables in minutes instead of waiting on a full batch',
+    'Stabilized a production .NET and SQL\u00A0Server ingestion path under deadlock and timeout pressure',
+    'Cut largest-file runtime from 3+ hours or failure to under 20 minutes',
+    'Kept dozens of very large files per hour moving through the same estate',
+    'Avoided a platform rewrite while restoring reliable throughput',
   ],
 }
 
 export const technologies = {
-  Languages: ['C#', 'SQL', 'T-SQL', 'TypeScript', 'JavaScript', 'Go'],
+  Languages: ['C#', 'SQL', 'T-SQL', 'TypeScript', 'Go'],
   Backend: [
     '.NET',
     'ASP.NET Core',
-    'ASP.NET',
     'REST APIs',
-    'Web APIs',
-    'Razor Pages',
     'Entity Framework Core',
-    'Entity Framework',
+    'Razor Pages',
     'ASP.NET Core Identity',
     'CQRS',
     'Clean Architecture',
     'Node.js',
     'GitLab CI/CD',
     'Azure DevOps',
-    'CI/CD',
   ],
-  Frontend: [
-    'TypeScript',
-    'React',
-    'Next.js',
-    'JavaScript',
-    'HTML',
-    'CSS',
-    'jQuery',
-    'Bootstrap',
-    'AdminLTE',
-  ],
+  Frontend: ['TypeScript', 'React', 'Next.js', 'JavaScript'],
   'Cloud & data': [
     'SQL Server',
+    'DACPAC',
     'Azure',
     'Azure SQL',
     'Azure App Service',
     'Azure Functions',
     'Azure Blob Storage',
-    'DACPAC',
+    'Databricks',
     'SSIS',
     'ETL',
-    'Databricks',
-    'Parquet',
     'MongoDB',
     'AWS',
     'AWS Lambda',
@@ -152,7 +137,7 @@ export const experience: ExperienceRole[] = [
     role: 'Senior Software Engineer',
     period: 'May 2017 - March 2018',
     industry: 'Healthcare education',
-    audience: 'Checkout and customer acquisition users',
+    audience: 'Healthcare education checkout and acquisition',
     overview:
       'Full-stack engineer on the checkout and customer acquisition platform for a major healthcare education company. Stack: TypeScript, Next.js, React, Node.js, MongoDB, REST APIs, and AWS.',
     bullets: [
@@ -168,7 +153,7 @@ export const experience: ExperienceRole[] = [
     role: 'Software Engineer',
     period: 'February 2016 - April 2017',
     industry: 'SaaS',
-    audience: 'Users migrating from desktop to web',
+    audience: 'Desktop-to-SaaS migration clients',
     overview:
       'Full-stack and cloud engineer who migrated a desktop product to a SaaS web platform for active clients.',
     bullets: [
@@ -182,13 +167,12 @@ export const experience: ExperienceRole[] = [
     role: 'Software Engineer',
     period: 'January 2015 - January 2016',
     industry: 'Education',
-    audience: 'Students managing invoices and payments',
+    audience: 'Students paying invoices and tuition',
     overview:
-      'Full-stack engineer for education payment tools and self-service invoice flows.',
+      'Full-stack engineer for education payment tools and self-service invoice flows. Stack: ASP.NET Core and ASP.NET Core Identity.',
     bullets: [
-      'Launched a multi-method student payment platform end to end.',
+      'Launched a multi-method student payment platform end to end with ASP.NET Core Identity.',
       'Replaced manual invoice and payment support with self-service flows and cut operational load on the support team.',
-      'Gave students a direct path to pay and manage invoices without waiting on manual back-office handling.',
     ],
   },
 ]
