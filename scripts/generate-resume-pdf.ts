@@ -263,8 +263,8 @@ function buildDoc(): Doc {
   return {
     header: {
       name: profile.name.toUpperCase(),
-      title: profile.title,
-      focus: profile.focus.join(' | '),
+      title: `${profile.title}`,
+      focus: 'C# | .NET | ASP.NET Core | SQL Server | Azure | REST APIs | CI/CD',
       location: profile.location,
       phone: profile.phone,
       email: profile.email,
