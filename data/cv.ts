@@ -7,8 +7,6 @@ export const profile = {
   company: 'IQVIA',
   yearsExperience: '10+ years',
   location: 'Madrid, Spain',
-  availability:
-    'Based in Madrid. I cover full EU hours and overlap with US\u00A0Eastern until about 2\u00A0pm.',
   contactBrief:
     'Send the role, stack, and timezone you need covered. I reply within one business day.',
   phone: '+34 657 99 00 70',
