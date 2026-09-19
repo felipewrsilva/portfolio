@@ -14,7 +14,8 @@ export default function Technologies() {
           <h2 className="section-title mt-3">Core stack</h2>
           <p className="body-copy mt-4 max-w-prose">
             Languages and platforms I use to design, modernize, and operate
-            production systems.
+            production systems. CI/CD and DACPAC sit with the backend and data
+            work, not as side tools.
           </p>
         </Reveal>
         <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">

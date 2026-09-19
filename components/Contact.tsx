@@ -30,7 +30,7 @@ export default function Contact() {
               id="contact-heading"
               className="mt-3 text-balance font-display text-3xl tracking-tight md:text-4xl"
             >
-              Hiring for a senior backend role?
+              Hiring for a senior .NET role?
             </h2>
             <p className="mt-4 max-w-prose text-pretty text-base text-white/90">
               {profile.contactBrief}

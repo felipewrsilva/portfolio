@@ -12,10 +12,10 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
 endobj
 5 0 obj
-<< /Title (FELIPE SILVA - Senior Software Engineer \(.NET\)) /Author (FELIPE SILVA) /Subject (C# | .NET | ASP.NET Core | SQL Server | Azure | REST APIs | CI/CD) /Creator (data/cv.ts) /Producer (portfolio resume builder) >>
+<< /Title (FELIPE SILVA - Senior Software Engineer \(.NET\)) /Author (FELIPE SILVA) /Subject (C# | .NET | ASP.NET Core | SQL Server | Azure | CI/CD | DACPAC) /Creator (data/cv.ts) /Producer (portfolio resume builder) >>
 endobj
 6 0 obj
-<< /Length 7971 >>
+<< /Length 7747 >>
 stream
 BT 0.040 0.070 0.130 rg 1.10 Tc
 /F2 21 Tf
@@ -55,7 +55,7 @@ ET
 BT 0.290 0.330 0.400 rg 0 Tc
 /F1 9.5 Tf
 1 0 0 1 54.00 692.00 Tm
-(C# | .NET | ASP.NET Core | SQL Server | Azure | REST APIs | CI/CD) Tj
+(C# | .NET | ASP.NET Core | SQL Server | Azure | CI/CD | DACPAC) Tj
 ET
 0.170 0.290 0.210 rg 54 665.90 504 1.1 re f
 BT 0.170 0.290 0.210 rg 1.40 Tc
@@ -67,42 +67,42 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 54.00 626.00 Tm
-(Senior Software Engineer and backend engineer based in Madrid with 10+ years in C#, .NET, ASP.NET Core, Entity) Tj
+(Senior Software Engineer based in Madrid with 10+ years in C#, .NET, ASP.NET Core, Entity Framework Core, SQL) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 54.00 612.52 Tm
-(Framework Core, SQL Server, T-SQL, REST APIs, and Azure. I design, build, and operate high-volume production) Tj
+(Server, and Azure. I design, build, and operate high-volume production systems. I ship CI/CD and SQL Server DACPAC) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 54.00 599.03 Tm
-(systems and data platforms in healthcare, enterprise security, education, and SaaS.) Tj
+(delivery with the same review path as application code, and I take frontend when the product needs one owner across the) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 54.00 579.55 Tm
-(At IQVIA I own healthcare extract and ingestion pipelines on .NET and SQL Server, including performance tuning, Azure) Tj
+1 0 0 1 54.00 585.55 Tm
+(stack.) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 54.00 566.06 Tm
-(Functions, Azure Blob, Databricks, CI/CD, and Azure DevOps. Earlier I led backend and API integration work at Fidelis) Tj
+(At IQVIA I own healthcare ingestion and extract platforms on .NET and SQL Server, including Azure Functions, Azure) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 54.00 552.58 Tm
-(Security on AWS Lambda, SNS, and SQS, rebuilt checkout and acquisition at Afya with TypeScript, React, Node.js, and) Tj
+(Blob, Databricks, GitLab CI/CD, Azure DevOps, and DACPAC. Earlier I led backend and API work at Fidelis Security on) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 54.00 539.09 Tm
-(MongoDB, migrated a desktop product to SaaS at Levilo, and shipped student payment systems at Senac. I stay) Tj
+(AWS, rebuilt checkout at Afya with TypeScript, React, and Node.js, migrated a desktop product to SaaS at Levilo, and) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 54.00 525.61 Tm
-(backend-first and take frontend and DevOps when the product needs one owner across the stack.) Tj
+(shipped student payment systems at Senac.) Tj
 ET
 BT 0.170 0.290 0.210 rg 1.40 Tc
 /F2 8.5 Tf
@@ -118,7 +118,7 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 108.27 479.12 Tm
-(C#, SQL, T-SQL, TypeScript, JavaScript, Go) Tj
+(C#, SQL, T-SQL, TypeScript, Go) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F2 9.3 Tf
@@ -128,12 +128,12 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 97.93 463.63 Tm
-(.NET, ASP.NET Core, ASP.NET, REST APIs, Web APIs, Razor Pages, Entity Framework Core, Entity) Tj
+(.NET, ASP.NET Core, REST APIs, Entity Framework Core, Razor Pages, ASP.NET Core Identity, CQRS,) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 97.93 450.15 Tm
-(Framework, ASP.NET Core Identity, CQRS, Clean Architecture, Node.js, GitLab CI/CD, Azure DevOps, CI/CD) Tj
+(Clean Architecture, Node.js, GitLab CI/CD, Azure DevOps) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F2 9.3 Tf
@@ -143,7 +143,7 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 99.47 434.66 Tm
-(TypeScript, React, Next.js, JavaScript, HTML, CSS, jQuery, Bootstrap, AdminLTE) Tj
+(TypeScript, React, Next.js, JavaScript) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F2 9.3 Tf
@@ -153,12 +153,12 @@ ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 116.52 419.18 Tm
-(SQL Server, Azure, Azure SQL, Azure App Service, Azure Functions, Azure Blob Storage, DACPAC,) Tj
+(SQL Server, DACPAC, Azure, Azure SQL, Azure App Service, Azure Functions, Azure Blob Storage,) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 116.52 405.69 Tm
-(SSIS, ETL, Databricks, Parquet, MongoDB, AWS, AWS Lambda, AWS SNS, AWS SQS) Tj
+(Databricks, SSIS, ETL, MongoDB, AWS, AWS Lambda, AWS SNS, AWS SQS) Tj
 ET
 BT 0.170 0.290 0.210 rg 1.40 Tc
 /F2 8.5 Tf
@@ -315,7 +315,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Annots [<< /Type /Annot /Subtype /Link /Rect [491.60 718.60 558.00 728.60] /Border [0 0 0] /A << /S /URI /URI (tel:+34657990070) >> >> << /Type /Annot /Subtype /Link /Rect [459.62 707.20 558.00 717.20] /Border [0 0 0] /A << /S /URI /URI (mailto:contact@felipewrsilva.dev) >> >> << /Type /Annot /Subtype /Link /Rect [453.14 695.80 558.00 705.80] /Border [0 0 0] /A << /S /URI /URI (https://linkedin.com/in/felipewrsilva) >> >> << /Type /Annot /Subtype /Link /Rect [495.65 684.40 558.00 694.40] /Border [0 0 0] /A << /S /URI /URI (https://felipewrsilva.dev) >> >>] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>
 endobj
 8 0 obj
-<< /Length 7593 >>
+<< /Length 7491 >>
 stream
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9.3 Tf
@@ -390,7 +390,7 @@ ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9 Tf
 1 0 0 1 54.00 603.12 Tm
-(Senior Software Engineer | Healthcare education | Checkout and customer acquisition users) Tj
+(Senior Software Engineer | Healthcare education | Healthcare education checkout and acquisition) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
@@ -480,7 +480,7 @@ ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9 Tf
 1 0 0 1 54.00 419.77 Tm
-(Software Engineer | SaaS | Users migrating from desktop to web) Tj
+(Software Engineer | SaaS | Desktop-to-SaaS migration clients) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
@@ -540,88 +540,83 @@ ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9 Tf
 1 0 0 1 54.00 295.36 Tm
-(Software Engineer | Education | Students managing invoices and payments) Tj
+(Software Engineer | Education | Students paying invoices and tuition) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
 1 0 0 1 54.00 282.36 Tm
-(Full-stack engineer for education payment tools and self-service invoice flows.) Tj
+(Full-stack engineer for education payment tools and self-service invoice flows. Stack: ASP.NET Core and ASP.NET Core) Tj
+ET
+BT 0.040 0.070 0.130 rg 0 Tc
+/F1 9.3 Tf
+1 0 0 1 54.00 268.87 Tm
+(Identity.) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 55.50 264.87 Tm
+1 0 0 1 55.50 251.39 Tm
 (-) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 66.00 264.87 Tm
-(Launched a multi-method student payment platform end to end.) Tj
+1 0 0 1 66.00 251.39 Tm
+(Launched a multi-method student payment platform end to end with ASP.NET Core Identity.) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 55.50 248.89 Tm
+1 0 0 1 55.50 235.40 Tm
 (-) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 66.00 248.89 Tm
+1 0 0 1 66.00 235.40 Tm
 (Replaced manual invoice and payment support with self-service flows and cut operational load on the support team.) Tj
-ET
-BT 0.170 0.290 0.210 rg 0 Tc
-/F1 9.3 Tf
-1 0 0 1 55.50 232.90 Tm
-(-) Tj
-ET
-BT 0.040 0.070 0.130 rg 0 Tc
-/F1 9.3 Tf
-1 0 0 1 66.00 232.90 Tm
-(Gave students a direct path to pay and manage invoices without waiting on manual back-office handling.) Tj
 ET
 BT 0.170 0.290 0.210 rg 1.40 Tc
 /F2 8.5 Tf
-1 0 0 1 54.00 204.92 Tm
+1 0 0 1 54.00 207.42 Tm
 (EDUCATION) Tj
 ET
-0.780 0.800 0.830 rg 54 198.32 504 0.6 re f
+0.780 0.800 0.830 rg 54 200.82 504 0.6 re f
 BT 0.040 0.070 0.130 rg 0 Tc
 /F2 10.6 Tf
-1 0 0 1 54.00 183.92 Tm
+1 0 0 1 54.00 186.42 Tm
 (University of Sao Paulo \(USP\)) Tj
 ET
 BT 0.290 0.330 0.400 rg 0 Tc
 /F1 8.8 Tf
-1 0 0 1 434.25 183.92 Tm
+1 0 0 1 434.25 186.42 Tm
 (January 2019 - December 2022) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9 Tf
-1 0 0 1 54.00 170.92 Tm
+1 0 0 1 54.00 173.42 Tm
 (Bachelor's degree in Information Systems) Tj
 ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F2 10.6 Tf
-1 0 0 1 54.00 151.92 Tm
+1 0 0 1 54.00 154.42 Tm
 (Sorocaba College of Engineering \(Facens\)) Tj
 ET
 BT 0.290 0.330 0.400 rg 0 Tc
 /F1 8.8 Tf
-1 0 0 1 434.25 151.92 Tm
+1 0 0 1 434.25 154.42 Tm
 (January 2014 - December 2018) Tj
 ET
 BT 0.170 0.290 0.210 rg 0 Tc
 /F1 9 Tf
-1 0 0 1 54.00 138.92 Tm
+1 0 0 1 54.00 141.42 Tm
 (Computer Engineering) Tj
 ET
 BT 0.170 0.290 0.210 rg 1.40 Tc
 /F2 8.5 Tf
-1 0 0 1 54.00 113.92 Tm
+1 0 0 1 54.00 116.42 Tm
 (LANGUAGES) Tj
 ET
-0.780 0.800 0.830 rg 54 107.32 504 0.6 re f
+0.780 0.800 0.830 rg 54 109.82 504 0.6 re f
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.3 Tf
-1 0 0 1 54.00 92.92 Tm
+1 0 0 1 54.00 95.42 Tm
 (English: C2 working language, Portuguese: Native, Spanish: Conversational) Tj
 ET
 0.780 0.800 0.830 rg 54 48 504 0.5 re f
@@ -640,12 +635,12 @@ xref
 0000000135 00000 n 
 0000000232 00000 n 
 0000000334 00000 n 
-0000000572 00000 n 
-0000008595 00000 n 
-0000009295 00000 n 
-0000016940 00000 n 
+0000000569 00000 n 
+0000008368 00000 n 
+0000009068 00000 n 
+0000016611 00000 n 
 trailer
 << /Size 10 /Root 1 0 R /Info 5 0 R >>
 startxref
-17076
+16747
 %%EOF

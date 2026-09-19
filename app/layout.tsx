@@ -28,7 +28,7 @@ const mono = IBM_Plex_Mono({
 const title =
   'Felipe Silva | Senior Software Engineer (.NET) | Madrid, Remote EU/US'
 const description =
-  'Senior .NET backend engineer in Madrid with 10+ years in C#, ASP.NET Core, SQL Server, and Azure across healthcare data, security, and SaaS. Remote-ready for EU hours and US Eastern overlap.'
+  'Senior .NET engineer in Madrid with 10+ years in C#, ASP.NET Core, SQL Server, Azure, CI/CD, and DACPAC. Healthcare data, security, and SaaS. Covers EU hours with US Eastern overlap.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://felipewrsilva.dev'),
@@ -87,12 +87,12 @@ export default function RootLayout({
     knowsAbout: [
       '.NET',
       'ASP.NET Core',
-      'ASP.NET',
       'C#',
       'SQL Server',
+      'DACPAC',
       'Azure',
+      'CI/CD',
       'TypeScript',
-      'JavaScript',
       'React',
       'Next.js',
       'Data platform modernization',
