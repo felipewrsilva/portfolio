@@ -134,14 +134,18 @@ const WIDTHS = {
 const UNICODE_REPLACEMENTS: Record<string, string> = {
   '\u2192': '->',
   '\u2248': '~',
-  '\u00b7': '\u0095',
-  '\u2022': '\u0095',
-  '\u2014': '\u2013',
+  '\u00b7': '|',
+  '\u2022': '-',
+  '\u2012': '-',
+  '\u2013': '-',
+  '\u2014': '-',
+  '\u2212': '-',
   '\u201c': '"',
   '\u201d': '"',
   '\u2018': "'",
   '\u2019': "'",
   '\u00a0': ' ',
+  '\u0095': '|',
 }
 
 function normalizeText(text: string) {
@@ -247,7 +251,7 @@ function experienceEntry(role: ExperienceRole): Entry {
     heading: role.company,
     role: role.role,
     period: role.period,
-    meta: `${role.industry} \u0095 ${role.audience}`,
+    meta: `${role.industry} | ${role.audience}`,
     blocks: [
       paragraphBlock(role.overview),
       ...role.bullets.map((bullet) => bulletBlock(bullet)),
@@ -260,7 +264,7 @@ function buildDoc(): Doc {
     header: {
       name: profile.name.toUpperCase(),
       title: profile.title,
-      focus: profile.focus.join(' · '),
+      focus: profile.focus.join(' | '),
       location: profile.location,
       phone: profile.phone,
       email: profile.email,
@@ -274,9 +278,9 @@ function buildDoc(): Doc {
         entries: [],
       },
       {
-        title: 'CORE TECHNOLOGIES',
+        title: 'TECHNICAL SKILLS',
         blocks: Object.entries(technologies).map(([label, items]) =>
-          labelledBlock(label, items.join(' \u0095 ')),
+          labelledBlock(label, items.join(', ')),
         ),
         entries: [],
       },
@@ -301,8 +305,8 @@ function buildDoc(): Doc {
         blocks: [
           paragraphBlock(
             languages
-              .map((language) => `${language.name} · ${language.level}`)
-              .join('  \u0095  '),
+              .map((language) => `${language.name}: ${language.level}`)
+              .join(', '),
           ),
         ],
         entries: [],
@@ -454,7 +458,7 @@ function drawBullet(runs: TextRun[], { size = 9.3 } = {}) {
   lines.forEach((line, index) => {
     ensureSpace(size + 4)
     if (index === 0) {
-      drawText('\u0095', MARGIN_X + 1.5, cursorY, size, ACCENT)
+      drawText('-', MARGIN_X + 1.5, cursorY, size, ACCENT)
     }
     drawRuns(line, MARGIN_X + indent, cursorY, size, INK)
     cursorY -= size * 1.45
@@ -502,7 +506,7 @@ function drawEntry(entry: Entry) {
   }
   cursorY -= 13
 
-  const subtitle = [entry.role, entry.meta].filter(Boolean).join('  \u0095  ')
+  const subtitle = [entry.role, entry.meta].filter(Boolean).join(' | ')
   if (subtitle) {
     drawText(subtitle, MARGIN_X, cursorY, 9, ACCENT)
     cursorY -= 13
