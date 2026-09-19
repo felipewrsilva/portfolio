@@ -59,7 +59,7 @@ export default function Hero() {
         >
           <a
             href={profile.emailHref}
-            className="inline-flex items-center justify-center bg-white px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-ink transition hover:bg-accent-soft sm:justify-start"
+            className="cta-solid"
           >
             Email
           </a>
@@ -67,14 +67,14 @@ export default function Hero() {
             href={profile.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center border border-white/30 px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-white transition hover:border-accent-soft hover:text-accent-soft sm:justify-start"
+            className="cta-ghost"
           >
             LinkedIn
           </a>
           <a
             href={profile.resumePdf}
             download
-            className="inline-flex items-center justify-center border border-white/30 px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-white transition hover:border-accent-soft hover:text-accent-soft sm:justify-start"
+            className="cta-ghost"
           >
             Resume
           </a>

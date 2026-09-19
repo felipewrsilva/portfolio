@@ -140,7 +140,6 @@ export default function SiteHeader() {
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             onClick={() => setMenuOpen((open) => !open)}
           >
-            <span className="sr-only">{menuOpen ? 'Close' : 'Menu'}</span>
             <span className="relative block h-3.5 w-5" aria-hidden>
               <span
                 className={cn(

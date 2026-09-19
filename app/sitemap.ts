@@ -1,9 +1,11 @@
 import type { MetadataRoute } from 'next'
 
+import { profile } from '@/data/cv'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://felipewrsilva.dev',
+      url: profile.siteUrl,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,

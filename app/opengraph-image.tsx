@@ -1,7 +1,9 @@
 import { ImageResponse } from 'next/og'
 
+import { profile } from '@/data/cv'
+
 export const runtime = 'edge'
-export const alt = 'Felipe Silva | Senior Software Engineer'
+export const alt = `${profile.name} | Senior Software Engineer`
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -45,7 +47,7 @@ export default function OpenGraphImage() {
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
           <div style={{ fontSize: 84, lineHeight: 1.05, letterSpacing: -2 }}>
-            Felipe Silva
+            {profile.name}
           </div>
           <div
             style={{
@@ -64,7 +66,7 @@ export default function OpenGraphImage() {
               letterSpacing: '0.08em',
             }}
           >
-            .NET · SQL Server · Azure
+            {profile.focus.join(' · ')}
           </div>
         </div>
       </div>

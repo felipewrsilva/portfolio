@@ -10,17 +10,11 @@
   --accent: #2c4a36;
   --accent-soft: #c5d6cb;
   --line: rgba(11, 18, 32, 0.18);
-  --hero-overlay: linear-gradient(
-    120deg,
-    rgba(11, 18, 32, 0.92) 0%,
-    rgba(11, 18, 32, 0.78) 48%,
-    rgba(20, 40, 28, 0.72) 100%
-  );
 }
 
 @layer base {
   * {
-    @apply scroll-smooth border-[color:var(--line)];
+    @apply border-[color:var(--line)];
   }
 
   html {
@@ -63,12 +57,24 @@
     @apply font-mono text-xs font-medium uppercase tracking-[0.22em] text-[color:var(--accent)];
   }
 
+  .section-label-inverse {
+    @apply font-mono text-xs font-medium uppercase tracking-[0.22em] text-accent-soft;
+  }
+
   .section-title {
     @apply text-balance font-display text-3xl tracking-tight text-[color:var(--ink)] md:text-4xl;
   }
 
   .body-copy {
     @apply text-pretty text-base leading-relaxed text-[color:var(--ink-muted)] md:text-lg;
+  }
+
+  .cta-solid {
+    @apply inline-flex items-center justify-center bg-white px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-ink transition hover:bg-accent-soft sm:justify-start;
+  }
+
+  .cta-ghost {
+    @apply inline-flex items-center justify-center border border-white/30 px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-white transition hover:border-accent-soft hover:text-accent-soft sm:justify-start;
   }
 
   .rise {

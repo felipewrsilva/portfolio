@@ -1,9 +1,8 @@
 /**
- * Updates GitHub profile + portfolio repo description to match the current CV.
+ * Updates GitHub profile + portfolio repo description to match docs/PUBLIC-IDENTITY.md.
  * Requires: gh auth login (scopes: user, public_repo or repo)
  *
  * Usage: node scripts/update-github-profile.mjs
- *    or: gh api ... (this script shells out to gh)
  */
 import { spawnSync } from 'node:child_process'
 
@@ -11,10 +10,9 @@ const GH = process.env.GH_PATH || 'C:\\Program Files\\GitHub CLI\\gh.exe'
 
 const profile = {
   name: 'Felipe Silva',
-  bio: 'Senior Software Engineer. .NET, SQL Server, AWS. Based in Madrid.',
+  bio: 'Senior Software Engineer. .NET, SQL Server, Azure. Based in Madrid.',
   blog: 'https://felipewrsilva.dev',
   location: 'Madrid, Spain',
-  hireable: true,
 }
 
 const portfolioDescription =

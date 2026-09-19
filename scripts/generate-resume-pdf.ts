@@ -264,12 +264,12 @@ function buildDoc(): Doc {
     header: {
       name: profile.name.toUpperCase(),
       title: `${profile.title}`,
-      focus: 'C# | .NET | ASP.NET Core | SQL Server | Azure | CI/CD | DACPAC',
+      focus: profile.resumeFocus,
       location: profile.location,
       phone: profile.phone,
       email: profile.email,
-      linkedin: 'linkedin.com/in/felipewrsilva',
-      website: 'felipewrsilva.dev',
+      linkedin: profile.linkedin.replace(/^https?:\/\//, ''),
+      website: profile.siteUrl.replace(/^https?:\/\//, ''),
     },
     sections: [
       {
@@ -320,7 +320,6 @@ const links: Array<Array<{ rect: number[]; uri: string }>> = []
 let pageOps: string[] = []
 let pageLinks: Array<{ rect: number[]; uri: string }> = []
 let cursorY = 0
-let pageNumber = 0
 
 function rgb(color: number[]) {
   return color.map((value) => value.toFixed(3)).join(' ')
@@ -388,7 +387,6 @@ function startPage() {
   }
   pageOps = []
   pageLinks = []
-  pageNumber += 1
   cursorY = PAGE_HEIGHT - MARGIN_TOP
 }
 

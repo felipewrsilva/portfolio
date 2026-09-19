@@ -2,11 +2,17 @@ export const profile = {
   name: 'Felipe Silva',
   title: 'Senior Software Engineer (.NET)',
   focus: ['C#', '.NET', 'SQL Server', 'Azure'] as const,
+  resumeFocus:
+    'C# | .NET | ASP.NET Core | SQL Server | Azure | CI/CD | DACPAC',
   tagline:
     'I build and operate .NET and SQL\u00A0Server platforms that carry real production load. That includes CI/CD, DACPAC database delivery, and frontend when the product needs one owner. At IQVIA the work is healthcare data under volume. Earlier roles covered checkout, enterprise security, and SaaS migrations.',
   company: 'IQVIA',
-  yearsExperience: '10+ years',
   location: 'Madrid, Spain',
+  siteUrl: 'https://felipewrsilva.dev',
+  seoTitle:
+    'Felipe Silva | Senior Software Engineer (.NET) | Madrid, Remote EU/US',
+  seoDescription:
+    'Senior .NET engineer in Madrid with 10+ years in C#, ASP.NET Core, SQL Server, Azure, CI/CD, and DACPAC. Healthcare data, security, and SaaS. Covers EU hours with US Eastern overlap.',
   contactBrief:
     'Send the role, stack, and timezone you need covered. I reply within one business day.',
   phone: '+34 657 99 00 70',
@@ -14,7 +20,7 @@ export const profile = {
   email: 'contact@felipewrsilva.dev',
   emailHref: 'mailto:contact@felipewrsilva.dev',
   linkedin: 'https://linkedin.com/in/felipewrsilva',
-  github: 'https://github.com/felipewrsilva/',
+  github: 'https://github.com/felipewrsilva',
   resumePdf: '/felipe-silva-resume.pdf',
 }
 
@@ -33,7 +39,6 @@ export const industries = [
 export const featuredCase = {
   client: 'IQVIA',
   industry: 'Healthcare technology',
-  audience: 'Pharmaceutical and healthcare data customers',
   title: 'High-volume healthcare file ingestion on .NET and SQL\u00A0Server',
   problem:
     'A high-volume C#, .NET, Entity Framework Core, and SQL\u00A0Server ingestion path failed under load. SQL deadlocks and timeouts were common. The largest files took three hours or more, or never finished.',
