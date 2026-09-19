@@ -2,13 +2,14 @@
 
 import { profile } from '@/data/cv'
 import { Reveal } from '@/components/Reveal'
+import { displayHost } from '@/lib/utils'
 
 const links = [
   { label: 'Email', value: profile.email, href: profile.emailHref },
   { label: 'Phone', value: profile.phone, href: profile.phoneHref },
   {
     label: 'LinkedIn',
-    value: 'linkedin.com/in/felipewrsilva',
+    value: displayHost(profile.linkedin),
     href: profile.linkedin,
   },
 ]
@@ -23,9 +24,7 @@ export default function Contact() {
       >
         <div className="content-width">
           <Reveal>
-            <p className="font-mono text-xs font-medium uppercase tracking-[0.22em] text-accent-soft">
-              Contact
-            </p>
+            <p className="section-label-inverse">Contact</p>
             <h2
               id="contact-heading"
               className="mt-3 text-balance font-display text-3xl tracking-tight md:text-4xl"
@@ -36,25 +35,18 @@ export default function Contact() {
               {profile.contactBrief}
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <a
-                href={profile.emailHref}
-                className="inline-flex items-center justify-center bg-white px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-ink transition hover:bg-accent-soft sm:justify-start"
-              >
+              <a href={profile.emailHref} className="cta-solid">
                 Email
               </a>
               <a
                 href={profile.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center border border-white/30 px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-white transition hover:border-accent-soft hover:text-accent-soft sm:justify-start"
+                className="cta-ghost"
               >
                 LinkedIn
               </a>
-              <a
-                href={profile.resumePdf}
-                download
-                className="inline-flex items-center justify-center border border-white/30 px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-white transition hover:border-accent-soft hover:text-accent-soft sm:justify-start"
-              >
+              <a href={profile.resumePdf} download className="cta-ghost">
                 Download resume
               </a>
             </div>

@@ -8,19 +8,15 @@ import {
   type ReactNode,
 } from 'react'
 
+import { cn } from '@/lib/utils'
+
 type RevealProps = {
   children: ReactNode
-  className?: string
   delay?: number
   as?: 'div' | 'li'
 }
 
-export function Reveal({
-  children,
-  className,
-  delay = 0,
-  as = 'div',
-}: RevealProps) {
+export function Reveal({ children, delay = 0, as = 'div' }: RevealProps) {
   const ref = useRef<HTMLElement | null>(null)
   // SSR and first paint stay fully visible; animation arms only after JS
   // confirms the element is below the fold.
@@ -56,19 +52,14 @@ export function Reveal({
     return () => observer.disconnect()
   }, [])
 
-  const classes = [
-    className,
-    armed && !visible ? 'reveal-pending' : 'reveal-ready',
-    armed && visible ? 'rise' : null,
-  ]
-    .filter(Boolean)
-    .join(' ')
-
   return createElement(
     as,
     {
       ref,
-      className: classes,
+      className: cn(
+        armed && !visible ? 'reveal-pending' : 'reveal-ready',
+        armed && visible && 'rise',
+      ),
       style: armed && visible ? { animationDelay: `${delay}s` } : undefined,
     },
     children,

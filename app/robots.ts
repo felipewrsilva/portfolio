@@ -1,12 +1,14 @@
 import type { MetadataRoute } from 'next'
 
+import { profile } from '@/data/cv'
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://felipewrsilva.dev/sitemap.xml',
-    host: 'https://felipewrsilva.dev',
+    sitemap: `${profile.siteUrl}/sitemap.xml`,
+    host: profile.siteUrl,
   }
 }

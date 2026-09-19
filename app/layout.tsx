@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import { IBM_Plex_Mono, IBM_Plex_Sans, Source_Serif_4 } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 
+import { languages, profile } from '@/data/cv'
+
 import './globals.css'
 
 const display = Source_Serif_4({
@@ -25,28 +27,24 @@ const mono = IBM_Plex_Mono({
   display: 'swap',
 })
 
-const title =
-  'Felipe Silva | Senior Software Engineer (.NET) | Madrid, Remote EU/US'
-const description =
-  'Senior .NET engineer in Madrid with 10+ years in C#, ASP.NET Core, SQL Server, Azure, CI/CD, and DACPAC. Healthcare data, security, and SaaS. Covers EU hours with US Eastern overlap.'
+const { seoTitle: title, seoDescription: description, siteUrl } = profile
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://felipewrsilva.dev'),
+  metadataBase: new URL(siteUrl),
   title,
   description,
   alternates: {
-    canonical: 'https://felipewrsilva.dev',
+    canonical: siteUrl,
   },
   icons: {
     icon: [{ url: '/fs-logo.svg', type: 'image/svg+xml' }],
     shortcut: '/fs-logo.svg',
-    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
   openGraph: {
     title,
     description,
-    url: 'https://felipewrsilva.dev',
-    siteName: 'Felipe Silva',
+    url: siteUrl,
+    siteName: profile.name,
     locale: 'en_US',
     alternateLocale: ['en_GB'],
     type: 'website',
@@ -66,10 +64,10 @@ export default function RootLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Felipe Silva',
-    jobTitle: 'Senior Software Engineer (.NET)',
-    url: 'https://felipewrsilva.dev',
-    email: 'contact@felipewrsilva.dev',
+    name: profile.name,
+    jobTitle: profile.title,
+    url: siteUrl,
+    email: profile.email,
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Madrid',
@@ -77,13 +75,10 @@ export default function RootLayout({
     },
     worksFor: {
       '@type': 'Organization',
-      name: 'IQVIA',
+      name: profile.company,
     },
-    knowsLanguage: ['English', 'Portuguese', 'Spanish'],
-    sameAs: [
-      'https://linkedin.com/in/felipewrsilva',
-      'https://github.com/felipewrsilva',
-    ],
+    knowsLanguage: languages.map((language) => language.name),
+    sameAs: [profile.linkedin, profile.github],
     knowsAbout: [
       '.NET',
       'ASP.NET Core',

@@ -16,7 +16,7 @@ export default function FeaturedCase() {
     <section id="featured" className="section-pad bg-ink text-white">
       <div className="content-width">
         <Reveal>
-          <p className="font-mono text-xs font-medium uppercase tracking-[0.22em] text-accent-soft">
+          <p className="section-label-inverse">
             Featured work
           </p>
           <p className="mt-4 font-mono text-xs uppercase tracking-[0.16em] text-white/80">
