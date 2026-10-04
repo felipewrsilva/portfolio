@@ -7,6 +7,7 @@ import {
   experience as baseExperience,
   languages as baseLanguages,
   profile as baseProfile,
+  resumeSkills as baseResumeSkills,
   summary as baseSummary,
   technologies as baseTechnologies,
   type ExperienceRole,
@@ -23,10 +24,13 @@ const outPath = resolve(
   cliArg('--out') || join(__dirname, '..', 'public', 'felipe-silva-resume.pdf'),
 )
 
+type SkillGroups = Record<string, readonly string[]>
+
 type CvData = {
   profile: typeof baseProfile
   summary: string[]
   technologies: typeof baseTechnologies
+  resumeSkills: SkillGroups
   experience: ExperienceRole[]
   education: typeof baseEducation
   languages: typeof baseLanguages
@@ -39,17 +43,21 @@ function loadCvData(): CvData {
       profile: baseProfile,
       summary: baseSummary,
       technologies: baseTechnologies,
+      resumeSkills: baseResumeSkills,
       experience: baseExperience,
       education: baseEducation,
       languages: baseLanguages,
     }
   }
 
-  const parsed = JSON.parse(readFileSync(resolve(dataPath), 'utf8')) as CvData
+  const parsed = JSON.parse(
+    readFileSync(resolve(dataPath), 'utf8'),
+  ) as Partial<CvData>
   return {
     profile: { ...baseProfile, ...parsed.profile },
     summary: parsed.summary ?? baseSummary,
     technologies: parsed.technologies ?? baseTechnologies,
+    resumeSkills: parsed.resumeSkills ?? baseResumeSkills,
     experience: parsed.experience ?? baseExperience,
     education: parsed.education ?? baseEducation,
     languages: parsed.languages ?? baseLanguages,
@@ -59,7 +67,7 @@ function loadCvData(): CvData {
 const {
   profile,
   summary,
-  technologies,
+  resumeSkills,
   experience,
   education,
   languages,
@@ -67,10 +75,13 @@ const {
 
 const PAGE_WIDTH = 612
 const PAGE_HEIGHT = 792
-const MARGIN_X = 54
-const MARGIN_TOP = 52
-const MARGIN_BOTTOM = 56
+const MARGIN_X = 58
+const MARGIN_TOP = 46
+const MARGIN_BOTTOM = 48
 const CONTENT_WIDTH = PAGE_WIDTH - MARGIN_X * 2
+const BODY_SIZE = 9.5
+const BODY_LEADING = 14.6
+const SKILL_LABEL_GAP = 16
 
 const INK: [number, number, number] = [0.04, 0.07, 0.13]
 const MUTED: [number, number, number] = [0.29, 0.33, 0.4]
@@ -251,11 +262,8 @@ function experienceEntry(role: ExperienceRole): Entry {
     heading: role.company,
     role: role.role,
     period: role.period,
-    meta: `${role.industry} | ${role.audience}`,
-    blocks: [
-      paragraphBlock(role.overview),
-      ...role.bullets.map((bullet) => bulletBlock(bullet)),
-    ],
+    meta: role.industry,
+    blocks: role.bullets.map((bullet) => bulletBlock(bullet)),
   }
 }
 
@@ -279,7 +287,7 @@ function buildDoc(): Doc {
       },
       {
         title: 'TECHNICAL SKILLS',
-        blocks: Object.entries(technologies).map(([label, items]) =>
+        blocks: Object.entries(resumeSkills).map(([label, items]) =>
           labelledBlock(label, items.join(', ')),
         ),
         entries: [],
@@ -305,8 +313,8 @@ function buildDoc(): Doc {
         blocks: [
           paragraphBlock(
             languages
-              .map((language) => `${language.name}: ${language.level}`)
-              .join(', '),
+              .map((language) => `${language.name} (${language.level})`)
+              .join('  |  '),
           ),
         ],
         entries: [],
@@ -395,12 +403,21 @@ function ensureSpace(height: number) {
 }
 
 function drawHeader(header: Doc['header']) {
-  drawText(header.name, MARGIN_X, cursorY - 18, 21, INK, {
+  drawText(header.name, MARGIN_X, cursorY - 16, 20, INK, {
     bold: true,
-    tracking: 1.1,
+    tracking: 0.9,
   })
+  cursorY -= 34
 
-  const contactLines = [
+  drawText(header.title, MARGIN_X, cursorY, 11.5, ACCENT, { bold: true })
+  cursorY -= 16
+
+  if (header.focus) {
+    drawText(header.focus, MARGIN_X, cursorY, 9.4, MUTED)
+    cursorY -= 16
+  }
+
+  const contactItems = [
     { text: header.location },
     { text: header.phone, uri: `tel:${header.phone.replace(/[^\d+]/g, '')}` },
     { text: header.email, uri: `mailto:${header.email}` },
@@ -408,112 +425,133 @@ function drawHeader(header: Doc['header']) {
     { text: header.website, uri: `https://${header.website}` },
   ].filter((item) => item.text)
 
-  let contactY = cursorY - 8
-  contactLines.forEach((item) => {
-    const width = measure(item.text, 8.5, false)
-    const x = MARGIN_X + CONTENT_WIDTH - width
-    drawText(item.text, x, contactY, 8.5, item.uri ? ACCENT : MUTED)
-    if (item.uri) addLink(x, contactY - 2, width, 10, item.uri)
-    contactY -= 11.4
+  const sep = '  |  '
+  const size = 8.6
+  let x = MARGIN_X
+  contactItems.forEach((item, index) => {
+    if (index > 0) {
+      drawText(sep, x, cursorY, size, MUTED)
+      x += measure(sep, size, false)
+    }
+    const width = measure(item.text, size, false)
+    if (x + width > MARGIN_X + CONTENT_WIDTH && x > MARGIN_X) {
+      cursorY -= 12
+      x = MARGIN_X
+    }
+    drawText(item.text, x, cursorY, size, item.uri ? ACCENT : MUTED)
+    if (item.uri) addLink(x, cursorY - 2, width, 11, item.uri)
+    x += width
   })
 
-  let y = cursorY - 34
-  drawText(header.title, MARGIN_X, y, 12, ACCENT, { bold: true })
-  if (header.focus) {
-    y -= 14
-    drawText(header.focus, MARGIN_X, y, 9.5, MUTED)
-  }
-
-  cursorY = Math.min(y, contactY + 6) - 14
-  drawRule(cursorY, RULE_STRONG, 1.1)
-  cursorY -= 20
+  cursorY -= 14
+  drawRule(cursorY, RULE_STRONG, 1)
+  cursorY -= 22
 }
 
 function drawSectionTitle(title: string) {
-  ensureSpace(44)
-  drawText(title, MARGIN_X, cursorY, 8.5, ACCENT, { bold: true, tracking: 1.4 })
-  cursorY -= 6
-  drawRule(cursorY, RULE_SOFT, 0.6)
-  cursorY -= 15
+  ensureSpace(36)
+  drawText(title, MARGIN_X, cursorY, 8.4, ACCENT, { bold: true, tracking: 1.5 })
+  cursorY -= 7
+  drawRule(cursorY, RULE_SOFT, 0.55)
+  cursorY -= 16
 }
 
 function drawParagraph(
   runs: TextRun[],
-  { size = 9.3, color = INK, indent = 0, gap = 6 } = {},
+  { size = BODY_SIZE, color = INK, indent = 0, gap = 8 } = {},
 ) {
   const lines = wrapRuns(runs, CONTENT_WIDTH - indent, size)
   lines.forEach((line) => {
-    ensureSpace(size + 4)
+    ensureSpace(BODY_LEADING + 2)
     drawRuns(line, MARGIN_X + indent, cursorY, size, color)
-    cursorY -= size * 1.45
+    cursorY -= BODY_LEADING
   })
   cursorY -= gap
 }
 
-function drawBullet(runs: TextRun[], { size = 9.3 } = {}) {
-  const indent = 12
+function drawBullet(runs: TextRun[], { size = BODY_SIZE } = {}) {
+  const indent = 14
   const lines = wrapRuns(runs, CONTENT_WIDTH - indent, size)
   lines.forEach((line, index) => {
-    ensureSpace(size + 4)
+    ensureSpace(BODY_LEADING + 2)
     if (index === 0) {
-      drawText('-', MARGIN_X + 1.5, cursorY, size, ACCENT)
+      drawText('-', MARGIN_X + 1, cursorY, size, ACCENT)
     }
     drawRuns(line, MARGIN_X + indent, cursorY, size, INK)
-    cursorY -= size * 1.45
+    cursorY -= BODY_LEADING
   })
-  cursorY -= 2.5
+  cursorY -= 3.5
+}
+
+function skillLabelColumnWidth() {
+  let max = 0
+  Object.keys(resumeSkills).forEach((label) => {
+    max = Math.max(max, measure(label, BODY_SIZE, true))
+  })
+  return max + SKILL_LABEL_GAP
 }
 
 function drawLabelled(label: string, runs: TextRun[]) {
-  const size = 9.3
-  const labelText = `${label}  `
-  const labelWidth = measure(labelText, size, true)
+  const size = BODY_SIZE
+  const labelWidth = skillLabelColumnWidth()
   const lines = wrapRuns(runs, CONTENT_WIDTH - labelWidth, size)
   lines.forEach((line, index) => {
-    ensureSpace(size + 4)
-    if (index === 0)
-      drawText(labelText, MARGIN_X, cursorY, size, ACCENT, { bold: true })
+    ensureSpace(BODY_LEADING + 2)
+    if (index === 0) {
+      drawText(label, MARGIN_X, cursorY, size, ACCENT, { bold: true })
+    }
     drawRuns(line, MARGIN_X + labelWidth, cursorY, size, INK)
-    cursorY -= size * 1.45
+    cursorY -= BODY_LEADING
   })
-  cursorY -= 2
+  cursorY -= 4
 }
 
-function entryLeadHeight(entry: Entry) {
-  let height = 14
-  if (entry.role || entry.meta) height += 13
-  const first = entry.blocks[0]
-  if (first) height += 9.3 * 1.45
-  return height
+function entryHeight(entry: Entry) {
+  let height = 15
+  if (entry.role || entry.meta) height += 15
+  entry.blocks.forEach((block) => {
+    if (block.type === 'bullet') {
+      const lines = wrapRuns(block.runs, CONTENT_WIDTH - 14, BODY_SIZE)
+      height += lines.length * BODY_LEADING + 3.5
+    } else if (block.type === 'labelled') {
+      const labelWidth = skillLabelColumnWidth()
+      const lines = wrapRuns(block.runs, CONTENT_WIDTH - labelWidth, BODY_SIZE)
+      height += lines.length * BODY_LEADING + 4
+    } else {
+      const lines = wrapRuns(block.runs, CONTENT_WIDTH, BODY_SIZE)
+      height += lines.length * BODY_LEADING + 6
+    }
+  })
+  return height + 6
 }
 
 function drawEntry(entry: Entry) {
-  ensureSpace(entryLeadHeight(entry))
+  ensureSpace(entryHeight(entry))
 
   const periodText = entry.period || ''
-  const periodWidth = periodText ? measure(periodText, 8.8, false) : 0
-  drawText(entry.heading, MARGIN_X, cursorY, 10.6, INK, { bold: true })
+  const periodWidth = periodText ? measure(periodText, 9, false) : 0
+  drawText(entry.heading, MARGIN_X, cursorY, 11, INK, { bold: true })
   if (periodText) {
     drawText(
       periodText,
       MARGIN_X + CONTENT_WIDTH - periodWidth,
       cursorY,
-      8.8,
+      9,
       MUTED,
     )
   }
-  cursorY -= 13
+  cursorY -= 15
 
-  const subtitle = [entry.role, entry.meta].filter(Boolean).join(' | ')
+  const subtitle = [entry.role, entry.meta].filter(Boolean).join('  |  ')
   if (subtitle) {
-    drawText(subtitle, MARGIN_X, cursorY, 9, ACCENT)
-    cursorY -= 13
+    drawText(subtitle, MARGIN_X, cursorY, 9.2, ACCENT)
+    cursorY -= 15
   }
 
   entry.blocks.forEach((block) => {
     if (block.type === 'bullet') drawBullet(block.runs)
     else if (block.type === 'labelled') drawLabelled(block.label, block.runs)
-    else drawParagraph(block.runs, { gap: 4 })
+    else drawParagraph(block.runs, { gap: 6 })
   })
 
   cursorY -= 6
@@ -532,7 +570,7 @@ doc.sections.forEach((section) => {
     else drawParagraph(block.runs)
   })
   section.entries.forEach((entry) => drawEntry(entry))
-  cursorY -= 6
+  cursorY -= 4
 })
 
 ops.push(pageOps)

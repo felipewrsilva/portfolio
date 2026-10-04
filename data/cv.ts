@@ -25,9 +25,31 @@ export const profile = {
 }
 
 export const summary = [
-  'Senior Software Engineer based in Madrid with 10+ years in C#, .NET, ASP.NET Core, Entity Framework Core, SQL Server, and REST APIs. I design, build, and operate high-volume production systems on Azure, with GitLab CI/CD and Azure DevOps. Current UI work is ASP.NET Core Razor Pages and operator tooling. TypeScript, React, and Next.js were the checkout stack at Afya.',
-  'At IQVIA I deliver healthcare ingestion and extract platforms on .NET and SQL Server, including REST APIs, Azure Functions, Azure App Service, Azure Blob Storage, Databricks, GitLab CI/CD, and Azure DevOps. Earlier I led backend and partner REST APIs at Fidelis Security on event-driven AWS, rebuilt checkout at Afya with TypeScript, React, and Node.js, migrated a desktop product to SaaS at Levilo, and shipped student payment systems at Senac.',
+  'Senior .NET engineer in Madrid with 10+ years in C#, ASP.NET Core, SQL Server, and REST APIs. I build and operate production systems on Azure, with CI/CD and operator UIs in Razor Pages. Earlier work covers event-driven APIs on AWS and React checkout at Afya.',
 ]
+
+export const resumeSkills = {
+  Languages: ['C#', 'SQL', 'T-SQL', 'TypeScript', 'Go'],
+  Backend: [
+    '.NET',
+    'ASP.NET Core',
+    'Web API',
+    'EF Core',
+    'REST',
+    'Razor Pages',
+    'Identity',
+    'CQRS',
+    'Docker',
+  ],
+  Frontend: ['TypeScript', 'React', 'Next.js'],
+  Cloud: [
+    'Azure (App Service, Functions, Blob, SQL)',
+    'SQL Server',
+    'Databricks',
+    'AWS (Lambda, SNS, SQS)',
+  ],
+  'CI/CD': ['GitLab CI/CD', 'Azure DevOps'],
+} as const
 
 export const industries = [
   'Healthcare',
@@ -114,11 +136,9 @@ export const experience: ExperienceRole[] = [
     overview:
       'Backend and data platform engineer for high-volume healthcare and pharmaceutical data used across multiple markets. Stack: C#, .NET, ASP.NET Core Web API, Razor Pages, Entity Framework Core, ASP.NET Core Identity, SQL Server, T-SQL, Clean Architecture, CQRS, REST APIs, Azure App Service, Azure Functions, and CI/CD.',
     bullets: [
-      'Optimized a high-volume C#, .NET, Entity Framework Core, and SQL Server file ingestion path that failed under SQL deadlocks, timeouts, and multi-hour runs. Reduced largest-file runtime from 3+ hours or failure to under 20 minutes while ingesting dozens of very large files per hour.',
-      'Built ASP.NET Core REST APIs and Razor Pages operator tooling with ASP.NET Core Identity, CQRS, jQuery, and AdminLTE for production operations on the same estate.',
-      'Designed and implemented a live ETL extract pipeline in Go that replaced SSIS and a manual CSV, Spark, and SQL Server path. Watches FTP, lands Parquet on Azure Blob Storage through Azure Functions, and supports analyst-triggered Databricks loads in minutes.',
-      'Implemented GitLab CI/CD and Azure DevOps pipelines for ASP.NET Core services and SQL Server schema changes, with automated pre-deploy checks so database updates follow the same review path as application code.',
-      'Reduced routine developer production support time by 75% through root-cause analysis and fixes on live ingestion and extract paths.',
+      'Cut largest-file runtime from 3+ hours or failure to under 20 minutes on a C#, .NET, EF Core, and SQL Server ingestion path under deadlock and timeout pressure.',
+      'Built ASP.NET Core REST APIs and Razor Pages operator tooling with Identity, CQRS, jQuery, and AdminLTE.',
+      'Replaced SSIS and a manual CSV/Spark path with a live extract pipeline in Go, Azure Functions, Blob Storage, and Databricks. Cut routine production support time by 75%.',
     ],
   },
   {
@@ -130,10 +150,8 @@ export const experience: ExperienceRole[] = [
     overview:
       'Backend engineer on a cross-platform enterprise security product. Work covered OS migration, partner REST API integrations, and event-driven AWS processing with Lambda, SNS, and SQS.',
     bullets: [
-      'Led backend development for an OS migration so the product ran reliably across customer environments that previously blocked upgrades, supporting retention and new acquisitions.',
-      'Designed and operated partner REST APIs, then redesigned brittle cybersecurity integrations and reduced recurring production defects in those layers.',
-      'Built Go tooling for simulation, monitoring, and alerts around failing partner connections, plus automated integration tests for those paths.',
-      'Migrated partner and processing workloads that needed async fan-out to AWS Lambda, SNS, and SQS, reducing coupling between partner calls and core processing.',
+      'Led the backend OS migration so the product ran in customer environments that previously blocked upgrades.',
+      'Built partner REST APIs and moved async work to AWS Lambda, SNS, and SQS, cutting recurring integration defects.',
     ],
   },
   {
@@ -145,11 +163,8 @@ export const experience: ExperienceRole[] = [
     overview:
       'Full-stack engineer on the checkout and customer acquisition platform for a major healthcare education company (May 2017 to March 2018). Stack: TypeScript, Next.js, React, Node.js, MongoDB, REST APIs, and AWS.',
     bullets: [
-      'Built and operated end-to-end checkout and acquisition flows in TypeScript, Next.js, React, Node.js, MongoDB, and AWS during that period, covering payments, contracts, APIs, and production support.',
-      'Led AWS modernization of the acquisition platform and increased sales conversions by 12% after launch.',
-      'Restructured the backend for more than 80% higher checkout throughput and shipped a zero-downtime cutover for live users.',
-      'Enabled bundle and combo purchases on the acquisition path without breaking existing checkout flows.',
-      'Owned day-to-day production support for checkout and acquisition while delivering feature work on the same codebase.',
+      'Built checkout and acquisition in TypeScript, Next.js, React, Node.js, MongoDB, and AWS, including payments and contracts.',
+      'Raised conversions by 12% and checkout throughput by more than 80% after an AWS modernization and zero-downtime cutover.',
     ],
   },
   {
@@ -161,9 +176,8 @@ export const experience: ExperienceRole[] = [
     overview:
       'Full-stack and cloud engineer who migrated a desktop product to a SaaS web platform for active clients. Stack: ASP.NET, Razor Pages, jQuery, and AdminLTE on the web path.',
     bullets: [
-      'Re-architected a legacy desktop product as SaaS and reduced monthly customer churn from 18% to 3% by removing local stability failures.',
-      'Designed and operated cloud infrastructure for more than 5,000 active client operations, including high-availability integrations with large consumer platforms.',
-      'Delivered the web product on ASP.NET Razor Pages, jQuery, and AdminLTE while keeping existing client operations running during the cutover.',
+      'Re-architected a desktop product as SaaS on ASP.NET Razor Pages, jQuery, and AdminLTE. Monthly churn fell from 18% to 3%.',
+      'Operated cloud infrastructure for more than 5,000 active client operations during the cutover.',
     ],
   },
   {
@@ -175,8 +189,7 @@ export const experience: ExperienceRole[] = [
     overview:
       'Full-stack engineer for education payment tools and self-service invoice flows. Stack: ASP.NET Core and ASP.NET Core Identity.',
     bullets: [
-      'Launched a multi-method student payment platform end to end with ASP.NET Core Identity.',
-      'Replaced manual invoice and payment support with self-service flows and cut operational load on the support team.',
+      'Launched student payments with ASP.NET Core Identity and replaced manual invoice support with self-service.',
     ],
   },
 ]
