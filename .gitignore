@@ -41,12 +41,9 @@ service-account*.json
 *.tsbuildinfo
 next-env.d.ts
 
-# private job-application materials (keep local only)
+# private / personal materials (keep local only)
+/personal/
 /historico_vagas/
-/docs/job-applications-log.md
-/docs/PUBLIC-IDENTITY.md
-/docs/portfolio-review-prompt.md
-/docs/PROMPT-APLICACOES.md
 
 # Cursor / agent local state and skills (keep local only)
 /.cursor/

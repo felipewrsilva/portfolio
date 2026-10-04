@@ -1,5 +1,5 @@
 /**
- * Updates GitHub profile + portfolio repo description to match docs/PUBLIC-IDENTITY.md.
+ * Updates GitHub profile + portfolio repo description to match personal/identity.md (local only).
  * Requires: gh auth login (scopes: user, public_repo or repo)
  *
  * Usage: node scripts/update-github-profile.mjs
