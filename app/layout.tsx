@@ -84,7 +84,7 @@ export default function RootLayout({
       'ASP.NET Core',
       'C#',
       'SQL Server',
-      'DACPAC',
+      'REST APIs',
       'Azure',
       'CI/CD',
       'TypeScript',
