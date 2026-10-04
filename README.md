@@ -15,7 +15,7 @@ Content and resume both come from [`data/cv.ts`](data/cv.ts). The downloadable P
 
 ## Requirements
 
-- Node.js 20+
+- Node.js 24.x
 
 ## Setup
 
