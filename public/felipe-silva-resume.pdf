@@ -315,7 +315,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Annots [<< /Type /Annot /Subtype /Link /Rect [122.85 678.00 190.04 689.00] /Border [0 0 0] /A << /S /URI /URI (tel:+34657990070) >> >> << /Type /Annot /Subtype /Link /Rect [201.84 678.00 301.37 689.00] /Border [0 0 0] /A << /S /URI /URI (mailto:contact@felipewrsilva.dev) >> >> << /Type /Annot /Subtype /Link /Rect [313.17 678.00 419.26 689.00] /Border [0 0 0] /A << /S /URI /URI (https://linkedin.com/in/felipewrsilva) >> >> << /Type /Annot /Subtype /Link /Rect [431.06 678.00 494.14 689.00] /Border [0 0 0] /A << /S /URI /URI (https://felipewrsilva.dev) >> >>] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>
 endobj
 8 0 obj
-<< /Length 3625 >>
+<< /Length 3972 >>
 stream
 BT 0.040 0.070 0.130 rg 0 Tc
 /F2 11 Tf
@@ -469,10 +469,35 @@ BT 0.170 0.290 0.210 rg 1.50 Tc
 (LANGUAGES) Tj
 ET
 0.780 0.800 0.830 rg 58 393.15 496 0.55 re f
+BT 0.170 0.290 0.210 rg 0 Tc
+/F2 9.5 Tf
+1 0 0 1 58.00 377.70 Tm
+(English) Tj
+ET
 BT 0.040 0.070 0.130 rg 0 Tc
 /F1 9.5 Tf
-1 0 0 1 58.00 377.70 Tm
-(English \(Conversational\) | Portuguese \(Native\) | Spanish \(Conversational\)) Tj
+1 0 0 1 132.59 377.70 Tm
+(Conversational) Tj
+ET
+BT 0.170 0.290 0.210 rg 0 Tc
+/F2 9.5 Tf
+1 0 0 1 58.00 359.10 Tm
+(Portuguese) Tj
+ET
+BT 0.040 0.070 0.130 rg 0 Tc
+/F1 9.5 Tf
+1 0 0 1 132.59 359.10 Tm
+(Native) Tj
+ET
+BT 0.170 0.290 0.210 rg 0 Tc
+/F2 9.5 Tf
+1 0 0 1 58.00 340.50 Tm
+(Spanish) Tj
+ET
+BT 0.040 0.070 0.130 rg 0 Tc
+/F1 9.5 Tf
+1 0 0 1 132.59 340.50 Tm
+(Conversational) Tj
 ET
 0.780 0.800 0.830 rg 58 40 496 0.5 re f
 BT 0 Tc 0.290 0.330 0.400 rg /F1 7.6 Tf 1 0 0 1 58 28 Tm (felipewrsilva.dev) Tj ET
@@ -493,9 +518,9 @@ xref
 0000000625 00000 n 
 0000007549 00000 n 
 0000008249 00000 n 
-0000011926 00000 n 
+0000012273 00000 n 
 trailer
 << /Size 10 /Root 1 0 R /Info 5 0 R >>
 startxref
-12062
+12409
 %%EOF

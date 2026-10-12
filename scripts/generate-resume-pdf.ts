@@ -310,13 +310,9 @@ function buildDoc(): Doc {
       },
       {
         title: 'LANGUAGES',
-        blocks: [
-          paragraphBlock(
-            languages
-              .map((language) => `${language.name} (${language.level})`)
-              .join('  |  '),
-          ),
-        ],
+        blocks: languages.map((language) =>
+          labelledBlock(language.name, language.level),
+        ),
         entries: [],
       },
     ],
